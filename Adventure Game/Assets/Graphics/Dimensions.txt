@@ -1,0 +1,5 @@
+Background: 2560x1440
+Ground: 2560x360 (part of background)
+Hero: 200x300
+Mob: 200x300
+Boss: 400x600
