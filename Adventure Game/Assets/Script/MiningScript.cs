@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class MiningScript : MonoBehaviour {
 
     public Text amountText;
-    public static int amount = 0;
+
+    int amount = 0;
 
     public void OnMouseDown()
     {

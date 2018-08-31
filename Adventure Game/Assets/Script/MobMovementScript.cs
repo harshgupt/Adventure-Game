@@ -9,5 +9,9 @@ public class MobMovementScript : MonoBehaviour {
     private void Update()
     {
         transform.Translate(speed, 0, 0);
+        if(transform.position.x <= 0)
+        {
+            speed = 0;
+        }
     }
 }
