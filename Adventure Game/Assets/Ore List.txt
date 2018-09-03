@@ -1,0 +1,29 @@
+Ores:
+Silver
+Gold
+Opal
+Jade
+Topaz
+Amethyst
+Moonstone
+Sunstone
+Ruby
+Sapphire
+Emerald
+Diamond
+
+Copper
+Tin
+Iron
+Coal
+Lead
+Mithril
+Adamantine
+Quicksilver
+Meteorite
+
+Alloys:
+Bronze = Copper + Tin
+White = Lead + Tin
+Black = Lead + Copper
+Steel = Iron + Coal

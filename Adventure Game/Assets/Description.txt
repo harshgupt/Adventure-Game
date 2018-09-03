@@ -1,0 +1,28 @@
+Side scrolling clicker/infinite
+Tier system for everything
+Character stands to the side in all instances along with familiar
+Base camp goes to resources or fights
+
+Swipe monsters to kill
+Monsters have theme and get difficult as you progress
+Boss at end with specific hitboxes, kill all boxes to win
+Boss can have no-touch regions
+Monsters like Zombies, Skeletons, Werevolves, Vampires
+Monsters drop resources and gold
+
+Click resources to mine
+Gold mined by clicking, level up gold collection
+Resources in separate scene
+Different resources, with different uses
+Resources unlocked the further you reach/more bosses you defeat
+Items like armor, weapons, magic items, potions, tools (pickaxe, etc)
+Battle inventory can hold magic, potions, food
+Better tools means lesser clicks/more damage to resource
+Tools like Pickaxe, Axe, Shovel
+Weapons like sword, battleaxe, warhammer, dagger
+Armor Chestplate, Legs, Boots, Helm, Gloves
+Potions like attack, defense
+Magic items like lightning, fire, earth, wind, water
+Familiar to support in battles or collect drops
+Food grown on plots, seeds bought using gold
+Harvest food from animals
