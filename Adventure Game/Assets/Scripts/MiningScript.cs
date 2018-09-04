@@ -16,28 +16,28 @@ public class MiningScript : MonoBehaviour {
     {
         if(gameObject.tag == "Copper Ore")
         {
-            Inventory.copperOre++;
-            amountText.text = Inventory.copperOre.ToString();
+            PlayerData.copperOre++;
+            amountText.text = PlayerData.copperOre.ToString();
         }
         else if (gameObject.tag == "Tin Ore")
         {
-            Inventory.tinOre++;
-            amountText.text = Inventory.tinOre.ToString();
+            PlayerData.tinOre++;
+            amountText.text = PlayerData.tinOre.ToString();
         }
         else if (gameObject.tag == "Iron Ore")
         {
-            Inventory.ironOre++;
-            amountText.text = Inventory.ironOre.ToString();
+            PlayerData.ironOre++;
+            amountText.text = PlayerData.ironOre.ToString();
         }
         else if (gameObject.tag == "Coal Ore")
         {
-            Inventory.coalOre++;
-            amountText.text = Inventory.coalOre.ToString();
+            PlayerData.coalOre++;
+            amountText.text = PlayerData.coalOre.ToString();
         }
         else if (gameObject.tag == "Lead Ore")
         {
-            Inventory.leadOre++;
-            amountText.text = Inventory.leadOre.ToString();
+            PlayerData.leadOre++;
+            amountText.text = PlayerData.leadOre.ToString();
         }
     }
 }

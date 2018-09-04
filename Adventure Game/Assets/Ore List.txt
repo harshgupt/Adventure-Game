@@ -27,3 +27,4 @@ Bronze = Copper + Tin
 White = Lead + Tin
 Black = Lead + Copper
 Steel = Iron + Coal
+Mystical = Mithril + Adamantine + Quicksilver + Meteorite
