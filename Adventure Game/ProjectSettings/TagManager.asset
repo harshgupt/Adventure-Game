@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Blade
   - Ore
+  - Copper Ore
+  - Tin Ore
+  - Iron Ore
+  - Coal Ore
+  - Lead Ore
   layers:
   - Default
   - TransparentFX
