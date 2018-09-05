@@ -1,8 +1,21 @@
 ﻿public class PlayerDataJSON
 {
     public int Coins;
+    public int PlayerLevel;
 
-    //MEtals and Alloys
+    //Weapons and Armour
+    public int WeaponTier;
+    public int HelmTier;
+    public int ChestplateTier;
+    public int GauntletsTier;
+    public int LeggingsTier;
+    public int BootsTier;
+
+    //Tools
+    public int PickaxeTier;
+    public int WoodaxeTier;
+
+    //Metals and Alloys
     public int CopperOre;
     public int TinOre;
     public int IronOre;

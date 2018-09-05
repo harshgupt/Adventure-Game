@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Mine Template.unity
     guid: 3df20eeee90834b4685ac9954b08cac0
+  - enabled: 1
+    path: Assets/Scenes/Smeltery Template.unity
+    guid: 119c76cf7c3ba5841a21f021b49f25f9
   m_configObjects: {}

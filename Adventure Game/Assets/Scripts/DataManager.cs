@@ -2,15 +2,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DataManager : MonoBehaviour {
     
     string dataFilePath;
 
+    public static bool saveData;
+    public static float saveTimer;
+
     private void Start()
     {
         dataFilePath = Path.Combine(Application.streamingAssetsPath, "data.json");
-        LoadGameData();
+        if(SceneManager.GetActiveScene().name == "Main")
+        {
+            LoadGameData();
+        }
+    }
+
+    private void Update()
+    {
+        saveTimer += Time.deltaTime;
+        if (saveTimer >= 5f)
+        {
+            saveTimer = 0;
+            SaveGameData();
+        }
+        if (saveData)
+        {
+            saveData = false;
+            SaveGameData();
+        }
     }
 
     public void LoadGameData()
@@ -43,6 +65,7 @@ public class DataManager : MonoBehaviour {
             PlayerData.meteorite = loadedData.Meteorite;
             PlayerData.mysticalMetal = loadedData.MysticalMetal;
         }
+        //Debug.Log("Data Loaded");
     }
 
     public void SaveGameData()
@@ -75,5 +98,6 @@ public class DataManager : MonoBehaviour {
         };
         string dataJSON = JsonUtility.ToJson(playerDataJSON);
         File.WriteAllText(dataFilePath, dataJSON);
+        //Debug.Log("Data Written");
     }
 }

@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class GoToScene : MonoBehaviour {
 
+    public void GoToMain()
+    {
+        SceneManager.LoadScene("Main");
+    }
+
 	public void GoToLevel()
     {
         SceneManager.LoadScene("Level Template");
@@ -13,5 +18,10 @@ public class GoToScene : MonoBehaviour {
     public void GoToMine()
     {
         SceneManager.LoadScene("Mine Template");
+    }
+
+    public void GoToForge()
+    {
+        SceneManager.LoadScene("Forge Template");
     }
 }

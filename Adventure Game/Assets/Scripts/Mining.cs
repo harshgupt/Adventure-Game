@@ -3,14 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MiningScript : MonoBehaviour {
+public class Mining : MonoBehaviour {
 
     public Text amountText;
-
-    private void Start()
-    {
-        
-    }
 
     public void OnMouseDown()
     {

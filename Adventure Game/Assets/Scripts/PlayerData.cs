@@ -11,7 +11,7 @@ public class PlayerData : MonoBehaviour {
     public static int weaponTier;
     public static int helmTier;
     public static int chestplateTier;
-    public static int gauntletTier;
+    public static int gauntletsTier;
     public static int leggingsTier;
     public static int bootsTier;
 
