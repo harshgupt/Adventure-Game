@@ -14,7 +14,7 @@ public class DataManager : MonoBehaviour {
     private void Start()
     {
         dataFilePath = Path.Combine(Application.streamingAssetsPath, "data.json");
-        if(SceneManager.GetActiveScene().name == "Main")
+        if(SceneManager.GetActiveScene().name == "Menu")
         {
             LoadGameData();
         }

@@ -13,7 +13,26 @@ public class InventoryManager : MonoBehaviour{
     public Item[] metals = new Item[PlayerData.numMetals];
     public Item[] ores = new Item[PlayerData.numOres];
 
-    void Update()
+    public void AddItem(string name, Sprite sprite, int amount)
+    {
+        for(int i = 0; i < numInventorySlots; i++)
+        {
+            if(itemName[i] == name)
+            {
+                itemAmounts[i].text = amount.ToString();
+                return;
+            }
+            else if(itemName[i] == "")
+            {
+                itemName[i] = name;
+                itemImages[i].sprite = sprite;
+                itemAmounts[i].text = amount.ToString();
+                return;
+            }
+        }
+    }
+
+    void Start()
     {
         int inventoryNo = 0;
         for(int i = 0; i < PlayerData.numMetals; i++)
