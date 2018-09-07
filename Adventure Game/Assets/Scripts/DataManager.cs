@@ -23,7 +23,7 @@ public class DataManager : MonoBehaviour {
     private void Update()
     {
         saveTimer += Time.deltaTime;
-        if (saveTimer >= 5f)
+        if (saveTimer >= 2f)
         {
             saveTimer = 0;
             SaveGameData();

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InventoryManager : MonoBehaviour{
+public class InventoryOreMetal : MonoBehaviour{
 
     public const int numInventorySlots = 30;
 
@@ -28,6 +28,40 @@ public class InventoryManager : MonoBehaviour{
                 itemImages[i].sprite = sprite;
                 itemAmounts[i].text = amount.ToString();
                 return;
+            }
+        }
+    }
+    
+    public void RemoveItem(string name, int amount)
+    {
+        for(int i = 0; i < numInventorySlots; i++)
+        {
+            if(itemName[i] == name)
+            {
+                if(amount == 0)
+                {
+                    for (int j = i; j < numInventorySlots-1; j++)
+                    {
+                        if(itemName[j+1] != "")
+                        {
+                            itemName[j] = itemName[j + 1];
+                            itemImages[j].sprite = itemImages[j + 1].sprite;
+                            itemAmounts[j].text = itemAmounts[j + 1].text;
+                        }
+                        else
+                        {
+                            itemName[j] = "";
+                            itemImages[j].sprite = null;
+                            itemAmounts[j].text = "";
+                            return;
+                        }
+                    }
+                }
+                else
+                {
+                    itemAmounts[i].text = amount.ToString();
+                    return;
+                }
             }
         }
     }
