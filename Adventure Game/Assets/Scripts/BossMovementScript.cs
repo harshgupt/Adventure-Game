@@ -8,10 +8,10 @@ public class BossMovementScript : MonoBehaviour {
 
     private void Update()
     {
-        transform.Translate(speed, 0, 0);
         if (transform.position.x <= 6.5f)
         {
             speed = 0;
         }
+        transform.Translate(speed, 0, 0);
     }
 }

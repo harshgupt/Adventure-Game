@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class MobMovementScript : MonoBehaviour {
 
-    float speed = -0.05f;
+    float speed = -0.1f;
+    int xPos;
 
-    private void Update()
+    private void Start()
     {
-        float xPos = Random.Range(0, 3f);
-        transform.Translate(speed, 0, 0);
-        if(transform.position.x <= xPos)
+        xPos = Random.Range(0, 4);
+    }
+
+    void Update()
+    {
+        if (transform.position.x <= xPos)
         {
             speed = 0;
         }
+        transform.Translate(speed, 0, 0);
     }
 }

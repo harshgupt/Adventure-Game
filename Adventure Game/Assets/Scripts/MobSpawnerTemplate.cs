@@ -28,7 +28,7 @@ public class MobSpawnerTemplate : MonoBehaviour {
             {
                 yCount = 0;
             }
-            if(mobCount < 5)
+            if(mobCount < 6)
             {
                 float yPos;
                 switch (yCount)
@@ -51,7 +51,7 @@ public class MobSpawnerTemplate : MonoBehaviour {
                 Instantiate(mob, new Vector2(12, yPos), Quaternion.identity);
                 mobCount++;
             }
-            else if(mobCount == 5)
+            else if(mobCount == 6)
             {
                 Instantiate(boss, new Vector2(12, 0), Quaternion.identity);
                 mobCount++;
