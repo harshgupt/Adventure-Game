@@ -2,15 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MobMovementScript : MonoBehaviour {
+public class BossMovementScript : MonoBehaviour {
 
-    float speed = -0.05f;
+    float speed = -0.02f;
 
     private void Update()
     {
-        float xPos = Random.Range(0, 3f);
         transform.Translate(speed, 0, 0);
-        if(transform.position.x <= xPos)
+        if (transform.position.x <= 6.5f)
         {
             speed = 0;
         }

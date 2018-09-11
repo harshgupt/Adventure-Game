@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FightingScript : MonoBehaviour {
+public class BossScriptTemplate : MonoBehaviour {
 
-    float maxHealth = 10f;
+    float maxHealth = 50f;
     float health;
     public Image healthBar;
 
@@ -20,7 +20,7 @@ public class FightingScript : MonoBehaviour {
         {
             health--;
             healthBar.fillAmount = health / maxHealth;
-            if(health <= 0)
+            if (health <= 0)
             {
                 Destroy(gameObject);
             }
