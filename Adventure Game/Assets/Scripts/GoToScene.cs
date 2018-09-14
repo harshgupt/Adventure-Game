@@ -22,18 +22,18 @@ public class GoToScene : MonoBehaviour {
     public void GoToMine()
     {
         sceneName = "Mine";
-        SceneManager.LoadScene("Mine Template");
+        SceneManager.LoadScene("Mine");
     }
 
     public void GoToForge()
     {
         sceneName = "Forge";
-        SceneManager.LoadScene("Forge Template");
+        SceneManager.LoadScene("Forge");
     }
 
     public void GoToUpgrade()
     {
-        sceneName = "Upgrade";
-        SceneManager.LoadScene("Upgrade Template");
+        sceneName = "Upgrades";
+        SceneManager.LoadScene("Upgrades");
     }
 }

@@ -3,15 +3,13 @@
     public int Coins;
     public int PlayerLevel;
 
-    //Weapons and Armour
-    public int WeaponTier;
+    //Armour, Weapons and Tools
     public int HelmTier;
     public int ChestplateTier;
     public int GauntletsTier;
     public int LeggingsTier;
     public int BootsTier;
-
-    //Tools
+    public int WeaponTier;
     public int PickaxeTier;
     public int WoodaxeTier;
 

@@ -1,0 +1,13 @@
+0 Wood
+1 Copper
+2 Tin
+3 Bronze
+4 Iron
+5 Lead
+6 Steel
+7 White Metal/Black Metal
+8 Mithril
+9 Adamantine
+10 Quicksilver
+11 Meteorite
+12 Mystical Metal

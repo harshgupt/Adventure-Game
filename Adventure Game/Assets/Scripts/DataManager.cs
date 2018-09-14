@@ -11,10 +11,14 @@ public class DataManager : MonoBehaviour {
     public static bool saveData;
     public static float saveTimer;
 
+    public const int numArmour = 8;
+    public const int numOres = 9;
+    public const int numMetals = 13;
+
     private void Start()
     {
         dataFilePath = Path.Combine(Application.streamingAssetsPath, "data.json");
-        if(SceneManager.GetActiveScene().name == "Menu")
+        if(SceneManager.GetActiveScene().name == "Main")
         {
             LoadGameData();
         }
@@ -23,7 +27,7 @@ public class DataManager : MonoBehaviour {
     private void Update()
     {
         saveTimer += Time.deltaTime;
-        if (saveTimer >= 2f)
+        if (saveTimer >= 0.5f)
         {
             saveTimer = 0;
             SaveGameData();
@@ -64,6 +68,14 @@ public class DataManager : MonoBehaviour {
             PlayerData.metals[10] = loadedData.Quicksilver;
             PlayerData.metals[11] = loadedData.Meteorite;
             PlayerData.metals[12] = loadedData.MysticalMetal;
+            PlayerData.armourTier[0] = loadedData.HelmTier;
+            PlayerData.armourTier[1] = loadedData.ChestplateTier;
+            PlayerData.armourTier[2] = loadedData.GauntletsTier;
+            PlayerData.armourTier[3] = loadedData.LeggingsTier;
+            PlayerData.armourTier[4] = loadedData.BootsTier;
+            PlayerData.armourTier[5] = loadedData.WeaponTier;
+            PlayerData.armourTier[6] = loadedData.PickaxeTier;
+            PlayerData.armourTier[7] = loadedData.WoodaxeTier;
         }
         //Debug.Log("Data Loaded");
     }
@@ -94,10 +106,72 @@ public class DataManager : MonoBehaviour {
             Adamantine = PlayerData.metals[9],
             Quicksilver = PlayerData.metals[10],
             Meteorite = PlayerData.metals[11],
-            MysticalMetal = PlayerData.metals[12]
+            MysticalMetal = PlayerData.metals[12],
+            HelmTier = PlayerData.armourTier[0],
+            ChestplateTier = PlayerData.armourTier[1],
+            GauntletsTier = PlayerData.armourTier[2],
+            LeggingsTier = PlayerData.armourTier[3],
+            BootsTier = PlayerData.armourTier[4],
+            WeaponTier = PlayerData.armourTier[5],
+            PickaxeTier = PlayerData.armourTier[6],
+            WoodaxeTier = PlayerData.armourTier[7]
         };
         string dataJSON = JsonUtility.ToJson(playerDataJSON);
         File.WriteAllText(dataFilePath, dataJSON);
         //Debug.Log("Data Written");
+    }
+
+    public void ResetData()
+    {
+        PlayerData.coins = 0;
+        for(int i = 0; i < numOres; i++)
+        {
+            PlayerData.ores[i] = 0;
+        }
+        for (int i = 0; i < numMetals; i++)
+        {
+            PlayerData.metals[i] = 0;
+        }
+        for (int i = 0; i < numArmour; i++)
+        {
+            PlayerData.armourTier[i] = 0;
+        }
+        PlayerDataJSON playerDataJSON = new PlayerDataJSON()
+        {
+            Coins = 0,
+            CopperOre = 0,
+            TinOre = 0,
+            IronOre = 0,
+            CoalOre = 0,
+            LeadOre = 0,
+            MithrilOre = 0,
+            AdamantineOre = 0,
+            QuicksilverOre = 0,
+            MeteoriteOre = 0,
+            Copper = 0,
+            Tin = 0,
+            Bronze = 0,
+            Iron = 0,
+            Steel = 0,
+            Lead = 0,
+            WhiteMetal = 0,
+            BlackMetal = 0,
+            Mithril = 0,
+            Adamantine = 0,
+            Quicksilver = 0,
+            Meteorite = 0,
+            MysticalMetal = 0,
+            HelmTier = 0,
+            ChestplateTier = 0,
+            GauntletsTier = 0,
+            LeggingsTier = 0,
+            BootsTier = 0,
+            WeaponTier = 0,
+            PickaxeTier = 0,
+            WoodaxeTier = 0
+        };
+        string dataJSON = JsonUtility.ToJson(playerDataJSON);
+        File.WriteAllText(dataFilePath, dataJSON);
+        //Debug.Log("Data Reset");
     }
 }

@@ -1,4 +1,4 @@
-Ores:
+Currency:
 Silver
 Gold
 Opal

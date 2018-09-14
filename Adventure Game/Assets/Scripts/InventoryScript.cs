@@ -11,8 +11,8 @@ public class InventoryScript : MonoBehaviour{
     public Image[] itemImages = new Image[numInventorySlots];
     public Text[] itemAmounts = new Text[numInventorySlots];
     public string[] itemName = new string[numInventorySlots];
-    public Item[] metals = new Item[PlayerData.numMetals];
-    public Item[] ores = new Item[PlayerData.numOres];
+    public Item[] metals = new Item[DataManager.numMetals];
+    public Item[] ores = new Item[DataManager.numOres];
 
     public void AddItem(string name, Sprite sprite, int amount)
     {
@@ -72,7 +72,7 @@ public class InventoryScript : MonoBehaviour{
         int inventoryNo = 0;
         if(GoToScene.sceneName == "Mine")
         {
-            for (int i = 0; i < PlayerData.numOres; i++)
+            for (int i = 0; i < DataManager.numOres; i++)
             {
                 if (PlayerData.ores[i] != 0)
                 {
@@ -85,7 +85,7 @@ public class InventoryScript : MonoBehaviour{
         }
         else if(GoToScene.sceneName == "Forge")
         {
-            for (int i = 0; i < PlayerData.numMetals; i++)
+            for (int i = 0; i < DataManager.numMetals; i++)
             {
                 if (PlayerData.metals[i] != 0)
                 {
@@ -95,7 +95,7 @@ public class InventoryScript : MonoBehaviour{
                     inventoryNo++;
                 }
             }
-            for (int i = 0; i < PlayerData.numOres; i++)
+            for (int i = 0; i < DataManager.numOres; i++)
             {
                 if (PlayerData.ores[i] != 0)
                 {
@@ -106,9 +106,9 @@ public class InventoryScript : MonoBehaviour{
                 }
             }
         }
-        else if(GoToScene.sceneName == "Upgrade")
+        else if(GoToScene.sceneName == "Upgrades")
         {
-            for (int i = 0; i < PlayerData.numMetals; i++)
+            for (int i = 0; i < DataManager.numMetals; i++)
             {
                 if (PlayerData.metals[i] != 0)
                 {

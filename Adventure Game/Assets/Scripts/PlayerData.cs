@@ -3,31 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerData : MonoBehaviour {
-
-    public const int numArmour = 6;
-    public const int numTools = 2;
-    public const int numOres = 9;
-    public const int numMetals = 13;
-
+    
     public static int coins;
     public static int playerLevel;
 
-    //Weapons and Armour
-    public static int[] armour = new int[numArmour];
-    /*public static int weaponTier;
-    public static int helmTier;
+    //Armour, Weapons and Tools
+    public static int[] armourTier = new int[DataManager.numArmour];
+    /*public static int helmTier;
     public static int chestplateTier;
     public static int gauntletsTier;
     public static int leggingsTier;
-    public static int bootsTier;*/
+    public static int bootsTier;
+    public static int weaponTier;
+    public static int pickaxeTier;
+    public static int woodaxeTier;*/
 
     //Tools
-    public static int pickaxeTier;
-    public static int woodaxeTier;
 
     //Metals and Alloys
-    public static int[] ores = new int[numOres];
-    public static int[] metals = new int[numMetals];
+    public static int[] ores = new int[DataManager.numOres];
+    public static int[] metals = new int[DataManager.numMetals];
     /*public static int copperOre;
     public static int tinOre;
     public static int ironOre;
