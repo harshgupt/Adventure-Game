@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class InventoryOreMetal : MonoBehaviour{
+public class InventoryScript : MonoBehaviour{
 
     public const int numInventorySlots = 30;
 

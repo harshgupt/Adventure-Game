@@ -704,7 +704,7 @@ GameObject:
   - component: {fileID: 114476423464258714}
   - component: {fileID: 114247691164387552}
   m_Layer: 5
-  m_Name: OreMetalInventory
+  m_Name: Inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

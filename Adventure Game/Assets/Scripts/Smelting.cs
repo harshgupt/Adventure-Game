@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Smelting : MonoBehaviour {
 
-    public InventoryOreMetal inventoryScript;
+    public InventoryScript inventoryScript;
     public Item[] metals = new Item[13];
     
     public void SmeltCopper()

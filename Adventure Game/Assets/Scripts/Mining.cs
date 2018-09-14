@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Mining : MonoBehaviour {
     
-    public InventoryOreMetal inventoryManagerScript;
+    public InventoryScript inventoryManagerScript;
     public Item[] ores = new Item[9];
 
     public void CopperMine()
