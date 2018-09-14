@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class InventoryOreMetal : MonoBehaviour{
 
@@ -69,24 +70,53 @@ public class InventoryOreMetal : MonoBehaviour{
     void Start()
     {
         int inventoryNo = 0;
-        for(int i = 0; i < PlayerData.numMetals; i++)
+        if(GoToScene.sceneName == "Mine")
         {
-            if(PlayerData.metals[i] != 0)
+            for (int i = 0; i < PlayerData.numOres; i++)
             {
-                itemImages[inventoryNo].sprite = metals[i].sprite;
-                itemAmounts[inventoryNo].text = PlayerData.metals[i].ToString();
-                itemName[inventoryNo] = metals[i].name;
-                inventoryNo++;
+                if (PlayerData.ores[i] != 0)
+                {
+                    itemImages[inventoryNo].sprite = ores[i].sprite;
+                    itemAmounts[inventoryNo].text = PlayerData.ores[i].ToString();
+                    itemName[inventoryNo] = ores[i].name;
+                    inventoryNo++;
+                }
             }
         }
-        for (int i = 0; i < PlayerData.numOres; i++)
+        else if(GoToScene.sceneName == "Forge")
         {
-            if (PlayerData.ores[i] != 0)
+            for (int i = 0; i < PlayerData.numMetals; i++)
             {
-                itemImages[inventoryNo].sprite = ores[i].sprite;
-                itemAmounts[inventoryNo].text = PlayerData.ores[i].ToString();
-                itemName[inventoryNo] = ores[i].name;
-                inventoryNo++;
+                if (PlayerData.metals[i] != 0)
+                {
+                    itemImages[inventoryNo].sprite = metals[i].sprite;
+                    itemAmounts[inventoryNo].text = PlayerData.metals[i].ToString();
+                    itemName[inventoryNo] = metals[i].name;
+                    inventoryNo++;
+                }
+            }
+            for (int i = 0; i < PlayerData.numOres; i++)
+            {
+                if (PlayerData.ores[i] != 0)
+                {
+                    itemImages[inventoryNo].sprite = ores[i].sprite;
+                    itemAmounts[inventoryNo].text = PlayerData.ores[i].ToString();
+                    itemName[inventoryNo] = ores[i].name;
+                    inventoryNo++;
+                }
+            }
+        }
+        else if(GoToScene.sceneName == "Upgrade")
+        {
+            for (int i = 0; i < PlayerData.numMetals; i++)
+            {
+                if (PlayerData.metals[i] != 0)
+                {
+                    itemImages[inventoryNo].sprite = metals[i].sprite;
+                    itemAmounts[inventoryNo].text = PlayerData.metals[i].ToString();
+                    itemName[inventoryNo] = metals[i].name;
+                    inventoryNo++;
+                }
             }
         }
     }

@@ -5,23 +5,35 @@ using UnityEngine.SceneManagement;
 
 public class GoToScene : MonoBehaviour {
 
+    public static string sceneName;
+
     public void GoToMain()
     {
+        sceneName = "Main";
         SceneManager.LoadScene("Main");
     }
 
 	public void GoToLevel()
     {
+        sceneName = "Level Template";
         SceneManager.LoadScene("Level Template");
     }
 
     public void GoToMine()
     {
+        sceneName = "Mine";
         SceneManager.LoadScene("Mine Template");
     }
 
     public void GoToForge()
     {
+        sceneName = "Forge";
         SceneManager.LoadScene("Forge Template");
+    }
+
+    public void GoToUpgrade()
+    {
+        sceneName = "Upgrade";
+        SceneManager.LoadScene("Upgrade Template");
     }
 }
