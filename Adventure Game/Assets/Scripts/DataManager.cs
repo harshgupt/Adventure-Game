@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class DataManager : MonoBehaviour {
@@ -15,12 +16,15 @@ public class DataManager : MonoBehaviour {
     public const int numOres = 9;
     public const int numMetals = 13;
 
+    public Text coinText;
+
     private void Start()
     {
         dataFilePath = Path.Combine(Application.streamingAssetsPath, "data.json");
         if(SceneManager.GetActiveScene().name == "Main")
         {
             LoadGameData();
+            DisplayCoins();
         }
     }
 
@@ -176,5 +180,10 @@ public class DataManager : MonoBehaviour {
         string dataJSON = JsonUtility.ToJson(playerDataJSON);
         File.WriteAllText(dataFilePath, dataJSON);
         //Debug.Log("Data Reset");
+    }
+
+    public void DisplayCoins()
+    {
+        coinText.text = PlayerData.coins.ToString();
     }
 }
