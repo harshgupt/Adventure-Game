@@ -11,5 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0339fb95c3b22754dbb00c83ac30b1c5, type: 3}
   m_Name: WhiteMetal
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: b9fd8ed099313de4f93333a3ab741e6e, type: 3}
+  sprite: {fileID: 21300000, guid: 74250ac062ed2c34ab161226c087f48b, type: 3}
   name: White Metal

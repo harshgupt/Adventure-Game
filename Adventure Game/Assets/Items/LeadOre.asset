@@ -11,5 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0339fb95c3b22754dbb00c83ac30b1c5, type: 3}
   m_Name: LeadOre
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: f01a9fe085cb92f4f801e81efcd45e87, type: 3}
+  sprite: {fileID: 21300000, guid: 9f1675b9f158b87459627d73a38b524c, type: 3}
   name: Lead Ore

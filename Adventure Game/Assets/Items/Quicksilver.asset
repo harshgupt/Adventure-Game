@@ -11,5 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0339fb95c3b22754dbb00c83ac30b1c5, type: 3}
   m_Name: Quicksilver
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 234c8b97c8119c84e83f86f1fac029dd, type: 3}
+  sprite: {fileID: 21300000, guid: 91bedd6f263e4244895ab8a0f2e2e5b9, type: 3}
   name: Quicksilver

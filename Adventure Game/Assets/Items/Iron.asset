@@ -11,5 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0339fb95c3b22754dbb00c83ac30b1c5, type: 3}
   m_Name: Iron
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: adfd903e056ab6a4eb0d6aca2325ac10, type: 3}
+  sprite: {fileID: 21300000, guid: ca91e998c4f3dff4ba6a86ab3279b7ec, type: 3}
   name: Iron

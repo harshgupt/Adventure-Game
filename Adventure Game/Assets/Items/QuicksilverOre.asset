@@ -11,5 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0339fb95c3b22754dbb00c83ac30b1c5, type: 3}
   m_Name: QuicksilverOre
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 49fb2082a2c489d448d330ffff199755, type: 3}
+  sprite: {fileID: 21300000, guid: d7db4bd8a00ebe8478f31fa0deda36bc, type: 3}
   name: Quicksilver Ore

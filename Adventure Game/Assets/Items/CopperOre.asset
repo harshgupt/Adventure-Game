@@ -11,5 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0339fb95c3b22754dbb00c83ac30b1c5, type: 3}
   m_Name: CopperOre
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 3d7d6aa7ba04bde41a11d573bb741b00, type: 3}
+  sprite: {fileID: 21300000, guid: 5df4c73e9db63634797e07a589916e67, type: 3}
   name: Copper Ore

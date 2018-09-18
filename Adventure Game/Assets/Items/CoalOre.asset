@@ -11,5 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0339fb95c3b22754dbb00c83ac30b1c5, type: 3}
   m_Name: CoalOre
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 2acdf4d5cf05d43498aa617eb6f767c2, type: 3}
+  sprite: {fileID: 21300000, guid: 08bfc9e713fb06d4eae6b54deea849bd, type: 3}
   name: Coal Ore

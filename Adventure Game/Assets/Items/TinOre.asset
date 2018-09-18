@@ -11,5 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0339fb95c3b22754dbb00c83ac30b1c5, type: 3}
   m_Name: TinOre
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 4f2bb485edc93094a827487d2d820428, type: 3}
+  sprite: {fileID: 21300000, guid: c71616b736879a6409b75ab4b1707ae3, type: 3}
   name: Tin Ore

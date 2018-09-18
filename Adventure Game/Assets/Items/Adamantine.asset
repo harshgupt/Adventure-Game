@@ -11,5 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0339fb95c3b22754dbb00c83ac30b1c5, type: 3}
   m_Name: Adamantine
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 349ca7bb1da2902478279f77789bc57c, type: 3}
+  sprite: {fileID: 21300000, guid: 38c7d4816fd1ee14fba344e3ebb22a2f, type: 3}
   name: Adamantine

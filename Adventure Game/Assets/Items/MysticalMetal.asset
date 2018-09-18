@@ -11,5 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0339fb95c3b22754dbb00c83ac30b1c5, type: 3}
   m_Name: MysticalMetal
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 6784546c4559dc64aadac3671ed3dfc6, type: 3}
+  sprite: {fileID: 21300000, guid: b2571a2587c1e6d4ba55e4ec8c58eb99, type: 3}
   name: Mystical Metal

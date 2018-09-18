@@ -11,5 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0339fb95c3b22754dbb00c83ac30b1c5, type: 3}
   m_Name: AdamantineOre
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: a4997e5c6c35c1546aad7a64529d2911, type: 3}
+  sprite: {fileID: 21300000, guid: 79c8803fafcd5094ea508527b16bcd17, type: 3}
   name: Adamantine Ore
