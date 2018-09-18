@@ -39,7 +39,7 @@ public class GoToScene : MonoBehaviour {
 
     public void GoToCoinMine()
     {
-        sceneName = "Coin Mine";
-        SceneManager.LoadScene("Coin Mine");
+        sceneName = "Gem Mine";
+        SceneManager.LoadScene("Gem Mine");
     }
 }
