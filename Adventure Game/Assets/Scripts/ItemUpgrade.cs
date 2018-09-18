@@ -19,6 +19,7 @@ public class ItemUpgrade : MonoBehaviour {
         armorTierText[5].text = PlayerData.armourTier[5].ToString();
         armorTierText[6].text = PlayerData.armourTier[6].ToString();
         armorTierText[7].text = PlayerData.armourTier[7].ToString();
+        armorTierText[8].text = PlayerData.armourTier[8].ToString();
     }
 
     public void Upgrade(int item)

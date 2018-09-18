@@ -9,6 +9,7 @@
     public int GauntletsTier;
     public int LeggingsTier;
     public int BootsTier;
+    public int ShieldTier;
     public int WeaponTier;
     public int PickaxeTier;
     public int WoodaxeTier;

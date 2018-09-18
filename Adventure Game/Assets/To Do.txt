@@ -1,0 +1,5 @@
+Add Infinitium ore
+Add coin system
+Damage to player when enemy reaches end
+Create inventory for Fight scene (max 5-10 items)
+Add healing potion (null, super, hyper, mega, ultra)

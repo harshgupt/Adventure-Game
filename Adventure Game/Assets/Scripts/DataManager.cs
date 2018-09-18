@@ -11,7 +11,7 @@ public class DataManager : MonoBehaviour {
     public static bool saveData;
     public static float saveTimer;
 
-    public const int numArmour = 8;
+    public const int numArmour = 9;
     public const int numOres = 9;
     public const int numMetals = 13;
 
@@ -73,9 +73,10 @@ public class DataManager : MonoBehaviour {
             PlayerData.armourTier[2] = loadedData.GauntletsTier;
             PlayerData.armourTier[3] = loadedData.LeggingsTier;
             PlayerData.armourTier[4] = loadedData.BootsTier;
-            PlayerData.armourTier[5] = loadedData.WeaponTier;
-            PlayerData.armourTier[6] = loadedData.PickaxeTier;
-            PlayerData.armourTier[7] = loadedData.WoodaxeTier;
+            PlayerData.armourTier[5] = loadedData.ShieldTier;
+            PlayerData.armourTier[6] = loadedData.WeaponTier;
+            PlayerData.armourTier[7] = loadedData.PickaxeTier;
+            PlayerData.armourTier[8] = loadedData.WoodaxeTier;
         }
         //Debug.Log("Data Loaded");
     }
@@ -112,9 +113,10 @@ public class DataManager : MonoBehaviour {
             GauntletsTier = PlayerData.armourTier[2],
             LeggingsTier = PlayerData.armourTier[3],
             BootsTier = PlayerData.armourTier[4],
-            WeaponTier = PlayerData.armourTier[5],
-            PickaxeTier = PlayerData.armourTier[6],
-            WoodaxeTier = PlayerData.armourTier[7]
+            ShieldTier = PlayerData.armourTier[5],
+            WeaponTier = PlayerData.armourTier[6],
+            PickaxeTier = PlayerData.armourTier[7],
+            WoodaxeTier = PlayerData.armourTier[8]
         };
         string dataJSON = JsonUtility.ToJson(playerDataJSON);
         File.WriteAllText(dataFilePath, dataJSON);
@@ -166,6 +168,7 @@ public class DataManager : MonoBehaviour {
             GauntletsTier = 0,
             LeggingsTier = 0,
             BootsTier = 0,
+            ShieldTier = 0,
             WeaponTier = 0,
             PickaxeTier = 0,
             WoodaxeTier = 0
