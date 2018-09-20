@@ -37,7 +37,7 @@ public class GoToScene : MonoBehaviour {
         SceneManager.LoadScene("Upgrades");
     }
 
-    public void GoToCoinMine()
+    public void GoToGemMine()
     {
         sceneName = "Gem Mine";
         SceneManager.LoadScene("Gem Mine");

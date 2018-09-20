@@ -216,4 +216,43 @@ public class Smelting : MonoBehaviour {
             inventoryScript.RemoveItem("Meteorite Ore", PlayerData.ores[8]);
         }
     }
+
+    public void SmeltInfinitiumMetal()
+    {
+        if (PlayerData.metals[0] == 0 || PlayerData.metals[1] == 0 || PlayerData.metals[2] == 0 || PlayerData.metals[3] == 0 || PlayerData.metals[4] == 0 || PlayerData.metals[5] == 0 || PlayerData.metals[6] == 0 || PlayerData.metals[7] == 0 || PlayerData.metals[8] == 0 || PlayerData.metals[9] == 0 || PlayerData.metals[10] == 0 || PlayerData.metals[11] == 0 || PlayerData.metals[12] == 0)
+        {
+            return;
+        }
+        else
+        {
+            PlayerData.metals[13]++;
+            PlayerData.metals[0]--;
+            PlayerData.metals[1]--;
+            PlayerData.metals[2]--;
+            PlayerData.metals[3]--;
+            PlayerData.metals[4]--;
+            PlayerData.metals[5]--;
+            PlayerData.metals[6]--;
+            PlayerData.metals[7]--;
+            PlayerData.metals[8]--;
+            PlayerData.metals[9]--;
+            PlayerData.metals[10]--;
+            PlayerData.metals[11]--;
+            PlayerData.metals[12]--;
+            inventoryScript.AddItem("Infinitium Metal", metals[13].sprite, PlayerData.metals[13]);
+            inventoryScript.RemoveItem("Copper", PlayerData.metals[0]);
+            inventoryScript.RemoveItem("Tin", PlayerData.metals[1]);
+            inventoryScript.RemoveItem("Bronze", PlayerData.metals[2]);
+            inventoryScript.RemoveItem("Iron", PlayerData.metals[3]);
+            inventoryScript.RemoveItem("Steel", PlayerData.metals[4]);
+            inventoryScript.RemoveItem("Lead", PlayerData.metals[5]);
+            inventoryScript.RemoveItem("White Metal", PlayerData.metals[6]);
+            inventoryScript.RemoveItem("Black Metal", PlayerData.metals[7]);
+            inventoryScript.RemoveItem("Mithril", PlayerData.metals[8]);
+            inventoryScript.RemoveItem("Adamantine", PlayerData.metals[9]);
+            inventoryScript.RemoveItem("Quicksilver", PlayerData.metals[10]);
+            inventoryScript.RemoveItem("Meteorite", PlayerData.metals[11]);
+            inventoryScript.RemoveItem("Mystical Metal", PlayerData.metals[12]);
+        }
+    }
 }

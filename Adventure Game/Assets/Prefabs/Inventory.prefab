@@ -1688,6 +1688,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 611d7e025c69bf5448edb01cb9fedbb8, type: 2}
   - {fileID: 11400000, guid: 027cc7d0144445d418cc8eca1ac6609e, type: 2}
   - {fileID: 11400000, guid: a672aa46356880441b401a0997eae54b, type: 2}
+  - {fileID: 11400000, guid: 02b2dad04bd5f5f48ac1637dd381bcb6, type: 2}
   ores:
   - {fileID: 11400000, guid: 24c8904efba74ef42b781dc26569126c, type: 2}
   - {fileID: 11400000, guid: 15113f2c0ec29064c94f7547a9a2b9be, type: 2}

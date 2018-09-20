@@ -11,3 +11,4 @@
 10 Quicksilver
 11 Meteorite
 12 Mystical Metal
+13 Infinitium Metal

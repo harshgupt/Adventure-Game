@@ -13,7 +13,7 @@ public class DataManager : MonoBehaviour {
 
     public const int numArmour = 9;
     public const int numOres = 9;
-    public const int numMetals = 13;
+    public const int numMetals = 14;
 
     private void Start()
     {
@@ -68,6 +68,7 @@ public class DataManager : MonoBehaviour {
             PlayerData.metals[10] = loadedData.Quicksilver;
             PlayerData.metals[11] = loadedData.Meteorite;
             PlayerData.metals[12] = loadedData.MysticalMetal;
+            PlayerData.metals[13] = loadedData.InfinitiumMetal;
             PlayerData.armourTier[0] = loadedData.HelmTier;
             PlayerData.armourTier[1] = loadedData.ChestplateTier;
             PlayerData.armourTier[2] = loadedData.GauntletsTier;
@@ -108,6 +109,7 @@ public class DataManager : MonoBehaviour {
             Quicksilver = PlayerData.metals[10],
             Meteorite = PlayerData.metals[11],
             MysticalMetal = PlayerData.metals[12],
+            InfinitiumMetal = PlayerData.metals[13],
             HelmTier = PlayerData.armourTier[0],
             ChestplateTier = PlayerData.armourTier[1],
             GauntletsTier = PlayerData.armourTier[2],
@@ -163,6 +165,7 @@ public class DataManager : MonoBehaviour {
             Quicksilver = 0,
             Meteorite = 0,
             MysticalMetal = 0,
+            InfinitiumMetal = 0,
             HelmTier = 0,
             ChestplateTier = 0,
             GauntletsTier = 0,

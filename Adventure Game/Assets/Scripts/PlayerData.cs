@@ -14,6 +14,7 @@ public class PlayerData : MonoBehaviour {
     public static int gauntletsTier;
     public static int leggingsTier;
     public static int bootsTier;
+    public static int shieldTier;
     public static int weaponTier;
     public static int pickaxeTier;
     public static int woodaxeTier;*/
@@ -44,5 +45,6 @@ public class PlayerData : MonoBehaviour {
     public static int adamantine;
     public static int quicksilver;
     public static int meteorite;
-    public static int mysticalMetal;*/
+    public static int mysticalMetal;
+    public static int infinitiumMetal*/
 }

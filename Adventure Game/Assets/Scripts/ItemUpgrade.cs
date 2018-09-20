@@ -170,6 +170,18 @@ public class ItemUpgrade : MonoBehaviour {
                     inventoryScript.RemoveItem("Mystical Metal", PlayerData.metals[12]);
                 }
                 break;
+            case 12:
+                if (PlayerData.metals[13] == 0)
+                {
+                    return;
+                }
+                else
+                {
+                    PlayerData.armourTier[item]++;
+                    PlayerData.metals[13]--;
+                    inventoryScript.RemoveItem("Infinitium Metal", PlayerData.metals[13]);
+                }
+                break;
             default:
                 return;
         }

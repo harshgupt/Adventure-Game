@@ -933,7 +933,7 @@ GameObject:
   - component: {fileID: 1009545045}
   - component: {fileID: 1009545044}
   m_Layer: 5
-  m_Name: CoinMine
+  m_Name: GemMine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -998,7 +998,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 668190242}
-        m_MethodName: GoToCoinMine
+        m_MethodName: GoToGemMine
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

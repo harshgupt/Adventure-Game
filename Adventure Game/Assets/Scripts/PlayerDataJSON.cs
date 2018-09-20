@@ -37,4 +37,5 @@
     public int Quicksilver;
     public int Meteorite;
     public int MysticalMetal;
+    public int InfinitiumMetal;
 }

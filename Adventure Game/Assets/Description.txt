@@ -19,7 +19,9 @@ Better tools means lesser clicks/more damage to resource
 Tools like Pickaxe, Axe, Shovel
 Weapons like dagger, sword, battleaxe, warhammer
 Potions like attack, defense
+Potions = Food + Monster parts
 Magic items like lightning, fire, earth, wind, water
+Magic = Twigs/Branches/Logs/Wood + Monster parts
 Familiar to support in battles (do damage, increase drops, etc)
 Food grown on plots, seeds bought using gold
 Clicking grows the plant, can increase yield

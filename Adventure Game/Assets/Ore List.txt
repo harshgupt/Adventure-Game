@@ -39,6 +39,7 @@ Metals:
 10 Quicksilver
 11 Meteorite
 12 Mystical Metal
+13 Infinitium Metal
 
 Alloys:
 Bronze = Copper + Tin
@@ -46,3 +47,4 @@ Steel = Iron + Coal
 White = Lead + Tin
 Black = Lead + Copper
 Mystical = Mithril + Adamantine + Quicksilver + Meteorite
+Infinitium = Everything
