@@ -1,4 +1,3 @@
-Increase Inventory space
 Shop to sell items
 Damage to player when enemy reaches end
 Create inventory for Fight scene (max 5-10 items)

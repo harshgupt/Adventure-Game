@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class InventoryScript : MonoBehaviour{
 
-    public const int numInventorySlots = 30;
+    public const int numInventorySlots = 60;
 
     public Image[] itemImages = new Image[numInventorySlots];
     public Text[] itemAmounts = new Text[numInventorySlots];
