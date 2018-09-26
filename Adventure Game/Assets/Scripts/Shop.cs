@@ -1,11 +1,58 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Shop : MonoBehaviour {
 
+    public const int numShopItems = 10;
+
     public InventoryScript inventoryScript;
-    
+
+    public GameObject buyMenu;
+    public GameObject sellMenu;
+
+    public Item[] shopItems = new Item[numShopItems];
+
+    public Button[] shopButtons = new Button[40];
+
+    public void BuyItem(int itemNo)
+    {
+        int value;
+        string itemName = shopItems[itemNo].name;
+        switch (itemName)
+        {
+            case "Infinitium Metal":
+                value = 2;
+                if(PlayerData.coins >= value)
+                {
+                    PlayerData.metals[13]++;
+                    inventoryScript.AddItem(itemName, shopItems[itemNo].sprite, PlayerData.metals[13]);
+                    PlayerData.coins -= value;
+                }
+                else
+                {
+                    break;
+                }
+                break;
+            case "Mystical Metal":
+                value = 1;
+                if (PlayerData.coins >= value)
+                {
+                    PlayerData.metals[12]++;
+                    inventoryScript.AddItem(itemName, shopItems[itemNo].sprite, PlayerData.metals[12]);
+                    PlayerData.coins -= value;
+                }
+                else
+                {
+                    break;
+                }
+                break;
+            default:
+                break;
+        }
+    }
+
     public void SellItem(int index)
     {
         switch (inventoryScript.itemName[index])
@@ -147,7 +194,32 @@ public class Shop : MonoBehaviour {
                 PlayerData.metals[13]--;
                 inventoryScript.RemoveItem(inventoryScript.itemName[index], PlayerData.metals[13]);
                 break;
+
+            default:
+                break;
         }
     }
 
+    public void SwitchShop(string type)
+    {
+        if(type == "Buy")
+        {
+            buyMenu.SetActive(true);
+            sellMenu.SetActive(false);
+        }
+        else
+        {
+            sellMenu.SetActive(true);
+            buyMenu.SetActive(false);
+        }
+    }
+
+    private void Start()
+    {
+        for(int i = 0; i < numShopItems; i++)
+        {
+            shopButtons[i].interactable = true;
+            shopButtons[i].image.sprite = shopItems[i].sprite;
+        }
+    }
 }

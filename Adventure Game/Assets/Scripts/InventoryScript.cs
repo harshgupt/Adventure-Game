@@ -67,7 +67,7 @@ public class InventoryScript : MonoBehaviour{
         }
     }
 
-    void Start()
+    void Awake()
     {
         int inventoryNo = 0;
         if(GoToScene.sceneName == "Mine")
