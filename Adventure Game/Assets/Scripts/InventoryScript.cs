@@ -119,5 +119,28 @@ public class InventoryScript : MonoBehaviour{
                 }
             }
         }
+        else if(GoToScene.sceneName == "Shop")
+        {
+            for (int i = 0; i < DataManager.numMetals; i++)
+            {
+                if (PlayerData.metals[i] != 0)
+                {
+                    itemImages[inventoryNo].sprite = metals[i].sprite;
+                    itemAmounts[inventoryNo].text = PlayerData.metals[i].ToString();
+                    itemName[inventoryNo] = metals[i].name;
+                    inventoryNo++;
+                }
+            }
+            for (int i = 0; i < DataManager.numOres; i++)
+            {
+                if (PlayerData.ores[i] != 0)
+                {
+                    itemImages[inventoryNo].sprite = ores[i].sprite;
+                    itemAmounts[inventoryNo].text = PlayerData.ores[i].ToString();
+                    itemName[inventoryNo] = ores[i].name;
+                    inventoryNo++;
+                }
+            }
+        }
     }
 }

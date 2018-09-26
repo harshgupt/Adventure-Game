@@ -42,4 +42,10 @@ public class GoToScene : MonoBehaviour {
         sceneName = "Gem Mine";
         SceneManager.LoadScene("Gem Mine");
     }
+
+    public void GoToShop()
+    {
+        sceneName = "Shop";
+        SceneManager.LoadScene("Shop");
+    }
 }
