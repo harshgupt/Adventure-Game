@@ -180,4 +180,59 @@ public class DataManager : MonoBehaviour {
         File.WriteAllText(dataFilePath, dataJSON);
         //Debug.Log("Data Reset");
     }
+
+    public void OneOfEach()
+    {
+        PlayerData.coins = 1;
+        for (int i = 0; i < numOres; i++)
+        {
+            PlayerData.ores[i] = 1;
+        }
+        for (int i = 0; i < numMetals; i++)
+        {
+            PlayerData.metals[i] = 1;
+        }
+        for (int i = 0; i < numArmour; i++)
+        {
+            PlayerData.armourTier[i] = 1;
+        }
+        PlayerDataJSON playerDataJSON = new PlayerDataJSON()
+        {
+            Coins = 1,
+            CopperOre = 1,
+            TinOre = 1,
+            IronOre = 1,
+            CoalOre = 1,
+            LeadOre = 1,
+            MithrilOre = 1,
+            AdamantineOre = 1,
+            QuicksilverOre = 1,
+            MeteoriteOre = 1,
+            Copper = 1,
+            Tin = 1,
+            Bronze = 1,
+            Iron = 1,
+            Steel = 1,
+            Lead = 1,
+            WhiteMetal = 1,
+            BlackMetal = 1,
+            Mithril = 1,
+            Adamantine = 1,
+            Quicksilver = 1,
+            Meteorite = 1,
+            MysticalMetal = 1,
+            InfinitiumMetal = 1,
+            HelmTier = 1,
+            ChestplateTier = 1,
+            GauntletsTier = 1,
+            LeggingsTier = 1,
+            BootsTier = 1,
+            ShieldTier = 1,
+            WeaponTier = 1,
+            PickaxeTier = 1,
+            WoodaxeTier = 1
+        };
+        string dataJSON = JsonUtility.ToJson(playerDataJSON);
+        File.WriteAllText(dataFilePath, dataJSON);
+    }
 }
