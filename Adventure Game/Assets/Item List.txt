@@ -1,4 +1,5 @@
 Currency:
+
 Silver
 Gold
 Opal
@@ -42,9 +43,16 @@ Metals:
 13 Infinitium Metal
 
 Alloys:
+
 Bronze = Copper + Tin
 Steel = Iron + Coal
 White = Lead + Tin
 Black = Lead + Copper
 Mystical = Mithril + Adamantine + Quicksilver + Meteorite
 Infinitium = Everything
+
+Potions: (Tiers: Regular, Super, Hyper, Mega, Ultra, Ultimate)
+
+Healing Potion
+Attack Potion
+Defence Potion

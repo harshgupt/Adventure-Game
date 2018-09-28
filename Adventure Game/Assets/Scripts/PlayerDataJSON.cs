@@ -38,4 +38,24 @@
     public int Meteorite;
     public int MysticalMetal;
     public int InfinitiumMetal;
+
+    //Potions
+    public int HealthPotion1;
+    public int HealthPotion2;
+    public int HealthPotion3;
+    public int HealthPotion4;
+    public int HealthPotion5;
+    public int HealthPotion6;
+    public int AttackPotion1;
+    public int AttackPotion2;
+    public int AttackPotion3;
+    public int AttackPotion4;
+    public int AttackPotion5;
+    public int AttackPotion6;
+    public int DefencePotion1;
+    public int DefencePotion2;
+    public int DefencePotion3;
+    public int DefencePotion4;
+    public int DefencePotion5;
+    public int DefencePotion6;
 }

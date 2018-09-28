@@ -9,7 +9,6 @@ Once boss is defeated, specific level can be replayed to get resources
 Monsters like Zombies, Skeletons, Werevolves, Vampires
 Monsters drop resources and gold
 
-Gold mined by clicking, level up gold collection
 Resources in separate scenes
 Resources unlocked the further you reach/more bosses you defeat
 Items like armor, weapons, magic items, potions, tools (pickaxe, etc)
@@ -18,9 +17,31 @@ Battle inventory amount can be upgraded
 Better tools means lesser clicks/more damage to resource
 Tools like Pickaxe, Axe, Shovel
 Weapons like dagger, sword, battleaxe, warhammer
-Potions like attack, defense
-Potions = Food + Monster parts
-Magic items like lightning, fire, earth, wind, water
+Potions: Health, Attack, Defence (Tiers: Regular, Super, Hyper, Mega, Ultra, Ultimate)
+Health Potion: Food + Monster Parts
+Regular: Heal 1 HP
+Super: Heal 2 HP, regen 1 HP each for 2s
+Hyper: Heal 5 HP, regen 1 HP for 5s
+Mega: Heal 10 HP, regen 1 HP for 10s
+Ultra: Heal 20 HP, regen 1 HP for 20s
+Ultimate: Complete heal, regen 1 HP for 30s
+Regeneration amount and duration can be extended
+Attack Potion: Monster Parts + Metal (lasts for 10s, can be extended)
+Regular: Inc damage by 1
+Super: Inc damage by 2, bleed effect for 2s
+Hyper: Inc damage by 3, bleed effect for 3s
+Mega: Inc damage by 4, bleed effect for 4s
+Ultra: Inc damage by 5, bleed effect for 5s
+Ultimate: Inc damage by 6, kill mobs (Not bosses) with single swipe, bleed for 6s
+Damage amount, effect time and bleed time can be extended
+Defence Potion: Metal + Food (lasts for 10s, can be extended)
+Regular: Reduce dmg taken by 1
+Super: Reduce dmg taken by 2, immunity for 2s
+Hyper: Reduce dmg taken by 3, immunity for 3s
+Mega: Reduce dmg taken by 4, immunity for 4s
+Ultra: Reduce dmg taken by 5, immunity for 5s
+Ultimate: Reduce dmg taken by 6, no damage from mobs (not bosses), immunity for 6s
+Magic items like lightning, fire, earth, wind, water, ice
 Magic = Twigs/Branches/Logs/Wood + Monster parts
 Familiar to support in battles (do damage, increase drops, etc)
 Food grown on plots, seeds bought using gold

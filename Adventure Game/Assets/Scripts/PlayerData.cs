@@ -19,8 +19,6 @@ public class PlayerData : MonoBehaviour {
     public static int pickaxeTier;
     public static int woodaxeTier;*/
 
-    //Tools
-
     //Metals and Alloys
     public static int[] ores = new int[DataManager.numOres];
     public static int[] metals = new int[DataManager.numMetals];
@@ -47,4 +45,25 @@ public class PlayerData : MonoBehaviour {
     public static int meteorite;
     public static int mysticalMetal;
     public static int infinitiumMetal*/
+
+    //Potions
+    public static int[] potions = new int[DataManager.numPotions];
+    /*public static int HealthPotion1;
+    public static int HealthPotion2;
+    public static int HealthPotion3;
+    public static int HealthPotion4;
+    public static int HealthPotion5;
+    public static int HealthPotion6;
+    public static int AttackPotion1;
+    public static int AttackPotion2;
+    public static int AttackPotion3;
+    public static int AttackPotion4;
+    public static int AttackPotion5;
+    public static int AttackPotion6;
+    public static int DefencePotion1;
+    public static int DefencePotion2;
+    public static int DefencePotion3;
+    public static int DefencePotion4;
+    public static int DefencePotion5;
+    public static int DefencePotion6;*/
 }

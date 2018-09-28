@@ -13,6 +13,7 @@ public class InventoryScript : MonoBehaviour{
     public string[] itemName = new string[numInventorySlots];
     public Item[] metals = new Item[DataManager.numMetals];
     public Item[] ores = new Item[DataManager.numOres];
+    public Item[] potions = new Item[DataManager.numPotions];
 
     public void AddItem(string name, Sprite sprite, int amount)
     {
@@ -138,6 +139,16 @@ public class InventoryScript : MonoBehaviour{
                     itemImages[inventoryNo].sprite = ores[i].sprite;
                     itemAmounts[inventoryNo].text = PlayerData.ores[i].ToString();
                     itemName[inventoryNo] = ores[i].name;
+                    inventoryNo++;
+                }
+            }
+            for (int i = 0; i < DataManager.numPotions; i++)
+            {
+                if (PlayerData.potions[i] != 0)
+                {
+                    itemImages[inventoryNo].sprite = potions[i].sprite;
+                    itemAmounts[inventoryNo].text = PlayerData.potions[i].ToString();
+                    itemName[inventoryNo] = potions[i].name;
                     inventoryNo++;
                 }
             }

@@ -14,6 +14,7 @@ public class DataManager : MonoBehaviour {
     public const int numArmour = 9;
     public const int numOres = 9;
     public const int numMetals = 14;
+    public const int numPotions = 18;
 
     private void Start()
     {
@@ -78,6 +79,24 @@ public class DataManager : MonoBehaviour {
             PlayerData.armourTier[6] = loadedData.WeaponTier;
             PlayerData.armourTier[7] = loadedData.PickaxeTier;
             PlayerData.armourTier[8] = loadedData.WoodaxeTier;
+            PlayerData.potions[0] = loadedData.HealthPotion1;
+            PlayerData.potions[1] = loadedData.HealthPotion2;
+            PlayerData.potions[2] = loadedData.HealthPotion3;
+            PlayerData.potions[3] = loadedData.HealthPotion4;
+            PlayerData.potions[4] = loadedData.HealthPotion5;
+            PlayerData.potions[5] = loadedData.HealthPotion6;
+            PlayerData.potions[6] = loadedData.AttackPotion1;
+            PlayerData.potions[7] = loadedData.AttackPotion2;
+            PlayerData.potions[8] = loadedData.AttackPotion3;
+            PlayerData.potions[9] = loadedData.AttackPotion4;
+            PlayerData.potions[10] = loadedData.AttackPotion5;
+            PlayerData.potions[11] = loadedData.AttackPotion6;
+            PlayerData.potions[12] = loadedData.DefencePotion1;
+            PlayerData.potions[13] = loadedData.DefencePotion2;
+            PlayerData.potions[14] = loadedData.DefencePotion3;
+            PlayerData.potions[15] = loadedData.DefencePotion4;
+            PlayerData.potions[16] = loadedData.DefencePotion5;
+            PlayerData.potions[17] = loadedData.DefencePotion6;
         }
         //Debug.Log("Data Loaded");
     }
@@ -118,7 +137,25 @@ public class DataManager : MonoBehaviour {
             ShieldTier = PlayerData.armourTier[5],
             WeaponTier = PlayerData.armourTier[6],
             PickaxeTier = PlayerData.armourTier[7],
-            WoodaxeTier = PlayerData.armourTier[8]
+            WoodaxeTier = PlayerData.armourTier[8],
+            HealthPotion1 = PlayerData.potions[0],
+            HealthPotion2 = PlayerData.potions[1],
+            HealthPotion3 = PlayerData.potions[2],
+            HealthPotion4 = PlayerData.potions[3],
+            HealthPotion5 = PlayerData.potions[4],
+            HealthPotion6 = PlayerData.potions[5],
+            AttackPotion1 = PlayerData.potions[6],
+            AttackPotion2 = PlayerData.potions[7],
+            AttackPotion3 = PlayerData.potions[8],
+            AttackPotion4 = PlayerData.potions[9],
+            AttackPotion5 = PlayerData.potions[10],
+            AttackPotion6 = PlayerData.potions[11],
+            DefencePotion1 = PlayerData.potions[12],
+            DefencePotion2 = PlayerData.potions[13],
+            DefencePotion3 = PlayerData.potions[14],
+            DefencePotion4 = PlayerData.potions[15],
+            DefencePotion5 = PlayerData.potions[16],
+            DefencePotion6 = PlayerData.potions[17]
         };
         string dataJSON = JsonUtility.ToJson(playerDataJSON);
         File.WriteAllText(dataFilePath, dataJSON);
@@ -128,7 +165,11 @@ public class DataManager : MonoBehaviour {
     public void ResetData()
     {
         PlayerData.coins = 0;
-        for(int i = 0; i < numOres; i++)
+        for (int i = 0; i < numArmour; i++)
+        {
+            PlayerData.armourTier[i] = 0;
+        }
+        for (int i = 0; i < numOres; i++)
         {
             PlayerData.ores[i] = 0;
         }
@@ -136,9 +177,9 @@ public class DataManager : MonoBehaviour {
         {
             PlayerData.metals[i] = 0;
         }
-        for (int i = 0; i < numArmour; i++)
+        for (int i = 0; i < numPotions; i++)
         {
-            PlayerData.armourTier[i] = 0;
+            PlayerData.potions[i] = 0;
         }
         PlayerDataJSON playerDataJSON = new PlayerDataJSON()
         {
@@ -174,7 +215,25 @@ public class DataManager : MonoBehaviour {
             ShieldTier = 0,
             WeaponTier = 0,
             PickaxeTier = 0,
-            WoodaxeTier = 0
+            WoodaxeTier = 0,
+            HealthPotion1 = 0,
+            HealthPotion2 = 0,
+            HealthPotion3 = 0,
+            HealthPotion4 = 0,
+            HealthPotion5 = 0,
+            HealthPotion6 = 0,
+            AttackPotion1 = 0,
+            AttackPotion2 = 0,
+            AttackPotion3 = 0,
+            AttackPotion4 = 0,
+            AttackPotion5 = 0,
+            AttackPotion6 = 0,
+            DefencePotion1 = 0,
+            DefencePotion2 = 0,
+            DefencePotion3 = 0,
+            DefencePotion4 = 0,
+            DefencePotion5 = 0,
+            DefencePotion6 = 0
         };
         string dataJSON = JsonUtility.ToJson(playerDataJSON);
         File.WriteAllText(dataFilePath, dataJSON);
@@ -195,6 +254,10 @@ public class DataManager : MonoBehaviour {
         for (int i = 0; i < numArmour; i++)
         {
             PlayerData.armourTier[i] = 1;
+        }
+        for (int i = 0; i < numPotions; i++)
+        {
+            PlayerData.potions[i] = 1;
         }
         PlayerDataJSON playerDataJSON = new PlayerDataJSON()
         {
@@ -230,7 +293,25 @@ public class DataManager : MonoBehaviour {
             ShieldTier = 1,
             WeaponTier = 1,
             PickaxeTier = 1,
-            WoodaxeTier = 1
+            WoodaxeTier = 1,
+            HealthPotion1 = 1,
+            HealthPotion2 = 1,
+            HealthPotion3 = 1,
+            HealthPotion4 = 1,
+            HealthPotion5 = 1,
+            HealthPotion6 = 1,
+            AttackPotion1 = 1,
+            AttackPotion2 = 1,
+            AttackPotion3 = 1,
+            AttackPotion4 = 1,
+            AttackPotion5 = 1,
+            AttackPotion6 = 1,
+            DefencePotion1 = 1,
+            DefencePotion2 = 1,
+            DefencePotion3 = 1,
+            DefencePotion4 = 1,
+            DefencePotion5 = 1,
+            DefencePotion6 = 1
         };
         string dataJSON = JsonUtility.ToJson(playerDataJSON);
         File.WriteAllText(dataFilePath, dataJSON);

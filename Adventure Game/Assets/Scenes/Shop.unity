@@ -2569,6 +2569,25 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 851bcf48394729c438a3775d1316f65e, type: 2}
   - {fileID: 11400000, guid: e23055f9fe1ed254f9f1516a901c38db, type: 2}
   - {fileID: 11400000, guid: 6b14b712c69c1f54fa51d38d993c145f, type: 2}
+  potions:
+  - {fileID: 11400000, guid: 8efd60cb32ab287469a16d5129ec0cf0, type: 2}
+  - {fileID: 11400000, guid: 0b5fab5752144214d9e3f366cfdf7e62, type: 2}
+  - {fileID: 11400000, guid: 2c2e3457dbaa0624f8981919f49ec80b, type: 2}
+  - {fileID: 11400000, guid: 3b2ab9e046484bc4a98880becd900922, type: 2}
+  - {fileID: 11400000, guid: 1d4d135b35ef5534c93aa627673d09b0, type: 2}
+  - {fileID: 11400000, guid: d71680fbef72d7149b2740e2882cc995, type: 2}
+  - {fileID: 11400000, guid: 0d3608397f56c5c429ec2732a8c4ed0b, type: 2}
+  - {fileID: 11400000, guid: 3a20d9b07a4f0a448ad2cf6eb040c32d, type: 2}
+  - {fileID: 11400000, guid: 6263c1f8417d571439bef7e5d7d07880, type: 2}
+  - {fileID: 11400000, guid: a1407085aefc23143989b86f724382b1, type: 2}
+  - {fileID: 11400000, guid: 985fb71b9e2900349a2272ff2e261c2a, type: 2}
+  - {fileID: 11400000, guid: 32b578522c361e54f8930bd9dea1aca8, type: 2}
+  - {fileID: 11400000, guid: cacfbc2efa7bfed43927c445558b0871, type: 2}
+  - {fileID: 11400000, guid: ed40f2bc4d3ba10419ddd8b6e8925c84, type: 2}
+  - {fileID: 11400000, guid: 2cbe4ba2fcc0ee345b18b6181adc39d2, type: 2}
+  - {fileID: 11400000, guid: 48692106f8b9836448dd1886233af19d, type: 2}
+  - {fileID: 11400000, guid: 9888d4fd2f31077488313e41cdfefd4c, type: 2}
+  - {fileID: 11400000, guid: 051681f026f5f604d8930e3b5eb4f26b, type: 2}
 --- !u!1 &303555954
 GameObject:
   m_ObjectHideFlags: 0
