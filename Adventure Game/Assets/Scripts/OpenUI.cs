@@ -12,6 +12,11 @@ public class OpenUI : MonoBehaviour {
     public GameObject settingsUI;
     public GameObject coinShopUI;
     public GameObject crystalShopUI;
+    public GameObject mineUI;
+    public GameObject forgeUI;
+    public GameObject gemstoneMineUI;
+    public GameObject potionsUI;
+    public GameObject spellsUI;
 
     public void OpenShop()
     {
@@ -117,6 +122,31 @@ public class OpenUI : MonoBehaviour {
         }
     }
 
+    public void OpenMine()
+    {
+        mineUI.SetActive(true);
+    }
+
+    public void OpenForge()
+    {
+        forgeUI.SetActive(true);
+    }
+
+    public void OpenGemstoneMine()
+    {
+        gemstoneMineUI.SetActive(true);
+    }
+
+    public void OpenPotions()
+    {
+        potionsUI.SetActive(true);
+    }
+
+    public void OpenSpells()
+    {
+        spellsUI.SetActive(true);
+    }
+
     public void CloseAll()
     {
         shopUI.SetActive(false);
@@ -127,5 +157,10 @@ public class OpenUI : MonoBehaviour {
         settingsUI.SetActive(false);
         coinShopUI.SetActive(false);
         crystalShopUI.SetActive(false);
+        mineUI.SetActive(false);
+        forgeUI.SetActive(false);
+        gemstoneMineUI.SetActive(false);
+        potionsUI.SetActive(false);
+        spellsUI.SetActive(false);
     }
 }
