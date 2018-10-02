@@ -7,11 +7,11 @@ public class MobSpawner : MonoBehaviour {
     public Transform mob;
     public Transform boss;
 
-    float yPos1 = 1.5f;
-    float yPos2 = -1.5f;
-    float yPos3 = 0f;
-    float yPos4 = 3f;
-    float yPos5 = -3f;
+    float yPos1 = 2f;
+    float yPos2 = -1f;
+    float yPos3 = 0.5f;
+    float yPos4 = 3.5f;
+    float yPos5 = -2.5f;
 
     public static int mobsKilled;
 

@@ -8,7 +8,7 @@ public class BossMovementScript : MonoBehaviour {
 
     private void Update()
     {
-        if (transform.position.x <= 1.5f)
+        if (transform.position.x <= 1f)
         {
             speed = 0;
         }

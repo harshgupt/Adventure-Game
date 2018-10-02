@@ -15,11 +15,11 @@ public class MobMovementScript : MonoBehaviour {
     private void Start()
     {
         yPos = transform.position.y;
-        if(yPos == 1.5f || yPos == -1.5f)
+        if(yPos == 2f || yPos == -1f)
         {
             xPos = 0;
         }
-        else if(yPos == 3f || yPos == 0 || yPos == -3f)
+        else if(yPos == 3.5f || yPos == 0.5 || yPos == -2.5f)
         {
             xPos = 2f;
         }

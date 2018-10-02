@@ -1,0 +1,131 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class OpenUI : MonoBehaviour {
+
+    public GameObject shopUI;
+    public GameObject resourcesUI;
+    public GameObject inventoryUI;
+    public GameObject witchcraftUI;
+    public GameObject rewardsUI;
+    public GameObject settingsUI;
+    public GameObject coinShopUI;
+    public GameObject crystalShopUI;
+
+    public void OpenShop()
+    {
+        if (shopUI.activeSelf)
+        {
+            CloseAll();
+        }
+        else
+        {
+            CloseAll();
+            shopUI.SetActive(true);
+        }
+    }
+
+    public void OpenResources()
+    {
+        if (resourcesUI.activeSelf)
+        {
+            CloseAll();
+        }
+        else
+        {
+            CloseAll();
+            resourcesUI.SetActive(true);
+        }
+    }
+
+    public void OpenInventory()
+    {
+        if (inventoryUI.activeSelf)
+        {
+            CloseAll();
+        }
+        else
+        {
+            CloseAll();
+            inventoryUI.SetActive(true);
+        }
+    }
+
+    public void OpenWitchcraft()
+    {
+        if (witchcraftUI.activeSelf)
+        {
+            CloseAll();
+        }
+        else
+        {
+            CloseAll();
+            witchcraftUI.SetActive(true);
+        }
+    }
+
+    public void OpenRewards()
+    {
+        if (rewardsUI.activeSelf)
+        {
+            CloseAll();
+        }
+        else
+        {
+            CloseAll();
+            rewardsUI.SetActive(true);
+        }
+    }
+
+    public void OpenSettings()
+    {
+        if (settingsUI.activeSelf)
+        {
+            CloseAll();
+        }
+        else
+        {
+            CloseAll();
+            settingsUI.SetActive(true);
+        }
+    }
+
+    public void OpenCoinShop()
+    {
+        if (coinShopUI.activeSelf)
+        {
+            CloseAll();
+        }
+        else
+        {
+            CloseAll();
+            coinShopUI.SetActive(true);
+        }
+    }
+
+    public void OpenCrystalShop()
+    {
+        if (crystalShopUI.activeSelf)
+        {
+            CloseAll();
+        }
+        else
+        {
+            CloseAll();
+            crystalShopUI.SetActive(true);
+        }
+    }
+
+    public void CloseAll()
+    {
+        shopUI.SetActive(false);
+        resourcesUI.SetActive(false);
+        inventoryUI.SetActive(false);
+        witchcraftUI.SetActive(false);
+        rewardsUI.SetActive(false);
+        settingsUI.SetActive(false);
+        coinShopUI.SetActive(false);
+        crystalShopUI.SetActive(false);
+    }
+}
