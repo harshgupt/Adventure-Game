@@ -1,3 +1,4 @@
+Add Food, Monster Parts
+Add Cauldron/Brewery/Witch's Hut
 Damage to player when enemy reaches end
 Create inventory for Fight scene (max 5-10 items)
-Add healing potion (null, super, hyper, mega, ultra)

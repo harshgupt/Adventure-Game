@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class MobScriptTemplate : MonoBehaviour {
 
-    float maxHealth = 10f;
+    float maxHealth = 1f;
     float health;
     public Image healthBar;
 
@@ -22,6 +22,7 @@ public class MobScriptTemplate : MonoBehaviour {
             healthBar.fillAmount = health / maxHealth;
             if(health <= 0)
             {
+                MobSpawner.mobsKilled++;
                 Destroy(gameObject);
             }
         }

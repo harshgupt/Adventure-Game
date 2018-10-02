@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class BossMovementScript : MonoBehaviour {
 
-    float speed = -0.02f;
+    float speed = -0.25f;
 
     private void Update()
     {
-        if (transform.position.x <= 6.5f)
+        if (transform.position.x <= 1.5f)
         {
             speed = 0;
         }

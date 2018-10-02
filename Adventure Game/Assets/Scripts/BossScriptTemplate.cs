@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class BossScriptTemplate : MonoBehaviour {
 
-    float maxHealth = 50f;
+    float maxHealth = 2f;
     float health;
     public Image healthBar;
 
@@ -22,6 +22,7 @@ public class BossScriptTemplate : MonoBehaviour {
             healthBar.fillAmount = health / maxHealth;
             if (health <= 0)
             {
+                MobSpawner.bossKilled = true;
                 Destroy(gameObject);
             }
         }
