@@ -1,3 +1,4 @@
+Shop UI to add Upgrades button
 Add Food, Monster Parts
 Add Cauldron/Brewery/Witch's Hut
 Damage to player when enemy reaches end

@@ -120,7 +120,7 @@ public class InventoryScript : MonoBehaviour{
                 }
             }
         }
-        else if(GoToScene.sceneName == "Shop")
+        else if(SceneManager.GetActiveScene().name == "Main")
         {
             for (int i = 0; i < DataManager.numMetals; i++)
             {

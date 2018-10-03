@@ -270,7 +270,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 510, y: -3030}
+  m_AnchoredPosition: {x: 490, y: -2870}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &16984805
@@ -312,7 +312,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -371,7 +371,7 @@ GameObject:
   - component: {fileID: 22327458}
   - component: {fileID: 22327457}
   m_Layer: 5
-  m_Name: Button (15)
+  m_Name: ShopSlot15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -434,7 +434,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: BuyItem
         m_Mode: 3
         m_Arguments:
@@ -766,7 +766,7 @@ GameObject:
   - component: {fileID: 67455006}
   - component: {fileID: 67455005}
   m_Layer: 5
-  m_Name: Button (33)
+  m_Name: ShopSlot33
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -829,7 +829,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: BuyItem
         m_Mode: 3
         m_Arguments:
@@ -910,7 +910,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 870, y: -1230}
+  m_AnchoredPosition: {x: 830, y: -1170}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &83322666
@@ -952,7 +952,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -1033,7 +1033,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 510, y: -870}
+  m_AnchoredPosition: {x: 490, y: -830}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &84418802
@@ -1075,7 +1075,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -1231,7 +1231,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 870, y: -4110}
+  m_AnchoredPosition: {x: 830, y: -3890}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &93182187
@@ -1273,7 +1273,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -1477,7 +1477,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 510, y: -5190}
+  m_AnchoredPosition: {x: 490, y: -4910}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &100160546
@@ -1519,7 +1519,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -1653,7 +1653,7 @@ GameObject:
   - component: {fileID: 113001724}
   - component: {fileID: 113001723}
   m_Layer: 5
-  m_Name: Button (23)
+  m_Name: ShopSlot23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1716,7 +1716,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: BuyItem
         m_Mode: 3
         m_Arguments:
@@ -1775,7 +1775,7 @@ GameObject:
   - component: {fileID: 114900889}
   - component: {fileID: 114900888}
   m_Layer: 5
-  m_Name: Button (8)
+  m_Name: ShopSlot8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1838,7 +1838,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: BuyItem
         m_Mode: 3
         m_Arguments:
@@ -1972,7 +1972,7 @@ GameObject:
   - component: {fileID: 122178709}
   - component: {fileID: 122178708}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: ShopSlot1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2035,7 +2035,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: BuyItem
         m_Mode: 3
         m_Arguments:
@@ -2067,7 +2067,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: b2571a2587c1e6d4ba55e4ec8c58eb99, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2116,7 +2116,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1230, y: -1590}
+  m_AnchoredPosition: {x: 1170, y: -1510}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &127747234
@@ -2158,7 +2158,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -2389,7 +2389,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 510, y: -3390}
+  m_AnchoredPosition: {x: 490, y: -3210}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &152333595
@@ -2431,7 +2431,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -2785,7 +2785,7 @@ GameObject:
   - component: {fileID: 214583612}
   - component: {fileID: 214583611}
   m_Layer: 5
-  m_Name: Button (27)
+  m_Name: ShopSlot27
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2848,7 +2848,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: BuyItem
         m_Mode: 3
         m_Arguments:
@@ -2907,7 +2907,7 @@ GameObject:
   - component: {fileID: 214770662}
   - component: {fileID: 214770661}
   m_Layer: 5
-  m_Name: Button (21)
+  m_Name: ShopSlot21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2970,7 +2970,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: BuyItem
         m_Mode: 3
         m_Arguments:
@@ -3117,7 +3117,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 870, y: -5190}
+  m_AnchoredPosition: {x: 830, y: -4910}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &228397001
@@ -3159,7 +3159,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -3240,7 +3240,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 870, y: -3390}
+  m_AnchoredPosition: {x: 830, y: -3210}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &228400704
@@ -3282,7 +3282,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -3416,7 +3416,7 @@ GameObject:
   - component: {fileID: 245743035}
   - component: {fileID: 245743034}
   m_Layer: 5
-  m_Name: Button (31)
+  m_Name: ShopSlot31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3479,7 +3479,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: BuyItem
         m_Mode: 3
         m_Arguments:
@@ -3635,7 +3635,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1230, y: -3750}
+  m_AnchoredPosition: {x: 1170, y: -3550}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &282024029
@@ -3677,7 +3677,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -3833,7 +3833,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1230, y: -5190}
+  m_AnchoredPosition: {x: 1170, y: -4910}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &294941611
@@ -3875,7 +3875,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -4303,7 +4303,7 @@ GameObject:
   - component: {fileID: 330234523}
   - component: {fileID: 330234522}
   m_Layer: 5
-  m_Name: Button (4)
+  m_Name: ShopSlot4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4366,7 +4366,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: BuyItem
         m_Mode: 3
         m_Arguments:
@@ -4447,7 +4447,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -4470}
+  m_AnchoredPosition: {x: 150, y: -4230}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &346658989
@@ -4489,7 +4489,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -4548,7 +4548,7 @@ GameObject:
   - component: {fileID: 350930128}
   - component: {fileID: 350930127}
   m_Layer: 5
-  m_Name: Button (22)
+  m_Name: ShopSlot22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4611,7 +4611,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: BuyItem
         m_Mode: 3
         m_Arguments:
@@ -4692,7 +4692,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 870, y: -870}
+  m_AnchoredPosition: {x: 830, y: -830}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &356593264
@@ -4734,7 +4734,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -4815,7 +4815,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 510, y: -150}
+  m_AnchoredPosition: {x: 490, y: -150}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &380820104
@@ -4857,7 +4857,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -5013,7 +5013,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1230, y: -3390}
+  m_AnchoredPosition: {x: 1170, y: -3210}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &384603669
@@ -5055,7 +5055,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -5559,7 +5559,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -1230}
+  m_AnchoredPosition: {x: 150, y: -1170}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &446292490
@@ -5601,7 +5601,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -5682,7 +5682,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 510, y: -4110}
+  m_AnchoredPosition: {x: 490, y: -3890}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &446632318
@@ -5724,7 +5724,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -5805,7 +5805,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 870, y: -2310}
+  m_AnchoredPosition: {x: 830, y: -2190}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &449577654
@@ -5847,7 +5847,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -6139,7 +6139,7 @@ GameObject:
   - component: {fileID: 489312684}
   - component: {fileID: 489312683}
   m_Layer: 5
-  m_Name: Button (39)
+  m_Name: ShopSlot39
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6202,7 +6202,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: BuyItem
         m_Mode: 3
         m_Arguments:
@@ -6261,7 +6261,7 @@ GameObject:
   - component: {fileID: 491917648}
   - component: {fileID: 491917647}
   m_Layer: 5
-  m_Name: Button (17)
+  m_Name: ShopSlot17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6324,7 +6324,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: BuyItem
         m_Mode: 3
         m_Arguments:
@@ -6405,7 +6405,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 870, y: -3030}
+  m_AnchoredPosition: {x: 830, y: -2870}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &496645465
@@ -6447,7 +6447,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -6506,7 +6506,7 @@ GameObject:
   - component: {fileID: 497151162}
   - component: {fileID: 497151161}
   m_Layer: 5
-  m_Name: Button (26)
+  m_Name: ShopSlot26
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6569,7 +6569,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: BuyItem
         m_Mode: 3
         m_Arguments:
@@ -6650,7 +6650,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1230, y: -2670}
+  m_AnchoredPosition: {x: 1170, y: -2530}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &499199551
@@ -6692,7 +6692,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -6923,7 +6923,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -1590}
+  m_AnchoredPosition: {x: 150, y: -1510}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &513806532
@@ -6965,7 +6965,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -7244,7 +7244,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 510, y: -3750}
+  m_AnchoredPosition: {x: 490, y: -3550}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &539587048
@@ -7286,7 +7286,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -8321,7 +8321,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -8552,7 +8552,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1230, y: -870}
+  m_AnchoredPosition: {x: 1170, y: -830}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &636339089
@@ -8594,7 +8594,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -8983,7 +8983,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 510, y: -1950}
+  m_AnchoredPosition: {x: 490, y: -1850}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &667526390
@@ -9025,7 +9025,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -9258,7 +9258,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1230, y: -510}
+  m_AnchoredPosition: {x: 1170, y: -490}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &675410488
@@ -9300,7 +9300,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -10005,7 +10005,7 @@ GameObject:
   - component: {fileID: 790718747}
   - component: {fileID: 790718746}
   m_Layer: 5
-  m_Name: Button (28)
+  m_Name: ShopSlot28
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10068,7 +10068,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: BuyItem
         m_Mode: 3
         m_Arguments:
@@ -10224,7 +10224,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1230, y: -4830}
+  m_AnchoredPosition: {x: 1170, y: -4570}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &825403570
@@ -10266,7 +10266,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -10347,7 +10347,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -2310}
+  m_AnchoredPosition: {x: 150, y: -2190}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &828390249
@@ -10389,7 +10389,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -10470,7 +10470,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -870}
+  m_AnchoredPosition: {x: 150, y: -830}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &830283691
@@ -10512,7 +10512,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -10874,7 +10874,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 870, y: -4470}
+  m_AnchoredPosition: {x: 830, y: -4230}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &864400033
@@ -10916,7 +10916,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -10997,7 +10997,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -3390}
+  m_AnchoredPosition: {x: 150, y: -3210}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &876086686
@@ -11039,7 +11039,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -11243,7 +11243,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1230, y: -3030}
+  m_AnchoredPosition: {x: 1170, y: -2870}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &880662587
@@ -11285,7 +11285,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -11366,7 +11366,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 870, y: -2670}
+  m_AnchoredPosition: {x: 830, y: -2530}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &885320135
@@ -11408,7 +11408,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -11789,7 +11789,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 510, y: -1590}
+  m_AnchoredPosition: {x: 490, y: -1510}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &933733516
@@ -11831,7 +11831,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -11965,7 +11965,7 @@ GameObject:
   - component: {fileID: 937544728}
   - component: {fileID: 937544727}
   m_Layer: 5
-  m_Name: Button (36)
+  m_Name: ShopSlot36
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12028,7 +12028,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: BuyItem
         m_Mode: 3
         m_Arguments:
@@ -12184,7 +12184,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1230, y: -1950}
+  m_AnchoredPosition: {x: 1170, y: -1850}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &969557679
@@ -12226,7 +12226,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -12285,7 +12285,7 @@ GameObject:
   - component: {fileID: 980127912}
   - component: {fileID: 980127911}
   m_Layer: 5
-  m_Name: Button (19)
+  m_Name: ShopSlot19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12348,7 +12348,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: BuyItem
         m_Mode: 3
         m_Arguments:
@@ -12674,7 +12674,7 @@ GameObject:
   - component: {fileID: 1027452397}
   - component: {fileID: 1027452396}
   m_Layer: 5
-  m_Name: Button (32)
+  m_Name: ShopSlot32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12737,7 +12737,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: BuyItem
         m_Mode: 3
         m_Arguments:
@@ -13166,7 +13166,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -3750}
+  m_AnchoredPosition: {x: 150, y: -3550}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1081689792
@@ -13208,7 +13208,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -13364,7 +13364,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -4830}
+  m_AnchoredPosition: {x: 150, y: -4570}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1105108219
@@ -13406,7 +13406,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -13487,7 +13487,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 510, y: -4470}
+  m_AnchoredPosition: {x: 490, y: -4230}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1108933583
@@ -13529,7 +13529,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -13733,7 +13733,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1230, y: -2310}
+  m_AnchoredPosition: {x: 1170, y: -2190}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1127418435
@@ -13775,7 +13775,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -13992,7 +13992,7 @@ GameObject:
   - component: {fileID: 1152606256}
   - component: {fileID: 1152606255}
   m_Layer: 5
-  m_Name: Button (34)
+  m_Name: ShopSlot34
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14055,7 +14055,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: BuyItem
         m_Mode: 3
         m_Arguments:
@@ -14211,7 +14211,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 510, y: -1230}
+  m_AnchoredPosition: {x: 490, y: -1170}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1163003899
@@ -14253,7 +14253,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -14716,7 +14716,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 870, y: -510}
+  m_AnchoredPosition: {x: 830, y: -490}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1196179425
@@ -14758,7 +14758,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -15122,7 +15122,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -510}
+  m_AnchoredPosition: {x: 150, y: -490}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1239913799
@@ -15164,7 +15164,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -15245,7 +15245,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -1950}
+  m_AnchoredPosition: {x: 150, y: -1850}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1250172101
@@ -15287,7 +15287,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -15997,6 +15997,7 @@ GameObject:
   - component: {fileID: 1270206332}
   - component: {fileID: 1270206331}
   - component: {fileID: 1270206330}
+  - component: {fileID: 1270206333}
   m_Layer: 5
   m_Name: CoinShop
   m_TagString: Untagged
@@ -16109,6 +16110,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1270206328}
   m_CullTransparentMesh: 0
+--- !u!114 &1270206333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1270206328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e613be29a865f774a961d155207357ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinText: {fileID: 690731742}
 --- !u!1 &1270970086
 GameObject:
   m_ObjectHideFlags: 0
@@ -16121,7 +16134,7 @@ GameObject:
   - component: {fileID: 1270970089}
   - component: {fileID: 1270970088}
   m_Layer: 5
-  m_Name: Button (37)
+  m_Name: ShopSlot37
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16184,7 +16197,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: BuyItem
         m_Mode: 3
         m_Arguments:
@@ -16790,7 +16803,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 510, y: -2670}
+  m_AnchoredPosition: {x: 490, y: -2530}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1338047801
@@ -16832,7 +16845,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -17228,7 +17241,7 @@ GameObject:
   - component: {fileID: 1363678796}
   - component: {fileID: 1363678795}
   m_Layer: 5
-  m_Name: Button (30)
+  m_Name: ShopSlot30
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17291,7 +17304,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: BuyItem
         m_Mode: 3
         m_Arguments:
@@ -17645,7 +17658,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1230, y: -150}
+  m_AnchoredPosition: {x: 1170, y: -150}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1390501160
@@ -17687,7 +17700,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -17966,7 +17979,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 510, y: -4830}
+  m_AnchoredPosition: {x: 490, y: -4570}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1439379209
@@ -18008,7 +18021,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -18142,7 +18155,7 @@ GameObject:
   - component: {fileID: 1448789654}
   - component: {fileID: 1448789653}
   m_Layer: 5
-  m_Name: Button (14)
+  m_Name: ShopSlot14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18205,7 +18218,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: BuyItem
         m_Mode: 3
         m_Arguments:
@@ -18361,7 +18374,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 870, y: -150}
+  m_AnchoredPosition: {x: 830, y: -150}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1471633431
@@ -18403,7 +18416,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -18606,7 +18619,7 @@ GameObject:
   - component: {fileID: 1482775888}
   - component: {fileID: 1482775887}
   m_Layer: 5
-  m_Name: Button (24)
+  m_Name: ShopSlot24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18669,7 +18682,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: BuyItem
         m_Mode: 3
         m_Arguments:
@@ -18750,7 +18763,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 870, y: -1950}
+  m_AnchoredPosition: {x: 830, y: -1850}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1486585596
@@ -18792,7 +18805,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -18996,7 +19009,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 510, y: -2310}
+  m_AnchoredPosition: {x: 490, y: -2190}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1493579153
@@ -19038,7 +19051,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -19440,7 +19453,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -5190}
+  m_AnchoredPosition: {x: 150, y: -4910}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1522651573
@@ -19482,7 +19495,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -19616,7 +19629,7 @@ GameObject:
   - component: {fileID: 1526750153}
   - component: {fileID: 1526750152}
   m_Layer: 5
-  m_Name: Button (12)
+  m_Name: ShopSlot12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19679,7 +19692,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: BuyItem
         m_Mode: 3
         m_Arguments:
@@ -19886,7 +19899,7 @@ GameObject:
   - component: {fileID: 1536130415}
   - component: {fileID: 1536130414}
   m_Layer: 5
-  m_Name: Button (13)
+  m_Name: ShopSlot13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19949,7 +19962,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: BuyItem
         m_Mode: 3
         m_Arguments:
@@ -20155,7 +20168,7 @@ GameObject:
   - component: {fileID: 1547983628}
   - component: {fileID: 1547983627}
   m_Layer: 5
-  m_Name: Button (5)
+  m_Name: ShopSlot5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20218,7 +20231,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: BuyItem
         m_Mode: 3
         m_Arguments:
@@ -20299,7 +20312,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1230, y: -1230}
+  m_AnchoredPosition: {x: 1170, y: -1170}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1552565853
@@ -20341,7 +20354,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -20803,7 +20816,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 510, y: -510}
+  m_AnchoredPosition: {x: 490, y: -490}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1586024292
@@ -20845,7 +20858,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -20904,7 +20917,7 @@ GameObject:
   - component: {fileID: 1586797573}
   - component: {fileID: 1586797572}
   m_Layer: 5
-  m_Name: Button (20)
+  m_Name: ShopSlot20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20967,7 +20980,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: BuyItem
         m_Mode: 3
         m_Arguments:
@@ -21026,7 +21039,7 @@ GameObject:
   - component: {fileID: 1605884015}
   - component: {fileID: 1605884014}
   m_Layer: 5
-  m_Name: Button (7)
+  m_Name: ShopSlot7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21089,7 +21102,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: BuyItem
         m_Mode: 3
         m_Arguments:
@@ -21148,7 +21161,7 @@ GameObject:
   - component: {fileID: 1608421827}
   - component: {fileID: 1608421826}
   m_Layer: 5
-  m_Name: Button (9)
+  m_Name: ShopSlot9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21211,7 +21224,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: BuyItem
         m_Mode: 3
         m_Arguments:
@@ -21367,7 +21380,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1230, y: -4110}
+  m_AnchoredPosition: {x: 1170, y: -3890}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1639110333
@@ -21409,7 +21422,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -21490,7 +21503,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 870, y: -4830}
+  m_AnchoredPosition: {x: 830, y: -4570}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1660888515
@@ -21532,7 +21545,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -21591,7 +21604,7 @@ GameObject:
   - component: {fileID: 1674972380}
   - component: {fileID: 1674972379}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ShopSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21654,7 +21667,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: BuyItem
         m_Mode: 3
         m_Arguments:
@@ -21686,7 +21699,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 3c9a60970501aa14eaa3413fec0e736b, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -21863,7 +21876,7 @@ GameObject:
   - component: {fileID: 1734146668}
   - component: {fileID: 1734146667}
   m_Layer: 5
-  m_Name: Button (16)
+  m_Name: ShopSlot16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21926,7 +21939,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: BuyItem
         m_Mode: 3
         m_Arguments:
@@ -22007,7 +22020,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -4110}
+  m_AnchoredPosition: {x: 150, y: -3890}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1734889151
@@ -22049,7 +22062,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -22656,7 +22669,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1813908099
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22722,12 +22735,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a281847332f72794d877f6c1df0ddf90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventoryScript: {fileID: 0}
+  inventoryScript: {fileID: 1185374070}
   buyMenu: {fileID: 1896683549}
   sellMenu: {fileID: 1185374068}
   shopItems:
-  - {fileID: 11400000, guid: 806efb1b0a546314abaacddc6bb6e344, type: 2}
-  - {fileID: 11400000, guid: 851bcf48394729c438a3775d1316f65e, type: 2}
+  - {fileID: 11400000, guid: 02b2dad04bd5f5f48ac1637dd381bcb6, type: 2}
+  - {fileID: 11400000, guid: a672aa46356880441b401a0997eae54b, type: 2}
   - {fileID: 11400000, guid: 0d3608397f56c5c429ec2732a8c4ed0b, type: 2}
   - {fileID: 11400000, guid: 3f027f77a2bc37e4988dbc5ed16899e9, type: 2}
   - {fileID: 11400000, guid: f3e006dd4b8526d4da3fd83765729ba1, type: 2}
@@ -22737,46 +22750,46 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cacfbc2efa7bfed43927c445558b0871, type: 2}
   - {fileID: 11400000, guid: 8efd60cb32ab287469a16d5129ec0cf0, type: 2}
   shopButtons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1674972379}
+  - {fileID: 122178708}
+  - {fileID: 2041236671}
+  - {fileID: 1924867131}
+  - {fileID: 330234522}
+  - {fileID: 1547983627}
+  - {fileID: 2000655553}
+  - {fileID: 1605884014}
+  - {fileID: 114900888}
+  - {fileID: 1608421826}
+  - {fileID: 2132469588}
+  - {fileID: 2138364019}
+  - {fileID: 1526750152}
+  - {fileID: 1536130414}
+  - {fileID: 1448789653}
+  - {fileID: 22327457}
+  - {fileID: 1734146667}
+  - {fileID: 491917647}
+  - {fileID: 2028332939}
+  - {fileID: 980127911}
+  - {fileID: 1586797572}
+  - {fileID: 214770661}
+  - {fileID: 350930127}
+  - {fileID: 113001723}
+  - {fileID: 1482775887}
+  - {fileID: 2091684459}
+  - {fileID: 497151161}
+  - {fileID: 214583611}
+  - {fileID: 790718746}
+  - {fileID: 2133055981}
+  - {fileID: 1363678795}
+  - {fileID: 245743034}
+  - {fileID: 1027452396}
+  - {fileID: 67455005}
+  - {fileID: 1152606255}
+  - {fileID: 2022270043}
+  - {fileID: 937544727}
+  - {fileID: 1270970088}
+  - {fileID: 1927925226}
+  - {fileID: 489312683}
 --- !u!1 &1820664812
 GameObject:
   m_ObjectHideFlags: 0
@@ -24162,7 +24175,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -3030}
+  m_AnchoredPosition: {x: 150, y: -2870}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1920136090
@@ -24204,7 +24217,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -24375,7 +24388,7 @@ GameObject:
   - component: {fileID: 1924867132}
   - component: {fileID: 1924867131}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: ShopSlot3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24438,7 +24451,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: BuyItem
         m_Mode: 3
         m_Arguments:
@@ -24497,7 +24510,7 @@ GameObject:
   - component: {fileID: 1927925227}
   - component: {fileID: 1927925226}
   m_Layer: 5
-  m_Name: Button (38)
+  m_Name: ShopSlot38
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24560,7 +24573,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: BuyItem
         m_Mode: 3
         m_Arguments:
@@ -24874,7 +24887,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -2670}
+  m_AnchoredPosition: {x: 150, y: -2530}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1959528674
@@ -24916,7 +24929,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -24997,7 +25010,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 870, y: -3750}
+  m_AnchoredPosition: {x: 830, y: -3550}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1976857974
@@ -25039,7 +25052,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -25173,7 +25186,7 @@ GameObject:
   - component: {fileID: 2000655554}
   - component: {fileID: 2000655553}
   m_Layer: 5
-  m_Name: Button (6)
+  m_Name: ShopSlot6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25236,7 +25249,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: BuyItem
         m_Mode: 3
         m_Arguments:
@@ -25445,7 +25458,7 @@ GameObject:
   - component: {fileID: 2022270044}
   - component: {fileID: 2022270043}
   m_Layer: 5
-  m_Name: Button (35)
+  m_Name: ShopSlot35
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25508,7 +25521,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: BuyItem
         m_Mode: 3
         m_Arguments:
@@ -25642,7 +25655,7 @@ GameObject:
   - component: {fileID: 2028332940}
   - component: {fileID: 2028332939}
   m_Layer: 5
-  m_Name: Button (18)
+  m_Name: ShopSlot18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25705,7 +25718,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: BuyItem
         m_Mode: 3
         m_Arguments:
@@ -25914,7 +25927,7 @@ GameObject:
   - component: {fileID: 2041236672}
   - component: {fileID: 2041236671}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: ShopSlot2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25977,7 +25990,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: BuyItem
         m_Mode: 3
         m_Arguments:
@@ -26058,7 +26071,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 870, y: -1590}
+  m_AnchoredPosition: {x: 830, y: -1510}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2060775716
@@ -26100,7 +26113,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
@@ -26317,7 +26330,7 @@ GameObject:
   - component: {fileID: 2091684460}
   - component: {fileID: 2091684459}
   m_Layer: 5
-  m_Name: Button (25)
+  m_Name: ShopSlot25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26380,7 +26393,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: BuyItem
         m_Mode: 3
         m_Arguments:
@@ -26589,7 +26602,7 @@ GameObject:
   - component: {fileID: 2132469589}
   - component: {fileID: 2132469588}
   m_Layer: 5
-  m_Name: Button (10)
+  m_Name: ShopSlot10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26652,7 +26665,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: BuyItem
         m_Mode: 3
         m_Arguments:
@@ -26711,7 +26724,7 @@ GameObject:
   - component: {fileID: 2133055982}
   - component: {fileID: 2133055981}
   m_Layer: 5
-  m_Name: Button (29)
+  m_Name: ShopSlot29
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26774,7 +26787,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: BuyItem
         m_Mode: 3
         m_Arguments:
@@ -26916,7 +26929,7 @@ GameObject:
   - component: {fileID: 2138364020}
   - component: {fileID: 2138364019}
   m_Layer: 5
-  m_Name: Button (11)
+  m_Name: ShopSlot11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26979,7 +26992,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: BuyItem
         m_Mode: 3
         m_Arguments:
@@ -27119,8 +27132,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -2080}
-  m_SizeDelta: {x: -120, y: 4160}
+  m_AnchoredPosition: {x: 0, y: -1537.25}
+  m_SizeDelta: {x: -120, y: 3075.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2140444763
 MonoBehaviour:
@@ -27142,7 +27155,7 @@ MonoBehaviour:
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 300, y: 300}
-  m_Spacing: {x: 60, y: 60}
+  m_Spacing: {x: 40, y: 40}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!114 &2140444764
@@ -27213,7 +27226,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1230, y: -4470}
+  m_AnchoredPosition: {x: 1170, y: -4230}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2143182210
@@ -27255,7 +27268,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1813908102}
         m_MethodName: SellItem
         m_Mode: 3
         m_Arguments:
