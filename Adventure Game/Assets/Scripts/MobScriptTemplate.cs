@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class MobScriptTemplate : MonoBehaviour {
 
-    float maxHealth = 1f;
+    float maxHealth = 4f;
     float health;
     public Image healthBar;
 
