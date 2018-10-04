@@ -1,4 +1,6 @@
 Shop UI to add Upgrades button
+Change all backgrounds to fit for all resolutions
+Show animation for adding and removing items (fade out + and - in while mining, etc)
 Add Food, Monster Parts
 Add Cauldron/Brewery/Witch's Hut
 Damage to player when enemy reaches end
