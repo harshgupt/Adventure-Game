@@ -31,8 +31,8 @@ Metals:
 1 Tin
 2 Bronze
 3 Iron
-4 Steel
-5 Lead
+4 Lead
+5 Steel
 6 White Metal
 7 Black Metal
 8 Mithril

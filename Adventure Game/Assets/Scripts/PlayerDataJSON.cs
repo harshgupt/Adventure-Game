@@ -28,8 +28,8 @@
     public int Tin;
     public int Bronze;
     public int Iron;
-    public int Steel;
     public int Lead;
+    public int Steel;
     public int WhiteMetal;
     public int BlackMetal;
     public int Mithril;

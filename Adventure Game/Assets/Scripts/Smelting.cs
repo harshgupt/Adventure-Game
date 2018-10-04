@@ -4,10 +4,26 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Smelting : MonoBehaviour {
-
-    public InventoryScript inventoryScript;
-    public Item[] metals = new Item[13];
     
+    public Item[] metals = new Item[13];
+
+    public GameObject copper;
+    public GameObject tin;
+    public GameObject bronze;
+    public GameObject iron;
+    public GameObject lead;
+    public GameObject steel;
+    public GameObject whiteMetal;
+    public GameObject blackMetal;
+    public GameObject mithril;
+    public GameObject adamantine;
+    public GameObject quicksilver;
+    public GameObject meteorite;
+    public GameObject mysticalMetal;
+    public GameObject infinitiumMetal;
+
+    public int currentMetal = 0;
+
     public void SmeltCopper()
     {
         if(PlayerData.ores[0] == 0)
@@ -18,8 +34,6 @@ public class Smelting : MonoBehaviour {
         {
             PlayerData.metals[0]++;
             PlayerData.ores[0]--;
-            inventoryScript.AddItem("Copper", metals[0].sprite, PlayerData.metals[0]);
-            inventoryScript.RemoveItem("Copper Ore", PlayerData.ores[0]);
         }
     }
 
@@ -33,8 +47,6 @@ public class Smelting : MonoBehaviour {
         {
             PlayerData.metals[1]++;
             PlayerData.ores[1]--;
-            inventoryScript.AddItem("Tin", metals[1].sprite, PlayerData.metals[1]);
-            inventoryScript.RemoveItem("Tin Ore", PlayerData.ores[1]);
         }
     }
 
@@ -49,9 +61,6 @@ public class Smelting : MonoBehaviour {
             PlayerData.metals[2]++;
             PlayerData.ores[0]--;
             PlayerData.ores[1]--;
-            inventoryScript.AddItem("Bronze", metals[2].sprite, PlayerData.metals[2]);
-            inventoryScript.RemoveItem("Copper Ore", PlayerData.ores[0]);
-            inventoryScript.RemoveItem("Tin Ore", PlayerData.ores[1]);
         }
     }
 
@@ -65,8 +74,6 @@ public class Smelting : MonoBehaviour {
         {
             PlayerData.metals[3]++;
             PlayerData.ores[2]--;
-            inventoryScript.AddItem("Iron", metals[3].sprite, PlayerData.metals[3]);
-            inventoryScript.RemoveItem("Iron Ore", PlayerData.ores[2]);
         }
     }
 
@@ -78,12 +85,9 @@ public class Smelting : MonoBehaviour {
         }
         else
         {
-            PlayerData.metals[4]++;
+            PlayerData.metals[5]++;
             PlayerData.ores[2]--;
             PlayerData.ores[3]--;
-            inventoryScript.AddItem("Steel", metals[4].sprite, PlayerData.metals[4]);
-            inventoryScript.RemoveItem("Iron Ore", PlayerData.ores[2]);
-            inventoryScript.RemoveItem("Coal Ore", PlayerData.ores[3]);
         }
     }
 
@@ -95,10 +99,8 @@ public class Smelting : MonoBehaviour {
         }
         else
         {
-            PlayerData.metals[5]++;
+            PlayerData.metals[4]++;
             PlayerData.ores[4]--;
-            inventoryScript.AddItem("Lead", metals[5].sprite, PlayerData.metals[5]);
-            inventoryScript.RemoveItem("Lead Ore", PlayerData.ores[4]);
         }
     }
 
@@ -113,9 +115,6 @@ public class Smelting : MonoBehaviour {
             PlayerData.metals[6]++;
             PlayerData.ores[4]--;
             PlayerData.ores[1]--;
-            inventoryScript.AddItem("White Metal", metals[6].sprite, PlayerData.metals[6]);
-            inventoryScript.RemoveItem("Lead Ore", PlayerData.ores[4]);
-            inventoryScript.RemoveItem("Tin Ore", PlayerData.ores[1]);
         }
     }
 
@@ -130,9 +129,6 @@ public class Smelting : MonoBehaviour {
             PlayerData.metals[7]++;
             PlayerData.ores[4]--;
             PlayerData.ores[0]--;
-            inventoryScript.AddItem("Black Metal", metals[7].sprite, PlayerData.metals[7]);
-            inventoryScript.RemoveItem("Lead Ore", PlayerData.ores[4]);
-            inventoryScript.RemoveItem("Copper Ore", PlayerData.ores[0]);
         }
     }
 
@@ -146,8 +142,6 @@ public class Smelting : MonoBehaviour {
         {
             PlayerData.metals[8]++;
             PlayerData.ores[5]--;
-            inventoryScript.AddItem("Mithril", metals[8].sprite, PlayerData.metals[8]);
-            inventoryScript.RemoveItem("Mithril Ore", PlayerData.ores[5]);
         }
     }
 
@@ -161,8 +155,6 @@ public class Smelting : MonoBehaviour {
         {
             PlayerData.metals[9]++;
             PlayerData.ores[6]--;
-            inventoryScript.AddItem("Adamantine", metals[9].sprite, PlayerData.metals[9]);
-            inventoryScript.RemoveItem("Adamantine Ore", PlayerData.ores[6]);
         }
     }
 
@@ -176,8 +168,6 @@ public class Smelting : MonoBehaviour {
         {
             PlayerData.metals[10]++;
             PlayerData.ores[7]--;
-            inventoryScript.AddItem("Quicksilver", metals[10].sprite, PlayerData.metals[10]);
-            inventoryScript.RemoveItem("Quicksilver Ore", PlayerData.ores[7]);
         }
     }
 
@@ -191,8 +181,6 @@ public class Smelting : MonoBehaviour {
         {
             PlayerData.metals[11]++;
             PlayerData.ores[8]--;
-            inventoryScript.AddItem("Meteorite", metals[11].sprite, PlayerData.metals[11]);
-            inventoryScript.RemoveItem("Meteorite Ore", PlayerData.ores[8]);
         }
     }
 
@@ -209,11 +197,6 @@ public class Smelting : MonoBehaviour {
             PlayerData.ores[6]--;
             PlayerData.ores[7]--;
             PlayerData.ores[8]--;
-            inventoryScript.AddItem("Mystical Metal", metals[12].sprite, PlayerData.metals[12]);
-            inventoryScript.RemoveItem("Mithril Ore", PlayerData.ores[5]);
-            inventoryScript.RemoveItem("Adamantine Ore", PlayerData.ores[6]);
-            inventoryScript.RemoveItem("Quicksilver Ore", PlayerData.ores[7]);
-            inventoryScript.RemoveItem("Meteorite Ore", PlayerData.ores[8]);
         }
     }
 
@@ -239,20 +222,158 @@ public class Smelting : MonoBehaviour {
             PlayerData.metals[10]--;
             PlayerData.metals[11]--;
             PlayerData.metals[12]--;
-            inventoryScript.AddItem("Infinitium Metal", metals[13].sprite, PlayerData.metals[13]);
-            inventoryScript.RemoveItem("Copper", PlayerData.metals[0]);
-            inventoryScript.RemoveItem("Tin", PlayerData.metals[1]);
-            inventoryScript.RemoveItem("Bronze", PlayerData.metals[2]);
-            inventoryScript.RemoveItem("Iron", PlayerData.metals[3]);
-            inventoryScript.RemoveItem("Steel", PlayerData.metals[4]);
-            inventoryScript.RemoveItem("Lead", PlayerData.metals[5]);
-            inventoryScript.RemoveItem("White Metal", PlayerData.metals[6]);
-            inventoryScript.RemoveItem("Black Metal", PlayerData.metals[7]);
-            inventoryScript.RemoveItem("Mithril", PlayerData.metals[8]);
-            inventoryScript.RemoveItem("Adamantine", PlayerData.metals[9]);
-            inventoryScript.RemoveItem("Quicksilver", PlayerData.metals[10]);
-            inventoryScript.RemoveItem("Meteorite", PlayerData.metals[11]);
-            inventoryScript.RemoveItem("Mystical Metal", PlayerData.metals[12]);
+        }
+    }
+
+    public void UpButton()
+    {
+        switch (currentMetal)
+        {
+            case 0:
+                return;
+            case 1:
+                copper.SetActive(true);
+                tin.SetActive(false);
+                currentMetal--;
+                break;
+            case 2:
+                tin.SetActive(true);
+                bronze.SetActive(false);
+                currentMetal--;
+                break;
+            case 3:
+                bronze.SetActive(true);
+                iron.SetActive(false);
+                currentMetal--;
+                break;
+            case 4:
+                iron.SetActive(true);
+                lead.SetActive(false);
+                currentMetal--;
+                break;
+            case 5:
+                lead.SetActive(true);
+                steel.SetActive(false);
+                currentMetal--;
+                break;
+            case 6:
+                steel.SetActive(true);
+                whiteMetal.SetActive(false);
+                currentMetal--;
+                break;
+            case 7:
+                whiteMetal.SetActive(true);
+                blackMetal.SetActive(false);
+                currentMetal--;
+                break;
+            case 8:
+                blackMetal.SetActive(true);
+                mithril.SetActive(false);
+                currentMetal--;
+                break;
+            case 9:
+                mithril.SetActive(true);
+                adamantine.SetActive(false);
+                currentMetal--;
+                break;
+            case 10:
+                adamantine.SetActive(true);
+                quicksilver.SetActive(false);
+                currentMetal--;
+                break;
+            case 11:
+                quicksilver.SetActive(true);
+                meteorite.SetActive(false);
+                currentMetal--;
+                break;
+            case 12:
+                meteorite.SetActive(true);
+                mysticalMetal.SetActive(false);
+                currentMetal--;
+                break;
+            case 13:
+                mysticalMetal.SetActive(true);
+                infinitiumMetal.SetActive(false);
+                currentMetal--;
+                break;
+            default:
+                return;
+        }
+    }
+
+    public void DownButton()
+    {
+        switch (currentMetal)
+        {
+            case 0:
+                copper.SetActive(false);
+                tin.SetActive(true);
+                currentMetal++;
+                break;
+            case 1:
+                tin.SetActive(false);
+                bronze.SetActive(true);
+                currentMetal++;
+                break;
+            case 2:
+                bronze.SetActive(false);
+                iron.SetActive(true);
+                currentMetal++;
+                break;
+            case 3:
+                iron.SetActive(false);
+                lead.SetActive(true);
+                currentMetal++;
+                break;
+            case 4:
+                lead.SetActive(false);
+                steel.SetActive(true);
+                currentMetal++;
+                break;
+            case 5:
+                steel.SetActive(false);
+                whiteMetal.SetActive(true);
+                currentMetal++;
+                break;
+            case 6:
+                whiteMetal.SetActive(false);
+                blackMetal.SetActive(true);
+                currentMetal++;
+                break;
+            case 7:
+                blackMetal.SetActive(false);
+                mithril.SetActive(true);
+                currentMetal++;
+                break;
+            case 8:
+                mithril.SetActive(false);
+                adamantine.SetActive(true);
+                currentMetal++;
+                break;
+            case 9:
+                adamantine.SetActive(false);
+                quicksilver.SetActive(true);
+                currentMetal++;
+                break;
+            case 10:
+                quicksilver.SetActive(false);
+                meteorite.SetActive(true);
+                currentMetal++;
+                break;
+            case 11:
+                meteorite.SetActive(false);
+                mysticalMetal.SetActive(true);
+                currentMetal++;
+                break;
+            case 12:
+                mysticalMetal.SetActive(false);
+                infinitiumMetal.SetActive(true);
+                currentMetal++;
+                break;
+            case 13:
+                return;
+            default:
+                return;
         }
     }
 }
