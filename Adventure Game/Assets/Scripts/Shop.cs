@@ -135,14 +135,14 @@ public class Shop : MonoBehaviour {
                 inventoryScript.RemoveItem(inventoryScript.itemName[index], PlayerData.metals[3]);
                 break;
 
-            case "Steel":
-                PlayerData.coins += 10;
+            case "Lead":
+                PlayerData.coins += 12;
                 PlayerData.metals[4]--;
                 inventoryScript.RemoveItem(inventoryScript.itemName[index], PlayerData.metals[4]);
                 break;
 
-            case "Lead":
-                PlayerData.coins += 12;
+            case "Steel":
+                PlayerData.coins += 10;
                 PlayerData.metals[5]--;
                 inventoryScript.RemoveItem(inventoryScript.itemName[index], PlayerData.metals[5]);
                 break;

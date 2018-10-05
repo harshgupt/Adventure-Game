@@ -68,59 +68,10 @@ public class InventoryScript : MonoBehaviour{
         }
     }
 
-    void Awake()
+    void Update()
     {
         int inventoryNo = 0;
-        if(GoToScene.sceneName == "Mine")
-        {
-            for (int i = 0; i < DataManager.numOres; i++)
-            {
-                if (PlayerData.ores[i] != 0)
-                {
-                    itemImages[inventoryNo].sprite = ores[i].sprite;
-                    itemAmounts[inventoryNo].text = PlayerData.ores[i].ToString();
-                    itemName[inventoryNo] = ores[i].name;
-                    inventoryNo++;
-                }
-            }
-        }
-        else if(GoToScene.sceneName == "Forge")
-        {
-            for (int i = 0; i < DataManager.numMetals; i++)
-            {
-                if (PlayerData.metals[i] != 0)
-                {
-                    itemImages[inventoryNo].sprite = metals[i].sprite;
-                    itemAmounts[inventoryNo].text = PlayerData.metals[i].ToString();
-                    itemName[inventoryNo] = metals[i].name;
-                    inventoryNo++;
-                }
-            }
-            for (int i = 0; i < DataManager.numOres; i++)
-            {
-                if (PlayerData.ores[i] != 0)
-                {
-                    itemImages[inventoryNo].sprite = ores[i].sprite;
-                    itemAmounts[inventoryNo].text = PlayerData.ores[i].ToString();
-                    itemName[inventoryNo] = ores[i].name;
-                    inventoryNo++;
-                }
-            }
-        }
-        else if(GoToScene.sceneName == "Upgrades")
-        {
-            for (int i = 0; i < DataManager.numMetals; i++)
-            {
-                if (PlayerData.metals[i] != 0)
-                {
-                    itemImages[inventoryNo].sprite = metals[i].sprite;
-                    itemAmounts[inventoryNo].text = PlayerData.metals[i].ToString();
-                    itemName[inventoryNo] = metals[i].name;
-                    inventoryNo++;
-                }
-            }
-        }
-        else if(SceneManager.GetActiveScene().name == "Main")
+        if(SceneManager.GetActiveScene().name == "Main")
         {
             for (int i = 0; i < DataManager.numMetals; i++)
             {
