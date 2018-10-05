@@ -18,8 +18,8 @@
     public int CopperOre;
     public int TinOre;
     public int IronOre;
-    public int CoalOre;
     public int LeadOre;
+    public int CoalOre;
     public int MithrilOre;
     public int AdamantineOre;
     public int QuicksilverOre;

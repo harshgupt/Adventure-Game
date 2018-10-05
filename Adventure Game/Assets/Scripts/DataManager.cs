@@ -106,8 +106,8 @@ public class DataManager : MonoBehaviour {
         CopperOre = PlayerData.ores[0];
         TinOre = PlayerData.ores[1];
         IronOre = PlayerData.ores[2];
-        CoalOre = PlayerData.ores[3];
-        LeadOre = PlayerData.ores[4];
+        LeadOre = PlayerData.ores[3];
+        CoalOre = PlayerData.ores[4];
         MithrilOre = PlayerData.ores[5];
         AdamantineOre = PlayerData.ores[6];
         QuicksilverOre = PlayerData.ores[7];
@@ -166,8 +166,8 @@ public class DataManager : MonoBehaviour {
             PlayerData.ores[0] = loadedData.CopperOre;
             PlayerData.ores[1] = loadedData.TinOre;
             PlayerData.ores[2] = loadedData.IronOre;
-            PlayerData.ores[3] = loadedData.CoalOre;
-            PlayerData.ores[4] = loadedData.LeadOre;
+            PlayerData.ores[3] = loadedData.LeadOre;
+            PlayerData.ores[4] = loadedData.CoalOre;
             PlayerData.ores[5] = loadedData.MithrilOre;
             PlayerData.ores[6] = loadedData.AdamantineOre;
             PlayerData.ores[7] = loadedData.QuicksilverOre;
@@ -225,8 +225,8 @@ public class DataManager : MonoBehaviour {
             CopperOre = PlayerData.ores[0],
             TinOre = PlayerData.ores[1],
             IronOre = PlayerData.ores[2],
-            CoalOre = PlayerData.ores[3],
-            LeadOre = PlayerData.ores[4],
+            LeadOre = PlayerData.ores[3],
+            CoalOre = PlayerData.ores[4],
             MithrilOre = PlayerData.ores[5],
             AdamantineOre = PlayerData.ores[6],
             QuicksilverOre = PlayerData.ores[7],
@@ -303,8 +303,8 @@ public class DataManager : MonoBehaviour {
             CopperOre = 0,
             TinOre = 0,
             IronOre = 0,
-            CoalOre = 0,
             LeadOre = 0,
+            CoalOre = 0,
             MithrilOre = 0,
             AdamantineOre = 0,
             QuicksilverOre = 0,
@@ -381,8 +381,8 @@ public class DataManager : MonoBehaviour {
             CopperOre = 1,
             TinOre = 1,
             IronOre = 1,
-            CoalOre = 1,
             LeadOre = 1,
+            CoalOre = 1,
             MithrilOre = 1,
             AdamantineOre = 1,
             QuicksilverOre = 1,

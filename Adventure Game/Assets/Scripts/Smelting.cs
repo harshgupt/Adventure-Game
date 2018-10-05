@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Smelting : MonoBehaviour {
     
-    public Item[] metals = new Item[13];
+    public Item[] metals = new Item[14];
 
     public GameObject copper;
     public GameObject tin;
@@ -22,7 +22,16 @@ public class Smelting : MonoBehaviour {
     public GameObject mysticalMetal;
     public GameObject infinitiumMetal;
 
+    public Image inventoryImage;
+
+    public Text inventoryAmount;
+
     public int currentMetal = 0;
+
+    public void Update()
+    {
+        DisplayInventoryAmount();
+    }
 
     public void SmeltCopper()
     {
@@ -77,9 +86,22 @@ public class Smelting : MonoBehaviour {
         }
     }
 
+    public void SmeltLead()
+    {
+        if (PlayerData.ores[3] == 0)
+        {
+            return;
+        }
+        else
+        {
+            PlayerData.metals[4]++;
+            PlayerData.ores[3]--;
+        }
+    }
+
     public void SmeltSteel()
     {
-        if (PlayerData.ores[2] == 0 || PlayerData.ores[3] == 0)
+        if (PlayerData.ores[2] == 0 || PlayerData.ores[4] == 0)
         {
             return;
         }
@@ -87,47 +109,34 @@ public class Smelting : MonoBehaviour {
         {
             PlayerData.metals[5]++;
             PlayerData.ores[2]--;
-            PlayerData.ores[3]--;
-        }
-    }
-
-    public void SmeltLead()
-    {
-        if (PlayerData.ores[4] == 0)
-        {
-            return;
-        }
-        else
-        {
-            PlayerData.metals[4]++;
             PlayerData.ores[4]--;
         }
     }
 
     public void SmeltWhiteMetal()
     {
-        if (PlayerData.ores[4] == 0 || PlayerData.ores[1] == 0)
+        if (PlayerData.ores[3] == 0 || PlayerData.ores[1] == 0)
         {
             return;
         }
         else
         {
             PlayerData.metals[6]++;
-            PlayerData.ores[4]--;
+            PlayerData.ores[3]--;
             PlayerData.ores[1]--;
         }
     }
 
     public void SmeltBlackMetal()
     {
-        if (PlayerData.ores[4] == 0 || PlayerData.ores[0] == 0)
+        if (PlayerData.ores[3] == 0 || PlayerData.ores[0] == 0)
         {
             return;
         }
         else
         {
             PlayerData.metals[7]++;
-            PlayerData.ores[4]--;
+            PlayerData.ores[3]--;
             PlayerData.ores[0]--;
         }
     }
@@ -223,6 +232,12 @@ public class Smelting : MonoBehaviour {
             PlayerData.metals[11]--;
             PlayerData.metals[12]--;
         }
+    }
+
+    public void DisplayInventoryAmount()
+    {
+        inventoryImage.sprite = metals[currentMetal].sprite;
+        inventoryAmount.text = PlayerData.metals[currentMetal].ToString();
     }
 
     public void UpButton()

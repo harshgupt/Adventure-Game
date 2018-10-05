@@ -17,7 +17,16 @@ public class Mining : MonoBehaviour {
     public GameObject quicksilverOre;
     public GameObject meteoriteOre;
 
+    public Image inventoryImage;
+
+    public Text inventoryAmount;
+
     public int currentOre = 0;
+
+    public void Update()
+    {
+        DisplayInventoryAmount();
+    }
 
     public void CopperMine()
     {
@@ -34,12 +43,12 @@ public class Mining : MonoBehaviour {
         PlayerData.ores[2]++;
     }
 
-    public void CoalMine()
+    public void LeadMine()
     {
         PlayerData.ores[3]++;
     }
 
-    public void LeadMine()
+    public void CoalMine()
     {
         PlayerData.ores[4]++;
     }
@@ -64,6 +73,12 @@ public class Mining : MonoBehaviour {
         PlayerData.ores[8]++;
     }
 
+    public void DisplayInventoryAmount()
+    {
+        inventoryImage.sprite = ores[currentOre].sprite;
+        inventoryAmount.text = PlayerData.ores[currentOre].ToString();
+    }
+
     public void UpButton()
     {
         switch (currentOre)
@@ -82,16 +97,16 @@ public class Mining : MonoBehaviour {
                 break;
             case 3:
                 ironOre.SetActive(true);
-                coalOre.SetActive(false);
-                currentOre--;
-                break;
-            case 4:
-                coalOre.SetActive(true);
                 leadOre.SetActive(false);
                 currentOre--;
                 break;
-            case 5:
+            case 4:
                 leadOre.SetActive(true);
+                coalOre.SetActive(false);
+                currentOre--;
+                break;
+            case 5:
+                coalOre.SetActive(true);
                 mithrilOre.SetActive(false);
                 currentOre--;
                 break;
@@ -131,16 +146,16 @@ public class Mining : MonoBehaviour {
                 break;
             case 2:
                 ironOre.SetActive(false);
-                coalOre.SetActive(true);
-                currentOre++;
-                break;
-            case 3:
-                coalOre.SetActive(false);
                 leadOre.SetActive(true);
                 currentOre++;
                 break;
-            case 4:
+            case 3:
                 leadOre.SetActive(false);
+                coalOre.SetActive(true);
+                currentOre++;
+                break;
+            case 4:
+                coalOre.SetActive(false);
                 mithrilOre.SetActive(true);
                 currentOre++;
                 break;

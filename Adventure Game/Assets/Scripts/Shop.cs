@@ -75,14 +75,14 @@ public class Shop : MonoBehaviour {
                 inventoryScript.RemoveItem(inventoryScript.itemName[index], PlayerData.ores[2]);
                 break;
 
-            case "Coal Ore":
-                PlayerData.coins += 4;
+            case "Lead Ore":
+                PlayerData.coins += 5;
                 PlayerData.ores[3]--;
                 inventoryScript.RemoveItem(inventoryScript.itemName[index], PlayerData.ores[3]);
                 break;
 
-            case "Lead Ore":
-                PlayerData.coins += 5;
+            case "Coal Ore":
+                PlayerData.coins += 4;
                 PlayerData.ores[4]--;
                 inventoryScript.RemoveItem(inventoryScript.itemName[index], PlayerData.ores[4]);
                 break;
