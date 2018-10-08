@@ -18,6 +18,8 @@ public class OpenUI : MonoBehaviour {
     public GameObject potionsUI;
     public GameObject spellsUI;
 
+    public static string inventoryDisplayType = "All";
+
     public void OpenShop()
     {
         if (shopUI.activeSelf)
@@ -27,6 +29,7 @@ public class OpenUI : MonoBehaviour {
         else
         {
             CloseAll();
+            inventoryDisplayType = "All";
             shopUI.SetActive(true);
         }
     }
@@ -53,6 +56,7 @@ public class OpenUI : MonoBehaviour {
         else
         {
             CloseAll();
+            inventoryDisplayType = "Battle";
             inventoryUI.SetActive(true);
         }
     }

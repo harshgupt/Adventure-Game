@@ -73,34 +73,50 @@ public class InventoryScript : MonoBehaviour{
         int inventoryNo = 0;
         if(SceneManager.GetActiveScene().name == "Main")
         {
-            for (int i = 0; i < DataManager.numMetals; i++)
+            if(OpenUI.inventoryDisplayType == "All")
             {
-                if (PlayerData.metals[i] != 0)
+                for (int i = 0; i < DataManager.numMetals; i++)
                 {
-                    itemImages[inventoryNo].sprite = metals[i].sprite;
-                    itemAmounts[inventoryNo].text = PlayerData.metals[i].ToString();
-                    itemName[inventoryNo] = metals[i].name;
-                    inventoryNo++;
+                    if (PlayerData.metals[i] != 0)
+                    {
+                        itemImages[inventoryNo].sprite = metals[i].sprite;
+                        itemAmounts[inventoryNo].text = PlayerData.metals[i].ToString();
+                        itemName[inventoryNo] = metals[i].name;
+                        inventoryNo++;
+                    }
+                }
+                for (int i = 0; i < DataManager.numOres; i++)
+                {
+                    if (PlayerData.ores[i] != 0)
+                    {
+                        itemImages[inventoryNo].sprite = ores[i].sprite;
+                        itemAmounts[inventoryNo].text = PlayerData.ores[i].ToString();
+                        itemName[inventoryNo] = ores[i].name;
+                        inventoryNo++;
+                    }
+                }
+                for (int i = 0; i < DataManager.numPotions; i++)
+                {
+                    if (PlayerData.potions[i] != 0)
+                    {
+                        itemImages[inventoryNo].sprite = potions[i].sprite;
+                        itemAmounts[inventoryNo].text = PlayerData.potions[i].ToString();
+                        itemName[inventoryNo] = potions[i].name;
+                        inventoryNo++;
+                    }
                 }
             }
-            for (int i = 0; i < DataManager.numOres; i++)
+            else if (OpenUI.inventoryDisplayType == "Battle")
             {
-                if (PlayerData.ores[i] != 0)
+                for (int i = 0; i < DataManager.numPotions; i++)
                 {
-                    itemImages[inventoryNo].sprite = ores[i].sprite;
-                    itemAmounts[inventoryNo].text = PlayerData.ores[i].ToString();
-                    itemName[inventoryNo] = ores[i].name;
-                    inventoryNo++;
-                }
-            }
-            for (int i = 0; i < DataManager.numPotions; i++)
-            {
-                if (PlayerData.potions[i] != 0)
-                {
-                    itemImages[inventoryNo].sprite = potions[i].sprite;
-                    itemAmounts[inventoryNo].text = PlayerData.potions[i].ToString();
-                    itemName[inventoryNo] = potions[i].name;
-                    inventoryNo++;
+                    if (PlayerData.potions[i] != 0)
+                    {
+                        itemImages[inventoryNo].sprite = potions[i].sprite;
+                        itemAmounts[inventoryNo].text = PlayerData.potions[i].ToString();
+                        itemName[inventoryNo] = potions[i].name;
+                        inventoryNo++;
+                    }
                 }
             }
         }

@@ -1,9 +1,11 @@
-Shop UI to add Upgrades button
+Add extra ores and metals
+Gem Mine
 Change all backgrounds to fit for all resolutions
 Show animation for adding and removing items (fade out + and - in while mining, etc)
-Add extra ores and metals
 Show ingredients for Smelting
+Drag and drop action for battle items
 Add Food, Monster Parts
 Add Cauldron/Brewery/Witch's Hut
 Damage to player when enemy reaches end
 Create inventory for Fight scene (max 5-10 items)
+Magic potion to increase power of spells

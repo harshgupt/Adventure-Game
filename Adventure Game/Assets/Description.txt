@@ -17,6 +17,7 @@ Battle inventory amount can be upgraded
 Better tools means lesser clicks/more damage to resource
 Tools like Pickaxe, Axe, Shovel
 Weapons like dagger, sword, battleaxe, warhammer
+To make potions, draw circle clockwise/anticlockwise, add ingredients step by step
 Potions: Health, Attack, Defence (Tiers: Regular, Super, Hyper, Mega, Ultra, Ultimate)
 Health Potion: Food + Monster Parts
 Regular: Heal 1 HP
@@ -42,8 +43,17 @@ Mega: Reduce dmg taken by 4, immunity for 4s
 Ultra: Reduce dmg taken by 5, immunity for 5s
 Ultimate: Reduce dmg taken by 6, no damage from mobs (not bosses), immunity for 6s
 Magic items like lightning, fire, earth, wind, water, ice
+Player has to swipe to do effect
+Lightning: damage
+Fire: Periodic burn damage
+Ice: Freeze all
+Water: Heal player
+Earth: Create fissure, enemies fall and die
+Wind: Push enemies back
+Magic items made by drawing specific shapes
 Magic = Twigs/Branches/Logs/Wood + Monster parts
 Familiar to support in battles (do damage, increase drops, etc)
-Food grown on plots, seeds bought using gold
+Food grown on plots, plots/saplings bought with coins
+Watering can to make it grow faster
 Clicking grows the plant, can increase yield
 Buy item to regrow the same plant (no more buying new seeds)
