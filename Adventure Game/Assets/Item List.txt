@@ -1,15 +1,35 @@
 Gems:
 
-Opal
-Jade
-Topaz
+Amber
 Amethyst
+Ametrine
+Aquamarine
+Bloodstone
+Cinnabar
+Citrine
+Coralite
+Diamond
+Emerald
+Garnet
+Heliodor
+Icy Quartz
+Jade
+Lapis Lazuli
 Moonstone
-Sunstone
+Onyx
+Opal
+Peridot
+Prismarium
+Pyrite
+Quartz
+Rose Quartz
 Ruby
 Sapphire
-Emerald
-Diamond
+Smoky Quartz
+Star Crystal
+Sunstone
+Topaz
+Turqoise
 
 Ores:
 
