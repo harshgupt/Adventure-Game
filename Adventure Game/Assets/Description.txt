@@ -18,7 +18,9 @@ Better tools means lesser clicks/more damage to resource
 Tools like Pickaxe, Axe, Shovel
 Weapons like dagger, sword, battleaxe, warhammer
 To make potions, draw circle clockwise/anticlockwise, add ingredients step by step
-Potions: Health, Attack, Defence (Tiers: Regular, Super, Hyper, Mega, Ultra, Ultimate)
+Potions: Health, Attack, Defence, Magic, Luck (Extra drops)
+Made using herbs and food
+(Tiers: Regular, Super, Hyper, Mega, Ultra, Ultimate)
 Health Potion: Food + Monster Parts
 Regular: Heal 1 HP
 Super: Heal 2 HP, regen 1 HP each for 2s
@@ -42,7 +44,7 @@ Hyper: Reduce dmg taken by 3, immunity for 3s
 Mega: Reduce dmg taken by 4, immunity for 4s
 Ultra: Reduce dmg taken by 5, immunity for 5s
 Ultimate: Reduce dmg taken by 6, no damage from mobs (not bosses), immunity for 6s
-Magic items like lightning, fire, earth, wind, water, ice
+Magic items like lightning, fire, earth, wind, water, ice, ultimate (infinite)
 Player has to swipe to do effect
 Lightning: damage
 Fire: Periodic burn damage
@@ -50,8 +52,9 @@ Ice: Freeze all
 Water: Heal player
 Earth: Create fissure, enemies fall and die
 Wind: Push enemies back
+Summoning: Summon substitute which takes damage (upgraded form can attack as well)
 Magic items made by drawing specific shapes
-Magic = Twigs/Branches/Logs/Wood + Monster parts
+Magic = Monster parts
 Familiar to support in battles (do damage, increase drops, etc)
 Food grown on plots, plots/saplings bought with coins
 Watering can to make it grow faster

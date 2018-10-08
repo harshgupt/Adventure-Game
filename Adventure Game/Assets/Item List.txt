@@ -134,6 +134,112 @@ Infinitium = All Metals (not ores)
 
 Potions: (Tiers: Regular, Super, Hyper, Mega, Ultra, Ultimate, Infinite)
 
-Healing Potion
-Attack Potion
-Defence Potion
+Healing Potion: Instant heal, regeneration, full health, boost health
+Attack Potion: Extra damage, bleed effect, instant kill
+Defence Potion: Reduce damage taken, no damage taken, return damage to enemy
+Magic Potion: Increase spell effects
+Luck Potion: Extra drops
+Marvelous Potion: Everything
+
+Magic:
+
+Lightning: damage
+Fire: Periodic burn damage
+Ice: Freeze all
+Water: Heal player
+Earth: Create fissure by drawing line, enemies fall and die
+Wind: Push enemies back by flicking
+Summoning: Summon substitute which takes damage
+
+Herbs:
+
+Cinnamon
+Nightshade
+Wolf's Bane
+Dragon's Ivy
+Firegrass
+Garlic
+Fluxweed
+Clover
+Holly
+Knotweed
+Parsley
+Pepper
+Rose Thorns and Petals
+Sage
+Sprig of Ivy
+Tawnymoth Weed
+Thyme
+Willow Twigs
+Windrush Leaf
+Asphodel
+Baneberry
+Belladonna
+Bitterroot
+Bloodroot
+Daisy Roots
+Ginger Root
+Goosegrass
+Lady's Mantle
+Mandrake Root
+Mistletoe Berry
+Moly
+Moondew
+Nettle
+Peppermint
+Silverweed
+Spleenwort
+Starthistle
+Star Grass
+Hellebore Syrup
+Tormentil
+Valerian Root
+Wormwood
+Toadstool
+
+Food:
+
+Ruby Apple
+Cinder Banana
+Blood Orange
+Black Carrot
+Mist Cherry
+Fire Pepper
+Dew Lemon
+Pygmy Pumpkin
+Spring Mango
+Wild Nectarine
+
+Monster Parts:
+
+Wing
+Guts
+Horn
+Wool
+Eggs
+Fang
+Feather
+Beak
+Teeth
+Fur
+Bone
+Eye
+Dust
+Teardrops
+Blood
+Heart
+Breath
+Spike
+Slime
+Quill
+Tail
+Foot
+Leg
+Scales
+Shell
+Hoof
+Venom
+Brain
+Claw
+Flesh
+Hair
