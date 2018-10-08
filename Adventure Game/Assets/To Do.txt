@@ -1,4 +1,5 @@
 Add extra ores and metals
+Remove Black Metal
 Gem Mine
 Change all backgrounds to fit for all resolutions
 Show animation for adding and removing items (fade out + and - in while mining, etc)

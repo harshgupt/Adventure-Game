@@ -1,7 +1,5 @@
-Currency:
+Gems:
 
-Silver
-Gold
 Opal
 Jade
 Topaz
@@ -15,43 +13,106 @@ Diamond
 
 Ores:
 
-0 Copper Ore
-1 Tin Ore
-2 Iron Ore
-3 Coal Ore
-4 Lead Ore
-5 Mithril Ore
-6 Adamantine Ore
-7 Quicksilver Ore
-8 Meteorite Ore
+Copper
+Tin
+Iron
+Coal
+Aluminium
+Nickel
+Magnesium
+Zinc
+Lead
+Silver
+Gold
+Platinum
+Obsidian
+Meteorite
+Mithril
+Adamanteus
+Quicksilver
+Aether
+Crimsonite
 
 Metals:
 
-0 Copper
-1 Tin
-2 Bronze
-3 Iron
-4 Lead
-5 Steel
-6 White Metal
-7 Black Metal
-8 Mithril
-9 Adamantine
-10 Quicksilver
-11 Meteorite
-12 Mystical Metal
-13 Infinitium Metal
+Copper
+Tin
+Bronze
+Iron
+Coal
+Steel
+Aluminium
+Duralumin
+Nickel
+Invar
+Magnesium
+Hydronalium
+Zinc
+Brass
+Zamakium
+Lead
+White Metal
+Damascus Steel
+Silver
+Gold
+Rose Gold
+Elinvar
+Electrum
+Corinthian Bronze
+Platinum
+Obsidian
+Darksteel
+Meteorite
+Meteoric Iron
+Shadowsteel
+Meteoric Steel
+Mithril
+Mystical Steel
+Adamanteus
+Divine Steel
+Quicksilver
+Celestial Steel
+Luminium
+Aether
+Etherium
+Cosmic Steel
+Crimsonite
+Soul Steel
+Neutronium
+Orichalcum
+Infinitium
 
 Alloys:
 
-Bronze = Copper + Tin
-Steel = Iron + Coal
-White = Lead + Tin
-Black = Lead + Copper
-Mystical = Mithril + Adamantine + Quicksilver + Meteorite
-Infinitium = Everything
+Bronze = Copper Tin
+Steel = Iron Coal
+Duralumin = Copper Aluminium
+Invar = Iron Nickel
+Hydronalium = Aluminium Magnesium
+Brass = Copper Zinc
+Zamakium = Aluminium Magnesium Zinc
+White Metal = Copper Tin Lead
+Damascus Steel = Iron Coal Lead
+Rose Gold = Copper Gold
+Elinvar = Iron Nickel Gold
+Electrum = Silver Gold
+Corinthian Bronze = Copper Silver Gold
+Darksteel = Iron Coal Obsidian
+Meteoric Iron = Iron Coal Meteorite
+Shadowsteel = Iron Obsidian Meteorite
+Meteoric Steel = Platinum Obsidian Meteorite
+Mystical Steel = Platinum Coal Mithril
+Divine Steel = Platinum Coal Adamanteus
+Celestial Steel = Platinum Coal Quicksilver
+Luminium = Mithril Adamanteus Quicksilver
+Etherium = Platinum Aether
+Cosmic Steel = Platinum Coal Aether
+Soul Steel = Obsidian Meteorite Crimsonite
+Neutronium = Meteorite Quicksilver Crimsonite
+Orichalcum = Quicksilver Aether Crimsonite
+Infinitium = All Metals (not ores)
 
-Potions: (Tiers: Regular, Super, Hyper, Mega, Ultra, Ultimate)
+Potions: (Tiers: Regular, Super, Hyper, Mega, Ultra, Ultimate, Infinite)
 
 Healing Potion
 Attack Potion
