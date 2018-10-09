@@ -83,4 +83,11 @@ public class Blade : MonoBehaviour {
         Destroy(currentBladeTrail, 0.5f);
         circleCollider.enabled = false;
     }
+
+    public void StopCuttingForUI()
+    {
+        isCutting = false;
+        Destroy(currentBladeTrail, 0.5f);
+        circleCollider.enabled = false;
+    }
 }

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class OpenUI : MonoBehaviour {
 
+    public GameObject bladeGame;
+    public GameObject bladeUI;
     public GameObject shopUI;
     public GameObject resourcesUI;
     public GameObject inventoryUI;
@@ -16,9 +18,18 @@ public class OpenUI : MonoBehaviour {
     public GameObject forgeUI;
     public GameObject gemstoneMineUI;
     public GameObject potionsUI;
-    public GameObject spellsUI;
+    public GameObject herbsUI;
+    public GameObject fruitsUI;
+
+    public Blade bladeScript;
 
     public static string inventoryDisplayType = "All";
+
+    private void Start()
+    {
+        //bladeGame.SetActive(true);
+        //bladeUI.SetActive(false);
+    }
 
     public void OpenShop()
     {
@@ -29,6 +40,7 @@ public class OpenUI : MonoBehaviour {
         else
         {
             CloseAll();
+            HideGameBlade();
             inventoryDisplayType = "All";
             shopUI.SetActive(true);
         }
@@ -43,6 +55,7 @@ public class OpenUI : MonoBehaviour {
         else
         {
             CloseAll();
+            HideGameBlade();
             resourcesUI.SetActive(true);
         }
     }
@@ -56,6 +69,7 @@ public class OpenUI : MonoBehaviour {
         else
         {
             CloseAll();
+            HideGameBlade();
             inventoryDisplayType = "Battle";
             inventoryUI.SetActive(true);
         }
@@ -70,6 +84,7 @@ public class OpenUI : MonoBehaviour {
         else
         {
             CloseAll();
+            HideGameBlade();
             witchcraftUI.SetActive(true);
         }
     }
@@ -83,6 +98,7 @@ public class OpenUI : MonoBehaviour {
         else
         {
             CloseAll();
+            HideGameBlade();
             rewardsUI.SetActive(true);
         }
     }
@@ -96,6 +112,7 @@ public class OpenUI : MonoBehaviour {
         else
         {
             CloseAll();
+            HideGameBlade();
             settingsUI.SetActive(true);
         }
     }
@@ -109,6 +126,7 @@ public class OpenUI : MonoBehaviour {
         else
         {
             CloseAll();
+            HideGameBlade();
             coinShopUI.SetActive(true);
         }
     }
@@ -122,6 +140,7 @@ public class OpenUI : MonoBehaviour {
         else
         {
             CloseAll();
+            HideGameBlade();
             crystalShopUI.SetActive(true);
         }
     }
@@ -143,16 +162,25 @@ public class OpenUI : MonoBehaviour {
 
     public void OpenPotions()
     {
+        bladeUI.SetActive(true);
         potionsUI.SetActive(true);
     }
 
-    public void OpenSpells()
+    public void OpenHerbGarden()
     {
-        spellsUI.SetActive(true);
+        bladeUI.SetActive(true);
+        herbsUI.SetActive(true);
+    }
+
+    public void OpenFruitOrchard()
+    {
+        fruitsUI.SetActive(true);
     }
 
     public void CloseAll()
     {
+        bladeGame.SetActive(true);
+        bladeUI.SetActive(false);
         shopUI.SetActive(false);
         resourcesUI.SetActive(false);
         inventoryUI.SetActive(false);
@@ -165,6 +193,12 @@ public class OpenUI : MonoBehaviour {
         forgeUI.SetActive(false);
         gemstoneMineUI.SetActive(false);
         potionsUI.SetActive(false);
-        spellsUI.SetActive(false);
+        fruitsUI.SetActive(false);
+    }
+
+    public void HideGameBlade()
+    {
+        bladeScript.StopCuttingForUI();
+        bladeGame.SetActive(false);
     }
 }

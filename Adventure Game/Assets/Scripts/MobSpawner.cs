@@ -21,7 +21,7 @@ public class MobSpawner : MonoBehaviour {
     {
         mobsKilled = 0;
         bossKilled = false;
-        Debug.Log("Level: " + LevelScript.level + ", Wave: " + LevelScript.wave);
+        //Debug.Log("Level: " + LevelScript.level + ", Wave: " + LevelScript.wave);
         SpawnMobs(2);
     }
 
@@ -31,28 +31,28 @@ public class MobSpawner : MonoBehaviour {
         {
             bossKilled = false;
             LevelScript.nextLevel = true;
-            Debug.Log("Level: " + LevelScript.level + ", Wave: " + LevelScript.wave);
+            //Debug.Log("Level: " + LevelScript.level + ", Wave: " + LevelScript.wave);
             SpawnMobs(2);
         }
         if(mobsKilled == 2 && LevelScript.wave <= 3)
         {
             mobsKilled = 0;
             LevelScript.wave++;
-            Debug.Log("Level: " + LevelScript.level + ", Wave: " + LevelScript.wave);
+            //Debug.Log("Level: " + LevelScript.level + ", Wave: " + LevelScript.wave);
             CheckWaveNo();
         }
         else if(mobsKilled == 3 && LevelScript.wave <= 6)
         {
             mobsKilled = 0;
             LevelScript.wave++;
-            Debug.Log("Level: " + LevelScript.level + ", Wave: " + LevelScript.wave);
+            //Debug.Log("Level: " + LevelScript.level + ", Wave: " + LevelScript.wave);
             CheckWaveNo();
         }
         else if (mobsKilled == 5 && LevelScript.wave <= 9)
         {
             mobsKilled = 0;
             LevelScript.wave++;
-            Debug.Log("Level: " + LevelScript.level + ", Wave: " + LevelScript.wave);
+            //Debug.Log("Level: " + LevelScript.level + ", Wave: " + LevelScript.wave);
             CheckWaveNo();
         }
     }
