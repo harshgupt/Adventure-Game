@@ -1,7 +1,6 @@
 ﻿public class PlayerDataJSON
 {
     public int Coins;
-    public int PlayerLevel;
 
     //Armour, Weapons and Tools
     public int HelmTier;
@@ -12,7 +11,6 @@
     public int ShieldTier;
     public int WeaponTier;
     public int PickaxeTier;
-    public int WoodaxeTier;
 
     //Metals and Alloys
     public int CopperOre;
@@ -58,4 +56,57 @@
     public int DefencePotion4;
     public int DefencePotion5;
     public int DefencePotion6;
+    public int MagicPotion1;
+    public int MagicPotion2;
+    public int MagicPotion3;
+    public int MagicPotion4;
+    public int MagicPotion5;
+    public int MagicPotion6;
+    public int LuckPotion1;
+    public int LuckPotion2;
+    public int LuckPotion3;
+    public int LuckPotion4;
+    public int LuckPotion5;
+    public int LuckPotion6;
+    public int MarvelousPotion;
+
+    //Herbs
+    public int Clover;
+    public int Holly;
+    public int IvySprig;
+    public int WillowTwig;
+    public int RoseThorn;
+    public int Goosegrass;
+    public int Windrush;
+    public int Firegrass;
+    public int DaisyPetal;
+    public int Moly;
+    public int Knotweed;
+    public int Bitterroot;
+    public int Baneberry;
+    public int Starthistle;
+    public int MandrakeRoot;
+    public int Spleenwort;
+    public int TawnymothWeed;
+    public int DragonIvy;
+    public int ValerianRoot;
+    public int HelleboreSyrup;
+    public int Wormwood;
+    public int Silverweed;
+    public int Wolfsbane;
+    public int Moondew;
+    public int Asphodel;
+    public int Fluxweed;
+    public int Nightshade;
+    public int Belladonna;
+    public int Tormentil;
+    public int Bloodroot;
+
+    //Fruits
+    public int RubyApple;
+    public int BloodOrange;
+    public int CinderBanana;
+    public int DewLemon;
+    public int GoldenMango;
+    public int WildNectarine;
 }

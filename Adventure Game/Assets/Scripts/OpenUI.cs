@@ -27,8 +27,8 @@ public class OpenUI : MonoBehaviour {
 
     private void Start()
     {
-        //bladeGame.SetActive(true);
-        //bladeUI.SetActive(false);
+        bladeGame.SetActive(true);
+        bladeUI.SetActive(false);
     }
 
     public void OpenShop()

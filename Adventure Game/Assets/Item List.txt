@@ -153,61 +153,46 @@ Summoning: Summon substitute which takes damage
 
 Herbs:
 
-Cinnamon
-Nightshade
-Wolf's Bane
-Dragon's Ivy
-Firegrass
-Garlic
-Fluxweed
 Clover
 Holly
-Knotweed
-Parsley
-Pepper
-Rose Thorns and Petals
-Sage
 Sprig of Ivy
-Tawnymoth Weed
-Thyme
 Willow Twigs
-Windrush Leaf
-Asphodel
-Baneberry
-Belladonna
-Bitterroot
-Bloodroot
-Daisy Roots
-Ginger Root
+Rose Thorns
 Goosegrass
-Lady's Mantle
-Mandrake Root
-Mistletoe Berry
+Windrush Leaf
+Firegrass
+Daisy
 Moly
-Moondew
-Nettle
-Peppermint
-Silverweed
-Spleenwort
+
+Knotweed
+Bitterroot
+Baneberry
 Starthistle
-Star Grass
-Hellebore Syrup
-Tormentil
+Mandrake Root
+Spleenwort
+Tawnymoth Weed
+Dragon Ivy
 Valerian Root
+Hellebore Syrup
+
 Wormwood
-Toadstool
+Silverweed
+Wolfsbane
+Moondew
+Asphodel
+Fluxweed
+Nightshade
+Belladonna
+Tormentil
+Bloodroot
 
 Food:
 
 Ruby Apple
-Cinder Banana
 Blood Orange
-Black Carrot
-Mist Cherry
-Fire Pepper
+Cinder Banana
 Dew Lemon
-Pygmy Pumpkin
-Spring Mango
+Golden Mango
 Wild Nectarine
 
 Monster Parts:

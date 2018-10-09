@@ -11,14 +11,15 @@ public class DataManager : MonoBehaviour {
     public static bool saveData;
     public static float saveTimer;
 
-    public const int numArmour = 9;
+    public const int numArmour = 8;
     public const int numOres = 9;
     public const int numMetals = 14;
-    public const int numPotions = 18;
+    public const int numPotions = 31;
+    public const int numHerbs = 30;
+    public const int numFruits = 6;
 
     #region To view data in runtime only
     public int Coins;
-    public int PlayerLevel;
 
     //Armour, Weapons and Tools
     public int HelmTier;
@@ -29,7 +30,6 @@ public class DataManager : MonoBehaviour {
     public int ShieldTier;
     public int WeaponTier;
     public int PickaxeTier;
-    public int WoodaxeTier;
 
     //Metals and Alloys
     public int CopperOre;
@@ -75,6 +75,59 @@ public class DataManager : MonoBehaviour {
     public int DefencePotion4;
     public int DefencePotion5;
     public int DefencePotion6;
+    public int MagicPotion1;
+    public int MagicPotion2;
+    public int MagicPotion3;
+    public int MagicPotion4;
+    public int MagicPotion5;
+    public int MagicPotion6;
+    public int LuckPotion1;
+    public int LuckPotion2;
+    public int LuckPotion3;
+    public int LuckPotion4;
+    public int LuckPotion5;
+    public int LuckPotion6;
+    public int MarvelousPotion;
+
+    //Herbs
+    public int Clover;
+    public int Holly;
+    public int IvySprig;
+    public int WillowTwig;
+    public int RoseThorn;
+    public int Goosegrass;
+    public int Windrush;
+    public int Firegrass;
+    public int DaisyPetal;
+    public int Moly;
+    public int Knotweed;
+    public int Bitterroot;
+    public int Baneberry;
+    public int Starthistle;
+    public int MandrakeRoot;
+    public int Spleenwort;
+    public int TawnymothWeed;
+    public int DragonIvy;
+    public int ValerianRoot;
+    public int HelleboreSyrup;
+    public int Wormwood;
+    public int Silverweed;
+    public int Wolfsbane;
+    public int Moondew;
+    public int Asphodel;
+    public int Fluxweed;
+    public int Nightshade;
+    public int Belladonna;
+    public int Tormentil;
+    public int Bloodroot;
+
+    //Fruits
+    public int RubyApple;
+    public int BloodOrange;
+    public int CinderBanana;
+    public int DewLemon;
+    public int GoldenMango;
+    public int WildNectarine;
     #endregion
 
     private void Start()
@@ -134,7 +187,6 @@ public class DataManager : MonoBehaviour {
         ShieldTier = PlayerData.armourTier[5];
         WeaponTier = PlayerData.armourTier[6];
         PickaxeTier = PlayerData.armourTier[7];
-        WoodaxeTier = PlayerData.armourTier[8];
         HealthPotion1 = PlayerData.potions[0];
         HealthPotion2 = PlayerData.potions[1];
         HealthPotion3 = PlayerData.potions[2];
@@ -153,6 +205,55 @@ public class DataManager : MonoBehaviour {
         DefencePotion4 = PlayerData.potions[15];
         DefencePotion5 = PlayerData.potions[16];
         DefencePotion6 = PlayerData.potions[17];
+        MagicPotion1 = PlayerData.potions[18];
+        MagicPotion2 = PlayerData.potions[19];
+        MagicPotion3 = PlayerData.potions[20];
+        MagicPotion4 = PlayerData.potions[21];
+        MagicPotion5 = PlayerData.potions[22];
+        MagicPotion6 = PlayerData.potions[23];
+        LuckPotion1 = PlayerData.potions[24];
+        LuckPotion2 = PlayerData.potions[25];
+        LuckPotion3 = PlayerData.potions[26];
+        LuckPotion4 = PlayerData.potions[27];
+        LuckPotion5 = PlayerData.potions[28];
+        LuckPotion6 = PlayerData.potions[29];
+        MarvelousPotion = PlayerData.potions[30];
+        Clover = PlayerData.herbs[0];
+        Holly = PlayerData.herbs[1];
+        IvySprig = PlayerData.herbs[2];
+        WillowTwig = PlayerData.herbs[3];
+        RoseThorn = PlayerData.herbs[4];
+        Goosegrass = PlayerData.herbs[5];
+        Windrush = PlayerData.herbs[6];
+        Firegrass = PlayerData.herbs[7];
+        DaisyPetal = PlayerData.herbs[8];
+        Moly = PlayerData.herbs[9];
+        Knotweed = PlayerData.herbs[10];
+        Bitterroot = PlayerData.herbs[11];
+        Baneberry = PlayerData.herbs[12];
+        Starthistle = PlayerData.herbs[13];
+        MandrakeRoot = PlayerData.herbs[14];
+        Spleenwort = PlayerData.herbs[15];
+        TawnymothWeed = PlayerData.herbs[16];
+        DragonIvy = PlayerData.herbs[17];
+        ValerianRoot = PlayerData.herbs[18];
+        HelleboreSyrup = PlayerData.herbs[19];
+        Wormwood = PlayerData.herbs[20];
+        Silverweed = PlayerData.herbs[21];
+        Wolfsbane = PlayerData.herbs[22];
+        Moondew = PlayerData.herbs[23];
+        Asphodel = PlayerData.herbs[24];
+        Fluxweed = PlayerData.herbs[25];
+        Nightshade = PlayerData.herbs[26];
+        Belladonna = PlayerData.herbs[27];
+        Tormentil = PlayerData.herbs[28];
+        Bloodroot = PlayerData.herbs[29];
+        RubyApple = PlayerData.fruits[0];
+        BloodOrange = PlayerData.fruits[1];
+        CinderBanana = PlayerData.fruits[2];
+        DewLemon = PlayerData.fruits[3];
+        GoldenMango = PlayerData.fruits[4];
+        WildNectarine = PlayerData.fruits[5];
         #endregion
     }
 
@@ -194,7 +295,6 @@ public class DataManager : MonoBehaviour {
             PlayerData.armourTier[5] = loadedData.ShieldTier;
             PlayerData.armourTier[6] = loadedData.WeaponTier;
             PlayerData.armourTier[7] = loadedData.PickaxeTier;
-            PlayerData.armourTier[8] = loadedData.WoodaxeTier;
             PlayerData.potions[0] = loadedData.HealthPotion1;
             PlayerData.potions[1] = loadedData.HealthPotion2;
             PlayerData.potions[2] = loadedData.HealthPotion3;
@@ -213,6 +313,55 @@ public class DataManager : MonoBehaviour {
             PlayerData.potions[15] = loadedData.DefencePotion4;
             PlayerData.potions[16] = loadedData.DefencePotion5;
             PlayerData.potions[17] = loadedData.DefencePotion6;
+            PlayerData.potions[18] = loadedData.MagicPotion1;
+            PlayerData.potions[19] = loadedData.MagicPotion2;
+            PlayerData.potions[20] = loadedData.MagicPotion3;
+            PlayerData.potions[21] = loadedData.MagicPotion4;
+            PlayerData.potions[22] = loadedData.MagicPotion5;
+            PlayerData.potions[23] = loadedData.MagicPotion6;
+            PlayerData.potions[24] = loadedData.LuckPotion1;
+            PlayerData.potions[25] = loadedData.LuckPotion2;
+            PlayerData.potions[26] = loadedData.LuckPotion3;
+            PlayerData.potions[27] = loadedData.LuckPotion4;
+            PlayerData.potions[28] = loadedData.LuckPotion5;
+            PlayerData.potions[29] = loadedData.LuckPotion6;
+            PlayerData.potions[30] = loadedData.MarvelousPotion;
+            PlayerData.herbs[0] = loadedData.Clover;
+            PlayerData.herbs[1] = loadedData.Holly;
+            PlayerData.herbs[2] = loadedData.IvySprig;
+            PlayerData.herbs[3] = loadedData.WillowTwig;
+            PlayerData.herbs[4] = loadedData.RoseThorn;
+            PlayerData.herbs[5] = loadedData.Goosegrass;
+            PlayerData.herbs[6] = loadedData.Windrush;
+            PlayerData.herbs[7] = loadedData.Firegrass;
+            PlayerData.herbs[8] = loadedData.DaisyPetal;
+            PlayerData.herbs[9] = loadedData.Moly;
+            PlayerData.herbs[10] = loadedData.Knotweed;
+            PlayerData.herbs[11] = loadedData.Bitterroot;
+            PlayerData.herbs[12] = loadedData.Baneberry;
+            PlayerData.herbs[13] = loadedData.Starthistle;
+            PlayerData.herbs[14] = loadedData.MandrakeRoot;
+            PlayerData.herbs[15] = loadedData.Spleenwort;
+            PlayerData.herbs[16] = loadedData.TawnymothWeed;
+            PlayerData.herbs[17] = loadedData.DragonIvy;
+            PlayerData.herbs[18] = loadedData.ValerianRoot;
+            PlayerData.herbs[19] = loadedData.HelleboreSyrup;
+            PlayerData.herbs[20] = loadedData.Wormwood;
+            PlayerData.herbs[21] = loadedData.Silverweed;
+            PlayerData.herbs[22] = loadedData.Wolfsbane;
+            PlayerData.herbs[23] = loadedData.Moondew;
+            PlayerData.herbs[24] = loadedData.Asphodel;
+            PlayerData.herbs[25] = loadedData.Fluxweed;
+            PlayerData.herbs[26] = loadedData.Nightshade;
+            PlayerData.herbs[27] = loadedData.Belladonna;
+            PlayerData.herbs[28] = loadedData.Tormentil;
+            PlayerData.herbs[29] = loadedData.Bloodroot;
+            PlayerData.fruits[0] = loadedData.RubyApple;
+            PlayerData.fruits[1] = loadedData.BloodOrange;
+            PlayerData.fruits[2] = loadedData.CinderBanana;
+            PlayerData.fruits[3] = loadedData.DewLemon;
+            PlayerData.fruits[4] = loadedData.GoldenMango;
+            PlayerData.fruits[5] = loadedData.WildNectarine;
         }
         //Debug.Log("Data Loaded");
     }
@@ -253,7 +402,6 @@ public class DataManager : MonoBehaviour {
             ShieldTier = PlayerData.armourTier[5],
             WeaponTier = PlayerData.armourTier[6],
             PickaxeTier = PlayerData.armourTier[7],
-            WoodaxeTier = PlayerData.armourTier[8],
             HealthPotion1 = PlayerData.potions[0],
             HealthPotion2 = PlayerData.potions[1],
             HealthPotion3 = PlayerData.potions[2],
@@ -271,7 +419,56 @@ public class DataManager : MonoBehaviour {
             DefencePotion3 = PlayerData.potions[14],
             DefencePotion4 = PlayerData.potions[15],
             DefencePotion5 = PlayerData.potions[16],
-            DefencePotion6 = PlayerData.potions[17]
+            DefencePotion6 = PlayerData.potions[17],
+            MagicPotion1 = PlayerData.potions[18],
+            MagicPotion2 = PlayerData.potions[19],
+            MagicPotion3 = PlayerData.potions[20],
+            MagicPotion4 = PlayerData.potions[21],
+            MagicPotion5 = PlayerData.potions[22],
+            MagicPotion6 = PlayerData.potions[23],
+            LuckPotion1 = PlayerData.potions[24],
+            LuckPotion2 = PlayerData.potions[25],
+            LuckPotion3 = PlayerData.potions[26],
+            LuckPotion4 = PlayerData.potions[27],
+            LuckPotion5 = PlayerData.potions[28],
+            LuckPotion6 = PlayerData.potions[29],
+            MarvelousPotion = PlayerData.potions[30],
+            Clover = PlayerData.herbs[0],
+            Holly = PlayerData.herbs[1],
+            IvySprig = PlayerData.herbs[2],
+            WillowTwig = PlayerData.herbs[3],
+            RoseThorn = PlayerData.herbs[4],
+            Goosegrass = PlayerData.herbs[5],
+            Windrush = PlayerData.herbs[6],
+            Firegrass = PlayerData.herbs[7],
+            DaisyPetal = PlayerData.herbs[8],
+            Moly = PlayerData.herbs[9],
+            Knotweed = PlayerData.herbs[10],
+            Bitterroot = PlayerData.herbs[11],
+            Baneberry = PlayerData.herbs[12],
+            Starthistle = PlayerData.herbs[13],
+            MandrakeRoot = PlayerData.herbs[14],
+            Spleenwort = PlayerData.herbs[15],
+            TawnymothWeed = PlayerData.herbs[16],
+            DragonIvy = PlayerData.herbs[17],
+            ValerianRoot = PlayerData.herbs[18],
+            HelleboreSyrup = PlayerData.herbs[19],
+            Wormwood = PlayerData.herbs[20],
+            Silverweed = PlayerData.herbs[21],
+            Wolfsbane = PlayerData.herbs[22],
+            Moondew = PlayerData.herbs[23],
+            Asphodel = PlayerData.herbs[24],
+            Fluxweed = PlayerData.herbs[25],
+            Nightshade = PlayerData.herbs[26],
+            Belladonna = PlayerData.herbs[27],
+            Tormentil = PlayerData.herbs[28],
+            Bloodroot = PlayerData.herbs[29],
+            RubyApple = PlayerData.fruits[0],
+            BloodOrange = PlayerData.fruits[1],
+            CinderBanana = PlayerData.fruits[2],
+            DewLemon = PlayerData.fruits[3],
+            GoldenMango = PlayerData.fruits[4],
+            WildNectarine = PlayerData.fruits[5]
         };
         string dataJSON = JsonUtility.ToJson(playerDataJSON);
         File.WriteAllText(dataFilePath, dataJSON);
@@ -297,59 +494,115 @@ public class DataManager : MonoBehaviour {
         {
             PlayerData.potions[i] = 0;
         }
+        for (int i = 0; i < numHerbs; i++)
+        {
+            PlayerData.herbs[i] = 0;
+        }
+        for (int i = 0; i < numFruits; i++)
+        {
+            PlayerData.fruits[i] = 0;
+        }
         PlayerDataJSON playerDataJSON = new PlayerDataJSON()
         {
-            Coins = 0,
-            CopperOre = 0,
-            TinOre = 0,
-            IronOre = 0,
-            LeadOre = 0,
-            CoalOre = 0,
-            MithrilOre = 0,
-            AdamantineOre = 0,
-            QuicksilverOre = 0,
-            MeteoriteOre = 0,
-            Copper = 0,
-            Tin = 0,
-            Bronze = 0,
-            Iron = 0,
-            Lead = 0,
-            Steel = 0,
-            WhiteMetal = 0,
-            BlackMetal = 0,
-            Mithril = 0,
-            Adamantine = 0,
-            Quicksilver = 0,
-            Meteorite = 0,
-            MysticalMetal = 0,
-            InfinitiumMetal = 0,
-            HelmTier = 0,
-            ChestplateTier = 0,
-            GauntletsTier = 0,
-            LeggingsTier = 0,
-            BootsTier = 0,
-            ShieldTier = 0,
-            WeaponTier = 0,
-            PickaxeTier = 0,
-            WoodaxeTier = 0,
-            HealthPotion1 = 0,
-            HealthPotion2 = 0,
-            HealthPotion3 = 0,
-            HealthPotion4 = 0,
-            HealthPotion5 = 0,
-            HealthPotion6 = 0,
-            AttackPotion1 = 0,
-            AttackPotion2 = 0,
-            AttackPotion3 = 0,
-            AttackPotion4 = 0,
-            AttackPotion5 = 0,
-            AttackPotion6 = 0,
-            DefencePotion1 = 0,
-            DefencePotion2 = 0,
-            DefencePotion3 = 0,
-            DefencePotion4 = 0,
-            DefencePotion5 = 0,
-            DefencePotion6 = 0
+            Coins = PlayerData.coins,
+            CopperOre = PlayerData.ores[0],
+            TinOre = PlayerData.ores[1],
+            IronOre = PlayerData.ores[2],
+            LeadOre = PlayerData.ores[3],
+            CoalOre = PlayerData.ores[4],
+            MithrilOre = PlayerData.ores[5],
+            AdamantineOre = PlayerData.ores[6],
+            QuicksilverOre = PlayerData.ores[7],
+            MeteoriteOre = PlayerData.ores[8],
+            Copper = PlayerData.metals[0],
+            Tin = PlayerData.metals[1],
+            Bronze = PlayerData.metals[2],
+            Iron = PlayerData.metals[3],
+            Lead = PlayerData.metals[4],
+            Steel = PlayerData.metals[5],
+            WhiteMetal = PlayerData.metals[6],
+            BlackMetal = PlayerData.metals[7],
+            Mithril = PlayerData.metals[8],
+            Adamantine = PlayerData.metals[9],
+            Quicksilver = PlayerData.metals[10],
+            Meteorite = PlayerData.metals[11],
+            MysticalMetal = PlayerData.metals[12],
+            InfinitiumMetal = PlayerData.metals[13],
+            HelmTier = PlayerData.armourTier[0],
+            ChestplateTier = PlayerData.armourTier[1],
+            GauntletsTier = PlayerData.armourTier[2],
+            LeggingsTier = PlayerData.armourTier[3],
+            BootsTier = PlayerData.armourTier[4],
+            ShieldTier = PlayerData.armourTier[5],
+            WeaponTier = PlayerData.armourTier[6],
+            PickaxeTier = PlayerData.armourTier[7],
+            HealthPotion1 = PlayerData.potions[0],
+            HealthPotion2 = PlayerData.potions[1],
+            HealthPotion3 = PlayerData.potions[2],
+            HealthPotion4 = PlayerData.potions[3],
+            HealthPotion5 = PlayerData.potions[4],
+            HealthPotion6 = PlayerData.potions[5],
+            AttackPotion1 = PlayerData.potions[6],
+            AttackPotion2 = PlayerData.potions[7],
+            AttackPotion3 = PlayerData.potions[8],
+            AttackPotion4 = PlayerData.potions[9],
+            AttackPotion5 = PlayerData.potions[10],
+            AttackPotion6 = PlayerData.potions[11],
+            DefencePotion1 = PlayerData.potions[12],
+            DefencePotion2 = PlayerData.potions[13],
+            DefencePotion3 = PlayerData.potions[14],
+            DefencePotion4 = PlayerData.potions[15],
+            DefencePotion5 = PlayerData.potions[16],
+            DefencePotion6 = PlayerData.potions[17],
+            MagicPotion1 = PlayerData.potions[18],
+            MagicPotion2 = PlayerData.potions[19],
+            MagicPotion3 = PlayerData.potions[20],
+            MagicPotion4 = PlayerData.potions[21],
+            MagicPotion5 = PlayerData.potions[22],
+            MagicPotion6 = PlayerData.potions[23],
+            LuckPotion1 = PlayerData.potions[24],
+            LuckPotion2 = PlayerData.potions[25],
+            LuckPotion3 = PlayerData.potions[26],
+            LuckPotion4 = PlayerData.potions[27],
+            LuckPotion5 = PlayerData.potions[28],
+            LuckPotion6 = PlayerData.potions[29],
+            MarvelousPotion = PlayerData.potions[30],
+            Clover = PlayerData.herbs[0],
+            Holly = PlayerData.herbs[1],
+            IvySprig = PlayerData.herbs[2],
+            WillowTwig = PlayerData.herbs[3],
+            RoseThorn = PlayerData.herbs[4],
+            Goosegrass = PlayerData.herbs[5],
+            Windrush = PlayerData.herbs[6],
+            Firegrass = PlayerData.herbs[7],
+            DaisyPetal = PlayerData.herbs[8],
+            Moly = PlayerData.herbs[9],
+            Knotweed = PlayerData.herbs[10],
+            Bitterroot = PlayerData.herbs[11],
+            Baneberry = PlayerData.herbs[12],
+            Starthistle = PlayerData.herbs[13],
+            MandrakeRoot = PlayerData.herbs[14],
+            Spleenwort = PlayerData.herbs[15],
+            TawnymothWeed = PlayerData.herbs[16],
+            DragonIvy = PlayerData.herbs[17],
+            ValerianRoot = PlayerData.herbs[18],
+            HelleboreSyrup = PlayerData.herbs[19],
+            Wormwood = PlayerData.herbs[20],
+            Silverweed = PlayerData.herbs[21],
+            Wolfsbane = PlayerData.herbs[22],
+            Moondew = PlayerData.herbs[23],
+            Asphodel = PlayerData.herbs[24],
+            Fluxweed = PlayerData.herbs[25],
+            Nightshade = PlayerData.herbs[26],
+            Belladonna = PlayerData.herbs[27],
+            Tormentil = PlayerData.herbs[28],
+            Bloodroot = PlayerData.herbs[29],
+            RubyApple = PlayerData.fruits[0],
+            BloodOrange = PlayerData.fruits[1],
+            CinderBanana = PlayerData.fruits[2],
+            DewLemon = PlayerData.fruits[3],
+            GoldenMango = PlayerData.fruits[4],
+            WildNectarine = PlayerData.fruits[5]
         };
         string dataJSON = JsonUtility.ToJson(playerDataJSON);
         File.WriteAllText(dataFilePath, dataJSON);
@@ -358,76 +611,132 @@ public class DataManager : MonoBehaviour {
 
     public void OneOfEach()
     {
-        PlayerData.coins = 1;
+        PlayerData.coins++;
         for (int i = 0; i < numOres; i++)
         {
-            PlayerData.ores[i] = 1;
+            PlayerData.ores[i]++;
         }
         for (int i = 0; i < numMetals; i++)
         {
-            PlayerData.metals[i] = 1;
+            PlayerData.metals[i]++;
         }
         for (int i = 0; i < numArmour; i++)
         {
-            PlayerData.armourTier[i] = 1;
+            PlayerData.armourTier[i]++;
         }
         for (int i = 0; i < numPotions; i++)
         {
-            PlayerData.potions[i] = 1;
+            PlayerData.potions[i]++;
+        }
+        for (int i = 0; i < numHerbs; i++)
+        {
+            PlayerData.herbs[i]++;
+        }
+        for (int i = 0; i < numFruits; i++)
+        {
+            PlayerData.fruits[i]++;
         }
         PlayerDataJSON playerDataJSON = new PlayerDataJSON()
         {
-            Coins = 1,
-            CopperOre = 1,
-            TinOre = 1,
-            IronOre = 1,
-            LeadOre = 1,
-            CoalOre = 1,
-            MithrilOre = 1,
-            AdamantineOre = 1,
-            QuicksilverOre = 1,
-            MeteoriteOre = 1,
-            Copper = 1,
-            Tin = 1,
-            Bronze = 1,
-            Iron = 1,
-            Lead = 1,
-            Steel = 1,
-            WhiteMetal = 1,
-            BlackMetal = 1,
-            Mithril = 1,
-            Adamantine = 1,
-            Quicksilver = 1,
-            Meteorite = 1,
-            MysticalMetal = 1,
-            InfinitiumMetal = 1,
-            HelmTier = 1,
-            ChestplateTier = 1,
-            GauntletsTier = 1,
-            LeggingsTier = 1,
-            BootsTier = 1,
-            ShieldTier = 1,
-            WeaponTier = 1,
-            PickaxeTier = 1,
-            WoodaxeTier = 1,
-            HealthPotion1 = 1,
-            HealthPotion2 = 1,
-            HealthPotion3 = 1,
-            HealthPotion4 = 1,
-            HealthPotion5 = 1,
-            HealthPotion6 = 1,
-            AttackPotion1 = 1,
-            AttackPotion2 = 1,
-            AttackPotion3 = 1,
-            AttackPotion4 = 1,
-            AttackPotion5 = 1,
-            AttackPotion6 = 1,
-            DefencePotion1 = 1,
-            DefencePotion2 = 1,
-            DefencePotion3 = 1,
-            DefencePotion4 = 1,
-            DefencePotion5 = 1,
-            DefencePotion6 = 1
+            Coins = PlayerData.coins,
+            CopperOre = PlayerData.ores[0],
+            TinOre = PlayerData.ores[1],
+            IronOre = PlayerData.ores[2],
+            LeadOre = PlayerData.ores[3],
+            CoalOre = PlayerData.ores[4],
+            MithrilOre = PlayerData.ores[5],
+            AdamantineOre = PlayerData.ores[6],
+            QuicksilverOre = PlayerData.ores[7],
+            MeteoriteOre = PlayerData.ores[8],
+            Copper = PlayerData.metals[0],
+            Tin = PlayerData.metals[1],
+            Bronze = PlayerData.metals[2],
+            Iron = PlayerData.metals[3],
+            Lead = PlayerData.metals[4],
+            Steel = PlayerData.metals[5],
+            WhiteMetal = PlayerData.metals[6],
+            BlackMetal = PlayerData.metals[7],
+            Mithril = PlayerData.metals[8],
+            Adamantine = PlayerData.metals[9],
+            Quicksilver = PlayerData.metals[10],
+            Meteorite = PlayerData.metals[11],
+            MysticalMetal = PlayerData.metals[12],
+            InfinitiumMetal = PlayerData.metals[13],
+            HelmTier = PlayerData.armourTier[0],
+            ChestplateTier = PlayerData.armourTier[1],
+            GauntletsTier = PlayerData.armourTier[2],
+            LeggingsTier = PlayerData.armourTier[3],
+            BootsTier = PlayerData.armourTier[4],
+            ShieldTier = PlayerData.armourTier[5],
+            WeaponTier = PlayerData.armourTier[6],
+            PickaxeTier = PlayerData.armourTier[7],
+            HealthPotion1 = PlayerData.potions[0],
+            HealthPotion2 = PlayerData.potions[1],
+            HealthPotion3 = PlayerData.potions[2],
+            HealthPotion4 = PlayerData.potions[3],
+            HealthPotion5 = PlayerData.potions[4],
+            HealthPotion6 = PlayerData.potions[5],
+            AttackPotion1 = PlayerData.potions[6],
+            AttackPotion2 = PlayerData.potions[7],
+            AttackPotion3 = PlayerData.potions[8],
+            AttackPotion4 = PlayerData.potions[9],
+            AttackPotion5 = PlayerData.potions[10],
+            AttackPotion6 = PlayerData.potions[11],
+            DefencePotion1 = PlayerData.potions[12],
+            DefencePotion2 = PlayerData.potions[13],
+            DefencePotion3 = PlayerData.potions[14],
+            DefencePotion4 = PlayerData.potions[15],
+            DefencePotion5 = PlayerData.potions[16],
+            DefencePotion6 = PlayerData.potions[17],
+            MagicPotion1 = PlayerData.potions[18],
+            MagicPotion2 = PlayerData.potions[19],
+            MagicPotion3 = PlayerData.potions[20],
+            MagicPotion4 = PlayerData.potions[21],
+            MagicPotion5 = PlayerData.potions[22],
+            MagicPotion6 = PlayerData.potions[23],
+            LuckPotion1 = PlayerData.potions[24],
+            LuckPotion2 = PlayerData.potions[25],
+            LuckPotion3 = PlayerData.potions[26],
+            LuckPotion4 = PlayerData.potions[27],
+            LuckPotion5 = PlayerData.potions[28],
+            LuckPotion6 = PlayerData.potions[29],
+            MarvelousPotion = PlayerData.potions[30],
+            Clover = PlayerData.herbs[0],
+            Holly = PlayerData.herbs[1],
+            IvySprig = PlayerData.herbs[2],
+            WillowTwig = PlayerData.herbs[3],
+            RoseThorn = PlayerData.herbs[4],
+            Goosegrass = PlayerData.herbs[5],
+            Windrush = PlayerData.herbs[6],
+            Firegrass = PlayerData.herbs[7],
+            DaisyPetal = PlayerData.herbs[8],
+            Moly = PlayerData.herbs[9],
+            Knotweed = PlayerData.herbs[10],
+            Bitterroot = PlayerData.herbs[11],
+            Baneberry = PlayerData.herbs[12],
+            Starthistle = PlayerData.herbs[13],
+            MandrakeRoot = PlayerData.herbs[14],
+            Spleenwort = PlayerData.herbs[15],
+            TawnymothWeed = PlayerData.herbs[16],
+            DragonIvy = PlayerData.herbs[17],
+            ValerianRoot = PlayerData.herbs[18],
+            HelleboreSyrup = PlayerData.herbs[19],
+            Wormwood = PlayerData.herbs[20],
+            Silverweed = PlayerData.herbs[21],
+            Wolfsbane = PlayerData.herbs[22],
+            Moondew = PlayerData.herbs[23],
+            Asphodel = PlayerData.herbs[24],
+            Fluxweed = PlayerData.herbs[25],
+            Nightshade = PlayerData.herbs[26],
+            Belladonna = PlayerData.herbs[27],
+            Tormentil = PlayerData.herbs[28],
+            Bloodroot = PlayerData.herbs[29],
+            RubyApple = PlayerData.fruits[0],
+            BloodOrange = PlayerData.fruits[1],
+            CinderBanana = PlayerData.fruits[2],
+            DewLemon = PlayerData.fruits[3],
+            GoldenMango = PlayerData.fruits[4],
+            WildNectarine = PlayerData.fruits[5]
         };
         string dataJSON = JsonUtility.ToJson(playerDataJSON);
         File.WriteAllText(dataFilePath, dataJSON);
