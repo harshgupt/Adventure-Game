@@ -91,34 +91,34 @@ public class DataManager : MonoBehaviour {
 
     //Herbs
     public int Clover;
-    public int Holly;
-    public int IvySprig;
-    public int WillowTwig;
-    public int RoseThorn;
-    public int Goosegrass;
-    public int Windrush;
-    public int Firegrass;
     public int DaisyPetal;
+    public int Holly;
+    public int RoseThorn;
+    public int IvySprig;
+    public int Windrush;
+    public int WillowTwig;
+    public int Goosegrass;
+    public int Firegrass;
     public int Moly;
+    public int Starthistle;
     public int Knotweed;
     public int Bitterroot;
     public int Baneberry;
-    public int Starthistle;
     public int MandrakeRoot;
-    public int Spleenwort;
     public int TawnymothWeed;
-    public int DragonIvy;
-    public int ValerianRoot;
+    public int Spleenwort;
     public int HelleboreSyrup;
+    public int ValerianRoot;
+    public int DragonIvy;
+    public int Asphodel;
     public int Wormwood;
     public int Silverweed;
     public int Wolfsbane;
     public int Moondew;
-    public int Asphodel;
     public int Fluxweed;
-    public int Nightshade;
-    public int Belladonna;
     public int Tormentil;
+    public int Belladonna;
+    public int Nightshade;
     public int Bloodroot;
 
     //Fruits
@@ -219,34 +219,34 @@ public class DataManager : MonoBehaviour {
         LuckPotion6 = PlayerData.potions[29];
         MarvelousPotion = PlayerData.potions[30];
         Clover = PlayerData.herbs[0];
-        Holly = PlayerData.herbs[1];
-        IvySprig = PlayerData.herbs[2];
-        WillowTwig = PlayerData.herbs[3];
-        RoseThorn = PlayerData.herbs[4];
-        Goosegrass = PlayerData.herbs[5];
-        Windrush = PlayerData.herbs[6];
-        Firegrass = PlayerData.herbs[7];
-        DaisyPetal = PlayerData.herbs[8];
+        DaisyPetal = PlayerData.herbs[1];
+        Holly = PlayerData.herbs[2];
+        RoseThorn = PlayerData.herbs[3];
+        IvySprig = PlayerData.herbs[4];
+        Windrush = PlayerData.herbs[5];
+        WillowTwig = PlayerData.herbs[6];
+        Goosegrass = PlayerData.herbs[7];
+        Firegrass = PlayerData.herbs[8];
         Moly = PlayerData.herbs[9];
-        Knotweed = PlayerData.herbs[10];
-        Bitterroot = PlayerData.herbs[11];
-        Baneberry = PlayerData.herbs[12];
-        Starthistle = PlayerData.herbs[13];
+        Starthistle = PlayerData.herbs[10];
+        Knotweed = PlayerData.herbs[11];
+        Bitterroot = PlayerData.herbs[12];
+        Baneberry = PlayerData.herbs[13];
         MandrakeRoot = PlayerData.herbs[14];
-        Spleenwort = PlayerData.herbs[15];
-        TawnymothWeed = PlayerData.herbs[16];
-        DragonIvy = PlayerData.herbs[17];
+        TawnymothWeed = PlayerData.herbs[15];
+        Spleenwort = PlayerData.herbs[16];
+        HelleboreSyrup = PlayerData.herbs[17];
         ValerianRoot = PlayerData.herbs[18];
-        HelleboreSyrup = PlayerData.herbs[19];
-        Wormwood = PlayerData.herbs[20];
-        Silverweed = PlayerData.herbs[21];
-        Wolfsbane = PlayerData.herbs[22];
-        Moondew = PlayerData.herbs[23];
-        Asphodel = PlayerData.herbs[24];
+        DragonIvy = PlayerData.herbs[19];
+        Asphodel = PlayerData.herbs[20];
+        Wormwood = PlayerData.herbs[21];
+        Silverweed = PlayerData.herbs[22];
+        Wolfsbane = PlayerData.herbs[23];
+        Moondew = PlayerData.herbs[24];
         Fluxweed = PlayerData.herbs[25];
-        Nightshade = PlayerData.herbs[26];
+        Tormentil = PlayerData.herbs[26];
         Belladonna = PlayerData.herbs[27];
-        Tormentil = PlayerData.herbs[28];
+        Nightshade = PlayerData.herbs[28];
         Bloodroot = PlayerData.herbs[29];
         RubyApple = PlayerData.fruits[0];
         BloodOrange = PlayerData.fruits[1];
@@ -327,34 +327,34 @@ public class DataManager : MonoBehaviour {
             PlayerData.potions[29] = loadedData.LuckPotion6;
             PlayerData.potions[30] = loadedData.MarvelousPotion;
             PlayerData.herbs[0] = loadedData.Clover;
-            PlayerData.herbs[1] = loadedData.Holly;
-            PlayerData.herbs[2] = loadedData.IvySprig;
-            PlayerData.herbs[3] = loadedData.WillowTwig;
-            PlayerData.herbs[4] = loadedData.RoseThorn;
-            PlayerData.herbs[5] = loadedData.Goosegrass;
-            PlayerData.herbs[6] = loadedData.Windrush;
-            PlayerData.herbs[7] = loadedData.Firegrass;
-            PlayerData.herbs[8] = loadedData.DaisyPetal;
+            PlayerData.herbs[1] = loadedData.DaisyPetal;
+            PlayerData.herbs[2] = loadedData.Holly;
+            PlayerData.herbs[3] = loadedData.RoseThorn;
+            PlayerData.herbs[4] = loadedData.IvySprig;
+            PlayerData.herbs[5] = loadedData.Windrush;
+            PlayerData.herbs[6] = loadedData.WillowTwig;
+            PlayerData.herbs[7] = loadedData.Goosegrass;
+            PlayerData.herbs[8] = loadedData.Firegrass;
             PlayerData.herbs[9] = loadedData.Moly;
-            PlayerData.herbs[10] = loadedData.Knotweed;
-            PlayerData.herbs[11] = loadedData.Bitterroot;
-            PlayerData.herbs[12] = loadedData.Baneberry;
-            PlayerData.herbs[13] = loadedData.Starthistle;
+            PlayerData.herbs[10] = loadedData.Starthistle;
+            PlayerData.herbs[11] = loadedData.Knotweed;
+            PlayerData.herbs[12] = loadedData.Bitterroot;
+            PlayerData.herbs[13] = loadedData.Baneberry;
             PlayerData.herbs[14] = loadedData.MandrakeRoot;
-            PlayerData.herbs[15] = loadedData.Spleenwort;
-            PlayerData.herbs[16] = loadedData.TawnymothWeed;
-            PlayerData.herbs[17] = loadedData.DragonIvy;
+            PlayerData.herbs[15] = loadedData.TawnymothWeed;
+            PlayerData.herbs[16] = loadedData.Spleenwort;
+            PlayerData.herbs[17] = loadedData.HelleboreSyrup;
             PlayerData.herbs[18] = loadedData.ValerianRoot;
-            PlayerData.herbs[19] = loadedData.HelleboreSyrup;
-            PlayerData.herbs[20] = loadedData.Wormwood;
-            PlayerData.herbs[21] = loadedData.Silverweed;
-            PlayerData.herbs[22] = loadedData.Wolfsbane;
-            PlayerData.herbs[23] = loadedData.Moondew;
-            PlayerData.herbs[24] = loadedData.Asphodel;
+            PlayerData.herbs[19] = loadedData.DragonIvy;
+            PlayerData.herbs[20] = loadedData.Asphodel;
+            PlayerData.herbs[21] = loadedData.Wormwood;
+            PlayerData.herbs[22] = loadedData.Silverweed;
+            PlayerData.herbs[23] = loadedData.Wolfsbane;
+            PlayerData.herbs[24] = loadedData.Moondew;
             PlayerData.herbs[25] = loadedData.Fluxweed;
-            PlayerData.herbs[26] = loadedData.Nightshade;
+            PlayerData.herbs[26] = loadedData.Tormentil;
             PlayerData.herbs[27] = loadedData.Belladonna;
-            PlayerData.herbs[28] = loadedData.Tormentil;
+            PlayerData.herbs[28] = loadedData.Nightshade;
             PlayerData.herbs[29] = loadedData.Bloodroot;
             PlayerData.fruits[0] = loadedData.RubyApple;
             PlayerData.fruits[1] = loadedData.BloodOrange;
@@ -434,34 +434,34 @@ public class DataManager : MonoBehaviour {
             LuckPotion6 = PlayerData.potions[29],
             MarvelousPotion = PlayerData.potions[30],
             Clover = PlayerData.herbs[0],
-            Holly = PlayerData.herbs[1],
-            IvySprig = PlayerData.herbs[2],
-            WillowTwig = PlayerData.herbs[3],
-            RoseThorn = PlayerData.herbs[4],
-            Goosegrass = PlayerData.herbs[5],
-            Windrush = PlayerData.herbs[6],
-            Firegrass = PlayerData.herbs[7],
-            DaisyPetal = PlayerData.herbs[8],
+            DaisyPetal = PlayerData.herbs[1],
+            Holly = PlayerData.herbs[2],
+            RoseThorn = PlayerData.herbs[3],
+            IvySprig = PlayerData.herbs[4],
+            Windrush = PlayerData.herbs[5],
+            WillowTwig = PlayerData.herbs[6],
+            Goosegrass = PlayerData.herbs[7],
+            Firegrass = PlayerData.herbs[8],
             Moly = PlayerData.herbs[9],
-            Knotweed = PlayerData.herbs[10],
-            Bitterroot = PlayerData.herbs[11],
-            Baneberry = PlayerData.herbs[12],
-            Starthistle = PlayerData.herbs[13],
+            Starthistle = PlayerData.herbs[10],
+            Knotweed = PlayerData.herbs[11],
+            Bitterroot = PlayerData.herbs[12],
+            Baneberry = PlayerData.herbs[13],
             MandrakeRoot = PlayerData.herbs[14],
-            Spleenwort = PlayerData.herbs[15],
-            TawnymothWeed = PlayerData.herbs[16],
-            DragonIvy = PlayerData.herbs[17],
+            TawnymothWeed = PlayerData.herbs[15],
+            Spleenwort = PlayerData.herbs[16],
+            HelleboreSyrup = PlayerData.herbs[17],
             ValerianRoot = PlayerData.herbs[18],
-            HelleboreSyrup = PlayerData.herbs[19],
-            Wormwood = PlayerData.herbs[20],
-            Silverweed = PlayerData.herbs[21],
-            Wolfsbane = PlayerData.herbs[22],
-            Moondew = PlayerData.herbs[23],
-            Asphodel = PlayerData.herbs[24],
+            DragonIvy = PlayerData.herbs[19],
+            Asphodel = PlayerData.herbs[20],
+            Wormwood = PlayerData.herbs[21],
+            Silverweed = PlayerData.herbs[22],
+            Wolfsbane = PlayerData.herbs[23],
+            Moondew = PlayerData.herbs[24],
             Fluxweed = PlayerData.herbs[25],
-            Nightshade = PlayerData.herbs[26],
+            Tormentil = PlayerData.herbs[26],
             Belladonna = PlayerData.herbs[27],
-            Tormentil = PlayerData.herbs[28],
+            Nightshade = PlayerData.herbs[28],
             Bloodroot = PlayerData.herbs[29],
             RubyApple = PlayerData.fruits[0],
             BloodOrange = PlayerData.fruits[1],
@@ -568,34 +568,34 @@ public class DataManager : MonoBehaviour {
             LuckPotion6 = PlayerData.potions[29],
             MarvelousPotion = PlayerData.potions[30],
             Clover = PlayerData.herbs[0],
-            Holly = PlayerData.herbs[1],
-            IvySprig = PlayerData.herbs[2],
-            WillowTwig = PlayerData.herbs[3],
-            RoseThorn = PlayerData.herbs[4],
-            Goosegrass = PlayerData.herbs[5],
-            Windrush = PlayerData.herbs[6],
-            Firegrass = PlayerData.herbs[7],
-            DaisyPetal = PlayerData.herbs[8],
+            DaisyPetal = PlayerData.herbs[1],
+            Holly = PlayerData.herbs[2],
+            RoseThorn = PlayerData.herbs[3],
+            IvySprig = PlayerData.herbs[4],
+            Windrush = PlayerData.herbs[5],
+            WillowTwig = PlayerData.herbs[6],
+            Goosegrass = PlayerData.herbs[7],
+            Firegrass = PlayerData.herbs[8],
             Moly = PlayerData.herbs[9],
-            Knotweed = PlayerData.herbs[10],
-            Bitterroot = PlayerData.herbs[11],
-            Baneberry = PlayerData.herbs[12],
-            Starthistle = PlayerData.herbs[13],
+            Starthistle = PlayerData.herbs[10],
+            Knotweed = PlayerData.herbs[11],
+            Bitterroot = PlayerData.herbs[12],
+            Baneberry = PlayerData.herbs[13],
             MandrakeRoot = PlayerData.herbs[14],
-            Spleenwort = PlayerData.herbs[15],
-            TawnymothWeed = PlayerData.herbs[16],
-            DragonIvy = PlayerData.herbs[17],
+            TawnymothWeed = PlayerData.herbs[15],
+            Spleenwort = PlayerData.herbs[16],
+            HelleboreSyrup = PlayerData.herbs[17],
             ValerianRoot = PlayerData.herbs[18],
-            HelleboreSyrup = PlayerData.herbs[19],
-            Wormwood = PlayerData.herbs[20],
-            Silverweed = PlayerData.herbs[21],
-            Wolfsbane = PlayerData.herbs[22],
-            Moondew = PlayerData.herbs[23],
-            Asphodel = PlayerData.herbs[24],
+            DragonIvy = PlayerData.herbs[19],
+            Asphodel = PlayerData.herbs[20],
+            Wormwood = PlayerData.herbs[21],
+            Silverweed = PlayerData.herbs[22],
+            Wolfsbane = PlayerData.herbs[23],
+            Moondew = PlayerData.herbs[24],
             Fluxweed = PlayerData.herbs[25],
-            Nightshade = PlayerData.herbs[26],
+            Tormentil = PlayerData.herbs[26],
             Belladonna = PlayerData.herbs[27],
-            Tormentil = PlayerData.herbs[28],
+            Nightshade = PlayerData.herbs[28],
             Bloodroot = PlayerData.herbs[29],
             RubyApple = PlayerData.fruits[0],
             BloodOrange = PlayerData.fruits[1],
@@ -702,34 +702,34 @@ public class DataManager : MonoBehaviour {
             LuckPotion6 = PlayerData.potions[29],
             MarvelousPotion = PlayerData.potions[30],
             Clover = PlayerData.herbs[0],
-            Holly = PlayerData.herbs[1],
-            IvySprig = PlayerData.herbs[2],
-            WillowTwig = PlayerData.herbs[3],
-            RoseThorn = PlayerData.herbs[4],
-            Goosegrass = PlayerData.herbs[5],
-            Windrush = PlayerData.herbs[6],
-            Firegrass = PlayerData.herbs[7],
-            DaisyPetal = PlayerData.herbs[8],
+            DaisyPetal = PlayerData.herbs[1],
+            Holly = PlayerData.herbs[2],
+            RoseThorn = PlayerData.herbs[3],
+            IvySprig = PlayerData.herbs[4],
+            Windrush = PlayerData.herbs[5],
+            WillowTwig = PlayerData.herbs[6],
+            Goosegrass = PlayerData.herbs[7],
+            Firegrass = PlayerData.herbs[8],
             Moly = PlayerData.herbs[9],
-            Knotweed = PlayerData.herbs[10],
-            Bitterroot = PlayerData.herbs[11],
-            Baneberry = PlayerData.herbs[12],
-            Starthistle = PlayerData.herbs[13],
+            Starthistle = PlayerData.herbs[10],
+            Knotweed = PlayerData.herbs[11],
+            Bitterroot = PlayerData.herbs[12],
+            Baneberry = PlayerData.herbs[13],
             MandrakeRoot = PlayerData.herbs[14],
-            Spleenwort = PlayerData.herbs[15],
-            TawnymothWeed = PlayerData.herbs[16],
-            DragonIvy = PlayerData.herbs[17],
+            TawnymothWeed = PlayerData.herbs[15],
+            Spleenwort = PlayerData.herbs[16],
+            HelleboreSyrup = PlayerData.herbs[17],
             ValerianRoot = PlayerData.herbs[18],
-            HelleboreSyrup = PlayerData.herbs[19],
-            Wormwood = PlayerData.herbs[20],
-            Silverweed = PlayerData.herbs[21],
-            Wolfsbane = PlayerData.herbs[22],
-            Moondew = PlayerData.herbs[23],
-            Asphodel = PlayerData.herbs[24],
+            DragonIvy = PlayerData.herbs[19],
+            Asphodel = PlayerData.herbs[20],
+            Wormwood = PlayerData.herbs[21],
+            Silverweed = PlayerData.herbs[22],
+            Wolfsbane = PlayerData.herbs[23],
+            Moondew = PlayerData.herbs[24],
             Fluxweed = PlayerData.herbs[25],
-            Nightshade = PlayerData.herbs[26],
+            Tormentil = PlayerData.herbs[26],
             Belladonna = PlayerData.herbs[27],
-            Tormentil = PlayerData.herbs[28],
+            Nightshade = PlayerData.herbs[28],
             Bloodroot = PlayerData.herbs[29],
             RubyApple = PlayerData.fruits[0],
             BloodOrange = PlayerData.fruits[1],

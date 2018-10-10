@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class PotionBrewing : MonoBehaviour {
 
+    public Blade bladeUIScript;
+
     public GameObject bladeUI;
 
     public void Close()
     {
-        bladeUI.SetActive(false);
+        if (bladeUI.activeSelf)
+        {
+            bladeUIScript.StopCuttingForUI();
+            bladeUI.SetActive(false);
+        }
         transform.gameObject.SetActive(false);
     }
 }

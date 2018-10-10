@@ -240,7 +240,7 @@ public class Smelting : MonoBehaviour {
         inventoryAmount.text = PlayerData.metals[currentMetal].ToString();
     }
 
-    public void UpButton()
+    public void LeftButton()
     {
         switch (currentMetal)
         {
@@ -316,7 +316,7 @@ public class Smelting : MonoBehaviour {
         }
     }
 
-    public void DownButton()
+    public void RightButton()
     {
         switch (currentMetal)
         {

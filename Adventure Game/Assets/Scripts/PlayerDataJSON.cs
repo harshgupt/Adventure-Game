@@ -72,34 +72,34 @@
 
     //Herbs
     public int Clover;
-    public int Holly;
-    public int IvySprig;
-    public int WillowTwig;
-    public int RoseThorn;
-    public int Goosegrass;
-    public int Windrush;
-    public int Firegrass;
     public int DaisyPetal;
+    public int Holly;
+    public int RoseThorn;
+    public int IvySprig;
+    public int Windrush;
+    public int WillowTwig;
+    public int Goosegrass;
+    public int Firegrass;
     public int Moly;
+    public int Starthistle;
     public int Knotweed;
     public int Bitterroot;
     public int Baneberry;
-    public int Starthistle;
     public int MandrakeRoot;
-    public int Spleenwort;
     public int TawnymothWeed;
-    public int DragonIvy;
-    public int ValerianRoot;
+    public int Spleenwort;
     public int HelleboreSyrup;
+    public int ValerianRoot;
+    public int DragonIvy;
+    public int Asphodel;
     public int Wormwood;
     public int Silverweed;
     public int Wolfsbane;
     public int Moondew;
-    public int Asphodel;
     public int Fluxweed;
-    public int Nightshade;
-    public int Belladonna;
     public int Tormentil;
+    public int Belladonna;
+    public int Nightshade;
     public int Bloodroot;
 
     //Fruits

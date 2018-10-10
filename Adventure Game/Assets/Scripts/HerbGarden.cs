@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class HerbGarden : MonoBehaviour {
-    
+
+    public Blade bladeUIScript;
+
     public GameObject bladeUI;
     public GameObject clover;
     public GameObject holly;
@@ -38,7 +40,7 @@ public class HerbGarden : MonoBehaviour {
 
     public int currentHerb = 0;
 
-    public void UpButton()
+    public void LeftButton()
     {
         switch (currentHerb)
         {
@@ -46,146 +48,146 @@ public class HerbGarden : MonoBehaviour {
                 return;
             case 1:
                 clover.SetActive(true);
-                holly.SetActive(false);
-                currentHerb--;
-                break;
-            case 2:
-                holly.SetActive(true);
-                ivySprig.SetActive(false);
-                currentHerb--;
-                break;
-            case 3:
-                ivySprig.SetActive(true);
-                willowTwig.SetActive(false);
-                currentHerb--;
-                break;
-            case 4:
-                willowTwig.SetActive(true);
-                roseThorn.SetActive(false);
-                currentHerb--;
-                break;
-            case 5:
-                roseThorn.SetActive(true);
-                goosegrass.SetActive(false);
-                currentHerb--;
-                break;
-            case 6:
-                goosegrass.SetActive(true);
-                windrush.SetActive(false);
-                currentHerb--;
-                break;
-            case 7:
-                windrush.SetActive(true);
-                firegrass.SetActive(false);
-                currentHerb--;
-                break;
-            case 8:
-                firegrass.SetActive(true);
                 daisyPetal.SetActive(false);
                 currentHerb--;
                 break;
-            case 9:
+            case 2:
                 daisyPetal.SetActive(true);
+                holly.SetActive(false);
+                currentHerb--;
+                break;
+            case 3:
+                holly.SetActive(true);
+                roseThorn.SetActive(false);
+                currentHerb--;
+                break;
+            case 4:
+                roseThorn.SetActive(true);
+                ivySprig.SetActive(false);
+                currentHerb--;
+                break;
+            case 5:
+                ivySprig.SetActive(true);
+                windrush.SetActive(false);
+                currentHerb--;
+                break;
+            case 6:
+                windrush.SetActive(true);
+                willowTwig.SetActive(false);
+                currentHerb--;
+                break;
+            case 7:
+                willowTwig.SetActive(true);
+                goosegrass.SetActive(false);
+                currentHerb--;
+                break;
+            case 8:
+                goosegrass.SetActive(true);
+                firegrass.SetActive(false);
+                currentHerb--;
+                break;
+            case 9:
+                firegrass.SetActive(true);
                 moly.SetActive(false);
                 currentHerb--;
                 break;
             case 10:
                 moly.SetActive(true);
-                knotweed.SetActive(false);
+                starthistle.SetActive(false);
                 currentHerb--;
                 break;
             case 11:
+                starthistle.SetActive(true);
+                knotweed.SetActive(false);
+                currentHerb--;
+                break;
+            case 12:
                 knotweed.SetActive(true);
                 bitterroot.SetActive(false);
                 currentHerb--;
                 break;
-            case 12:
+            case 13:
                 bitterroot.SetActive(true);
                 baneberry.SetActive(false);
                 currentHerb--;
                 break;
-            case 13:
-                baneberry.SetActive(true);
-                starthistle.SetActive(false);
-                currentHerb--;
-                break;
             case 14:
-                starthistle.SetActive(true);
+                baneberry.SetActive(true);
                 mandrakeRoot.SetActive(false);
                 currentHerb--;
                 break;
             case 15:
                 mandrakeRoot.SetActive(true);
-                spleenwort.SetActive(false);
-                currentHerb--;
-                break;
-            case 16:
-                spleenwort.SetActive(true);
                 tawnymothWeed.SetActive(false);
                 currentHerb--;
                 break;
-            case 17:
+            case 16:
                 tawnymothWeed.SetActive(true);
-                dragonIvy.SetActive(false);
+                spleenwort.SetActive(false);
+                currentHerb--;
+                break;
+            case 17:
+                spleenwort.SetActive(true);
+                helleboreSyrup.SetActive(false);
                 currentHerb--;
                 break;
             case 18:
-                dragonIvy.SetActive(true);
+                helleboreSyrup.SetActive(true);
                 valerianRoot.SetActive(false);
                 currentHerb--;
                 break;
             case 19:
                 valerianRoot.SetActive(true);
-                helleboreSyrup.SetActive(false);
+                dragonIvy.SetActive(false);
                 currentHerb--;
                 break;
             case 20:
-                helleboreSyrup.SetActive(true);
-                wormwood.SetActive(false);
+                dragonIvy.SetActive(true);
+                asphodel.SetActive(false);
                 currentHerb--;
                 break;
             case 21:
+                asphodel.SetActive(true);
+                wormwood.SetActive(false);
+                currentHerb--;
+                break;
+            case 22:
                 wormwood.SetActive(true);
                 silverweed.SetActive(false);
                 currentHerb--;
                 break;
-            case 22:
+            case 23:
                 silverweed.SetActive(true);
                 wolfsbane.SetActive(false);
                 currentHerb--;
                 break;
-            case 23:
+            case 24:
                 wolfsbane.SetActive(true);
                 moondew.SetActive(false);
                 currentHerb--;
                 break;
-            case 24:
-                moondew.SetActive(true);
-                asphodel.SetActive(false);
-                currentHerb--;
-                break;
             case 25:
-                asphodel.SetActive(true);
+                moondew.SetActive(true);
                 fluxweed.SetActive(false);
                 currentHerb--;
                 break;
             case 26:
                 fluxweed.SetActive(true);
-                nightshade.SetActive(false);
+                tormentil.SetActive(false);
                 currentHerb--;
                 break;
             case 27:
-                nightshade.SetActive(true);
+                tormentil.SetActive(true);
                 belladonna.SetActive(false);
                 currentHerb--;
                 break;
             case 28:
                 belladonna.SetActive(true);
-                tormentil.SetActive(false);
+                nightshade.SetActive(false);
                 currentHerb--;
                 break;
             case 29:
-                tormentil.SetActive(true);
+                nightshade.SetActive(true);
                 bloodroot.SetActive(false);
                 currentHerb--;
                 break;
@@ -194,152 +196,152 @@ public class HerbGarden : MonoBehaviour {
         }
     }
 
-    public void DownButton()
+    public void RightButton()
     {
         switch (currentHerb)
         {
             case 0:
                 clover.SetActive(false);
-                holly.SetActive(true);
-                currentHerb++;
-                break;
-            case 1:
-                holly.SetActive(false);
-                ivySprig.SetActive(true);
-                currentHerb++;
-                break;
-            case 2:
-                ivySprig.SetActive(false);
-                willowTwig.SetActive(true);
-                currentHerb++;
-                break;
-            case 3:
-                willowTwig.SetActive(false);
-                roseThorn.SetActive(true);
-                currentHerb++;
-                break;
-            case 4:
-                roseThorn.SetActive(false);
-                goosegrass.SetActive(true);
-                currentHerb++;
-                break;
-            case 5:
-                goosegrass.SetActive(false);
-                windrush.SetActive(true);
-                currentHerb++;
-                break;
-            case 6:
-                windrush.SetActive(false);
-                firegrass.SetActive(true);
-                currentHerb++;
-                break;
-            case 7:
-                firegrass.SetActive(false);
                 daisyPetal.SetActive(true);
                 currentHerb++;
                 break;
-            case 8:
+            case 1:
                 daisyPetal.SetActive(false);
+                holly.SetActive(true);
+                currentHerb++;
+                break;
+            case 2:
+                holly.SetActive(false);
+                roseThorn.SetActive(true);
+                currentHerb++;
+                break;
+            case 3:
+                roseThorn.SetActive(false);
+                ivySprig.SetActive(true);
+                currentHerb++;
+                break;
+            case 4:
+                ivySprig.SetActive(false);
+                windrush.SetActive(true);
+                currentHerb++;
+                break;
+            case 5:
+                windrush.SetActive(false);
+                willowTwig.SetActive(true);
+                currentHerb++;
+                break;
+            case 6:
+                willowTwig.SetActive(false);
+                goosegrass.SetActive(true);
+                currentHerb++;
+                break;
+            case 7:
+                goosegrass.SetActive(false);
+                firegrass.SetActive(true);
+                currentHerb++;
+                break;
+            case 8:
+                firegrass.SetActive(false);
                 moly.SetActive(true);
                 currentHerb++;
                 break;
             case 9:
                 moly.SetActive(false);
-                knotweed.SetActive(true);
+                starthistle.SetActive(true);
                 currentHerb++;
                 break;
             case 10:
+                starthistle.SetActive(false);
+                knotweed.SetActive(true);
+                currentHerb++;
+                break;
+            case 11:
                 knotweed.SetActive(false);
                 bitterroot.SetActive(true);
                 currentHerb++;
                 break;
-            case 11:
+            case 12:
                 bitterroot.SetActive(false);
                 baneberry.SetActive(true);
                 currentHerb++;
                 break;
-            case 12:
-                baneberry.SetActive(false);
-                starthistle.SetActive(true);
-                currentHerb++;
-                break;
             case 13:
-                starthistle.SetActive(false);
+                baneberry.SetActive(false);
                 mandrakeRoot.SetActive(true);
                 currentHerb++;
                 break;
             case 14:
                 mandrakeRoot.SetActive(false);
-                spleenwort.SetActive(true);
-                currentHerb++;
-                break;
-            case 15:
-                spleenwort.SetActive(false);
                 tawnymothWeed.SetActive(true);
                 currentHerb++;
                 break;
-            case 16:
+            case 15:
                 tawnymothWeed.SetActive(false);
-                dragonIvy.SetActive(true);
+                spleenwort.SetActive(true);
+                currentHerb++;
+                break;
+            case 16:
+                spleenwort.SetActive(false);
+                helleboreSyrup.SetActive(true);
                 currentHerb++;
                 break;
             case 17:
-                dragonIvy.SetActive(false);
+                helleboreSyrup.SetActive(false);
                 valerianRoot.SetActive(true);
                 currentHerb++;
                 break;
             case 18:
                 valerianRoot.SetActive(false);
-                helleboreSyrup.SetActive(true);
+                dragonIvy.SetActive(true);
                 currentHerb++;
                 break;
             case 19:
-                helleboreSyrup.SetActive(false);
-                wormwood.SetActive(true);
+                dragonIvy.SetActive(false);
+                asphodel.SetActive(true);
                 currentHerb++;
                 break;
             case 20:
+                asphodel.SetActive(false);
+                wormwood.SetActive(true);
+                currentHerb++;
+                break;
+            case 21:
                 wormwood.SetActive(false);
                 silverweed.SetActive(true);
                 currentHerb++;
                 break;
-            case 21:
+            case 22:
                 silverweed.SetActive(false);
                 wolfsbane.SetActive(true);
                 currentHerb++;
                 break;
-            case 22:
+            case 23:
                 wolfsbane.SetActive(false);
                 moondew.SetActive(true);
                 currentHerb++;
                 break;
-            case 23:
-                moondew.SetActive(false);
-                asphodel.SetActive(true);
-                currentHerb++;
-                break;
             case 24:
-                asphodel.SetActive(false);
+                moondew.SetActive(false);
                 fluxweed.SetActive(true);
                 currentHerb++;
                 break;
             case 25:
                 fluxweed.SetActive(false);
-                nightshade.SetActive(true);
+                tormentil.SetActive(true);
                 currentHerb++;
                 break;
             case 26:
-                nightshade.SetActive(false);
+                tormentil.SetActive(false);
                 belladonna.SetActive(true);
                 currentHerb++;
                 break;
             case 27:
                 belladonna.SetActive(false);
-                tormentil.SetActive(true);
+                nightshade.SetActive(true);
                 currentHerb++;
                 break;
             case 28:
-                tormentil.SetActive(false);
+                nightshade.SetActive(false);
                 bloodroot.SetActive(true);
                 currentHerb++;
                 break;
@@ -352,7 +354,11 @@ public class HerbGarden : MonoBehaviour {
 
     public void Close()
     {
-        bladeUI.SetActive(false);
+        if (bladeUI.activeSelf)
+        {
+            bladeUIScript.StopCuttingForUI();
+            bladeUI.SetActive(false);
+        }
         transform.gameObject.SetActive(false);
     }
 }

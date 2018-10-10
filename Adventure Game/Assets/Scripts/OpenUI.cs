@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OpenUI : MonoBehaviour {
+public class OpenUI : MonoBehaviour{
+
+    public Blade bladeGameScript;
+    public Blade bladeUIScript;
 
     public GameObject bladeGame;
     public GameObject bladeUI;
@@ -21,15 +24,7 @@ public class OpenUI : MonoBehaviour {
     public GameObject herbsUI;
     public GameObject fruitsUI;
 
-    public Blade bladeScript;
-
     public static string inventoryDisplayType = "All";
-
-    private void Start()
-    {
-        bladeGame.SetActive(true);
-        bladeUI.SetActive(false);
-    }
 
     public void OpenShop()
     {
@@ -179,8 +174,8 @@ public class OpenUI : MonoBehaviour {
 
     public void CloseAll()
     {
+        HideUIBlade();
         bladeGame.SetActive(true);
-        bladeUI.SetActive(false);
         shopUI.SetActive(false);
         resourcesUI.SetActive(false);
         inventoryUI.SetActive(false);
@@ -193,12 +188,25 @@ public class OpenUI : MonoBehaviour {
         forgeUI.SetActive(false);
         gemstoneMineUI.SetActive(false);
         potionsUI.SetActive(false);
+        herbsUI.SetActive(false);
         fruitsUI.SetActive(false);
     }
 
     public void HideGameBlade()
     {
-        bladeScript.StopCuttingForUI();
-        bladeGame.SetActive(false);
+        if (bladeGame.activeSelf)
+        {
+            bladeGameScript.StopCuttingForUI();
+            bladeGame.SetActive(false);
+        }
+    }
+
+    public void HideUIBlade()
+    {
+        if (bladeUI.activeSelf)
+        {
+            bladeUIScript.StopCuttingForUI();
+            bladeUI.SetActive(false);
+        }
     }
 }

@@ -13,88 +13,88 @@ public class HerbScript : MonoBehaviour {
                 case "Clover":
                     PlayerData.herbs[0]++;
                     break;
-                case "Holly":
+                case "Daisy Petal":
                     PlayerData.herbs[1]++;
                     break;
-                case "Ivy Sprig":
+                case "Holly":
                     PlayerData.herbs[2]++;
                     break;
-                case "Willow Twig":
+                case "Rose Thorn":
                     PlayerData.herbs[3]++;
                     break;
-                case "Rose Thorn":
+                case "Ivy Sprig":
                     PlayerData.herbs[4]++;
                     break;
-                case "Goosegrass":
+                case "Windrush":
                     PlayerData.herbs[5]++;
                     break;
-                case "Windrush":
+                case "Willow Twig":
                     PlayerData.herbs[6]++;
                     break;
-                case "Firegrass":
+                case "Goosegrass":
                     PlayerData.herbs[7]++;
                     break;
-                case "Daisy Petal":
+                case "Firegrass":
                     PlayerData.herbs[8]++;
                     break;
                 case "Moly":
                     PlayerData.herbs[9]++;
                     break;
-                case "Knotweed":
+                case "Starthistle":
                     PlayerData.herbs[10]++;
                     break;
-                case "Bitterroot":
+                case "Knotweed":
                     PlayerData.herbs[11]++;
                     break;
-                case "Baneberry":
+                case "Bitterroot":
                     PlayerData.herbs[12]++;
                     break;
-                case "Starthistle":
+                case "Baneberry":
                     PlayerData.herbs[13]++;
                     break;
                 case "Mandrake Root":
                     PlayerData.herbs[14]++;
                     break;
-                case "Spleenwort":
+                case "Tawnymoth Weed":
                     PlayerData.herbs[15]++;
                     break;
-                case "Tawnymoth Weed":
+                case "Spleenwort":
                     PlayerData.herbs[16]++;
                     break;
-                case "Dragon Ivy":
+                case "Hellebore Syrup":
                     PlayerData.herbs[17]++;
                     break;
                 case "Valerian Root":
                     PlayerData.herbs[18]++;
                     break;
-                case "Hellebore Syrup":
+                case "Dragon Ivy":
                     PlayerData.herbs[19]++;
                     break;
-                case "Wormwood":
+                case "Asphodel":
                     PlayerData.herbs[20]++;
                     break;
-                case "Silverweed":
+                case "Wormwood":
                     PlayerData.herbs[21]++;
                     break;
-                case "Wolfsbane":
+                case "Silverweed":
                     PlayerData.herbs[22]++;
                     break;
-                case "Moondew":
+                case "Wolfsbane":
                     PlayerData.herbs[23]++;
                     break;
-                case "Asphodel":
+                case "Moondew":
                     PlayerData.herbs[24]++;
                     break;
                 case "Fluxweed":
                     PlayerData.herbs[25]++;
                     break;
-                case "Nightshade":
+                case "Tormentil":
                     PlayerData.herbs[26]++;
                     break;
                 case "Belladonna":
                     PlayerData.herbs[27]++;
                     break;
-                case "Tormentil":
+                case "Nightshade":
                     PlayerData.herbs[28]++;
                     break;
                 case "Bloodroot":

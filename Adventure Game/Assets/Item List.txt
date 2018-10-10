@@ -141,6 +141,38 @@ Magic Potion: Increase spell effects
 Luck Potion: Extra drops
 Marvelous Potion: Everything
 
+LP1 = Clover + Ruby Apple
+DP1 = Daisy + Ruby Apple
+HP1 = Holly + Ruby Apple
+AP1 = Rose Thorns + Ruby Apple
+MP1 = Ivy + Ruby Apple
+LP2 = Windrush + Blood Orange
+DP2 = Willow Twigs + Blood Orange
+HP2 = Goosegrass + Blood Orange
+AP2 = Firegrass + Blood Orange
+MP2 = Moly + Blood Orange
+LP3 = Starthistle + Cinder Banana
+DP3 = Knotweed + Cinder Banana
+HP3 = Bitterroot + Cinder Banana
+AP3 = Baneberry + Cinder Banana
+MP3 = Mandrake Root + Cinder Banana
+LP4 = Tawnymoth Weed + Dew Lemon
+DP4 = Spleenwort + Dew Lemon
+HP4 = Hellebore Syrup + Dew Lemon
+AP4 = Valerian Root + Dew Lemon
+MP4 = Dragon Ivy + Dew Lemon
+LP5 = Asphodel + Golden Mango
+DP5 = Wormwood + Golden Mango
+HP5 = Silverweed + Golden Mango
+AP5 = Wolfsbane + Golden Mango
+MP5 = Moondew + Golden Mango
+LP6 = Fluxweed + Wild Nectarine
+DP6 = Tormentil + Wild Nectarine
+HP6 = Belladonna + Wild Nectarine
+AP6 = Nightshade + Wild Nectarine
+MP6 = Bloodroot + Wild Nectarine
+MarvP = All Herbs + Fruits
+
 Magic:
 
 Lightning: damage
@@ -154,36 +186,39 @@ Summoning: Summon substitute which takes damage
 Herbs:
 
 Clover
-Holly
-Sprig of Ivy
-Willow Twigs
-Rose Thorns
-Goosegrass
-Windrush Leaf
-Firegrass
 Daisy
+Holly
+Rose Thorns
+Ivy
+
+Windrush
+Willow Twigs
+Goosegrass
+Firegrass
 Moly
 
+Starthistle
 Knotweed
 Bitterroot
 Baneberry
-Starthistle
 Mandrake Root
-Spleenwort
-Tawnymoth Weed
-Dragon Ivy
-Valerian Root
-Hellebore Syrup
 
+Tawnymoth Weed
+Spleenwort
+Hellebore Syrup
+Valerian Root
+Dragon Ivy
+
+Asphodel
 Wormwood
 Silverweed
 Wolfsbane
 Moondew
-Asphodel
+
 Fluxweed
-Nightshade
-Belladonna
 Tormentil
+Belladonna
+Nightshade
 Bloodroot
 
 Food:
