@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CircleDetection : MonoBehaviour {
+
     public Camera cam;
 
     public Vector2 startPosition;
@@ -17,6 +18,7 @@ public class CircleDetection : MonoBehaviour {
 
     private void Update()
     {
+        Debug.Log(Vector2.Distance(circleCenter, cam.ScreenToWorldPoint(Input.mousePosition)));
         if (Input.GetMouseButtonDown(0))
         {
             if(Vector2.Distance(circleCenter, cam.ScreenToWorldPoint(Input.mousePosition)) <= circleRadius)
