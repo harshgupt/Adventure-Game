@@ -180,7 +180,6 @@ public class PotionBrewing : MonoBehaviour {
                         angle += Vector2.SignedAngle(v2, v1);
                     }
                     int numTurns = (int)angle / 360;
-                    Debug.Log(numTurns);
                     progressBar.fillAmount = (float)numTurns / maxNumTurns;
                     prevPosition = currentPosition;
                     if (angle >= maxNumTurns * 360 / 2)
@@ -199,14 +198,12 @@ public class PotionBrewing : MonoBehaviour {
                         angle += Vector2.SignedAngle(v1, v2);
                     }
                     int numTurns = (int)angle / 360;
-                    Debug.Log(numTurns);
                     progressBar.fillAmount = (float)numTurns / maxNumTurns;
                     prevPosition = currentPosition;
                 }
                 else if(angle >= maxNumTurns * 360)
                 {
                     angle = 0;
-                    Debug.Log("Finished Brewing");
                     addedIngredient2 = false;
                     PlayerData.herbs[herbIngredient]--;
                     PlayerData.fruits[fruitIngredient]--;
