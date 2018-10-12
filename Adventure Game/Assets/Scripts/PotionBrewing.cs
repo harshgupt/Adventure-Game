@@ -42,8 +42,17 @@ public class PotionBrewing : MonoBehaviour {
     public GameObject AP6;
     public GameObject MP6;
     public GameObject marvelousPotion;
+    public GameObject ingredientObject;
 
     public Image progressBar;
+    public Image ingredient;
+
+    public Sprite[] herbSprites = new Sprite[30];
+    public Sprite[] fruitSprites = new Sprite[6];
+    public Sprite ingredient1;
+    public Sprite ingredient2;
+
+    public Vector3 ingredientPos;
 
     public Vector2 startPosition;
     public Vector2 currentPosition;
@@ -56,15 +65,25 @@ public class PotionBrewing : MonoBehaviour {
 
     public int maxNumTurns = 10;
     public int currentPotion = 0;
+    public int herbIngredient;
+    public int fruitIngredient;
 
     public bool isDrawing = false;
     public bool movedOut = false;
+    public bool addedIngredient1 = false;
+    public bool addedIngredient2 = false;
+    public bool secondStage = false;
+
+    private void Start()
+    {
+        ingredientPos = ingredientObject.transform.position;
+    }
 
     private void Update()
     {
 #if !UNITY_EDITOR
         Touch touch = Input.touches[0];
-        if(touch.phase == TouchPhase.Began)
+        if(touch.phase == TouchPhase.Began && (addedIngredient1 || addedIngredient2))
         {
             if (Vector2.Distance(circleCenter, cam.ScreenToWorldPoint(touch.position)) <= circleRadius)
             {
@@ -85,8 +104,29 @@ public class PotionBrewing : MonoBehaviour {
                 StartDrawing();
             }
         }
+        if (touch.phase == TouchPhase.Began && !addedIngredient1 && !addedIngredient2)
+        {
+            MouseDrag.condition = true;
+        }
+        if (touch.phase == TouchPhase.Ended && MouseDrag.holding)
+        {
+            MouseDrag.holding = false;
+            if (Vector2.Distance(circleCenter, cam.ScreenToWorldPoint(touch.position)) <= circleRadius)
+            {
+                MouseDrag.condition = false;
+                if (!secondStage)
+                {
+                    AfterFirstIngredient();
+                }
+                else
+                {
+                    AfterSecondIngredient();
+                }
+            }
+            ingredientObject.transform.position = ingredientPos;
+        }
 #else
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && (addedIngredient1 || addedIngredient2))
         {
             if (Vector2.Distance(circleCenter, cam.ScreenToWorldPoint(Input.mousePosition)) <= circleRadius)
             {
@@ -97,6 +137,27 @@ public class PotionBrewing : MonoBehaviour {
         if (Input.GetMouseButtonUp(0))
         {
             StopDrawing();
+        }
+        if(Input.GetMouseButtonDown(0) && !addedIngredient1 && !addedIngredient2)
+        {
+            MouseDrag.condition = true;
+        }
+        if(Input.GetMouseButtonUp(0) && MouseDrag.holding)
+        {
+            MouseDrag.holding = false;
+            if(Vector2.Distance(circleCenter, cam.ScreenToWorldPoint(Input.mousePosition)) <= circleRadius)
+            {
+                MouseDrag.condition = false;
+                if (!secondStage)
+                {
+                    AfterFirstIngredient();
+                }
+                else
+                {
+                    AfterSecondIngredient();
+                }
+            }
+            ingredientObject.transform.position = ingredientPos;
         }
 #endif
         if (isDrawing)
@@ -122,8 +183,12 @@ public class PotionBrewing : MonoBehaviour {
                     Debug.Log(numTurns);
                     progressBar.fillAmount = (float)numTurns / maxNumTurns;
                     prevPosition = currentPosition;
+                    if (angle >= maxNumTurns * 360 / 2)
+                    {
+                        BeforeSecondIngredient();
+                    }
                 }
-                else if(angle >= maxNumTurns * 360 / 2 && angle <= maxNumTurns * 360)
+                else if(angle >= maxNumTurns * 360 / 2 && angle <= maxNumTurns * 360 && addedIngredient2)
                 {
                     Vector2 v1 = prevPosition - circleCenter;
                     currentPosition = touchPosition;
@@ -138,6 +203,22 @@ public class PotionBrewing : MonoBehaviour {
                     progressBar.fillAmount = (float)numTurns / maxNumTurns;
                     prevPosition = currentPosition;
                 }
+                else if(angle >= maxNumTurns * 360)
+                {
+                    angle = 0;
+                    Debug.Log("Finished Brewing");
+                    addedIngredient2 = false;
+                    PlayerData.herbs[herbIngredient]--;
+                    PlayerData.fruits[fruitIngredient]--;
+                    PlayerData.potions[currentPotion]++;
+                    secondStage = false;
+                    if (bladeUI.activeSelf)
+                    {
+                        bladeUIScript.StopCuttingForUI();
+                        bladeUI.SetActive(false);
+                    }
+                    cauldronUI.SetActive(false);
+                }
             }
             else
             {
@@ -145,6 +226,37 @@ public class PotionBrewing : MonoBehaviour {
                 StopDrawing();
             }
         }
+    }
+
+    public void StartBrewing()
+    {
+        ingredient.sprite = ingredient1;
+    }
+
+    public void AfterFirstIngredient()
+    {
+        addedIngredient1 = true;
+        Color color = ingredient.color;
+        color.a = 0;
+        ingredient.color = color;
+    }
+
+    public void BeforeSecondIngredient()
+    {
+        addedIngredient1 = false;
+        secondStage = true;
+        ingredient.sprite = ingredient2;
+        Color color = ingredient.color;
+        color.a = 1;
+        ingredient.color = color;
+    }
+
+    public void AfterSecondIngredient()
+    {
+        addedIngredient2 = true;
+        Color color = ingredient.color;
+        color.a = 0;
+        ingredient.color = color;
     }
 
     public void StartDrawing()
@@ -178,15 +290,35 @@ public class PotionBrewing : MonoBehaviour {
     public void ResetAll()
     {
         bladeUI.SetActive(true);
+        ingredient.sprite = null;
         progressBar.fillAmount = 0;
         angle = 0;
+        secondStage = false;
+        addedIngredient1 = false;
+        addedIngredient2 = false;
+        ingredientObject.transform.position = ingredientPos;
+        Color color = ingredient.color;
+        color.a = 1;
+        ingredient.color = color;
     }
 
     public void LP1Brew()
     {
         ResetAll();
         maxNumTurns = 8;
-        cauldronUI.SetActive(true);
+        herbIngredient = 0;
+        fruitIngredient = 0;
+        ingredient1 = herbSprites[0];
+        ingredient2 = fruitSprites[0];
+        if (PlayerData.herbs[0] > 0 && PlayerData.fruits[0] > 0)
+        {
+            StartBrewing();
+            cauldronUI.SetActive(true);
+        }
+        else
+        {
+            return;
+        }
 
     }
 
@@ -194,7 +326,19 @@ public class PotionBrewing : MonoBehaviour {
     {
         ResetAll();
         maxNumTurns = 8;
-        cauldronUI.SetActive(true);
+        herbIngredient = 1;
+        fruitIngredient = 0;
+        ingredient1 = herbSprites[1];
+        ingredient2 = fruitSprites[0];
+        if (PlayerData.herbs[1] > 0 && PlayerData.fruits[0] > 0)
+        {
+            StartBrewing();
+            cauldronUI.SetActive(true);
+        }
+        else
+        {
+            return;
+        }
 
     }
 
@@ -202,7 +346,19 @@ public class PotionBrewing : MonoBehaviour {
     {
         ResetAll();
         maxNumTurns = 8;
-        cauldronUI.SetActive(true);
+        herbIngredient = 2;
+        fruitIngredient = 0;
+        ingredient1 = herbSprites[2];
+        ingredient2 = fruitSprites[0];
+        if (PlayerData.herbs[2] > 0 && PlayerData.fruits[0] > 0)
+        {
+            StartBrewing();
+            cauldronUI.SetActive(true);
+        }
+        else
+        {
+            return;
+        }
 
     }
 
@@ -210,7 +366,19 @@ public class PotionBrewing : MonoBehaviour {
     {
         ResetAll();
         maxNumTurns = 8;
-        cauldronUI.SetActive(true);
+        herbIngredient = 3;
+        fruitIngredient = 0;
+        ingredient1 = herbSprites[3];
+        ingredient2 = fruitSprites[0];
+        if (PlayerData.herbs[3] > 0 && PlayerData.fruits[0] > 0)
+        {
+            StartBrewing();
+            cauldronUI.SetActive(true);
+        }
+        else
+        {
+            return;
+        }
 
     }
 
@@ -218,7 +386,19 @@ public class PotionBrewing : MonoBehaviour {
     {
         ResetAll();
         maxNumTurns = 8;
-        cauldronUI.SetActive(true);
+        herbIngredient = 4;
+        fruitIngredient = 0;
+        ingredient1 = herbSprites[4];
+        ingredient2 = fruitSprites[0];
+        if (PlayerData.herbs[4] > 0 && PlayerData.fruits[0] > 0)
+        {
+            StartBrewing();
+            cauldronUI.SetActive(true);
+        }
+        else
+        {
+            return;
+        }
 
     }
 
@@ -226,7 +406,19 @@ public class PotionBrewing : MonoBehaviour {
     {
         ResetAll();
         maxNumTurns = 8;
-        cauldronUI.SetActive(true);
+        herbIngredient = 5;
+        fruitIngredient = 1;
+        ingredient1 = herbSprites[5];
+        ingredient2 = fruitSprites[1];
+        if (PlayerData.herbs[5] > 0 && PlayerData.fruits[1] > 0)
+        {
+            StartBrewing();
+            cauldronUI.SetActive(true);
+        }
+        else
+        {
+            return;
+        }
 
     }
 
@@ -234,7 +426,19 @@ public class PotionBrewing : MonoBehaviour {
     {
         ResetAll();
         maxNumTurns = 8;
-        cauldronUI.SetActive(true);
+        herbIngredient = 6;
+        fruitIngredient = 1;
+        ingredient1 = herbSprites[6];
+        ingredient2 = fruitSprites[1];
+        if (PlayerData.herbs[6] > 0 && PlayerData.fruits[1] > 0)
+        {
+            StartBrewing();
+            cauldronUI.SetActive(true);
+        }
+        else
+        {
+            return;
+        }
 
     }
 
@@ -242,7 +446,19 @@ public class PotionBrewing : MonoBehaviour {
     {
         ResetAll();
         maxNumTurns = 8;
-        cauldronUI.SetActive(true);
+        herbIngredient = 7;
+        fruitIngredient = 1;
+        ingredient1 = herbSprites[7];
+        ingredient2 = fruitSprites[1];
+        if (PlayerData.herbs[7] > 0 && PlayerData.fruits[1] > 0)
+        {
+            StartBrewing();
+            cauldronUI.SetActive(true);
+        }
+        else
+        {
+            return;
+        }
 
     }
 
@@ -250,7 +466,19 @@ public class PotionBrewing : MonoBehaviour {
     {
         ResetAll();
         maxNumTurns = 8;
-        cauldronUI.SetActive(true);
+        herbIngredient = 8;
+        fruitIngredient = 1;
+        ingredient1 = herbSprites[8];
+        ingredient2 = fruitSprites[1];
+        if (PlayerData.herbs[8] > 0 && PlayerData.fruits[1] > 0)
+        {
+            StartBrewing();
+            cauldronUI.SetActive(true);
+        }
+        else
+        {
+            return;
+        }
 
     }
 
@@ -258,7 +486,19 @@ public class PotionBrewing : MonoBehaviour {
     {
         ResetAll();
         maxNumTurns = 8;
-        cauldronUI.SetActive(true);
+        herbIngredient = 9;
+        fruitIngredient = 1;
+        ingredient1 = herbSprites[9];
+        ingredient2 = fruitSprites[1];
+        if (PlayerData.herbs[9] > 0 && PlayerData.fruits[1] > 0)
+        {
+            StartBrewing();
+            cauldronUI.SetActive(true);
+        }
+        else
+        {
+            return;
+        }
 
     }
 
@@ -266,7 +506,19 @@ public class PotionBrewing : MonoBehaviour {
     {
         ResetAll();
         maxNumTurns = 8;
-        cauldronUI.SetActive(true);
+        herbIngredient = 10;
+        fruitIngredient = 2;
+        ingredient1 = herbSprites[10];
+        ingredient2 = fruitSprites[2];
+        if (PlayerData.herbs[10] > 0 && PlayerData.fruits[2] > 0)
+        {
+            StartBrewing();
+            cauldronUI.SetActive(true);
+        }
+        else
+        {
+            return;
+        }
 
     }
 
@@ -274,7 +526,19 @@ public class PotionBrewing : MonoBehaviour {
     {
         ResetAll();
         maxNumTurns = 8;
-        cauldronUI.SetActive(true);
+        herbIngredient = 11;
+        fruitIngredient = 2;
+        ingredient1 = herbSprites[11];
+        ingredient2 = fruitSprites[2];
+        if (PlayerData.herbs[11] > 0 && PlayerData.fruits[2] > 0)
+        {
+            StartBrewing();
+            cauldronUI.SetActive(true);
+        }
+        else
+        {
+            return;
+        }
 
     }
 
@@ -282,7 +546,19 @@ public class PotionBrewing : MonoBehaviour {
     {
         ResetAll();
         maxNumTurns = 8;
-        cauldronUI.SetActive(true);
+        herbIngredient = 12;
+        fruitIngredient = 2;
+        ingredient1 = herbSprites[12];
+        ingredient2 = fruitSprites[2];
+        if (PlayerData.herbs[12] > 0 && PlayerData.fruits[2] > 0)
+        {
+            StartBrewing();
+            cauldronUI.SetActive(true);
+        }
+        else
+        {
+            return;
+        }
 
     }
 
@@ -290,7 +566,19 @@ public class PotionBrewing : MonoBehaviour {
     {
         ResetAll();
         maxNumTurns = 8;
-        cauldronUI.SetActive(true);
+        herbIngredient = 13;
+        fruitIngredient = 2;
+        ingredient1 = herbSprites[13];
+        ingredient2 = fruitSprites[2];
+        if (PlayerData.herbs[13] > 0 && PlayerData.fruits[2] > 0)
+        {
+            StartBrewing();
+            cauldronUI.SetActive(true);
+        }
+        else
+        {
+            return;
+        }
 
     }
 
@@ -298,7 +586,19 @@ public class PotionBrewing : MonoBehaviour {
     {
         ResetAll();
         maxNumTurns = 8;
-        cauldronUI.SetActive(true);
+        herbIngredient = 14;
+        fruitIngredient = 2;
+        ingredient1 = herbSprites[14];
+        ingredient2 = fruitSprites[2];
+        if (PlayerData.herbs[14] > 0 && PlayerData.fruits[2] > 0)
+        {
+            StartBrewing();
+            cauldronUI.SetActive(true);
+        }
+        else
+        {
+            return;
+        }
 
     }
 
@@ -306,7 +606,19 @@ public class PotionBrewing : MonoBehaviour {
     {
         ResetAll();
         maxNumTurns = 8;
-        cauldronUI.SetActive(true);
+        herbIngredient = 15;
+        fruitIngredient = 3;
+        ingredient1 = herbSprites[15];
+        ingredient2 = fruitSprites[3];
+        if (PlayerData.herbs[15] > 0 && PlayerData.fruits[3] > 0)
+        {
+            StartBrewing();
+            cauldronUI.SetActive(true);
+        }
+        else
+        {
+            return;
+        }
 
     }
 
@@ -314,7 +626,19 @@ public class PotionBrewing : MonoBehaviour {
     {
         ResetAll();
         maxNumTurns = 8;
-        cauldronUI.SetActive(true);
+        herbIngredient = 16;
+        fruitIngredient = 3;
+        ingredient1 = herbSprites[16];
+        ingredient2 = fruitSprites[3];
+        if (PlayerData.herbs[16] > 0 && PlayerData.fruits[3] > 0)
+        {
+            StartBrewing();
+            cauldronUI.SetActive(true);
+        }
+        else
+        {
+            return;
+        }
 
     }
 
@@ -322,7 +646,19 @@ public class PotionBrewing : MonoBehaviour {
     {
         ResetAll();
         maxNumTurns = 8;
-        cauldronUI.SetActive(true);
+        herbIngredient = 17;
+        fruitIngredient = 3;
+        ingredient1 = herbSprites[17];
+        ingredient2 = fruitSprites[3];
+        if (PlayerData.herbs[17] > 0 && PlayerData.fruits[3] > 0)
+        {
+            StartBrewing();
+            cauldronUI.SetActive(true);
+        }
+        else
+        {
+            return;
+        }
 
     }
 
@@ -330,7 +666,19 @@ public class PotionBrewing : MonoBehaviour {
     {
         ResetAll();
         maxNumTurns = 8;
-        cauldronUI.SetActive(true);
+        herbIngredient = 18;
+        fruitIngredient = 3;
+        ingredient1 = herbSprites[18];
+        ingredient2 = fruitSprites[3];
+        if (PlayerData.herbs[18] > 0 && PlayerData.fruits[3] > 0)
+        {
+            StartBrewing();
+            cauldronUI.SetActive(true);
+        }
+        else
+        {
+            return;
+        }
 
     }
 
@@ -338,7 +686,19 @@ public class PotionBrewing : MonoBehaviour {
     {
         ResetAll();
         maxNumTurns = 8;
-        cauldronUI.SetActive(true);
+        herbIngredient = 19;
+        fruitIngredient = 3;
+        ingredient1 = herbSprites[19];
+        ingredient2 = fruitSprites[3];
+        if (PlayerData.herbs[19] > 0 && PlayerData.fruits[3] > 0)
+        {
+            StartBrewing();
+            cauldronUI.SetActive(true);
+        }
+        else
+        {
+            return;
+        }
 
     }
 
@@ -346,7 +706,19 @@ public class PotionBrewing : MonoBehaviour {
     {
         ResetAll();
         maxNumTurns = 8;
-        cauldronUI.SetActive(true);
+        herbIngredient = 20;
+        fruitIngredient = 4;
+        ingredient1 = herbSprites[20];
+        ingredient2 = fruitSprites[4];
+        if (PlayerData.herbs[20] > 0 && PlayerData.fruits[4] > 0)
+        {
+            StartBrewing();
+            cauldronUI.SetActive(true);
+        }
+        else
+        {
+            return;
+        }
 
     }
 
@@ -354,7 +726,19 @@ public class PotionBrewing : MonoBehaviour {
     {
         ResetAll();
         maxNumTurns = 8;
-        cauldronUI.SetActive(true);
+        herbIngredient = 21;
+        fruitIngredient = 4;
+        ingredient1 = herbSprites[21];
+        ingredient2 = fruitSprites[4];
+        if (PlayerData.herbs[21] > 0 && PlayerData.fruits[4] > 0)
+        {
+            StartBrewing();
+            cauldronUI.SetActive(true);
+        }
+        else
+        {
+            return;
+        }
 
     }
 
@@ -362,7 +746,19 @@ public class PotionBrewing : MonoBehaviour {
     {
         ResetAll();
         maxNumTurns = 8;
-        cauldronUI.SetActive(true);
+        herbIngredient = 22;
+        fruitIngredient = 4;
+        ingredient1 = herbSprites[22];
+        ingredient2 = fruitSprites[4];
+        if (PlayerData.herbs[22] > 0 && PlayerData.fruits[4] > 0)
+        {
+            StartBrewing();
+            cauldronUI.SetActive(true);
+        }
+        else
+        {
+            return;
+        }
 
     }
 
@@ -370,7 +766,19 @@ public class PotionBrewing : MonoBehaviour {
     {
         ResetAll();
         maxNumTurns = 8;
-        cauldronUI.SetActive(true);
+        herbIngredient = 23;
+        fruitIngredient = 4;
+        ingredient1 = herbSprites[23];
+        ingredient2 = fruitSprites[4];
+        if (PlayerData.herbs[23] > 0 && PlayerData.fruits[4] > 0)
+        {
+            StartBrewing();
+            cauldronUI.SetActive(true);
+        }
+        else
+        {
+            return;
+        }
 
     }
 
@@ -378,7 +786,19 @@ public class PotionBrewing : MonoBehaviour {
     {
         ResetAll();
         maxNumTurns = 8;
-        cauldronUI.SetActive(true);
+        herbIngredient = 24;
+        fruitIngredient = 4;
+        ingredient1 = herbSprites[24];
+        ingredient2 = fruitSprites[4];
+        if (PlayerData.herbs[24] > 0 && PlayerData.fruits[4] > 0)
+        {
+            StartBrewing();
+            cauldronUI.SetActive(true);
+        }
+        else
+        {
+            return;
+        }
 
     }
 
@@ -386,7 +806,19 @@ public class PotionBrewing : MonoBehaviour {
     {
         ResetAll();
         maxNumTurns = 8;
-        cauldronUI.SetActive(true);
+        herbIngredient = 25;
+        fruitIngredient = 5;
+        ingredient1 = herbSprites[25];
+        ingredient2 = fruitSprites[5];
+        if (PlayerData.herbs[25] > 0 && PlayerData.fruits[5] > 0)
+        {
+            StartBrewing();
+            cauldronUI.SetActive(true);
+        }
+        else
+        {
+            return;
+        }
 
     }
 
@@ -394,7 +826,19 @@ public class PotionBrewing : MonoBehaviour {
     {
         ResetAll();
         maxNumTurns = 8;
-        cauldronUI.SetActive(true);
+        herbIngredient = 26;
+        fruitIngredient = 5;
+        ingredient1 = herbSprites[26];
+        ingredient2 = fruitSprites[5];
+        if (PlayerData.herbs[26] > 0 && PlayerData.fruits[5] > 0)
+        {
+            StartBrewing();
+            cauldronUI.SetActive(true);
+        }
+        else
+        {
+            return;
+        }
 
     }
 
@@ -402,7 +846,19 @@ public class PotionBrewing : MonoBehaviour {
     {
         ResetAll();
         maxNumTurns = 8;
-        cauldronUI.SetActive(true);
+        herbIngredient = 27;
+        fruitIngredient = 5;
+        ingredient1 = herbSprites[27];
+        ingredient2 = fruitSprites[5];
+        if (PlayerData.herbs[27] > 0 && PlayerData.fruits[5] > 0)
+        {
+            StartBrewing();
+            cauldronUI.SetActive(true);
+        }
+        else
+        {
+            return;
+        }
 
     }
 
@@ -410,7 +866,19 @@ public class PotionBrewing : MonoBehaviour {
     {
         ResetAll();
         maxNumTurns = 8;
-        cauldronUI.SetActive(true);
+        herbIngredient = 28;
+        fruitIngredient = 5;
+        ingredient1 = herbSprites[28];
+        ingredient2 = fruitSprites[5];
+        if (PlayerData.herbs[28] > 0 && PlayerData.fruits[5] > 0)
+        {
+            StartBrewing();
+            cauldronUI.SetActive(true);
+        }
+        else
+        {
+            return;
+        }
 
     }
 
@@ -418,7 +886,19 @@ public class PotionBrewing : MonoBehaviour {
     {
         ResetAll();
         maxNumTurns = 8;
-        cauldronUI.SetActive(true);
+        herbIngredient = 29;
+        fruitIngredient = 5;
+        ingredient1 = herbSprites[29];
+        ingredient2 = fruitSprites[5];
+        if (PlayerData.herbs[29] > 0 && PlayerData.fruits[5] > 0)
+        {
+            StartBrewing();
+            cauldronUI.SetActive(true);
+        }
+        else
+        {
+            return;
+        }
 
     }
     

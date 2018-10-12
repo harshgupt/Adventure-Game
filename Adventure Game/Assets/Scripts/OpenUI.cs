@@ -157,7 +157,6 @@ public class OpenUI : MonoBehaviour{
 
     public void OpenPotions()
     {
-        //bladeUI.SetActive(true);
         potionsUI.SetActive(true);
     }
 
