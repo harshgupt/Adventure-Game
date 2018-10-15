@@ -1,10 +1,11 @@
-Drag and drop item into cauldron for next step (anti-clockwise)
+Save scrolled position, or unlocked position in Mine, Forge, etc
+Finish Forge part
+Show current inventory amount for resources (Herbs, fruits, potions)
 Add extra ores and metals
 Gem Mine
 Change all backgrounds to fit for all resolutions
 Show animation for adding and removing items (fade out + and - in while mining, etc)
-Show ingredients for Smelting
+Show ingredients for Smelting and Potions
 Drag and drop action for battle items
 Damage to player when enemy reaches end
 Create inventory for Fight scene (max 5-10 items)
-Magic potion to increase power of spells
