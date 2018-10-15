@@ -12,8 +12,8 @@ public class DataManager : MonoBehaviour {
     public static float saveTimer;
 
     public const int numArmour = 8;
-    public const int numOres = 9;
-    public const int numMetals = 14;
+    public const int numOres = 19;
+    public const int numMetals = 45;
     public const int numPotions = 31;
     public const int numHerbs = 30;
     public const int numFruits = 6;
@@ -36,27 +36,80 @@ public class DataManager : MonoBehaviour {
     public int TinOre;
     public int IronOre;
     public int CoalOre;
+    public int AluminiumOre;
+    public int NickelOre;
+    public int MagnesiumOre;
+    public int ZincOre;
     public int LeadOre;
-    public int MithrilOre;
-    public int AdamantineOre;
-    public int QuicksilverOre;
+    public int SilverOre;
+    public int GoldOre;
+    public int PlatinumOre;
+    public int ObsidianOre;
     public int MeteoriteOre;
+    public int MithrilOre;
+    public int AdamanteusOre;
+    public int QuicksilverOre;
+    public int AetherOre;
+    public int CrimsoniteOre;
     public int Copper;
     public int Tin;
     public int Bronze;
     public int Iron;
-    public int Lead;
     public int Steel;
+    public int Aluminium;
+    public int Duralumin;
+    public int Nickel;
+    public int Invar;
+    public int Magnesium;
+    public int Hydronalium;
+    public int Zinc;
+    public int Brass;
+    public int Zamakium;
+    public int Lead;
     public int WhiteMetal;
-    public int BlackMetal;
+    public int DamascusSteel;
+    public int Silver;
+    public int Gold;
+    public int RoseGold;
+    public int Elinvar;
+    public int Electrum;
+    public int CorinthianBronze;
+    public int Platinum;
+    public int RefinedObsidian;
+    public int Darksteel;
+    public int RefinedMeteorite;
+    public int MeteoricIron;
+    public int Shadowsteel;
+    public int MeteoricSteel;
     public int Mithril;
-    public int Adamantine;
+    public int MysticalSteel;
+    public int Adamanteus;
+    public int DivineSteel;
     public int Quicksilver;
-    public int Meteorite;
-    public int MysticalMetal;
-    public int InfinitiumMetal;
+    public int CelestialSteel;
+    public int Luminium;
+    public int Aether;
+    public int Etherium;
+    public int CosmicSteel;
+    public int Crimsonite;
+    public int SoulSteel;
+    public int Neutronium;
+    public int Orichalcum;
+    public int Infinitium;
 
     //Potions
+    public int LuckPotion1;
+    public int LuckPotion2;
+    public int LuckPotion3;
+    public int LuckPotion4;
+    public int LuckPotion5;
+    public int LuckPotion6;
+    public int DefencePotion1;
+    public int DefencePotion2;
+    public int DefencePotion3;
+    public int DefencePotion4;
+    public int DefencePotion5;
+    public int DefencePotion6;
     public int HealthPotion1;
     public int HealthPotion2;
     public int HealthPotion3;
@@ -69,24 +122,12 @@ public class DataManager : MonoBehaviour {
     public int AttackPotion4;
     public int AttackPotion5;
     public int AttackPotion6;
-    public int DefencePotion1;
-    public int DefencePotion2;
-    public int DefencePotion3;
-    public int DefencePotion4;
-    public int DefencePotion5;
-    public int DefencePotion6;
     public int MagicPotion1;
     public int MagicPotion2;
     public int MagicPotion3;
     public int MagicPotion4;
     public int MagicPotion5;
     public int MagicPotion6;
-    public int LuckPotion1;
-    public int LuckPotion2;
-    public int LuckPotion3;
-    public int LuckPotion4;
-    public int LuckPotion5;
-    public int LuckPotion6;
     public int MarvelousPotion;
 
     //Herbs
@@ -159,26 +200,67 @@ public class DataManager : MonoBehaviour {
         CopperOre = PlayerData.ores[0];
         TinOre = PlayerData.ores[1];
         IronOre = PlayerData.ores[2];
-        LeadOre = PlayerData.ores[3];
-        CoalOre = PlayerData.ores[4];
-        MithrilOre = PlayerData.ores[5];
-        AdamantineOre = PlayerData.ores[6];
-        QuicksilverOre = PlayerData.ores[7];
-        MeteoriteOre = PlayerData.ores[8];
+        CoalOre = PlayerData.ores[3];
+        AluminiumOre = PlayerData.ores[4];
+        NickelOre = PlayerData.ores[5];
+        MagnesiumOre = PlayerData.ores[6];
+        ZincOre = PlayerData.ores[7];
+        LeadOre = PlayerData.ores[8];
+        SilverOre = PlayerData.ores[9];
+        GoldOre = PlayerData.ores[10];
+        PlatinumOre = PlayerData.ores[11];
+        ObsidianOre = PlayerData.ores[12];
+        MeteoriteOre = PlayerData.ores[13];
+        MithrilOre = PlayerData.ores[14];
+        AdamanteusOre = PlayerData.ores[15];
+        QuicksilverOre = PlayerData.ores[16];
+        AetherOre = PlayerData.ores[17];
+        CrimsoniteOre = PlayerData.ores[18];
         Copper = PlayerData.metals[0];
         Tin = PlayerData.metals[1];
         Bronze = PlayerData.metals[2];
         Iron = PlayerData.metals[3];
-        Lead = PlayerData.metals[4];
-        Steel = PlayerData.metals[5];
-        WhiteMetal = PlayerData.metals[6];
-        BlackMetal = PlayerData.metals[7];
-        Mithril = PlayerData.metals[8];
-        Adamantine = PlayerData.metals[9];
-        Quicksilver = PlayerData.metals[10];
-        Meteorite = PlayerData.metals[11];
-        MysticalMetal = PlayerData.metals[12];
-        InfinitiumMetal = PlayerData.metals[13];
+        Steel = PlayerData.metals[4];
+        Aluminium = PlayerData.metals[5];
+        Duralumin = PlayerData.metals[6];
+        Nickel = PlayerData.metals[7];
+        Invar = PlayerData.metals[8];
+        Magnesium = PlayerData.metals[9];
+        Hydronalium = PlayerData.metals[10];
+        Zinc = PlayerData.metals[11];
+        Brass = PlayerData.metals[12];
+        Zamakium = PlayerData.metals[13];
+        Lead = PlayerData.metals[14];
+        WhiteMetal = PlayerData.metals[15];
+        DamascusSteel = PlayerData.metals[16];
+        Silver = PlayerData.metals[17];
+        Gold = PlayerData.metals[18];
+        RoseGold = PlayerData.metals[19];
+        Elinvar = PlayerData.metals[20];
+        Electrum = PlayerData.metals[21];
+        CorinthianBronze = PlayerData.metals[22];
+        Platinum = PlayerData.metals[23];
+        RefinedObsidian = PlayerData.metals[24];
+        Darksteel = PlayerData.metals[25];
+        RefinedMeteorite = PlayerData.metals[26];
+        MeteoricIron = PlayerData.metals[27];
+        Shadowsteel = PlayerData.metals[28];
+        MeteoricSteel = PlayerData.metals[29];
+        Mithril = PlayerData.metals[30];
+        MysticalSteel = PlayerData.metals[31];
+        Adamanteus = PlayerData.metals[32];
+        DivineSteel = PlayerData.metals[33];
+        Quicksilver = PlayerData.metals[34];
+        CelestialSteel = PlayerData.metals[35];
+        Luminium = PlayerData.metals[36];
+        Aether = PlayerData.metals[37];
+        Etherium = PlayerData.metals[38];
+        CosmicSteel = PlayerData.metals[39];
+        Crimsonite = PlayerData.metals[40];
+        SoulSteel = PlayerData.metals[41];
+        Neutronium = PlayerData.metals[42];
+        Orichalcum = PlayerData.metals[43];
+        Infinitium = PlayerData.metals[44];
         HelmTier = PlayerData.armourTier[0];
         ChestplateTier = PlayerData.armourTier[1];
         GauntletsTier = PlayerData.armourTier[2];
@@ -267,26 +349,67 @@ public class DataManager : MonoBehaviour {
             PlayerData.ores[0] = loadedData.CopperOre;
             PlayerData.ores[1] = loadedData.TinOre;
             PlayerData.ores[2] = loadedData.IronOre;
-            PlayerData.ores[3] = loadedData.LeadOre;
-            PlayerData.ores[4] = loadedData.CoalOre;
-            PlayerData.ores[5] = loadedData.MithrilOre;
-            PlayerData.ores[6] = loadedData.AdamantineOre;
-            PlayerData.ores[7] = loadedData.QuicksilverOre;
-            PlayerData.ores[8] = loadedData.MeteoriteOre;
+            PlayerData.ores[3] = loadedData.CoalOre;
+            PlayerData.ores[4] = loadedData.AluminiumOre;
+            PlayerData.ores[5] = loadedData.NickelOre;
+            PlayerData.ores[6] = loadedData.MagnesiumOre;
+            PlayerData.ores[7] = loadedData.ZincOre;
+            PlayerData.ores[8] = loadedData.LeadOre;
+            PlayerData.ores[9] = loadedData.SilverOre;
+            PlayerData.ores[10] = loadedData.GoldOre;
+            PlayerData.ores[11] = loadedData.PlatinumOre;
+            PlayerData.ores[12] = loadedData.ObsidianOre;
+            PlayerData.ores[13] = loadedData.MeteoriteOre;
+            PlayerData.ores[14] = loadedData.MithrilOre;
+            PlayerData.ores[15] = loadedData.AdamanteusOre;
+            PlayerData.ores[16] = loadedData.QuicksilverOre;
+            PlayerData.ores[17] = loadedData.AetherOre;
+            PlayerData.ores[18] = loadedData.CrimsoniteOre;
             PlayerData.metals[0] = loadedData.Copper;
             PlayerData.metals[1] = loadedData.Tin;
             PlayerData.metals[2] = loadedData.Bronze;
             PlayerData.metals[3] = loadedData.Iron;
-            PlayerData.metals[4] = loadedData.Lead;
-            PlayerData.metals[5] = loadedData.Steel;
-            PlayerData.metals[6] = loadedData.WhiteMetal;
-            PlayerData.metals[7] = loadedData.BlackMetal;
-            PlayerData.metals[8] = loadedData.Mithril;
-            PlayerData.metals[9] = loadedData.Adamantine;
-            PlayerData.metals[10] = loadedData.Quicksilver;
-            PlayerData.metals[11] = loadedData.Meteorite;
-            PlayerData.metals[12] = loadedData.MysticalMetal;
-            PlayerData.metals[13] = loadedData.InfinitiumMetal;
+            PlayerData.metals[4] = loadedData.Steel;
+            PlayerData.metals[5] = loadedData.Aluminium;
+            PlayerData.metals[6] = loadedData.Duralumin;
+            PlayerData.metals[7] = loadedData.Nickel;
+            PlayerData.metals[8] = loadedData.Invar;
+            PlayerData.metals[9] = loadedData.Magnesium;
+            PlayerData.metals[10] = loadedData.Hydronalium;
+            PlayerData.metals[11] = loadedData.Zinc;
+            PlayerData.metals[12] = loadedData.Brass;
+            PlayerData.metals[13] = loadedData.Zamakium;
+            PlayerData.metals[14] = loadedData.Lead;
+            PlayerData.metals[15] = loadedData.WhiteMetal;
+            PlayerData.metals[16] = loadedData.DamascusSteel;
+            PlayerData.metals[17] = loadedData.Silver;
+            PlayerData.metals[18] = loadedData.Gold;
+            PlayerData.metals[19] = loadedData.RoseGold;
+            PlayerData.metals[20] = loadedData.Elinvar;
+            PlayerData.metals[21] = loadedData.Electrum;
+            PlayerData.metals[22] = loadedData.CorinthianBronze;
+            PlayerData.metals[23] = loadedData.Platinum;
+            PlayerData.metals[24] = loadedData.RefinedObsidian;
+            PlayerData.metals[25] = loadedData.Darksteel;
+            PlayerData.metals[26] = loadedData.RefinedMeteorite;
+            PlayerData.metals[27] = loadedData.MeteoricIron;
+            PlayerData.metals[28] = loadedData.Shadowsteel;
+            PlayerData.metals[29] = loadedData.MeteoricSteel;
+            PlayerData.metals[30] = loadedData.Mithril;
+            PlayerData.metals[31] = loadedData.MysticalSteel;
+            PlayerData.metals[32] = loadedData.Adamanteus;
+            PlayerData.metals[33] = loadedData.DivineSteel;
+            PlayerData.metals[34] = loadedData.Quicksilver;
+            PlayerData.metals[35] = loadedData.CelestialSteel;
+            PlayerData.metals[36] = loadedData.Luminium;
+            PlayerData.metals[37] = loadedData.Aether;
+            PlayerData.metals[38] = loadedData.Etherium;
+            PlayerData.metals[39] = loadedData.CosmicSteel;
+            PlayerData.metals[40] = loadedData.Crimsonite;
+            PlayerData.metals[41] = loadedData.SoulSteel;
+            PlayerData.metals[42] = loadedData.Neutronium;
+            PlayerData.metals[43] = loadedData.Orichalcum;
+            PlayerData.metals[44] = loadedData.Infinitium;
             PlayerData.armourTier[0] = loadedData.HelmTier;
             PlayerData.armourTier[1] = loadedData.ChestplateTier;
             PlayerData.armourTier[2] = loadedData.GauntletsTier;
@@ -374,26 +497,67 @@ public class DataManager : MonoBehaviour {
             CopperOre = PlayerData.ores[0],
             TinOre = PlayerData.ores[1],
             IronOre = PlayerData.ores[2],
-            LeadOre = PlayerData.ores[3],
-            CoalOre = PlayerData.ores[4],
-            MithrilOre = PlayerData.ores[5],
-            AdamantineOre = PlayerData.ores[6],
-            QuicksilverOre = PlayerData.ores[7],
-            MeteoriteOre = PlayerData.ores[8],
+            CoalOre = PlayerData.ores[3],
+            AluminiumOre = PlayerData.ores[4],
+            NickelOre = PlayerData.ores[5],
+            MagnesiumOre = PlayerData.ores[6],
+            ZincOre = PlayerData.ores[7],
+            LeadOre = PlayerData.ores[8],
+            SilverOre = PlayerData.ores[9],
+            GoldOre = PlayerData.ores[10],
+            PlatinumOre = PlayerData.ores[11],
+            ObsidianOre = PlayerData.ores[12],
+            MeteoriteOre = PlayerData.ores[13],
+            MithrilOre = PlayerData.ores[14],
+            AdamanteusOre = PlayerData.ores[15],
+            QuicksilverOre = PlayerData.ores[16],
+            AetherOre = PlayerData.ores[17],
+            CrimsoniteOre = PlayerData.ores[18],
             Copper = PlayerData.metals[0],
             Tin = PlayerData.metals[1],
             Bronze = PlayerData.metals[2],
             Iron = PlayerData.metals[3],
-            Lead = PlayerData.metals[4],
-            Steel = PlayerData.metals[5],
-            WhiteMetal = PlayerData.metals[6],
-            BlackMetal = PlayerData.metals[7],
-            Mithril = PlayerData.metals[8],
-            Adamantine = PlayerData.metals[9],
-            Quicksilver = PlayerData.metals[10],
-            Meteorite = PlayerData.metals[11],
-            MysticalMetal = PlayerData.metals[12],
-            InfinitiumMetal = PlayerData.metals[13],
+            Steel = PlayerData.metals[4],
+            Aluminium = PlayerData.metals[5],
+            Duralumin = PlayerData.metals[6],
+            Nickel = PlayerData.metals[7],
+            Invar = PlayerData.metals[8],
+            Magnesium = PlayerData.metals[9],
+            Hydronalium = PlayerData.metals[10],
+            Zinc = PlayerData.metals[11],
+            Brass = PlayerData.metals[12],
+            Zamakium = PlayerData.metals[13],
+            Lead = PlayerData.metals[14],
+            WhiteMetal = PlayerData.metals[15],
+            DamascusSteel = PlayerData.metals[16],
+            Silver = PlayerData.metals[17],
+            Gold = PlayerData.metals[18],
+            RoseGold = PlayerData.metals[19],
+            Elinvar = PlayerData.metals[20],
+            Electrum = PlayerData.metals[21],
+            CorinthianBronze = PlayerData.metals[22],
+            Platinum = PlayerData.metals[23],
+            RefinedObsidian = PlayerData.metals[24],
+            Darksteel = PlayerData.metals[25],
+            RefinedMeteorite = PlayerData.metals[26],
+            MeteoricIron = PlayerData.metals[27],
+            Shadowsteel = PlayerData.metals[28],
+            MeteoricSteel = PlayerData.metals[29],
+            Mithril = PlayerData.metals[30],
+            MysticalSteel = PlayerData.metals[31],
+            Adamanteus = PlayerData.metals[32],
+            DivineSteel = PlayerData.metals[33],
+            Quicksilver = PlayerData.metals[34],
+            CelestialSteel = PlayerData.metals[35],
+            Luminium = PlayerData.metals[36],
+            Aether = PlayerData.metals[37],
+            Etherium = PlayerData.metals[38],
+            CosmicSteel = PlayerData.metals[39],
+            Crimsonite = PlayerData.metals[40],
+            SoulSteel = PlayerData.metals[41],
+            Neutronium = PlayerData.metals[42],
+            Orichalcum = PlayerData.metals[43],
+            Infinitium = PlayerData.metals[44],
             HelmTier = PlayerData.armourTier[0],
             ChestplateTier = PlayerData.armourTier[1],
             GauntletsTier = PlayerData.armourTier[2],
@@ -508,26 +672,67 @@ public class DataManager : MonoBehaviour {
             CopperOre = PlayerData.ores[0],
             TinOre = PlayerData.ores[1],
             IronOre = PlayerData.ores[2],
-            LeadOre = PlayerData.ores[3],
-            CoalOre = PlayerData.ores[4],
-            MithrilOre = PlayerData.ores[5],
-            AdamantineOre = PlayerData.ores[6],
-            QuicksilverOre = PlayerData.ores[7],
-            MeteoriteOre = PlayerData.ores[8],
+            CoalOre = PlayerData.ores[3],
+            AluminiumOre = PlayerData.ores[4],
+            NickelOre = PlayerData.ores[5],
+            MagnesiumOre = PlayerData.ores[6],
+            ZincOre = PlayerData.ores[7],
+            LeadOre = PlayerData.ores[8],
+            SilverOre = PlayerData.ores[9],
+            GoldOre = PlayerData.ores[10],
+            PlatinumOre = PlayerData.ores[11],
+            ObsidianOre = PlayerData.ores[12],
+            MeteoriteOre = PlayerData.ores[13],
+            MithrilOre = PlayerData.ores[14],
+            AdamanteusOre = PlayerData.ores[15],
+            QuicksilverOre = PlayerData.ores[16],
+            AetherOre = PlayerData.ores[17],
+            CrimsoniteOre = PlayerData.ores[18],
             Copper = PlayerData.metals[0],
             Tin = PlayerData.metals[1],
             Bronze = PlayerData.metals[2],
             Iron = PlayerData.metals[3],
-            Lead = PlayerData.metals[4],
-            Steel = PlayerData.metals[5],
-            WhiteMetal = PlayerData.metals[6],
-            BlackMetal = PlayerData.metals[7],
-            Mithril = PlayerData.metals[8],
-            Adamantine = PlayerData.metals[9],
-            Quicksilver = PlayerData.metals[10],
-            Meteorite = PlayerData.metals[11],
-            MysticalMetal = PlayerData.metals[12],
-            InfinitiumMetal = PlayerData.metals[13],
+            Steel = PlayerData.metals[4],
+            Aluminium = PlayerData.metals[5],
+            Duralumin = PlayerData.metals[6],
+            Nickel = PlayerData.metals[7],
+            Invar = PlayerData.metals[8],
+            Magnesium = PlayerData.metals[9],
+            Hydronalium = PlayerData.metals[10],
+            Zinc = PlayerData.metals[11],
+            Brass = PlayerData.metals[12],
+            Zamakium = PlayerData.metals[13],
+            Lead = PlayerData.metals[14],
+            WhiteMetal = PlayerData.metals[15],
+            DamascusSteel = PlayerData.metals[16],
+            Silver = PlayerData.metals[17],
+            Gold = PlayerData.metals[18],
+            RoseGold = PlayerData.metals[19],
+            Elinvar = PlayerData.metals[20],
+            Electrum = PlayerData.metals[21],
+            CorinthianBronze = PlayerData.metals[22],
+            Platinum = PlayerData.metals[23],
+            RefinedObsidian = PlayerData.metals[24],
+            Darksteel = PlayerData.metals[25],
+            RefinedMeteorite = PlayerData.metals[26],
+            MeteoricIron = PlayerData.metals[27],
+            Shadowsteel = PlayerData.metals[28],
+            MeteoricSteel = PlayerData.metals[29],
+            Mithril = PlayerData.metals[30],
+            MysticalSteel = PlayerData.metals[31],
+            Adamanteus = PlayerData.metals[32],
+            DivineSteel = PlayerData.metals[33],
+            Quicksilver = PlayerData.metals[34],
+            CelestialSteel = PlayerData.metals[35],
+            Luminium = PlayerData.metals[36],
+            Aether = PlayerData.metals[37],
+            Etherium = PlayerData.metals[38],
+            CosmicSteel = PlayerData.metals[39],
+            Crimsonite = PlayerData.metals[40],
+            SoulSteel = PlayerData.metals[41],
+            Neutronium = PlayerData.metals[42],
+            Orichalcum = PlayerData.metals[43],
+            Infinitium = PlayerData.metals[44],
             HelmTier = PlayerData.armourTier[0],
             ChestplateTier = PlayerData.armourTier[1],
             GauntletsTier = PlayerData.armourTier[2],
@@ -642,26 +847,67 @@ public class DataManager : MonoBehaviour {
             CopperOre = PlayerData.ores[0],
             TinOre = PlayerData.ores[1],
             IronOre = PlayerData.ores[2],
-            LeadOre = PlayerData.ores[3],
-            CoalOre = PlayerData.ores[4],
-            MithrilOre = PlayerData.ores[5],
-            AdamantineOre = PlayerData.ores[6],
-            QuicksilverOre = PlayerData.ores[7],
-            MeteoriteOre = PlayerData.ores[8],
+            CoalOre = PlayerData.ores[3],
+            AluminiumOre = PlayerData.ores[4],
+            NickelOre = PlayerData.ores[5],
+            MagnesiumOre = PlayerData.ores[6],
+            ZincOre = PlayerData.ores[7],
+            LeadOre = PlayerData.ores[8],
+            SilverOre = PlayerData.ores[9],
+            GoldOre = PlayerData.ores[10],
+            PlatinumOre = PlayerData.ores[11],
+            ObsidianOre = PlayerData.ores[12],
+            MeteoriteOre = PlayerData.ores[13],
+            MithrilOre = PlayerData.ores[14],
+            AdamanteusOre = PlayerData.ores[15],
+            QuicksilverOre = PlayerData.ores[16],
+            AetherOre = PlayerData.ores[17],
+            CrimsoniteOre = PlayerData.ores[18],
             Copper = PlayerData.metals[0],
             Tin = PlayerData.metals[1],
             Bronze = PlayerData.metals[2],
             Iron = PlayerData.metals[3],
-            Lead = PlayerData.metals[4],
-            Steel = PlayerData.metals[5],
-            WhiteMetal = PlayerData.metals[6],
-            BlackMetal = PlayerData.metals[7],
-            Mithril = PlayerData.metals[8],
-            Adamantine = PlayerData.metals[9],
-            Quicksilver = PlayerData.metals[10],
-            Meteorite = PlayerData.metals[11],
-            MysticalMetal = PlayerData.metals[12],
-            InfinitiumMetal = PlayerData.metals[13],
+            Steel = PlayerData.metals[4],
+            Aluminium = PlayerData.metals[5],
+            Duralumin = PlayerData.metals[6],
+            Nickel = PlayerData.metals[7],
+            Invar = PlayerData.metals[8],
+            Magnesium = PlayerData.metals[9],
+            Hydronalium = PlayerData.metals[10],
+            Zinc = PlayerData.metals[11],
+            Brass = PlayerData.metals[12],
+            Zamakium = PlayerData.metals[13],
+            Lead = PlayerData.metals[14],
+            WhiteMetal = PlayerData.metals[15],
+            DamascusSteel = PlayerData.metals[16],
+            Silver = PlayerData.metals[17],
+            Gold = PlayerData.metals[18],
+            RoseGold = PlayerData.metals[19],
+            Elinvar = PlayerData.metals[20],
+            Electrum = PlayerData.metals[21],
+            CorinthianBronze = PlayerData.metals[22],
+            Platinum = PlayerData.metals[23],
+            RefinedObsidian = PlayerData.metals[24],
+            Darksteel = PlayerData.metals[25],
+            RefinedMeteorite = PlayerData.metals[26],
+            MeteoricIron = PlayerData.metals[27],
+            Shadowsteel = PlayerData.metals[28],
+            MeteoricSteel = PlayerData.metals[29],
+            Mithril = PlayerData.metals[30],
+            MysticalSteel = PlayerData.metals[31],
+            Adamanteus = PlayerData.metals[32],
+            DivineSteel = PlayerData.metals[33],
+            Quicksilver = PlayerData.metals[34],
+            CelestialSteel = PlayerData.metals[35],
+            Luminium = PlayerData.metals[36],
+            Aether = PlayerData.metals[37],
+            Etherium = PlayerData.metals[38],
+            CosmicSteel = PlayerData.metals[39],
+            Crimsonite = PlayerData.metals[40],
+            SoulSteel = PlayerData.metals[41],
+            Neutronium = PlayerData.metals[42],
+            Orichalcum = PlayerData.metals[43],
+            Infinitium = PlayerData.metals[44],
             HelmTier = PlayerData.armourTier[0],
             ChestplateTier = PlayerData.armourTier[1],
             GauntletsTier = PlayerData.armourTier[2],

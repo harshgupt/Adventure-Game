@@ -33,74 +33,73 @@ Turqoise
 
 Ores:
 
-Copper
-Tin
-Iron
-Coal
-Aluminium
-Nickel
-Magnesium
-Zinc
-Lead
-Silver
-Gold
-Platinum
-Obsidian
-Meteorite
-Mithril
-Adamanteus
-Quicksilver
-Aether
-Crimsonite
+0 Copper
+1 Tin
+2 Iron
+3 Coal
+4 Aluminium
+5 Nickel
+6 Magnesium
+7 Zinc
+8 Lead
+9 Silver
+10 Gold
+11 Platinum
+12 Obsidian
+13 Meteorite
+14 Mithril
+15 Adamanteus
+16 Quicksilver
+17 Aether
+18 Crimsonite
 
 Metals:
 
-Copper
-Tin
-Bronze
-Iron
-Coal
-Steel
-Aluminium
-Duralumin
-Nickel
-Invar
-Magnesium
-Hydronalium
-Zinc
-Brass
-Zamakium
-Lead
-White Metal
-Damascus Steel
-Silver
-Gold
-Rose Gold
-Elinvar
-Electrum
-Corinthian Bronze
-Platinum
-Obsidian
-Darksteel
-Meteorite
-Meteoric Iron
-Shadowsteel
-Meteoric Steel
-Mithril
-Mystical Steel
-Adamanteus
-Divine Steel
-Quicksilver
-Celestial Steel
-Luminium
-Aether
-Etherium
-Cosmic Steel
-Crimsonite
-Soul Steel
-Neutronium
-Orichalcum
-Infinitium
+0 Copper
+1 Tin
+2 Bronze
+3 Iron
+4 Steel
+5 Aluminium
+6 Duralumin
+7 Nickel
+8 Invar
+9 Magnesium
+10 Hydronalium
+11 Zinc
+12 Brass
+13 Zamakium
+14 Lead
+15 White Metal
+16 Damascus Steel
+17 Silver
+18 Gold
+19 Rose Gold
+20 Elinvar
+21 Electrum
+22 Corinthian Bronze
+23 Platinum
+24 Refined Obsidian
+25 Darksteel
+26 Refined Meteorite
+27 Meteoric Iron
+28 Shadowsteel
+29 Meteoric Steel
+30 Mithril
+31 Mystical Steel
+32 Adamanteus
+33 Divine Steel
+34 Quicksilver
+35 Celestial Steel
+36 Luminium
+37 Aether
+38 Etherium
+39 Cosmic Steel
+40 Crimsonite
+41 Soul Steel
+42 Neutronium
+43 Orichalcum
+44 Infinitium
 
 Alloys:
 
