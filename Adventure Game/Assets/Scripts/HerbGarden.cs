@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HerbGarden : MonoBehaviour {
 
@@ -38,7 +39,24 @@ public class HerbGarden : MonoBehaviour {
     public GameObject tormentil;
     public GameObject bloodroot;
 
+    public Image inventoryImage;
+
+    public Sprite[] herbSprites = new Sprite[DataManager.numHerbs];
+
+    public Text inventoryAmount;
+
     public int currentHerb = 0;
+
+    private void Update()
+    {
+        DisplayInventoryAmount();
+    }
+
+    public void DisplayInventoryAmount()
+    {
+        inventoryImage.sprite = herbSprites[currentHerb];
+        inventoryAmount.text = PlayerData.herbs[currentHerb].ToString();
+    }
 
     public void LeftButton()
     {

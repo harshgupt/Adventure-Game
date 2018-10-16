@@ -12,7 +12,18 @@ public class FruitOrchard : MonoBehaviour {
     public GameObject goldenMango;
     public GameObject wildNectarine;
 
+    public Image inventoryImage;
+
+    public Sprite[] fruitSprites = new Sprite[DataManager.numFruits];
+
+    public Text inventoryAmount;
+
     public int currentFruit = 0;
+
+    private void Update()
+    {
+        DisplayInventoryAmount();
+    }
 
     public void RubyAppleCollect()
     {
@@ -42,6 +53,12 @@ public class FruitOrchard : MonoBehaviour {
     public void WildNectarineCollect()
     {
         PlayerData.fruits[5]++;
+    }
+
+    public void DisplayInventoryAmount()
+    {
+        inventoryImage.sprite = fruitSprites[currentFruit];
+        inventoryAmount.text = PlayerData.fruits[currentFruit].ToString();
     }
 
     public void LeftButton()
