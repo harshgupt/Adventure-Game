@@ -46,11 +46,15 @@ public class PotionBrewing : MonoBehaviour {
 
     public Image progressBar;
     public Image ingredient;
+    public Image inventoryImage;
 
-    public Sprite[] herbSprites = new Sprite[30];
-    public Sprite[] fruitSprites = new Sprite[6];
+    public Sprite[] herbSprites = new Sprite[DataManager.numHerbs];
+    public Sprite[] fruitSprites = new Sprite[DataManager.numFruits];
+    public Sprite[] potionSprites = new Sprite[DataManager.numPotions];
     public Sprite ingredient1;
     public Sprite ingredient2;
+
+    public Text inventoryAmount;
 
     public Vector3 ingredientPos;
 
@@ -81,6 +85,7 @@ public class PotionBrewing : MonoBehaviour {
 
     private void Update()
     {
+        DisplayInventoryAmount();
 #if !UNITY_EDITOR
         Touch touch = Input.touches[0];
         if(touch.phase == TouchPhase.Began && (addedIngredient1 || addedIngredient2))
@@ -297,6 +302,12 @@ public class PotionBrewing : MonoBehaviour {
         Color color = ingredient.color;
         color.a = 1;
         ingredient.color = color;
+    }
+
+    public void DisplayInventoryAmount()
+    {
+        inventoryImage.sprite = potionSprites[currentPotion];
+        inventoryAmount.text = PlayerData.potions[currentPotion].ToString();
     }
 
     public void LP1Brew()

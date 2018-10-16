@@ -2138,7 +2138,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -50, y: -350.00003}
+  m_AnchoredPosition: {x: -50, y: -350}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &62894132
@@ -29900,7 +29900,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1145921230
 RectTransform:
   m_ObjectHideFlags: 0
@@ -30038,6 +30038,7 @@ MonoBehaviour:
   ingredientObject: {fileID: 1372984356}
   progressBar: {fileID: 1509621556}
   ingredient: {fileID: 1372984358}
+  inventoryImage: {fileID: 62894132}
   herbSprites:
   - {fileID: 21300000, guid: f28c69c0821d4d446be262162655b897, type: 3}
   - {fileID: 21300000, guid: bd8ce134ec83c094898a0f18222939e7, type: 3}
@@ -30076,8 +30077,41 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b9c929c33c8a580409ca7bd3727431d1, type: 3}
   - {fileID: 21300000, guid: e8af05c22d800ba43906a0c686097e81, type: 3}
   - {fileID: 21300000, guid: 09aef52d166e5344a9d60e3936e3d39a, type: 3}
+  potionSprites:
+  - {fileID: 21300000, guid: bdb639837407f724dad13e93122451a0, type: 3}
+  - {fileID: 21300000, guid: d838d8b928c54ba40bc9ff8265d98ac2, type: 3}
+  - {fileID: 21300000, guid: 28388d1392025f74fa11a275d674fdac, type: 3}
+  - {fileID: 21300000, guid: 71f8eecc2a16a2e449cacfa76cdf9b47, type: 3}
+  - {fileID: 21300000, guid: d93bcf00e8e6732469da586cb72fa9e8, type: 3}
+  - {fileID: 21300000, guid: b47775bf4dc55134ea32e5a8a78d5e44, type: 3}
+  - {fileID: 21300000, guid: 965f65c81243345459034fe99d0e9cc0, type: 3}
+  - {fileID: 21300000, guid: eeb627e2d1206da46acc505a57a5b4ee, type: 3}
+  - {fileID: 21300000, guid: 4e744f55a5ece624fa7b02f9b600d5bb, type: 3}
+  - {fileID: 21300000, guid: 8f33d2b8ea5ac214da269d2632091a0d, type: 3}
+  - {fileID: 21300000, guid: c1e03d7b8e1ae5446999a77ad64460d4, type: 3}
+  - {fileID: 21300000, guid: bbd4576ea13d1594784b399629fbbc3b, type: 3}
+  - {fileID: 21300000, guid: d92d1cbfdb8aad54493f0ec4b5e75057, type: 3}
+  - {fileID: 21300000, guid: b083cb5526367b0439ee4174756ab23b, type: 3}
+  - {fileID: 21300000, guid: f41358dfa5ff15b43b0045e013a51b1a, type: 3}
+  - {fileID: 21300000, guid: c70d2fdea995d9843a14819518e1fb3f, type: 3}
+  - {fileID: 21300000, guid: d3992b68e8457004285dd931f8b3b7c3, type: 3}
+  - {fileID: 21300000, guid: 2bc009b211c061e4c992bccdfc028704, type: 3}
+  - {fileID: 21300000, guid: 8c64b9e6bf1e1dd4c89581f9fd9de40c, type: 3}
+  - {fileID: 21300000, guid: 9c25be72ec08bf144817fae10b91ae95, type: 3}
+  - {fileID: 21300000, guid: 4b077a1e8b29d9f44a0d2a79b5cb3d09, type: 3}
+  - {fileID: 21300000, guid: a20a987eb93577c4bb07b8f2254e4924, type: 3}
+  - {fileID: 21300000, guid: b6ea9b74ac4699e468885ccf4db84b52, type: 3}
+  - {fileID: 21300000, guid: 871a65aa31be96a45bd9209c82b2c2a3, type: 3}
+  - {fileID: 21300000, guid: 8b2358dc74d7d0848bb8366cdcc3e776, type: 3}
+  - {fileID: 21300000, guid: e0b73fe3f608f4a41807c435f581490e, type: 3}
+  - {fileID: 21300000, guid: 7d79e07828f406543b4284b76142b8b8, type: 3}
+  - {fileID: 21300000, guid: ce1493ff4132f5a48ae3af401bd0659f, type: 3}
+  - {fileID: 21300000, guid: 0bd31bdd3dd60584cb1d32257994f568, type: 3}
+  - {fileID: 21300000, guid: 74c3126cb39c02e44b5718b9a29e0952, type: 3}
+  - {fileID: 21300000, guid: 576ceffdfa5e0964eaec541d3dfce1cc, type: 3}
   ingredient1: {fileID: 0}
   ingredient2: {fileID: 0}
+  inventoryAmount: {fileID: 1249630622}
   ingredientPos: {x: 0, y: 0, z: 0}
   startPosition: {x: 0, y: 0}
   currentPosition: {x: 0, y: 0}
@@ -50214,7 +50248,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1955578650
 RectTransform:
   m_ObjectHideFlags: 0
