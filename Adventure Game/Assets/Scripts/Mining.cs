@@ -4,8 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Mining : MonoBehaviour {
-    
-    public Sprite[] oreSprites = new Sprite[DataManager.numOres];
 
     public GameObject copperOre;
     public GameObject tinOre;
@@ -28,6 +26,8 @@ public class Mining : MonoBehaviour {
     public GameObject crimsoniteOre;
 
     public Image inventoryImage;
+
+    public Sprite[] oreSprites = new Sprite[DataManager.numOres];
 
     public Text inventoryAmount;
 

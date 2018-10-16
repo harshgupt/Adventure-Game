@@ -4,8 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Smelting : MonoBehaviour {
-    
-    public Sprite[] metals = new Sprite[DataManager.numMetals];
 
     public GameObject copper;
     public GameObject tin;
@@ -54,6 +52,8 @@ public class Smelting : MonoBehaviour {
     public GameObject infinitium;
 
     public Image inventoryImage;
+
+    public Sprite[] metalSprites = new Sprite[DataManager.numMetals];
 
     public Text inventoryAmount;
 
@@ -737,7 +737,7 @@ public class Smelting : MonoBehaviour {
 
     public void DisplayInventoryAmount()
     {
-        inventoryImage.sprite = metals[currentMetal];
+        inventoryImage.sprite = metalSprites[currentMetal];
         inventoryAmount.text = PlayerData.metals[currentMetal].ToString();
     }
 
