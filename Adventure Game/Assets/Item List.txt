@@ -1,35 +1,35 @@
 Gems:
 
-Amber
-Quartz
-Opal
-Jade
-Cinnabar
-Ametrine
-Smoky Quartz
-Garnet
-Onyx
-Pyrite
-Heliodor
-Citrine
-Rose Quartz
-Lapis Lazuli
-Aquamarine
-Peridot
-Turqoise
-Icy Quartz
-Coralite
-Amethyst
-Prismarium
-Topaz
-Moonstone
-Ruby
-Sunstone
-Sapphire
-Bloodstone
-Emerald
-Star Crystal
-Diamond
+0 Amber
+1 Quartz
+2 Opal
+3 Jade
+4 Cinnabar
+5 Ametrine
+6 Smoky Quartz
+7 Garnet
+8 Onyx
+9 Pyrite
+10 Heliodor
+11 Citrine
+12 Rose Quartz
+13 Lapis Lazuli
+14 Aquamarine
+15 Peridot
+16 Turqoise
+17 Icy Quartz
+18 Coralite
+19 Amethyst
+20 Prismarium
+21 Topaz
+22 Ruby
+23 Moonstone
+24 Sapphire
+25 Sunstone
+26 Emerald
+27 Bloodstone
+28 Star Crystal
+29 Diamond
 
 Ores:
 

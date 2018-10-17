@@ -14,6 +14,7 @@ public class DataManager : MonoBehaviour {
     public const int numArmour = 8;
     public const int numOres = 19;
     public const int numMetals = 45;
+    public const int numGems = 30;
     public const int numPotions = 31;
     public const int numHerbs = 30;
     public const int numFruits = 6;
@@ -96,6 +97,38 @@ public class DataManager : MonoBehaviour {
     public int Neutronium;
     public int Orichalcum;
     public int Infinitium;
+
+    //Gems
+    public int Amber;
+    public int Quartz;
+    public int Opal;
+    public int Jade;
+    public int Cinnabar;
+    public int Ametrine;
+    public int SmokyQuartz;
+    public int Garnet;
+    public int Onyx;
+    public int Pyrite;
+    public int Heliodor;
+    public int Citrine;
+    public int RoseQuartz;
+    public int LapisLazuli;
+    public int Aquamarine;
+    public int Peridot;
+    public int Turquoise;
+    public int IcyQuartz;
+    public int Coralite;
+    public int Amethyst;
+    public int Prismarium;
+    public int Topaz;
+    public int Ruby;
+    public int Moonstone;
+    public int Sapphire;
+    public int Sunstone;
+    public int Emerald;
+    public int Bloodstone;
+    public int StarCrystal;
+    public int Diamond;
 
     //Potions
     public int LuckPotion1;
@@ -197,6 +230,14 @@ public class DataManager : MonoBehaviour {
         #region To view data in runtime only
 
         Coins = PlayerData.coins;
+        HelmTier = PlayerData.armourTier[0];
+        ChestplateTier = PlayerData.armourTier[1];
+        GauntletsTier = PlayerData.armourTier[2];
+        LeggingsTier = PlayerData.armourTier[3];
+        BootsTier = PlayerData.armourTier[4];
+        ShieldTier = PlayerData.armourTier[5];
+        WeaponTier = PlayerData.armourTier[6];
+        PickaxeTier = PlayerData.armourTier[7];
         CopperOre = PlayerData.ores[0];
         TinOre = PlayerData.ores[1];
         IronOre = PlayerData.ores[2];
@@ -261,14 +302,36 @@ public class DataManager : MonoBehaviour {
         Neutronium = PlayerData.metals[42];
         Orichalcum = PlayerData.metals[43];
         Infinitium = PlayerData.metals[44];
-        HelmTier = PlayerData.armourTier[0];
-        ChestplateTier = PlayerData.armourTier[1];
-        GauntletsTier = PlayerData.armourTier[2];
-        LeggingsTier = PlayerData.armourTier[3];
-        BootsTier = PlayerData.armourTier[4];
-        ShieldTier = PlayerData.armourTier[5];
-        WeaponTier = PlayerData.armourTier[6];
-        PickaxeTier = PlayerData.armourTier[7];
+        Amber = PlayerData.gems[0];
+        Quartz = PlayerData.gems[1];
+        Opal = PlayerData.gems[2];
+        Jade = PlayerData.gems[3];
+        Cinnabar = PlayerData.gems[4];
+        Ametrine = PlayerData.gems[5];
+        SmokyQuartz = PlayerData.gems[6];
+        Garnet = PlayerData.gems[7];
+        Onyx = PlayerData.gems[8];
+        Pyrite = PlayerData.gems[9];
+        Heliodor = PlayerData.gems[10];
+        Citrine = PlayerData.gems[11];
+        RoseQuartz = PlayerData.gems[12];
+        LapisLazuli = PlayerData.gems[13];
+        Aquamarine = PlayerData.gems[14];
+        Peridot = PlayerData.gems[15];
+        Turquoise = PlayerData.gems[16];
+        IcyQuartz = PlayerData.gems[17];
+        Coralite = PlayerData.gems[18];
+        Amethyst = PlayerData.gems[19];
+        Prismarium = PlayerData.gems[20];
+        Topaz = PlayerData.gems[21];
+        Ruby = PlayerData.gems[22];
+        Moonstone = PlayerData.gems[23];
+        Sapphire = PlayerData.gems[24];
+        Sunstone = PlayerData.gems[25];
+        Emerald = PlayerData.gems[26];
+        Bloodstone = PlayerData.gems[27];
+        StarCrystal = PlayerData.gems[28];
+        Diamond = PlayerData.gems[29];
         LuckPotion1 = PlayerData.potions[0];
         LuckPotion2 = PlayerData.potions[5];
         LuckPotion3 = PlayerData.potions[10];
@@ -346,6 +409,14 @@ public class DataManager : MonoBehaviour {
             string data = File.ReadAllText(dataFilePath);
             PlayerDataJSON loadedData = JsonUtility.FromJson<PlayerDataJSON>(data);
             PlayerData.coins = loadedData.Coins;
+            PlayerData.armourTier[0] = loadedData.HelmTier;
+            PlayerData.armourTier[1] = loadedData.ChestplateTier;
+            PlayerData.armourTier[2] = loadedData.GauntletsTier;
+            PlayerData.armourTier[3] = loadedData.LeggingsTier;
+            PlayerData.armourTier[4] = loadedData.BootsTier;
+            PlayerData.armourTier[5] = loadedData.ShieldTier;
+            PlayerData.armourTier[6] = loadedData.WeaponTier;
+            PlayerData.armourTier[7] = loadedData.PickaxeTier;
             PlayerData.ores[0] = loadedData.CopperOre;
             PlayerData.ores[1] = loadedData.TinOre;
             PlayerData.ores[2] = loadedData.IronOre;
@@ -410,14 +481,36 @@ public class DataManager : MonoBehaviour {
             PlayerData.metals[42] = loadedData.Neutronium;
             PlayerData.metals[43] = loadedData.Orichalcum;
             PlayerData.metals[44] = loadedData.Infinitium;
-            PlayerData.armourTier[0] = loadedData.HelmTier;
-            PlayerData.armourTier[1] = loadedData.ChestplateTier;
-            PlayerData.armourTier[2] = loadedData.GauntletsTier;
-            PlayerData.armourTier[3] = loadedData.LeggingsTier;
-            PlayerData.armourTier[4] = loadedData.BootsTier;
-            PlayerData.armourTier[5] = loadedData.ShieldTier;
-            PlayerData.armourTier[6] = loadedData.WeaponTier;
-            PlayerData.armourTier[7] = loadedData.PickaxeTier;
+            PlayerData.gems[0] = loadedData.Amber;
+            PlayerData.gems[1] = loadedData.Quartz;
+            PlayerData.gems[2] = loadedData.Opal;
+            PlayerData.gems[3] = loadedData.Jade;
+            PlayerData.gems[4] = loadedData.Cinnabar;
+            PlayerData.gems[5] = loadedData.Ametrine;
+            PlayerData.gems[6] = loadedData.SmokyQuartz;
+            PlayerData.gems[7] = loadedData.Garnet;
+            PlayerData.gems[8] = loadedData.Onyx;
+            PlayerData.gems[9] = loadedData.Pyrite;
+            PlayerData.gems[10] = loadedData.Heliodor;
+            PlayerData.gems[11] = loadedData.Citrine;
+            PlayerData.gems[12] = loadedData.RoseQuartz;
+            PlayerData.gems[13] = loadedData.LapisLazuli;
+            PlayerData.gems[14] = loadedData.Aquamarine;
+            PlayerData.gems[15] = loadedData.Peridot;
+            PlayerData.gems[16] = loadedData.Turquoise;
+            PlayerData.gems[17] = loadedData.IcyQuartz;
+            PlayerData.gems[18] = loadedData.Coralite;
+            PlayerData.gems[19] = loadedData.Amethyst;
+            PlayerData.gems[20] = loadedData.Prismarium;
+            PlayerData.gems[21] = loadedData.Topaz;
+            PlayerData.gems[22] = loadedData.Ruby;
+            PlayerData.gems[23] = loadedData.Moonstone;
+            PlayerData.gems[24] = loadedData.Sapphire;
+            PlayerData.gems[25] = loadedData.Sunstone;
+            PlayerData.gems[26] = loadedData.Emerald;
+            PlayerData.gems[27] = loadedData.Bloodstone;
+            PlayerData.gems[28] = loadedData.StarCrystal;
+            PlayerData.gems[29] = loadedData.Diamond;
             PlayerData.potions[0] = loadedData.LuckPotion1;
             PlayerData.potions[5] = loadedData.LuckPotion2;
             PlayerData.potions[10] = loadedData.LuckPotion3;
@@ -494,6 +587,14 @@ public class DataManager : MonoBehaviour {
         PlayerDataJSON playerDataJSON = new PlayerDataJSON()
         {
             Coins = PlayerData.coins,
+            HelmTier = PlayerData.armourTier[0],
+            ChestplateTier = PlayerData.armourTier[1],
+            GauntletsTier = PlayerData.armourTier[2],
+            LeggingsTier = PlayerData.armourTier[3],
+            BootsTier = PlayerData.armourTier[4],
+            ShieldTier = PlayerData.armourTier[5],
+            WeaponTier = PlayerData.armourTier[6],
+            PickaxeTier = PlayerData.armourTier[7],
             CopperOre = PlayerData.ores[0],
             TinOre = PlayerData.ores[1],
             IronOre = PlayerData.ores[2],
@@ -558,14 +659,36 @@ public class DataManager : MonoBehaviour {
             Neutronium = PlayerData.metals[42],
             Orichalcum = PlayerData.metals[43],
             Infinitium = PlayerData.metals[44],
-            HelmTier = PlayerData.armourTier[0],
-            ChestplateTier = PlayerData.armourTier[1],
-            GauntletsTier = PlayerData.armourTier[2],
-            LeggingsTier = PlayerData.armourTier[3],
-            BootsTier = PlayerData.armourTier[4],
-            ShieldTier = PlayerData.armourTier[5],
-            WeaponTier = PlayerData.armourTier[6],
-            PickaxeTier = PlayerData.armourTier[7],
+            Amber = PlayerData.gems[0],
+            Quartz = PlayerData.gems[1],
+            Opal = PlayerData.gems[2],
+            Jade = PlayerData.gems[3],
+            Cinnabar = PlayerData.gems[4],
+            Ametrine = PlayerData.gems[5],
+            SmokyQuartz = PlayerData.gems[6],
+            Garnet = PlayerData.gems[7],
+            Onyx = PlayerData.gems[8],
+            Pyrite = PlayerData.gems[9],
+            Heliodor = PlayerData.gems[10],
+            Citrine = PlayerData.gems[11],
+            RoseQuartz = PlayerData.gems[12],
+            LapisLazuli = PlayerData.gems[13],
+            Aquamarine = PlayerData.gems[14],
+            Peridot = PlayerData.gems[15],
+            Turquoise = PlayerData.gems[16],
+            IcyQuartz = PlayerData.gems[17],
+            Coralite = PlayerData.gems[18],
+            Amethyst = PlayerData.gems[19],
+            Prismarium = PlayerData.gems[20],
+            Topaz = PlayerData.gems[21],
+            Ruby = PlayerData.gems[22],
+            Moonstone = PlayerData.gems[23],
+            Sapphire = PlayerData.gems[24],
+            Sunstone = PlayerData.gems[25],
+            Emerald = PlayerData.gems[26],
+            Bloodstone = PlayerData.gems[27],
+            StarCrystal = PlayerData.gems[28],
+            Diamond = PlayerData.gems[29],
             LuckPotion1 = PlayerData.potions[0],
             LuckPotion2 = PlayerData.potions[5],
             LuckPotion3 = PlayerData.potions[10],
@@ -654,6 +777,10 @@ public class DataManager : MonoBehaviour {
         {
             PlayerData.metals[i] = 0;
         }
+        for (int i = 0; i < numGems; i++)
+        {
+            PlayerData.gems[i] = 0;
+        }
         for (int i = 0; i < numPotions; i++)
         {
             PlayerData.potions[i] = 0;
@@ -669,6 +796,14 @@ public class DataManager : MonoBehaviour {
         PlayerDataJSON playerDataJSON = new PlayerDataJSON()
         {
             Coins = PlayerData.coins,
+            HelmTier = PlayerData.armourTier[0],
+            ChestplateTier = PlayerData.armourTier[1],
+            GauntletsTier = PlayerData.armourTier[2],
+            LeggingsTier = PlayerData.armourTier[3],
+            BootsTier = PlayerData.armourTier[4],
+            ShieldTier = PlayerData.armourTier[5],
+            WeaponTier = PlayerData.armourTier[6],
+            PickaxeTier = PlayerData.armourTier[7],
             CopperOre = PlayerData.ores[0],
             TinOre = PlayerData.ores[1],
             IronOre = PlayerData.ores[2],
@@ -733,14 +868,36 @@ public class DataManager : MonoBehaviour {
             Neutronium = PlayerData.metals[42],
             Orichalcum = PlayerData.metals[43],
             Infinitium = PlayerData.metals[44],
-            HelmTier = PlayerData.armourTier[0],
-            ChestplateTier = PlayerData.armourTier[1],
-            GauntletsTier = PlayerData.armourTier[2],
-            LeggingsTier = PlayerData.armourTier[3],
-            BootsTier = PlayerData.armourTier[4],
-            ShieldTier = PlayerData.armourTier[5],
-            WeaponTier = PlayerData.armourTier[6],
-            PickaxeTier = PlayerData.armourTier[7],
+            Amber = PlayerData.gems[0],
+            Quartz = PlayerData.gems[1],
+            Opal = PlayerData.gems[2],
+            Jade = PlayerData.gems[3],
+            Cinnabar = PlayerData.gems[4],
+            Ametrine = PlayerData.gems[5],
+            SmokyQuartz = PlayerData.gems[6],
+            Garnet = PlayerData.gems[7],
+            Onyx = PlayerData.gems[8],
+            Pyrite = PlayerData.gems[9],
+            Heliodor = PlayerData.gems[10],
+            Citrine = PlayerData.gems[11],
+            RoseQuartz = PlayerData.gems[12],
+            LapisLazuli = PlayerData.gems[13],
+            Aquamarine = PlayerData.gems[14],
+            Peridot = PlayerData.gems[15],
+            Turquoise = PlayerData.gems[16],
+            IcyQuartz = PlayerData.gems[17],
+            Coralite = PlayerData.gems[18],
+            Amethyst = PlayerData.gems[19],
+            Prismarium = PlayerData.gems[20],
+            Topaz = PlayerData.gems[21],
+            Ruby = PlayerData.gems[22],
+            Moonstone = PlayerData.gems[23],
+            Sapphire = PlayerData.gems[24],
+            Sunstone = PlayerData.gems[25],
+            Emerald = PlayerData.gems[26],
+            Bloodstone = PlayerData.gems[27],
+            StarCrystal = PlayerData.gems[28],
+            Diamond = PlayerData.gems[29],
             LuckPotion1 = PlayerData.potions[0],
             LuckPotion2 = PlayerData.potions[5],
             LuckPotion3 = PlayerData.potions[10],
@@ -825,6 +982,10 @@ public class DataManager : MonoBehaviour {
         {
             PlayerData.metals[i]++;
         }
+        for (int i = 0; i < numGems; i++)
+        {
+            PlayerData.gems[i]++;
+        }
         for (int i = 0; i < numArmour; i++)
         {
             PlayerData.armourTier[i]++;
@@ -844,6 +1005,14 @@ public class DataManager : MonoBehaviour {
         PlayerDataJSON playerDataJSON = new PlayerDataJSON()
         {
             Coins = PlayerData.coins,
+            HelmTier = PlayerData.armourTier[0],
+            ChestplateTier = PlayerData.armourTier[1],
+            GauntletsTier = PlayerData.armourTier[2],
+            LeggingsTier = PlayerData.armourTier[3],
+            BootsTier = PlayerData.armourTier[4],
+            ShieldTier = PlayerData.armourTier[5],
+            WeaponTier = PlayerData.armourTier[6],
+            PickaxeTier = PlayerData.armourTier[7],
             CopperOre = PlayerData.ores[0],
             TinOre = PlayerData.ores[1],
             IronOre = PlayerData.ores[2],
@@ -908,14 +1077,36 @@ public class DataManager : MonoBehaviour {
             Neutronium = PlayerData.metals[42],
             Orichalcum = PlayerData.metals[43],
             Infinitium = PlayerData.metals[44],
-            HelmTier = PlayerData.armourTier[0],
-            ChestplateTier = PlayerData.armourTier[1],
-            GauntletsTier = PlayerData.armourTier[2],
-            LeggingsTier = PlayerData.armourTier[3],
-            BootsTier = PlayerData.armourTier[4],
-            ShieldTier = PlayerData.armourTier[5],
-            WeaponTier = PlayerData.armourTier[6],
-            PickaxeTier = PlayerData.armourTier[7],
+            Amber = PlayerData.gems[0],
+            Quartz = PlayerData.gems[1],
+            Opal = PlayerData.gems[2],
+            Jade = PlayerData.gems[3],
+            Cinnabar = PlayerData.gems[4],
+            Ametrine = PlayerData.gems[5],
+            SmokyQuartz = PlayerData.gems[6],
+            Garnet = PlayerData.gems[7],
+            Onyx = PlayerData.gems[8],
+            Pyrite = PlayerData.gems[9],
+            Heliodor = PlayerData.gems[10],
+            Citrine = PlayerData.gems[11],
+            RoseQuartz = PlayerData.gems[12],
+            LapisLazuli = PlayerData.gems[13],
+            Aquamarine = PlayerData.gems[14],
+            Peridot = PlayerData.gems[15],
+            Turquoise = PlayerData.gems[16],
+            IcyQuartz = PlayerData.gems[17],
+            Coralite = PlayerData.gems[18],
+            Amethyst = PlayerData.gems[19],
+            Prismarium = PlayerData.gems[20],
+            Topaz = PlayerData.gems[21],
+            Ruby = PlayerData.gems[22],
+            Moonstone = PlayerData.gems[23],
+            Sapphire = PlayerData.gems[24],
+            Sunstone = PlayerData.gems[25],
+            Emerald = PlayerData.gems[26],
+            Bloodstone = PlayerData.gems[27],
+            StarCrystal = PlayerData.gems[28],
+            Diamond = PlayerData.gems[29],
             LuckPotion1 = PlayerData.potions[0],
             LuckPotion2 = PlayerData.potions[5],
             LuckPotion3 = PlayerData.potions[10],

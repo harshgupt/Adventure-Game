@@ -78,6 +78,38 @@
     public int Orichalcum;
     public int Infinitium;
 
+    //Gems
+    public int Amber;
+    public int Quartz;
+    public int Opal;
+    public int Jade;
+    public int Cinnabar;
+    public int Ametrine;
+    public int SmokyQuartz;
+    public int Garnet;
+    public int Onyx;
+    public int Pyrite;
+    public int Heliodor;
+    public int Citrine;
+    public int RoseQuartz;
+    public int LapisLazuli;
+    public int Aquamarine;
+    public int Peridot;
+    public int Turquoise;
+    public int IcyQuartz;
+    public int Coralite;
+    public int Amethyst;
+    public int Prismarium;
+    public int Topaz;
+    public int Ruby;
+    public int Moonstone;
+    public int Sapphire;
+    public int Sunstone;
+    public int Emerald;
+    public int Bloodstone;
+    public int StarCrystal;
+    public int Diamond;
+
     //Potions
     public int LuckPotion1;
     public int LuckPotion2;

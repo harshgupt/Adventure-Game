@@ -1,6 +1,4 @@
 Save scrolled position, or unlocked position in Mine, Forge, etc
-Show current inventory amount for resources (Herbs, fruits, potions)
-Gem Mine
 Change all backgrounds to fit for all resolutions
 Show animation for adding and removing items (fade out + and - in while mining, etc)
 Show ingredients for Smelting and Potions

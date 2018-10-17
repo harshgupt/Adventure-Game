@@ -17,11 +17,8 @@ Battle inventory amount can be upgraded
 Better tools means lesser clicks/more damage to resource
 Tools like Pickaxe, Axe, Shovel
 Weapons like dagger, sword, battleaxe, warhammer
-To make potions, draw circle clockwise/anticlockwise, add ingredients step by step
 Potions: Health, Attack, Defence, Magic, Luck (Extra drops)
-Made using herbs and food
 (Tiers: Regular, Super, Hyper, Mega, Ultra, Ultimate)
-Health Potion: Food + Monster Parts
 Regular: Heal 1 HP
 Super: Heal 2 HP, regen 1 HP each for 2s
 Hyper: Heal 5 HP, regen 1 HP for 5s
@@ -29,7 +26,7 @@ Mega: Heal 10 HP, regen 1 HP for 10s
 Ultra: Heal 20 HP, regen 1 HP for 20s
 Ultimate: Complete heal, regen 1 HP for 30s
 Regeneration amount and duration can be extended
-Attack Potion: Monster Parts + Metal (lasts for 10s, can be extended)
+Attack Potion: (lasts for 10s, can be extended)
 Regular: Inc damage by 1
 Super: Inc damage by 2, bleed effect for 2s
 Hyper: Inc damage by 3, bleed effect for 3s
@@ -37,7 +34,7 @@ Mega: Inc damage by 4, bleed effect for 4s
 Ultra: Inc damage by 5, bleed effect for 5s
 Ultimate: Inc damage by 6, kill mobs (Not bosses) with single swipe, bleed for 6s
 Damage amount, effect time and bleed time can be extended
-Defence Potion: Metal + Food (lasts for 10s, can be extended)
+Defence Potion: (lasts for 10s, can be extended)
 Regular: Reduce dmg taken by 1
 Super: Reduce dmg taken by 2, immunity for 2s
 Hyper: Reduce dmg taken by 3, immunity for 3s
@@ -56,7 +53,6 @@ Summoning: Summon substitute which takes damage (upgraded form can attack as wel
 Magic items made by drawing specific shapes
 Magic = Monster parts
 Familiar to support in battles (do damage, increase drops, etc)
-Food grown on plots, plots/saplings bought with coins
-Watering can to make it grow faster
-Clicking grows the plant, can increase yield
-Buy item to regrow the same plant (no more buying new seeds)
+Watering can to upgrade
+Gem Rocks have chance to give Crystals
+Metal Rocks have chance to give Coins
