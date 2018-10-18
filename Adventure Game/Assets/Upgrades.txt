@@ -1,0 +1,22 @@
+220 Tiers of upgrades
+5 tiers per metal
+Each piece of armor and the weapon have 220 upgrades each
+Upgrade requires metal, gem and coins or crystals
+New gem required for metal in pattern: 2:1, 1:1, 2:1, 1:1, ....
+Next upgrade unlocks after each wave
+Tier 1-5: Copper
+Tier 6-10: Tin
+.
+.
+.
+Tier 215-220: Orichalcum
+Tier 221+: Infinitium
+Helm, Gauntlets, Boots same cost (50, 1, 1)
+Leggings, Chestplate, Shield same cost (75, 2, 1)
+Weapon highest cost (100, 2, 2)
+115% increment in cost (rounded up to nearest int, then if > 1000 round to nearest K, similarly for M, B, T)
+0-1: 100 coins, 2 metals, 1 gems (Unlock)
+1-2: 115 coins, 2.3 metals, 1.15 gems
+2-3: 
+3-4: 
+4-5: 

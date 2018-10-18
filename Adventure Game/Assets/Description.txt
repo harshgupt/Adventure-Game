@@ -1,4 +1,5 @@
-Infinite side scrolling until player dies
+Infinite side scrolling until player dies (22 levels, 10 waves each level, 2 upgrades every level)
+22 themes
 Tier system for everything
 Character stands to the side in all instances along with familiar
 

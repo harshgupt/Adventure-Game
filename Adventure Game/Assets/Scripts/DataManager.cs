@@ -11,7 +11,7 @@ public class DataManager : MonoBehaviour {
     public static bool saveData;
     public static float saveTimer;
 
-    public const int numArmour = 8;
+    public const int numArmour = 6;
     public const int numOres = 19;
     public const int numMetals = 45;
     public const int numGems = 30;
@@ -20,9 +20,9 @@ public class DataManager : MonoBehaviour {
     public const int numFruits = 6;
 
     #region To view data in runtime only
-    public int Coins;
+    public float Coins;
 
-    //Armour, Weapons and Tools
+    //Armour and Weapon
     public int HelmTier;
     public int ChestplateTier;
     public int GauntletsTier;
@@ -30,105 +30,104 @@ public class DataManager : MonoBehaviour {
     public int BootsTier;
     public int ShieldTier;
     public int WeaponTier;
-    public int PickaxeTier;
 
     //Metals and Alloys
-    public int CopperOre;
-    public int TinOre;
-    public int IronOre;
-    public int CoalOre;
-    public int AluminiumOre;
-    public int NickelOre;
-    public int MagnesiumOre;
-    public int ZincOre;
-    public int LeadOre;
-    public int SilverOre;
-    public int GoldOre;
-    public int PlatinumOre;
-    public int ObsidianOre;
-    public int MeteoriteOre;
-    public int MithrilOre;
-    public int AdamanteusOre;
-    public int QuicksilverOre;
-    public int AetherOre;
-    public int CrimsoniteOre;
-    public int Copper;
-    public int Tin;
-    public int Bronze;
-    public int Iron;
-    public int Steel;
-    public int Aluminium;
-    public int Duralumin;
-    public int Nickel;
-    public int Invar;
-    public int Magnesium;
-    public int Hydronalium;
-    public int Zinc;
-    public int Brass;
-    public int Zamakium;
-    public int Lead;
-    public int WhiteMetal;
-    public int DamascusSteel;
-    public int Silver;
-    public int Gold;
-    public int RoseGold;
-    public int Elinvar;
-    public int Electrum;
-    public int CorinthianBronze;
-    public int Platinum;
-    public int RefinedObsidian;
-    public int Darksteel;
-    public int RefinedMeteorite;
-    public int MeteoricIron;
-    public int Shadowsteel;
-    public int MeteoricSteel;
-    public int Mithril;
-    public int MysticalSteel;
-    public int Adamanteus;
-    public int DivineSteel;
-    public int Quicksilver;
-    public int CelestialSteel;
-    public int Luminium;
-    public int Aether;
-    public int Etherium;
-    public int CosmicSteel;
-    public int Crimsonite;
-    public int SoulSteel;
-    public int Neutronium;
-    public int Orichalcum;
-    public int Infinitium;
+    public float CopperOre;
+    public float TinOre;
+    public float IronOre;
+    public float CoalOre;
+    public float AluminiumOre;
+    public float NickelOre;
+    public float MagnesiumOre;
+    public float ZincOre;
+    public float LeadOre;
+    public float SilverOre;
+    public float GoldOre;
+    public float PlatinumOre;
+    public float ObsidianOre;
+    public float MeteoriteOre;
+    public float MithrilOre;
+    public float AdamanteusOre;
+    public float QuicksilverOre;
+    public float AetherOre;
+    public float CrimsoniteOre;
+    public float Copper;
+    public float Tin;
+    public float Bronze;
+    public float Iron;
+    public float Steel;
+    public float Aluminium;
+    public float Duralumin;
+    public float Nickel;
+    public float Invar;
+    public float Magnesium;
+    public float Hydronalium;
+    public float Zinc;
+    public float Brass;
+    public float Zamakium;
+    public float Lead;
+    public float WhiteMetal;
+    public float DamascusSteel;
+    public float Silver;
+    public float Gold;
+    public float RoseGold;
+    public float Elinvar;
+    public float Electrum;
+    public float CorinthianBronze;
+    public float Platinum;
+    public float RefinedObsidian;
+    public float Darksteel;
+    public float RefinedMeteorite;
+    public float MeteoricIron;
+    public float Shadowsteel;
+    public float MeteoricSteel;
+    public float Mithril;
+    public float MysticalSteel;
+    public float Adamanteus;
+    public float DivineSteel;
+    public float Quicksilver;
+    public float CelestialSteel;
+    public float Luminium;
+    public float Aether;
+    public float Etherium;
+    public float CosmicSteel;
+    public float Crimsonite;
+    public float SoulSteel;
+    public float Neutronium;
+    public float Orichalcum;
+    public float Infinitium;
 
     //Gems
-    public int Amber;
-    public int Quartz;
-    public int Opal;
-    public int Jade;
-    public int Cinnabar;
-    public int Ametrine;
-    public int SmokyQuartz;
-    public int Garnet;
-    public int Onyx;
-    public int Pyrite;
-    public int Heliodor;
-    public int Citrine;
-    public int RoseQuartz;
-    public int LapisLazuli;
-    public int Aquamarine;
-    public int Peridot;
-    public int Turquoise;
-    public int IcyQuartz;
-    public int Coralite;
-    public int Amethyst;
-    public int Prismarium;
-    public int Topaz;
-    public int Ruby;
-    public int Moonstone;
-    public int Sapphire;
-    public int Sunstone;
-    public int Emerald;
-    public int Bloodstone;
-    public int StarCrystal;
-    public int Diamond;
+    public float Amber;
+    public float Quartz;
+    public float Opal;
+    public float Jade;
+    public float Cinnabar;
+    public float Ametrine;
+    public float SmokyQuartz;
+    public float Garnet;
+    public float Onyx;
+    public float Pyrite;
+    public float Heliodor;
+    public float Citrine;
+    public float RoseQuartz;
+    public float LapisLazuli;
+    public float Aquamarine;
+    public float Peridot;
+    public float Turquoise;
+    public float IcyQuartz;
+    public float Coralite;
+    public float Amethyst;
+    public float Prismarium;
+    public float Topaz;
+    public float Ruby;
+    public float Moonstone;
+    public float Sapphire;
+    public float Sunstone;
+    public float Emerald;
+    public float Bloodstone;
+    public float StarCrystal;
+    public float Diamond;
 
     //Potions
     public int LuckPotion1;
@@ -236,8 +235,7 @@ public class DataManager : MonoBehaviour {
         LeggingsTier = PlayerData.armourTier[3];
         BootsTier = PlayerData.armourTier[4];
         ShieldTier = PlayerData.armourTier[5];
-        WeaponTier = PlayerData.armourTier[6];
-        PickaxeTier = PlayerData.armourTier[7];
+        WeaponTier = PlayerData.weaponTier;
         CopperOre = PlayerData.ores[0];
         TinOre = PlayerData.ores[1];
         IronOre = PlayerData.ores[2];
@@ -415,8 +413,7 @@ public class DataManager : MonoBehaviour {
             PlayerData.armourTier[3] = loadedData.LeggingsTier;
             PlayerData.armourTier[4] = loadedData.BootsTier;
             PlayerData.armourTier[5] = loadedData.ShieldTier;
-            PlayerData.armourTier[6] = loadedData.WeaponTier;
-            PlayerData.armourTier[7] = loadedData.PickaxeTier;
+            PlayerData.weaponTier = loadedData.WeaponTier;
             PlayerData.ores[0] = loadedData.CopperOre;
             PlayerData.ores[1] = loadedData.TinOre;
             PlayerData.ores[2] = loadedData.IronOre;
@@ -593,8 +590,7 @@ public class DataManager : MonoBehaviour {
             LeggingsTier = PlayerData.armourTier[3],
             BootsTier = PlayerData.armourTier[4],
             ShieldTier = PlayerData.armourTier[5],
-            WeaponTier = PlayerData.armourTier[6],
-            PickaxeTier = PlayerData.armourTier[7],
+            WeaponTier = PlayerData.weaponTier,
             CopperOre = PlayerData.ores[0],
             TinOre = PlayerData.ores[1],
             IronOre = PlayerData.ores[2],
@@ -765,10 +761,6 @@ public class DataManager : MonoBehaviour {
     public void ResetData()
     {
         PlayerData.coins = 0;
-        for (int i = 0; i < numArmour; i++)
-        {
-            PlayerData.armourTier[i] = 0;
-        }
         for (int i = 0; i < numOres; i++)
         {
             PlayerData.ores[i] = 0;
@@ -796,14 +788,6 @@ public class DataManager : MonoBehaviour {
         PlayerDataJSON playerDataJSON = new PlayerDataJSON()
         {
             Coins = PlayerData.coins,
-            HelmTier = PlayerData.armourTier[0],
-            ChestplateTier = PlayerData.armourTier[1],
-            GauntletsTier = PlayerData.armourTier[2],
-            LeggingsTier = PlayerData.armourTier[3],
-            BootsTier = PlayerData.armourTier[4],
-            ShieldTier = PlayerData.armourTier[5],
-            WeaponTier = PlayerData.armourTier[6],
-            PickaxeTier = PlayerData.armourTier[7],
             CopperOre = PlayerData.ores[0],
             TinOre = PlayerData.ores[1],
             IronOre = PlayerData.ores[2],
@@ -986,10 +970,6 @@ public class DataManager : MonoBehaviour {
         {
             PlayerData.gems[i]++;
         }
-        for (int i = 0; i < numArmour; i++)
-        {
-            PlayerData.armourTier[i]++;
-        }
         for (int i = 0; i < numPotions; i++)
         {
             PlayerData.potions[i]++;
@@ -1005,14 +985,6 @@ public class DataManager : MonoBehaviour {
         PlayerDataJSON playerDataJSON = new PlayerDataJSON()
         {
             Coins = PlayerData.coins,
-            HelmTier = PlayerData.armourTier[0],
-            ChestplateTier = PlayerData.armourTier[1],
-            GauntletsTier = PlayerData.armourTier[2],
-            LeggingsTier = PlayerData.armourTier[3],
-            BootsTier = PlayerData.armourTier[4],
-            ShieldTier = PlayerData.armourTier[5],
-            WeaponTier = PlayerData.armourTier[6],
-            PickaxeTier = PlayerData.armourTier[7],
             CopperOre = PlayerData.ores[0],
             TinOre = PlayerData.ores[1],
             IronOre = PlayerData.ores[2],

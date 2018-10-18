@@ -15,7 +15,7 @@ public class InventoryScript : MonoBehaviour{
     public Item[] ores = new Item[DataManager.numOres];
     public Item[] potions = new Item[DataManager.numPotions];
 
-    public void AddItem(string name, Sprite sprite, int amount)
+    public void AddItem(string name, Sprite sprite, float amount)
     {
         for(int i = 0; i < numInventorySlots; i++)
         {
@@ -34,7 +34,7 @@ public class InventoryScript : MonoBehaviour{
         }
     }
     
-    public void RemoveItem(string name, int amount)
+    public void RemoveItem(string name, float amount)
     {
         for(int i = 0; i < numInventorySlots; i++)
         {
