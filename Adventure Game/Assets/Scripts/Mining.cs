@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class Mining : MonoBehaviour {
 
+    public PlayerData pData;
+
     public GameObject copperOre;
     public GameObject tinOre;
     public GameObject ironOre;
@@ -27,8 +29,6 @@ public class Mining : MonoBehaviour {
 
     public Image inventoryImage;
 
-    public Sprite[] oreSprites = new Sprite[DataManager.numOres];
-
     public Text inventoryAmount;
 
     public int currentOre = 0;
@@ -40,13 +40,13 @@ public class Mining : MonoBehaviour {
 
     public void MineOre()
     {
-        PlayerData.ores[currentOre]++;
+        pData.ores[currentOre].amount++;
     }
 
     public void DisplayInventoryAmount()
     {
-        inventoryImage.sprite = oreSprites[currentOre];
-        inventoryAmount.text = PlayerData.ores[currentOre].ToString();
+        inventoryImage.sprite = pData.ores[currentOre].sprite;
+        inventoryAmount.text = pData.ores[currentOre].amount.ToString();
     }
 
     public void UpButton()

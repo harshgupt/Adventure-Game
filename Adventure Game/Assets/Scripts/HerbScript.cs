@@ -3,7 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class HerbScript : MonoBehaviour {
-    
+
+    public PlayerData pData;
+
+    private void Awake()
+    {
+        pData = FindObjectOfType<PlayerData>().GetComponent<PlayerData>();
+    }
+
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.tag == "UI Blade")
@@ -11,94 +18,94 @@ public class HerbScript : MonoBehaviour {
             switch (gameObject.name)
             {
                 case "Clover":
-                    PlayerData.herbs[0]++;
+                    pData.herbs[0].amount++;
                     break;
                 case "Daisy Petal":
-                    PlayerData.herbs[1]++;
+                    pData.herbs[1].amount++;
                     break;
                 case "Holly":
-                    PlayerData.herbs[2]++;
+                    pData.herbs[2].amount++;
                     break;
                 case "Rose Thorn":
-                    PlayerData.herbs[3]++;
+                    pData.herbs[3].amount++;
                     break;
                 case "Ivy Sprig":
-                    PlayerData.herbs[4]++;
+                    pData.herbs[4].amount++;
                     break;
                 case "Windrush":
-                    PlayerData.herbs[5]++;
+                    pData.herbs[5].amount++;
                     break;
                 case "Willow Twig":
-                    PlayerData.herbs[6]++;
+                    pData.herbs[6].amount++;
                     break;
                 case "Goosegrass":
-                    PlayerData.herbs[7]++;
+                    pData.herbs[7].amount++;
                     break;
                 case "Firegrass":
-                    PlayerData.herbs[8]++;
+                    pData.herbs[8].amount++;
                     break;
                 case "Moly":
-                    PlayerData.herbs[9]++;
+                    pData.herbs[9].amount++;
                     break;
                 case "Starthistle":
-                    PlayerData.herbs[10]++;
+                    pData.herbs[10].amount++;
                     break;
                 case "Knotweed":
-                    PlayerData.herbs[11]++;
+                    pData.herbs[11].amount++;
                     break;
                 case "Bitterroot":
-                    PlayerData.herbs[12]++;
+                    pData.herbs[12].amount++;
                     break;
                 case "Baneberry":
-                    PlayerData.herbs[13]++;
+                    pData.herbs[13].amount++;
                     break;
                 case "Mandrake Root":
-                    PlayerData.herbs[14]++;
+                    pData.herbs[14].amount++;
                     break;
                 case "Tawnymoth Weed":
-                    PlayerData.herbs[15]++;
+                    pData.herbs[15].amount++;
                     break;
                 case "Spleenwort":
-                    PlayerData.herbs[16]++;
+                    pData.herbs[16].amount++;
                     break;
                 case "Hellebore Syrup":
-                    PlayerData.herbs[17]++;
+                    pData.herbs[17].amount++;
                     break;
                 case "Valerian Root":
-                    PlayerData.herbs[18]++;
+                    pData.herbs[18].amount++;
                     break;
                 case "Dragon Ivy":
-                    PlayerData.herbs[19]++;
+                    pData.herbs[19].amount++;
                     break;
                 case "Asphodel":
-                    PlayerData.herbs[20]++;
+                    pData.herbs[20].amount++;
                     break;
                 case "Wormwood":
-                    PlayerData.herbs[21]++;
+                    pData.herbs[21].amount++;
                     break;
                 case "Silverweed":
-                    PlayerData.herbs[22]++;
+                    pData.herbs[22].amount++;
                     break;
                 case "Wolfsbane":
-                    PlayerData.herbs[23]++;
+                    pData.herbs[23].amount++;
                     break;
                 case "Moondew":
-                    PlayerData.herbs[24]++;
+                    pData.herbs[24].amount++;
                     break;
                 case "Fluxweed":
-                    PlayerData.herbs[25]++;
+                    pData.herbs[25].amount++;
                     break;
                 case "Tormentil":
-                    PlayerData.herbs[26]++;
+                    pData.herbs[26].amount++;
                     break;
                 case "Belladonna":
-                    PlayerData.herbs[27]++;
+                    pData.herbs[27].amount++;
                     break;
                 case "Nightshade":
-                    PlayerData.herbs[28]++;
+                    pData.herbs[28].amount++;
                     break;
                 case "Bloodroot":
-                    PlayerData.herbs[29]++;
+                    pData.herbs[29].amount++;
                     break;
                 default:
                     break;

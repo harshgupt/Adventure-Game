@@ -7,6 +7,8 @@ public class HerbGarden : MonoBehaviour {
 
     public Blade bladeUIScript;
 
+    public PlayerData pData;
+
     public GameObject bladeUI;
     public GameObject clover;
     public GameObject holly;
@@ -41,8 +43,6 @@ public class HerbGarden : MonoBehaviour {
 
     public Image inventoryImage;
 
-    public Sprite[] herbSprites = new Sprite[DataManager.numHerbs];
-
     public Text inventoryAmount;
 
     public int currentHerb = 0;
@@ -54,8 +54,8 @@ public class HerbGarden : MonoBehaviour {
 
     public void DisplayInventoryAmount()
     {
-        inventoryImage.sprite = herbSprites[currentHerb];
-        inventoryAmount.text = PlayerData.herbs[currentHerb].ToString();
+        inventoryImage.sprite = pData.herbs[currentHerb].sprite;
+        inventoryAmount.text = pData.herbs[currentHerb].amount.ToString();
     }
 
     public void LeftButton()

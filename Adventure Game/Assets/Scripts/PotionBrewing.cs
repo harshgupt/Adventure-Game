@@ -9,6 +9,8 @@ public class PotionBrewing : MonoBehaviour {
 
     public Blade bladeUIScript;
 
+    public PlayerData pData;
+
     public GameObject bladeUI;
     public GameObject cauldronUI;
     public GameObject LP1;
@@ -47,10 +49,7 @@ public class PotionBrewing : MonoBehaviour {
     public Image progressBar;
     public Image ingredient;
     public Image inventoryImage;
-
-    public Sprite[] herbSprites = new Sprite[DataManager.numHerbs];
-    public Sprite[] fruitSprites = new Sprite[DataManager.numFruits];
-    public Sprite[] potionSprites = new Sprite[DataManager.numPotions];
+    
     public Sprite ingredient1;
     public Sprite ingredient2;
 
@@ -210,9 +209,9 @@ public class PotionBrewing : MonoBehaviour {
                 {
                     angle = 0;
                     addedIngredient2 = false;
-                    PlayerData.herbs[herbIngredient]--;
-                    PlayerData.fruits[fruitIngredient]--;
-                    PlayerData.potions[currentPotion]++;
+                    pData.herbs[herbIngredient].amount--;
+                    pData.fruits[fruitIngredient].amount--;
+                    pData.potions[currentPotion].amount++;
                     secondStage = false;
                     if (bladeUI.activeSelf)
                     {
@@ -306,8 +305,8 @@ public class PotionBrewing : MonoBehaviour {
 
     public void DisplayInventoryAmount()
     {
-        inventoryImage.sprite = potionSprites[currentPotion];
-        inventoryAmount.text = PlayerData.potions[currentPotion].ToString();
+        inventoryImage.sprite = pData.potions[currentPotion].sprite;
+        inventoryAmount.text = pData.potions[currentPotion].amount.ToString();
     }
 
     public void LP1Brew()
@@ -316,9 +315,9 @@ public class PotionBrewing : MonoBehaviour {
         maxNumTurns = 8;
         herbIngredient = 0;
         fruitIngredient = 0;
-        ingredient1 = herbSprites[0];
-        ingredient2 = fruitSprites[0];
-        if (PlayerData.herbs[0] > 0 && PlayerData.fruits[0] > 0)
+        ingredient1 = pData.herbs[0].sprite;
+        ingredient2 = pData.fruits[0].sprite;
+        if (pData.herbs[0].amount > 0 && pData.fruits[0].amount > 0)
         {
             StartBrewing();
             cauldronUI.SetActive(true);
@@ -336,9 +335,9 @@ public class PotionBrewing : MonoBehaviour {
         maxNumTurns = 8;
         herbIngredient = 1;
         fruitIngredient = 0;
-        ingredient1 = herbSprites[1];
-        ingredient2 = fruitSprites[0];
-        if (PlayerData.herbs[1] > 0 && PlayerData.fruits[0] > 0)
+        ingredient1 = pData.herbs[1].sprite;
+        ingredient2 = pData.fruits[0].sprite;
+        if (pData.herbs[1].amount > 0 && pData.fruits[0].amount > 0)
         {
             StartBrewing();
             cauldronUI.SetActive(true);
@@ -356,9 +355,9 @@ public class PotionBrewing : MonoBehaviour {
         maxNumTurns = 8;
         herbIngredient = 2;
         fruitIngredient = 0;
-        ingredient1 = herbSprites[2];
-        ingredient2 = fruitSprites[0];
-        if (PlayerData.herbs[2] > 0 && PlayerData.fruits[0] > 0)
+        ingredient1 = pData.herbs[2].sprite;
+        ingredient2 = pData.fruits[0].sprite;
+        if (pData.herbs[2].amount > 0 && pData.fruits[0].amount > 0)
         {
             StartBrewing();
             cauldronUI.SetActive(true);
@@ -376,9 +375,9 @@ public class PotionBrewing : MonoBehaviour {
         maxNumTurns = 8;
         herbIngredient = 3;
         fruitIngredient = 0;
-        ingredient1 = herbSprites[3];
-        ingredient2 = fruitSprites[0];
-        if (PlayerData.herbs[3] > 0 && PlayerData.fruits[0] > 0)
+        ingredient1 = pData.herbs[3].sprite;
+        ingredient2 = pData.fruits[0].sprite;
+        if (pData.herbs[3].amount > 0 && pData.fruits[0].amount > 0)
         {
             StartBrewing();
             cauldronUI.SetActive(true);
@@ -396,9 +395,9 @@ public class PotionBrewing : MonoBehaviour {
         maxNumTurns = 8;
         herbIngredient = 4;
         fruitIngredient = 0;
-        ingredient1 = herbSprites[4];
-        ingredient2 = fruitSprites[0];
-        if (PlayerData.herbs[4] > 0 && PlayerData.fruits[0] > 0)
+        ingredient1 = pData.herbs[4].sprite;
+        ingredient2 = pData.fruits[0].sprite;
+        if (pData.herbs[4].amount > 0 && pData.fruits[0].amount > 0)
         {
             StartBrewing();
             cauldronUI.SetActive(true);
@@ -416,9 +415,9 @@ public class PotionBrewing : MonoBehaviour {
         maxNumTurns = 8;
         herbIngredient = 5;
         fruitIngredient = 1;
-        ingredient1 = herbSprites[5];
-        ingredient2 = fruitSprites[1];
-        if (PlayerData.herbs[5] > 0 && PlayerData.fruits[1] > 0)
+        ingredient1 = pData.herbs[5].sprite;
+        ingredient2 = pData.fruits[1].sprite;
+        if (pData.herbs[5].amount > 0 && pData.fruits[1].amount > 0)
         {
             StartBrewing();
             cauldronUI.SetActive(true);
@@ -436,9 +435,9 @@ public class PotionBrewing : MonoBehaviour {
         maxNumTurns = 8;
         herbIngredient = 6;
         fruitIngredient = 1;
-        ingredient1 = herbSprites[6];
-        ingredient2 = fruitSprites[1];
-        if (PlayerData.herbs[6] > 0 && PlayerData.fruits[1] > 0)
+        ingredient1 = pData.herbs[6].sprite;
+        ingredient2 = pData.fruits[1].sprite;
+        if (pData.herbs[6].amount > 0 && pData.fruits[1].amount > 0)
         {
             StartBrewing();
             cauldronUI.SetActive(true);
@@ -456,9 +455,9 @@ public class PotionBrewing : MonoBehaviour {
         maxNumTurns = 8;
         herbIngredient = 7;
         fruitIngredient = 1;
-        ingredient1 = herbSprites[7];
-        ingredient2 = fruitSprites[1];
-        if (PlayerData.herbs[7] > 0 && PlayerData.fruits[1] > 0)
+        ingredient1 = pData.herbs[7].sprite;
+        ingredient2 = pData.fruits[1].sprite;
+        if (pData.herbs[7].amount > 0 && pData.fruits[1].amount > 0)
         {
             StartBrewing();
             cauldronUI.SetActive(true);
@@ -476,9 +475,9 @@ public class PotionBrewing : MonoBehaviour {
         maxNumTurns = 8;
         herbIngredient = 8;
         fruitIngredient = 1;
-        ingredient1 = herbSprites[8];
-        ingredient2 = fruitSprites[1];
-        if (PlayerData.herbs[8] > 0 && PlayerData.fruits[1] > 0)
+        ingredient1 = pData.herbs[8].sprite;
+        ingredient2 = pData.fruits[1].sprite;
+        if (pData.herbs[8].amount > 0 && pData.fruits[1].amount > 0)
         {
             StartBrewing();
             cauldronUI.SetActive(true);
@@ -496,9 +495,9 @@ public class PotionBrewing : MonoBehaviour {
         maxNumTurns = 8;
         herbIngredient = 9;
         fruitIngredient = 1;
-        ingredient1 = herbSprites[9];
-        ingredient2 = fruitSprites[1];
-        if (PlayerData.herbs[9] > 0 && PlayerData.fruits[1] > 0)
+        ingredient1 = pData.herbs[9].sprite;
+        ingredient2 = pData.fruits[1].sprite;
+        if (pData.herbs[9].amount > 0 && pData.fruits[1].amount > 0)
         {
             StartBrewing();
             cauldronUI.SetActive(true);
@@ -516,9 +515,9 @@ public class PotionBrewing : MonoBehaviour {
         maxNumTurns = 8;
         herbIngredient = 10;
         fruitIngredient = 2;
-        ingredient1 = herbSprites[10];
-        ingredient2 = fruitSprites[2];
-        if (PlayerData.herbs[10] > 0 && PlayerData.fruits[2] > 0)
+        ingredient1 = pData.herbs[10].sprite;
+        ingredient2 = pData.fruits[2].sprite;
+        if (pData.herbs[10].amount > 0 && pData.fruits[2].amount > 0)
         {
             StartBrewing();
             cauldronUI.SetActive(true);
@@ -536,9 +535,9 @@ public class PotionBrewing : MonoBehaviour {
         maxNumTurns = 8;
         herbIngredient = 11;
         fruitIngredient = 2;
-        ingredient1 = herbSprites[11];
-        ingredient2 = fruitSprites[2];
-        if (PlayerData.herbs[11] > 0 && PlayerData.fruits[2] > 0)
+        ingredient1 = pData.herbs[11].sprite;
+        ingredient2 = pData.fruits[2].sprite;
+        if (pData.herbs[11].amount > 0 && pData.fruits[2].amount > 0)
         {
             StartBrewing();
             cauldronUI.SetActive(true);
@@ -556,9 +555,9 @@ public class PotionBrewing : MonoBehaviour {
         maxNumTurns = 8;
         herbIngredient = 12;
         fruitIngredient = 2;
-        ingredient1 = herbSprites[12];
-        ingredient2 = fruitSprites[2];
-        if (PlayerData.herbs[12] > 0 && PlayerData.fruits[2] > 0)
+        ingredient1 = pData.herbs[12].sprite;
+        ingredient2 = pData.fruits[2].sprite;
+        if (pData.herbs[12].amount > 0 && pData.fruits[2].amount > 0)
         {
             StartBrewing();
             cauldronUI.SetActive(true);
@@ -576,9 +575,9 @@ public class PotionBrewing : MonoBehaviour {
         maxNumTurns = 8;
         herbIngredient = 13;
         fruitIngredient = 2;
-        ingredient1 = herbSprites[13];
-        ingredient2 = fruitSprites[2];
-        if (PlayerData.herbs[13] > 0 && PlayerData.fruits[2] > 0)
+        ingredient1 = pData.herbs[13].sprite;
+        ingredient2 = pData.fruits[2].sprite;
+        if (pData.herbs[13].amount > 0 && pData.fruits[2].amount > 0)
         {
             StartBrewing();
             cauldronUI.SetActive(true);
@@ -596,9 +595,9 @@ public class PotionBrewing : MonoBehaviour {
         maxNumTurns = 8;
         herbIngredient = 14;
         fruitIngredient = 2;
-        ingredient1 = herbSprites[14];
-        ingredient2 = fruitSprites[2];
-        if (PlayerData.herbs[14] > 0 && PlayerData.fruits[2] > 0)
+        ingredient1 = pData.herbs[14].sprite;
+        ingredient2 = pData.fruits[2].sprite;
+        if (pData.herbs[14].amount > 0 && pData.fruits[2].amount > 0)
         {
             StartBrewing();
             cauldronUI.SetActive(true);
@@ -616,9 +615,9 @@ public class PotionBrewing : MonoBehaviour {
         maxNumTurns = 8;
         herbIngredient = 15;
         fruitIngredient = 3;
-        ingredient1 = herbSprites[15];
-        ingredient2 = fruitSprites[3];
-        if (PlayerData.herbs[15] > 0 && PlayerData.fruits[3] > 0)
+        ingredient1 = pData.herbs[15].sprite;
+        ingredient2 = pData.fruits[3].sprite;
+        if (pData.herbs[15].amount > 0 && pData.fruits[3].amount > 0)
         {
             StartBrewing();
             cauldronUI.SetActive(true);
@@ -636,9 +635,9 @@ public class PotionBrewing : MonoBehaviour {
         maxNumTurns = 8;
         herbIngredient = 16;
         fruitIngredient = 3;
-        ingredient1 = herbSprites[16];
-        ingredient2 = fruitSprites[3];
-        if (PlayerData.herbs[16] > 0 && PlayerData.fruits[3] > 0)
+        ingredient1 = pData.herbs[16].sprite;
+        ingredient2 = pData.fruits[3].sprite;
+        if (pData.herbs[16].amount > 0 && pData.fruits[3].amount > 0)
         {
             StartBrewing();
             cauldronUI.SetActive(true);
@@ -656,9 +655,9 @@ public class PotionBrewing : MonoBehaviour {
         maxNumTurns = 8;
         herbIngredient = 17;
         fruitIngredient = 3;
-        ingredient1 = herbSprites[17];
-        ingredient2 = fruitSprites[3];
-        if (PlayerData.herbs[17] > 0 && PlayerData.fruits[3] > 0)
+        ingredient1 = pData.herbs[17].sprite;
+        ingredient2 = pData.fruits[3].sprite;
+        if (pData.herbs[17].amount > 0 && pData.fruits[3].amount > 0)
         {
             StartBrewing();
             cauldronUI.SetActive(true);
@@ -676,9 +675,9 @@ public class PotionBrewing : MonoBehaviour {
         maxNumTurns = 8;
         herbIngredient = 18;
         fruitIngredient = 3;
-        ingredient1 = herbSprites[18];
-        ingredient2 = fruitSprites[3];
-        if (PlayerData.herbs[18] > 0 && PlayerData.fruits[3] > 0)
+        ingredient1 = pData.herbs[18].sprite;
+        ingredient2 = pData.fruits[3].sprite;
+        if (pData.herbs[18].amount > 0 && pData.fruits[3].amount > 0)
         {
             StartBrewing();
             cauldronUI.SetActive(true);
@@ -696,9 +695,9 @@ public class PotionBrewing : MonoBehaviour {
         maxNumTurns = 8;
         herbIngredient = 19;
         fruitIngredient = 3;
-        ingredient1 = herbSprites[19];
-        ingredient2 = fruitSprites[3];
-        if (PlayerData.herbs[19] > 0 && PlayerData.fruits[3] > 0)
+        ingredient1 = pData.herbs[19].sprite;
+        ingredient2 = pData.fruits[3].sprite;
+        if (pData.herbs[19].amount > 0 && pData.fruits[3].amount > 0)
         {
             StartBrewing();
             cauldronUI.SetActive(true);
@@ -716,9 +715,9 @@ public class PotionBrewing : MonoBehaviour {
         maxNumTurns = 8;
         herbIngredient = 20;
         fruitIngredient = 4;
-        ingredient1 = herbSprites[20];
-        ingredient2 = fruitSprites[4];
-        if (PlayerData.herbs[20] > 0 && PlayerData.fruits[4] > 0)
+        ingredient1 = pData.herbs[20].sprite;
+        ingredient2 = pData.fruits[4].sprite;
+        if (pData.herbs[20].amount > 0 && pData.fruits[4].amount > 0)
         {
             StartBrewing();
             cauldronUI.SetActive(true);
@@ -736,9 +735,9 @@ public class PotionBrewing : MonoBehaviour {
         maxNumTurns = 8;
         herbIngredient = 21;
         fruitIngredient = 4;
-        ingredient1 = herbSprites[21];
-        ingredient2 = fruitSprites[4];
-        if (PlayerData.herbs[21] > 0 && PlayerData.fruits[4] > 0)
+        ingredient1 = pData.herbs[21].sprite;
+        ingredient2 = pData.fruits[4].sprite;
+        if (pData.herbs[21].amount > 0 && pData.fruits[4].amount > 0)
         {
             StartBrewing();
             cauldronUI.SetActive(true);
@@ -756,9 +755,9 @@ public class PotionBrewing : MonoBehaviour {
         maxNumTurns = 8;
         herbIngredient = 22;
         fruitIngredient = 4;
-        ingredient1 = herbSprites[22];
-        ingredient2 = fruitSprites[4];
-        if (PlayerData.herbs[22] > 0 && PlayerData.fruits[4] > 0)
+        ingredient1 = pData.herbs[22].sprite;
+        ingredient2 = pData.fruits[4].sprite;
+        if (pData.herbs[22].amount > 0 && pData.fruits[4].amount > 0)
         {
             StartBrewing();
             cauldronUI.SetActive(true);
@@ -776,9 +775,9 @@ public class PotionBrewing : MonoBehaviour {
         maxNumTurns = 8;
         herbIngredient = 23;
         fruitIngredient = 4;
-        ingredient1 = herbSprites[23];
-        ingredient2 = fruitSprites[4];
-        if (PlayerData.herbs[23] > 0 && PlayerData.fruits[4] > 0)
+        ingredient1 = pData.herbs[23].sprite;
+        ingredient2 = pData.fruits[4].sprite;
+        if (pData.herbs[23].amount > 0 && pData.fruits[4].amount > 0)
         {
             StartBrewing();
             cauldronUI.SetActive(true);
@@ -796,9 +795,9 @@ public class PotionBrewing : MonoBehaviour {
         maxNumTurns = 8;
         herbIngredient = 24;
         fruitIngredient = 4;
-        ingredient1 = herbSprites[24];
-        ingredient2 = fruitSprites[4];
-        if (PlayerData.herbs[24] > 0 && PlayerData.fruits[4] > 0)
+        ingredient1 = pData.herbs[24].sprite;
+        ingredient2 = pData.fruits[4].sprite;
+        if (pData.herbs[24].amount > 0 && pData.fruits[4].amount > 0)
         {
             StartBrewing();
             cauldronUI.SetActive(true);
@@ -816,9 +815,9 @@ public class PotionBrewing : MonoBehaviour {
         maxNumTurns = 8;
         herbIngredient = 25;
         fruitIngredient = 5;
-        ingredient1 = herbSprites[25];
-        ingredient2 = fruitSprites[5];
-        if (PlayerData.herbs[25] > 0 && PlayerData.fruits[5] > 0)
+        ingredient1 = pData.herbs[25].sprite;
+        ingredient2 = pData.fruits[5].sprite;
+        if (pData.herbs[25].amount > 0 && pData.fruits[5].amount > 0)
         {
             StartBrewing();
             cauldronUI.SetActive(true);
@@ -836,9 +835,9 @@ public class PotionBrewing : MonoBehaviour {
         maxNumTurns = 8;
         herbIngredient = 26;
         fruitIngredient = 5;
-        ingredient1 = herbSprites[26];
-        ingredient2 = fruitSprites[5];
-        if (PlayerData.herbs[26] > 0 && PlayerData.fruits[5] > 0)
+        ingredient1 = pData.herbs[26].sprite;
+        ingredient2 = pData.fruits[5].sprite;
+        if (pData.herbs[26].amount > 0 && pData.fruits[5].amount > 0)
         {
             StartBrewing();
             cauldronUI.SetActive(true);
@@ -856,9 +855,9 @@ public class PotionBrewing : MonoBehaviour {
         maxNumTurns = 8;
         herbIngredient = 27;
         fruitIngredient = 5;
-        ingredient1 = herbSprites[27];
-        ingredient2 = fruitSprites[5];
-        if (PlayerData.herbs[27] > 0 && PlayerData.fruits[5] > 0)
+        ingredient1 = pData.herbs[27].sprite;
+        ingredient2 = pData.fruits[5].sprite;
+        if (pData.herbs[27].amount > 0 && pData.fruits[5].amount > 0)
         {
             StartBrewing();
             cauldronUI.SetActive(true);
@@ -876,9 +875,9 @@ public class PotionBrewing : MonoBehaviour {
         maxNumTurns = 8;
         herbIngredient = 28;
         fruitIngredient = 5;
-        ingredient1 = herbSprites[28];
-        ingredient2 = fruitSprites[5];
-        if (PlayerData.herbs[28] > 0 && PlayerData.fruits[5] > 0)
+        ingredient1 = pData.herbs[28].sprite;
+        ingredient2 = pData.fruits[5].sprite;
+        if (pData.herbs[28].amount > 0 && pData.fruits[5].amount > 0)
         {
             StartBrewing();
             cauldronUI.SetActive(true);
@@ -896,9 +895,9 @@ public class PotionBrewing : MonoBehaviour {
         maxNumTurns = 8;
         herbIngredient = 29;
         fruitIngredient = 5;
-        ingredient1 = herbSprites[29];
-        ingredient2 = fruitSprites[5];
-        if (PlayerData.herbs[29] > 0 && PlayerData.fruits[5] > 0)
+        ingredient1 = pData.herbs[29].sprite;
+        ingredient2 = pData.fruits[5].sprite;
+        if (pData.herbs[29].amount > 0 && pData.fruits[5].amount > 0)
         {
             StartBrewing();
             cauldronUI.SetActive(true);

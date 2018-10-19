@@ -11,5 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0339fb95c3b22754dbb00c83ac30b1c5, type: 3}
   m_Name: Copper
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 2367d3af419fb0c48a1576dbf9f1dc12, type: 3}
-  name: Copper
+  sprite: {fileID: 21300000, guid: 043cf4b65e96d9e4e9ad94209240342c, type: 3}
+  amount: 0

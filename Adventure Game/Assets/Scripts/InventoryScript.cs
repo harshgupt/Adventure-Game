@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class InventoryScript : MonoBehaviour{
 
+    public PlayerData pData;
+
     public const int numInventorySlots = 60;
 
     public Image[] itemImages = new Image[numInventorySlots];
@@ -77,30 +79,30 @@ public class InventoryScript : MonoBehaviour{
             {
                 for (int i = 0; i < DataManager.numMetals; i++)
                 {
-                    if (PlayerData.metals[i] != 0)
+                    if (pData.metals[i].amount != 0)
                     {
                         itemImages[inventoryNo].sprite = metals[i].sprite;
-                        itemAmounts[inventoryNo].text = PlayerData.metals[i].ToString();
+                        itemAmounts[inventoryNo].text = pData.metals[i].ToString();
                         itemName[inventoryNo] = metals[i].name;
                         inventoryNo++;
                     }
                 }
                 for (int i = 0; i < DataManager.numOres; i++)
                 {
-                    if (PlayerData.ores[i] != 0)
+                    if (pData.ores[i].amount != 0)
                     {
                         itemImages[inventoryNo].sprite = ores[i].sprite;
-                        itemAmounts[inventoryNo].text = PlayerData.ores[i].ToString();
+                        itemAmounts[inventoryNo].text = pData.ores[i].ToString();
                         itemName[inventoryNo] = ores[i].name;
                         inventoryNo++;
                     }
                 }
                 for (int i = 0; i < DataManager.numPotions; i++)
                 {
-                    if (PlayerData.potions[i] != 0)
+                    if (pData.potions[i].amount != 0)
                     {
                         itemImages[inventoryNo].sprite = potions[i].sprite;
-                        itemAmounts[inventoryNo].text = PlayerData.potions[i].ToString();
+                        itemAmounts[inventoryNo].text = pData.potions[i].ToString();
                         itemName[inventoryNo] = potions[i].name;
                         inventoryNo++;
                     }
@@ -110,10 +112,10 @@ public class InventoryScript : MonoBehaviour{
             {
                 for (int i = 0; i < DataManager.numPotions; i++)
                 {
-                    if (PlayerData.potions[i] != 0)
+                    if (pData.potions[i].amount != 0)
                     {
                         itemImages[inventoryNo].sprite = potions[i].sprite;
-                        itemAmounts[inventoryNo].text = PlayerData.potions[i].ToString();
+                        itemAmounts[inventoryNo].text = pData.potions[i].ToString();
                         itemName[inventoryNo] = potions[i].name;
                         inventoryNo++;
                     }

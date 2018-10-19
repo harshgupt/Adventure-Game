@@ -8,10 +8,11 @@ public class PlayerData : MonoBehaviour {
     
     public static int[] armourTier = new int[DataManager.numArmour];
     public static int weaponTier;
-    public static float[] ores = new float[DataManager.numOres];
-    public static float[] metals = new float[DataManager.numMetals];
-    public static float[] gems = new float[DataManager.numGems];
-    public static int[] potions = new int[DataManager.numPotions];
-    public static int[] herbs = new int[DataManager.numHerbs];
-    public static int[] fruits = new int[DataManager.numFruits];
+
+    public Item[] ores = new Item[DataManager.numOres];
+    public Item[] metals = new Item[DataManager.numMetals];
+    public Item[] gems = new Item[DataManager.numGems];
+    public Item[] potions = new Item[DataManager.numPotions];
+    public Item[] herbs = new Item[DataManager.numHerbs];
+    public Item[] fruits = new Item[DataManager.numFruits];
 }

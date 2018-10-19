@@ -11,5 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0339fb95c3b22754dbb00c83ac30b1c5, type: 3}
   m_Name: Lead
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 7db472f3145d58f4e84afe03aaaeb14a, type: 3}
-  name: Lead
+  sprite: {fileID: 21300000, guid: 948158f5953fdd844bdfcba2851004ab, type: 3}
+  amount: 0

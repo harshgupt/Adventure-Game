@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GemMining : MonoBehaviour {
+public class GemMining : MonoBehaviour
+{
+    public PlayerData pData;
 
     public GameObject amber;
     public GameObject quartz;
@@ -38,8 +40,6 @@ public class GemMining : MonoBehaviour {
 
     public Image inventoryImage;
 
-    public Sprite[] gemSprites = new Sprite[DataManager.numGems];
-
     public Text inventoryAmount;
 
     public int currentGem = 0;
@@ -51,13 +51,13 @@ public class GemMining : MonoBehaviour {
 
     public void MineGem()
     {
-        PlayerData.gems[currentGem]++;
+        pData.gems[currentGem].amount++;
     }
 
     public void DisplayInventoryAmount()
     {
-        inventoryImage.sprite = gemSprites[currentGem];
-        inventoryAmount.text = PlayerData.gems[currentGem].ToString();
+        inventoryImage.sprite = pData.gems[currentGem].sprite;
+        inventoryAmount.text = pData.gems[currentGem].amount.ToString();
     }
 
     public void UpButton()

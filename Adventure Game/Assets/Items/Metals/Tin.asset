@@ -11,5 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0339fb95c3b22754dbb00c83ac30b1c5, type: 3}
   m_Name: Tin
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 8c5a2963059674d46ac9e87c25ba8c54, type: 3}
-  name: Tin
+  sprite: {fileID: 21300000, guid: a7e1b34e7cc66734d89abdc7bb2085ad, type: 3}
+  amount: 0

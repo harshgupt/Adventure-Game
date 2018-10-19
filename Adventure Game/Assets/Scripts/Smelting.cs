@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class Smelting : MonoBehaviour {
 
+    public PlayerData pData;
+
     public GameObject copper;
     public GameObject tin;
     public GameObject bronze;
@@ -53,8 +55,6 @@ public class Smelting : MonoBehaviour {
 
     public Image inventoryImage;
 
-    public Sprite[] metalSprites = new Sprite[DataManager.numMetals];
-
     public Text inventoryAmount;
 
     public int currentMetal = 0;
@@ -64,681 +64,681 @@ public class Smelting : MonoBehaviour {
         DisplayInventoryAmount();
     }
 
+    public void DisplayInventoryAmount()
+    {
+        inventoryImage.sprite = pData.metals[currentMetal].sprite;
+        inventoryAmount.text = pData.metals[currentMetal].amount.ToString();
+    }
+
     public void SmeltCopper()
     {
-        if(PlayerData.ores[0] == 0)
+        if(pData.ores[0].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[0]++;
-            PlayerData.ores[0]--;
+            pData.metals[0].amount++;
+            pData.ores[0].amount--;
         }
     }
 
     public void SmeltTin()
     {
-        if (PlayerData.ores[1] == 0)
+        if (pData.ores[1].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[1]++;
-            PlayerData.ores[1]--;
+            pData.metals[1].amount++;
+            pData.ores[1].amount--;
         }
     }
 
     public void SmeltBronze()
     {
-        if (PlayerData.ores[0] == 0 || PlayerData.ores[1] == 0)
+        if (pData.ores[0].amount == 0 || pData.ores[1].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[2]++;
-            PlayerData.ores[0]--;
-            PlayerData.ores[1]--;
+            pData.metals[2].amount++;
+            pData.ores[0].amount--;
+            pData.ores[1].amount--;
         }
     }
 
     public void SmeltIron()
     {
-        if (PlayerData.ores[2] == 0)
+        if (pData.ores[2].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[3]++;
-            PlayerData.ores[2]--;
+            pData.metals[3].amount++;
+            pData.ores[2].amount--;
         }
     }
 
     public void SmeltSteel()
     {
-        if (PlayerData.ores[2] == 0 || PlayerData.ores[3] == 0)
+        if (pData.ores[2].amount == 0 || pData.ores[3].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[4]++;
-            PlayerData.ores[2]--;
-            PlayerData.ores[3]--;
+            pData.metals[4].amount++;
+            pData.ores[2].amount--;
+            pData.ores[3].amount--;
         }
     }
 
     public void SmeltAluminium()
     {
-        if (PlayerData.ores[4] == 0)
+        if (pData.ores[4].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[5]++;
-            PlayerData.ores[4]--;
+            pData.metals[5].amount++;
+            pData.ores[4].amount--;
         }
     }
 
     public void SmeltDuralumin()
     {
-        if (PlayerData.ores[0] == 0 || PlayerData.ores[4] == 0)
+        if (pData.ores[0].amount == 0 || pData.ores[4].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[6]++;
-            PlayerData.ores[0]--;
-            PlayerData.ores[4]--;
+            pData.metals[6].amount++;
+            pData.ores[0].amount--;
+            pData.ores[4].amount--;
         }
     }
 
     public void SmeltNickel()
     {
-        if (PlayerData.ores[5] == 0)
+        if (pData.ores[5].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[7]++;
-            PlayerData.ores[5]--;
+            pData.metals[7].amount++;
+            pData.ores[5].amount--;
         }
     }
 
     public void SmeltInvar()
     {
-        if (PlayerData.ores[2] == 0 || PlayerData.ores[5] == 0)
+        if (pData.ores[2].amount == 0 || pData.ores[5].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[8]++;
-            PlayerData.ores[2]--;
-            PlayerData.ores[5]--;
+            pData.metals[8].amount++;
+            pData.ores[2].amount--;
+            pData.ores[5].amount--;
         }
     }
 
     public void SmeltMagnesium()
     {
-        if (PlayerData.ores[6] == 0)
+        if (pData.ores[6].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[9]++;
-            PlayerData.ores[6]--;
+            pData.metals[9].amount++;
+            pData.ores[6].amount--;
         }
     }
 
     public void SmeltHydronalium()
     {
-        if (PlayerData.ores[4] == 0 || PlayerData.ores[6] == 0)
+        if (pData.ores[4].amount == 0 || pData.ores[6].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[10]++;
-            PlayerData.ores[4]--;
-            PlayerData.ores[6]--;
+            pData.metals[10].amount++;
+            pData.ores[4].amount--;
+            pData.ores[6].amount--;
         }
     }
 
     public void SmeltZinc()
     {
-        if (PlayerData.ores[7] == 0)
+        if (pData.ores[7].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[11]++;
-            PlayerData.ores[7]--;
+            pData.metals[11].amount++;
+            pData.ores[7].amount--;
         }
     }
 
     public void SmeltBrass()
     {
-        if (PlayerData.ores[0] == 0 || PlayerData.ores[7] == 0)
+        if (pData.ores[0].amount == 0 || pData.ores[7].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[12]++;
-            PlayerData.ores[0]--;
-            PlayerData.ores[7]--;
+            pData.metals[12].amount++;
+            pData.ores[0].amount--;
+            pData.ores[7].amount--;
         }
     }
 
     public void SmeltZamakium()
     {
-        if (PlayerData.ores[4] == 0 || PlayerData.ores[6] == 0 || PlayerData.ores[7] == 0)
+        if (pData.ores[4].amount == 0 || pData.ores[6].amount == 0 || pData.ores[7].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[13]++;
-            PlayerData.ores[4]--;
-            PlayerData.ores[6]--;
-            PlayerData.ores[7]--;
+            pData.metals[13].amount++;
+            pData.ores[4].amount--;
+            pData.ores[6].amount--;
+            pData.ores[7].amount--;
         }
     }
 
     public void SmeltLead()
     {
-        if (PlayerData.ores[8] == 0)
+        if (pData.ores[8].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[14]++;
-            PlayerData.ores[8]--;
+            pData.metals[14].amount++;
+            pData.ores[8].amount--;
         }
     }
 
     public void SmeltWhiteMetal()
     {
-        if (PlayerData.ores[0] == 0 || PlayerData.ores[1] == 0 || PlayerData.ores[8] == 0)
+        if (pData.ores[0].amount == 0 || pData.ores[1].amount == 0 || pData.ores[8].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[15]++;
-            PlayerData.ores[0]--;
-            PlayerData.ores[1]--;
-            PlayerData.ores[8]--;
+            pData.metals[15].amount++;
+            pData.ores[0].amount--;
+            pData.ores[1].amount--;
+            pData.ores[8].amount--;
         }
     }
 
     public void SmeltDamascusSteel()
     {
-        if (PlayerData.ores[2] == 0 || PlayerData.ores[3] == 0 || PlayerData.ores[8] == 0)
+        if (pData.ores[2].amount == 0 || pData.ores[3].amount == 0 || pData.ores[8].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[16]++;
-            PlayerData.ores[2]--;
-            PlayerData.ores[3]--;
-            PlayerData.ores[8]--;
+            pData.metals[16].amount++;
+            pData.ores[2].amount--;
+            pData.ores[3].amount--;
+            pData.ores[8].amount--;
         }
     }
 
     public void SmeltSilver()
     {
-        if (PlayerData.ores[9] == 0)
+        if (pData.ores[9].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[17]++;
-            PlayerData.ores[9]--;
+            pData.metals[17].amount++;
+            pData.ores[9].amount--;
         }
     }
 
     public void SmeltGold()
     {
-        if (PlayerData.ores[10] == 0)
+        if (pData.ores[10].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[18]++;
-            PlayerData.ores[10]--;
+            pData.metals[18].amount++;
+            pData.ores[10].amount--;
         }
     }
 
     public void SmeltRoseGold()
     {
-        if (PlayerData.ores[0] == 0 || PlayerData.ores[10] == 0)
+        if (pData.ores[0].amount == 0 || pData.ores[10].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[19]++;
-            PlayerData.ores[0]--;
-            PlayerData.ores[10]--;
+            pData.metals[19].amount++;
+            pData.ores[0].amount--;
+            pData.ores[10].amount--;
         }
     }
 
     public void SmeltElinvar()
     {
-        if (PlayerData.ores[2] == 0 || PlayerData.ores[5] == 0 || PlayerData.ores[10] == 0)
+        if (pData.ores[2].amount == 0 || pData.ores[5].amount == 0 || pData.ores[10].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[20]++;
-            PlayerData.ores[2]--;
-            PlayerData.ores[5]--;
-            PlayerData.ores[10]--;
+            pData.metals[20].amount++;
+            pData.ores[2].amount--;
+            pData.ores[5].amount--;
+            pData.ores[10].amount--;
         }
     }
 
     public void SmeltElectrum()
     {
-        if (PlayerData.ores[9] == 0 || PlayerData.ores[10] == 0)
+        if (pData.ores[9].amount == 0 || pData.ores[10].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[21]++;
-            PlayerData.ores[9]--;
-            PlayerData.ores[10]--;
+            pData.metals[21].amount++;
+            pData.ores[9].amount--;
+            pData.ores[10].amount--;
         }
     }
 
     public void SmeltCorinthianBronze()
     {
-        if (PlayerData.ores[0] == 0 || PlayerData.ores[9] == 0 || PlayerData.ores[10] == 0)
+        if (pData.ores[0].amount == 0 || pData.ores[9].amount == 0 || pData.ores[10].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[22]++;
-            PlayerData.ores[0]--;
-            PlayerData.ores[9]--;
-            PlayerData.ores[10]--;
+            pData.metals[22].amount++;
+            pData.ores[0].amount--;
+            pData.ores[9].amount--;
+            pData.ores[10].amount--;
         }
     }
 
     public void SmeltPlatinum()
     {
-        if (PlayerData.ores[11] == 0)
+        if (pData.ores[11].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[23]++;
-            PlayerData.ores[11]--;
+            pData.metals[23].amount++;
+            pData.ores[11].amount--;
         }
     }
 
     public void SmeltRefinedObsidian()
     {
-        if (PlayerData.ores[12] == 0)
+        if (pData.ores[12].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[24]++;
-            PlayerData.ores[12]--;
+            pData.metals[24].amount++;
+            pData.ores[12].amount--;
         }
     }
 
     public void SmeltDarksteel()
     {
-        if (PlayerData.ores[2] == 0 || PlayerData.ores[3] == 0 || PlayerData.ores[12] == 0)
+        if (pData.ores[2].amount == 0 || pData.ores[3].amount == 0 || pData.ores[12].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[25]++;
-            PlayerData.ores[2]--;
-            PlayerData.ores[3]--;
-            PlayerData.ores[12]--;
+            pData.metals[25].amount++;
+            pData.ores[2].amount--;
+            pData.ores[3].amount--;
+            pData.ores[12].amount--;
         }
     }
 
     public void SmeltRefinedMeteorite()
     {
-        if (PlayerData.ores[13] == 0)
+        if (pData.ores[13].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[26]++;
-            PlayerData.ores[13]--;
+            pData.metals[26].amount++;
+            pData.ores[13].amount--;
         }
     }
 
     public void SmeltMeteoricIron()
     {
-        if (PlayerData.ores[2] == 0 || PlayerData.ores[3] == 0 || PlayerData.ores[13] == 0)
+        if (pData.ores[2].amount == 0 || pData.ores[3].amount == 0 || pData.ores[13].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[27]++;
-            PlayerData.ores[2]--;
-            PlayerData.ores[3]--;
-            PlayerData.ores[13]--;
+            pData.metals[27].amount++;
+            pData.ores[2].amount--;
+            pData.ores[3].amount--;
+            pData.ores[13].amount--;
         }
     }
 
     public void SmeltShadowsteel()
     {
-        if (PlayerData.ores[2] == 0 || PlayerData.ores[12] == 0 || PlayerData.ores[13] == 0)
+        if (pData.ores[2].amount == 0 || pData.ores[12].amount == 0 || pData.ores[13].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[28]++;
-            PlayerData.ores[2]--;
-            PlayerData.ores[12]--;
-            PlayerData.ores[13]--;
+            pData.metals[28].amount++;
+            pData.ores[2].amount--;
+            pData.ores[12].amount--;
+            pData.ores[13].amount--;
         }
     }
 
     public void SmeltMeteoricSteel()
     {
-        if (PlayerData.ores[11] == 0 || PlayerData.ores[12] == 0 || PlayerData.ores[13] == 0)
+        if (pData.ores[11].amount == 0 || pData.ores[12].amount == 0 || pData.ores[13].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[29]++;
-            PlayerData.ores[11]--;
-            PlayerData.ores[12]--;
-            PlayerData.ores[13]--;
+            pData.metals[29].amount++;
+            pData.ores[11].amount--;
+            pData.ores[12].amount--;
+            pData.ores[13].amount--;
         }
     }
 
     public void SmeltMithril()
     {
-        if (PlayerData.ores[14] == 0)
+        if (pData.ores[14].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[30]++;
-            PlayerData.ores[14]--;
+            pData.metals[30].amount++;
+            pData.ores[14].amount--;
         }
     }
 
     public void SmeltMysticalSteel()
     {
-        if (PlayerData.ores[3] == 0 || PlayerData.ores[11] == 0 || PlayerData.ores[14] == 0)
+        if (pData.ores[3].amount == 0 || pData.ores[11].amount == 0 || pData.ores[14].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[31]++;
-            PlayerData.ores[3]--;
-            PlayerData.ores[11]--;
-            PlayerData.ores[14]--;
+            pData.metals[31].amount++;
+            pData.ores[3].amount--;
+            pData.ores[11].amount--;
+            pData.ores[14].amount--;
         }
     }
 
     public void SmeltAdamanteus()
     {
-        if (PlayerData.ores[15] == 0)
+        if (pData.ores[15].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[32]++;
-            PlayerData.ores[15]--;
+            pData.metals[32].amount++;
+            pData.ores[15].amount--;
         }
     }
 
     public void SmeltDivineSteel()
     {
-        if (PlayerData.ores[3] == 0 || PlayerData.ores[11] == 0 || PlayerData.ores[15] == 0)
+        if (pData.ores[3].amount == 0 || pData.ores[11].amount == 0 || pData.ores[15].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[33]++;
-            PlayerData.ores[3]--;
-            PlayerData.ores[11]--;
-            PlayerData.ores[15]--;
+            pData.metals[33].amount++;
+            pData.ores[3].amount--;
+            pData.ores[11].amount--;
+            pData.ores[15].amount--;
         }
     }
 
     public void SmeltQuicksilver()
     {
-        if (PlayerData.ores[16] == 0)
+        if (pData.ores[16].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[34]++;
-            PlayerData.ores[16]--;
+            pData.metals[34].amount++;
+            pData.ores[16].amount--;
         }
     }
 
     public void SmeltCelestialSteel()
     {
-        if (PlayerData.ores[3] == 0 || PlayerData.ores[11] == 0 || PlayerData.ores[16] == 0)
+        if (pData.ores[3].amount == 0 || pData.ores[11].amount == 0 || pData.ores[16].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[35]++;
-            PlayerData.ores[3]--;
-            PlayerData.ores[11]--;
-            PlayerData.ores[16]--;
+            pData.metals[35].amount++;
+            pData.ores[3].amount--;
+            pData.ores[11].amount--;
+            pData.ores[16].amount--;
         }
     }
 
     public void SmeltLuminium()
     {
-        if (PlayerData.ores[14] == 0 || PlayerData.ores[15] == 0 || PlayerData.ores[16] == 0)
+        if (pData.ores[14].amount == 0 || pData.ores[15].amount == 0 || pData.ores[16].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[36]++;
-            PlayerData.ores[14]--;
-            PlayerData.ores[15]--;
-            PlayerData.ores[16]--;
+            pData.metals[36].amount++;
+            pData.ores[14].amount--;
+            pData.ores[15].amount--;
+            pData.ores[16].amount--;
         }
     }
 
     public void SmeltAether()
     {
-        if (PlayerData.ores[17] == 0)
+        if (pData.ores[17].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[37]++;
-            PlayerData.ores[17]--;
+            pData.metals[37].amount++;
+            pData.ores[17].amount--;
         }
     }
 
     public void SmeltEtherium()
     {
-        if (PlayerData.ores[11] == 0 || PlayerData.ores[17] == 0)
+        if (pData.ores[11].amount == 0 || pData.ores[17].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[38]++;
-            PlayerData.ores[11]--;
-            PlayerData.ores[17]--;
+            pData.metals[38].amount++;
+            pData.ores[11].amount--;
+            pData.ores[17].amount--;
         }
     }
 
     public void SmeltCosmicSteel()
     {
-        if (PlayerData.ores[3] == 0 || PlayerData.ores[11] == 0 || PlayerData.ores[17] == 0)
+        if (pData.ores[3].amount == 0 || pData.ores[11].amount == 0 || pData.ores[17].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[39]++;
-            PlayerData.ores[3]--;
-            PlayerData.ores[11]--;
-            PlayerData.ores[17]--;
+            pData.metals[39].amount++;
+            pData.ores[3].amount--;
+            pData.ores[11].amount--;
+            pData.ores[17].amount--;
         }
     }
 
     public void SmeltCrimsonite()
     {
-        if (PlayerData.ores[18] == 0)
+        if (pData.ores[18].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[40]++;
-            PlayerData.ores[18]--;
+            pData.metals[40].amount++;
+            pData.ores[18].amount--;
         }
     }
 
     public void SmeltSoulSteel()
     {
-        if (PlayerData.ores[12] == 0 || PlayerData.ores[13] == 0 || PlayerData.ores[18] == 0)
+        if (pData.ores[12].amount == 0 || pData.ores[13].amount == 0 || pData.ores[18].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[41]++;
-            PlayerData.ores[12]--;
-            PlayerData.ores[13]--;
-            PlayerData.ores[18]--;
+            pData.metals[41].amount++;
+            pData.ores[12].amount--;
+            pData.ores[13].amount--;
+            pData.ores[18].amount--;
         }
     }
 
     public void SmeltNeutronium()
     {
-        if (PlayerData.ores[13] == 0 || PlayerData.ores[16] == 0 || PlayerData.ores[18] == 0)
+        if (pData.ores[13].amount == 0 || pData.ores[16].amount == 0 || pData.ores[18].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[42]++;
-            PlayerData.ores[13]--;
-            PlayerData.ores[16]--;
-            PlayerData.ores[18]--;
+            pData.metals[42].amount++;
+            pData.ores[13].amount--;
+            pData.ores[16].amount--;
+            pData.ores[18].amount--;
         }
     }
 
     public void SmeltOrichalcum()
     {
-        if (PlayerData.ores[16] == 0 || PlayerData.ores[17] == 0 || PlayerData.ores[18] == 0)
+        if (pData.ores[16].amount == 0 || pData.ores[17].amount == 0 || pData.ores[18].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[43]++;
-            PlayerData.ores[16]--;
-            PlayerData.ores[17]--;
-            PlayerData.ores[18]--;
+            pData.metals[43].amount++;
+            pData.ores[16].amount--;
+            pData.ores[17].amount--;
+            pData.ores[18].amount--;
         }
     }
 
     public void SmeltInfinitium()
     {
-        if (PlayerData.metals[0] == 0 || PlayerData.metals[1] == 0 || PlayerData.metals[2] == 0 || PlayerData.metals[3] == 0 || PlayerData.metals[4] == 0 || PlayerData.metals[5] == 0 || PlayerData.metals[6] == 0 || PlayerData.metals[7] == 0 || PlayerData.metals[8] == 0 || PlayerData.metals[9] == 0 || PlayerData.metals[10] == 0 || PlayerData.metals[11] == 0 || PlayerData.metals[12] == 0 || PlayerData.metals[13] == 0 || PlayerData.metals[14] == 0 || PlayerData.metals[15] == 0 || PlayerData.metals[16] == 0 || PlayerData.metals[17] == 0 || PlayerData.metals[18] == 0 || PlayerData.metals[19] == 0 || PlayerData.metals[20] == 0 || PlayerData.metals[21] == 0 || PlayerData.metals[22] == 0 || PlayerData.metals[23] == 0 || PlayerData.metals[24] == 0 || PlayerData.metals[25] == 0 || PlayerData.metals[26] == 0 || PlayerData.metals[27] == 0 || PlayerData.metals[28] == 0 || PlayerData.metals[29] == 0 || PlayerData.metals[30] == 0 || PlayerData.metals[31] == 0 || PlayerData.metals[32] == 0 || PlayerData.metals[33] == 0 || PlayerData.metals[34] == 0 || PlayerData.metals[35] == 0 || PlayerData.metals[36] == 0 || PlayerData.metals[37] == 0 || PlayerData.metals[38] == 0 || PlayerData.metals[39] == 0 || PlayerData.metals[40] == 0 || PlayerData.metals[41] == 0 || PlayerData.metals[42] == 0 || PlayerData.metals[43] == 0 || PlayerData.metals[44] == 0)
+        if (pData.metals[0].amount == 0 || pData.metals[1].amount == 0 || pData.metals[2].amount == 0 || pData.metals[3].amount == 0 || pData.metals[4].amount == 0 || pData.metals[5].amount == 0 || pData.metals[6].amount == 0 || pData.metals[7].amount == 0 || pData.metals[8].amount == 0 || pData.metals[9].amount == 0 || pData.metals[10].amount == 0 || pData.metals[11].amount == 0 || pData.metals[12].amount == 0 || pData.metals[13].amount == 0 || pData.metals[14].amount == 0 || pData.metals[15].amount == 0 || pData.metals[16].amount == 0 || pData.metals[17].amount == 0 || pData.metals[18].amount == 0 || pData.metals[19].amount == 0 || pData.metals[20].amount == 0 || pData.metals[21].amount == 0 || pData.metals[22].amount == 0 || pData.metals[23].amount == 0 || pData.metals[24].amount == 0 || pData.metals[25].amount == 0 || pData.metals[26].amount == 0 || pData.metals[27].amount == 0 || pData.metals[28].amount == 0 || pData.metals[29].amount == 0 || pData.metals[30].amount == 0 || pData.metals[31].amount == 0 || pData.metals[32].amount == 0 || pData.metals[33].amount == 0 || pData.metals[34].amount == 0 || pData.metals[35].amount == 0 || pData.metals[36].amount == 0 || pData.metals[37].amount == 0 || pData.metals[38].amount == 0 || pData.metals[39].amount == 0 || pData.metals[40].amount == 0 || pData.metals[41].amount == 0 || pData.metals[42].amount == 0 || pData.metals[43].amount == 0)
         {
             return;
         }
         else
         {
-            PlayerData.metals[44]++;
-            PlayerData.metals[0]--;
-            PlayerData.metals[1]--;
-            PlayerData.metals[2]--;
-            PlayerData.metals[3]--;
-            PlayerData.metals[4]--;
-            PlayerData.metals[5]--;
-            PlayerData.metals[6]--;
-            PlayerData.metals[7]--;
-            PlayerData.metals[8]--;
-            PlayerData.metals[9]--;
-            PlayerData.metals[10]--;
-            PlayerData.metals[11]--;
-            PlayerData.metals[12]--;
-            PlayerData.metals[13]--;
-            PlayerData.metals[14]--;
-            PlayerData.metals[15]--;
-            PlayerData.metals[16]--;
-            PlayerData.metals[17]--;
-            PlayerData.metals[18]--;
-            PlayerData.metals[19]--;
-            PlayerData.metals[20]--;
-            PlayerData.metals[21]--;
-            PlayerData.metals[22]--;
-            PlayerData.metals[23]--;
-            PlayerData.metals[24]--;
-            PlayerData.metals[25]--;
-            PlayerData.metals[26]--;
-            PlayerData.metals[27]--;
-            PlayerData.metals[28]--;
-            PlayerData.metals[29]--;
-            PlayerData.metals[30]--;
-            PlayerData.metals[31]--;
-            PlayerData.metals[32]--;
-            PlayerData.metals[33]--;
-            PlayerData.metals[34]--;
-            PlayerData.metals[35]--;
-            PlayerData.metals[36]--;
-            PlayerData.metals[37]--;
-            PlayerData.metals[38]--;
-            PlayerData.metals[39]--;
-            PlayerData.metals[40]--;
-            PlayerData.metals[41]--;
-            PlayerData.metals[42]--;
-            PlayerData.metals[43]--;
+            pData.metals[44].amount++;
+            pData.metals[0].amount--;
+            pData.metals[1].amount--;
+            pData.metals[2].amount--;
+            pData.metals[3].amount--;
+            pData.metals[4].amount--;
+            pData.metals[5].amount--;
+            pData.metals[6].amount--;
+            pData.metals[7].amount--;
+            pData.metals[8].amount--;
+            pData.metals[9].amount--;
+            pData.metals[10].amount--;
+            pData.metals[11].amount--;
+            pData.metals[12].amount--;
+            pData.metals[13].amount--;
+            pData.metals[14].amount--;
+            pData.metals[15].amount--;
+            pData.metals[16].amount--;
+            pData.metals[17].amount--;
+            pData.metals[18].amount--;
+            pData.metals[19].amount--;
+            pData.metals[20].amount--;
+            pData.metals[21].amount--;
+            pData.metals[22].amount--;
+            pData.metals[23].amount--;
+            pData.metals[24].amount--;
+            pData.metals[25].amount--;
+            pData.metals[26].amount--;
+            pData.metals[27].amount--;
+            pData.metals[28].amount--;
+            pData.metals[29].amount--;
+            pData.metals[30].amount--;
+            pData.metals[31].amount--;
+            pData.metals[32].amount--;
+            pData.metals[33].amount--;
+            pData.metals[34].amount--;
+            pData.metals[35].amount--;
+            pData.metals[36].amount--;
+            pData.metals[37].amount--;
+            pData.metals[38].amount--;
+            pData.metals[39].amount--;
+            pData.metals[40].amount--;
+            pData.metals[41].amount--;
+            pData.metals[42].amount--;
+            pData.metals[43].amount--;
         }
-    }
-
-    public void DisplayInventoryAmount()
-    {
-        inventoryImage.sprite = metalSprites[currentMetal];
-        inventoryAmount.text = PlayerData.metals[currentMetal].ToString();
     }
 
     public void LeftButton()

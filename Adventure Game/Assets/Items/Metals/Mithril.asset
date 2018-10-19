@@ -11,5 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0339fb95c3b22754dbb00c83ac30b1c5, type: 3}
   m_Name: Mithril
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 330e8add56d2f44419a9a37fb1033458, type: 3}
-  name: Mithril
+  sprite: {fileID: 21300000, guid: a5a8469b8e0fbcc42a8f026e7028f982, type: 3}
+  amount: 0

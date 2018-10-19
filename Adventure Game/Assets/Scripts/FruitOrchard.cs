@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class FruitOrchard : MonoBehaviour {
 
+    public PlayerData pData;
+
     public GameObject rubyApple;
     public GameObject bloodOrange;
     public GameObject cinderBanana;
@@ -13,8 +15,6 @@ public class FruitOrchard : MonoBehaviour {
     public GameObject wildNectarine;
 
     public Image inventoryImage;
-
-    public Sprite[] fruitSprites = new Sprite[DataManager.numFruits];
 
     public Text inventoryAmount;
 
@@ -27,38 +27,38 @@ public class FruitOrchard : MonoBehaviour {
 
     public void RubyAppleCollect()
     {
-        PlayerData.fruits[0]++;
+        pData.fruits[0].amount++;
     }
 
     public void BloodOrangeCollect()
     {
-        PlayerData.fruits[1]++;
+        pData.fruits[1].amount++;
     }
 
     public void CinderBananaCollect()
     {
-        PlayerData.fruits[2]++;
+        pData.fruits[2].amount++;
     }
 
     public void DewLemonCollect()
     {
-        PlayerData.fruits[3]++;
+        pData.fruits[3].amount++;
     }
 
     public void GoldenMangoCollect()
     {
-        PlayerData.fruits[4]++;
+        pData.fruits[4].amount++;
     }
 
     public void WildNectarineCollect()
     {
-        PlayerData.fruits[5]++;
+        pData.fruits[5].amount++;
     }
 
     public void DisplayInventoryAmount()
     {
-        inventoryImage.sprite = fruitSprites[currentFruit];
-        inventoryAmount.text = PlayerData.fruits[currentFruit].ToString();
+        inventoryImage.sprite = pData.fruits[currentFruit].sprite;
+        inventoryAmount.text = pData.fruits[currentFruit].amount.ToString();
     }
 
     public void LeftButton()

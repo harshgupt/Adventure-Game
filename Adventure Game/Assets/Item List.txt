@@ -16,7 +16,7 @@ Gems:
 13 Lapis Lazuli
 14 Aquamarine
 15 Peridot
-16 Turqoise
+16 Turquoise
 17 Icy Quartz
 18 Coralite
 19 Amethyst
