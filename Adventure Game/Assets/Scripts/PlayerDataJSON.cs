@@ -2,6 +2,10 @@
 {
     public float Coins;
 
+    //Level and Wave
+    public int Level;
+    public int Wave;
+
     //Armour and Weapon
     public int HelmTier;
     public int ChestplateTier;

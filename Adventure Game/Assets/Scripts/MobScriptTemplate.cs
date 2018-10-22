@@ -23,6 +23,10 @@ public class MobScriptTemplate : MonoBehaviour {
             if(health <= 0)
             {
                 MobSpawner.mobsOnScreen--;
+                if(MobSpawner.mobsOnScreen == 0)
+                {
+                    LevelScript.wave++;
+                }
                 Destroy(gameObject);
             }
         }

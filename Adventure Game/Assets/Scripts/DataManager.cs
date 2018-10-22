@@ -24,6 +24,10 @@ public class DataManager : MonoBehaviour {
     #region To view data in runtime only
     public float Coins;
 
+    //Level and Wave
+    public int Level;
+    public int Wave;
+
     //Armour and Weapon
     public int HelmTier;
     public int ChestplateTier;
@@ -208,15 +212,15 @@ public class DataManager : MonoBehaviour {
     private void Awake()
     {
         pData = GetComponent<PlayerData>();
+        dataFilePath = Path.Combine(Application.streamingAssetsPath, "data.json");
+        if (SceneManager.GetActiveScene().name == "Main")
+        {
+            LoadGameData();
+        }
     }
 
     private void Start()
     {
-        dataFilePath = Path.Combine(Application.streamingAssetsPath, "data.json");
-        if(SceneManager.GetActiveScene().name == "Main")
-        {
-            LoadGameData();
-        }
     }
 
     private void Update()
@@ -236,6 +240,8 @@ public class DataManager : MonoBehaviour {
         #region To view data in runtime only
 
         Coins = PlayerData.coins;
+        Level = LevelScript.level;
+        Wave = LevelScript.wave;
         HelmTier = PlayerData.armourTier[0];
         ChestplateTier = PlayerData.armourTier[1];
         GauntletsTier = PlayerData.armourTier[2];
@@ -590,6 +596,8 @@ public class DataManager : MonoBehaviour {
         PlayerDataJSON playerDataJSON = new PlayerDataJSON()
         {
             Coins = PlayerData.coins,
+            Level = LevelScript.level,
+            Wave = LevelScript.wave,
             HelmTier = PlayerData.armourTier[0],
             ChestplateTier = PlayerData.armourTier[1],
             GauntletsTier = PlayerData.armourTier[2],

@@ -13743,6 +13743,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Coins: 0
+  Level: 0
+  Wave: 0
   HelmTier: 0
   ChestplateTier: 0
   GauntletsTier: 0

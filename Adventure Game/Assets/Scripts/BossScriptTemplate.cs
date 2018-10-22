@@ -22,6 +22,8 @@ public class BossScriptTemplate : MonoBehaviour {
             healthBar.fillAmount = health / maxHealth;
             if (health <= 0)
             {
+                LevelScript.wave = 1;
+                LevelScript.level++;
                 MobSpawner.bossOnScreen = 0;
                 Destroy(gameObject);
             }

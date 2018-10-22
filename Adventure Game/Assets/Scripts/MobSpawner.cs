@@ -18,22 +18,20 @@ public class MobSpawner : MonoBehaviour
 
     private void Start()
     {
-        mobsOnScreen = 0;
-        bossOnScreen = 0;
-        SpawnMob(1);
-        SpawnMob(2);
-        Debug.Log("Level: " + LevelScript.level + ", Wave: " + LevelScript.wave);
+        /*if(LevelScript.level == 1 && LevelScript.wave == 1)
+        {
+            mobsOnScreen = 0;
+            bossOnScreen = 0;
+            SpawnMob(1);
+            SpawnMob(2);
+            Debug.Log("Level: " + LevelScript.level + ", Wave: " + LevelScript.wave);
+        }*/
     }
 
     private void Update()
     {
         if (mobsOnScreen == 0 && bossOnScreen == 0)
         {
-            LevelScript.wave++;
-            if (LevelScript.wave > 10)
-            {
-                LevelScript.nextLevel = true;
-            }
             if (LevelScript.wave > 0 && LevelScript.wave <= 3)
             {
                 SpawnMob(1);
@@ -129,7 +127,7 @@ public class MobSpawner : MonoBehaviour
                 bossType = boss1;
                 break;
         }
-        Instantiate(bossType, new Vector2(6, 0f), Quaternion.identity);
+        Instantiate(bossType, new Vector2(6, 0.5f), Quaternion.identity);
         bossOnScreen = 1;
     }
 }
