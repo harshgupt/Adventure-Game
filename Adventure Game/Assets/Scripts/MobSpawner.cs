@@ -16,18 +16,6 @@ public class MobSpawner : MonoBehaviour
     public static int mobsOnScreen;
     public static int bossOnScreen;
 
-    private void Start()
-    {
-        /*if(LevelScript.level == 1 && LevelScript.wave == 1)
-        {
-            mobsOnScreen = 0;
-            bossOnScreen = 0;
-            SpawnMob(1);
-            SpawnMob(2);
-            Debug.Log("Level: " + LevelScript.level + ", Wave: " + LevelScript.wave);
-        }*/
-    }
-
     private void Update()
     {
         if (mobsOnScreen == 0 && bossOnScreen == 0)
@@ -36,14 +24,14 @@ public class MobSpawner : MonoBehaviour
             {
                 SpawnMob(1);
                 SpawnMob(2);
-                Debug.Log("Level: " + LevelScript.level + ", Wave: " + LevelScript.wave);
+                //Debug.Log("Level: " + LevelScript.level + ", Wave: " + LevelScript.wave);
             }
             else if (LevelScript.wave > 3 && LevelScript.wave <= 6)
             {
                 SpawnMob(1);
                 SpawnMob(2);
                 SpawnMob(3);
-                Debug.Log("Level: " + LevelScript.level + ", Wave: " + LevelScript.wave);
+                //Debug.Log("Level: " + LevelScript.level + ", Wave: " + LevelScript.wave);
             }
             else if (LevelScript.wave > 6 && LevelScript.wave <= 9)
             {
@@ -52,12 +40,12 @@ public class MobSpawner : MonoBehaviour
                 SpawnMob(3);
                 SpawnMob(4);
                 SpawnMob(5);
-                Debug.Log("Level: " + LevelScript.level + ", Wave: " + LevelScript.wave);
+                //Debug.Log("Level: " + LevelScript.level + ", Wave: " + LevelScript.wave);
             }
             else if (LevelScript.wave == 10)
             {
                 SpawnBoss();
-                Debug.Log("Level: " + LevelScript.level + ", Wave: " + LevelScript.wave);
+                //Debug.Log("Level: " + LevelScript.level + ", Wave: " + LevelScript.wave);
             }
         }
     }

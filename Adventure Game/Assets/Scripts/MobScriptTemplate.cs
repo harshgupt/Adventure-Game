@@ -5,13 +5,32 @@ using UnityEngine.UI;
 
 public class MobScriptTemplate : MonoBehaviour {
 
+    public MobMovementScript mobMovementScript;
+
+    public Image healthBar;
+
     float maxHealth = 1f;
     float health;
-    public Image healthBar;
+    float attackTime = 1f;
+    float timer = 0;
+    float damage = 1f;
 
     private void Start()
     {
         health = maxHealth;
+    }
+
+    private void Update()
+    {
+        if (mobMovementScript.reachedEnd)
+        {
+            timer += Time.deltaTime;
+            if (timer >= attackTime)
+            {
+                timer = 0;
+                AttackPlayer();
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -30,5 +49,11 @@ public class MobScriptTemplate : MonoBehaviour {
                 Destroy(gameObject);
             }
         }
+    }
+
+    public void AttackPlayer()
+    {
+        PlayerData.playerHealth -= damage;
+        Debug.Log(PlayerData.playerHealth);
     }
 }

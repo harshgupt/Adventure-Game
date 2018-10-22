@@ -23,6 +23,7 @@ public class DataManager : MonoBehaviour {
 
     #region To view data in runtime only
     public float Coins;
+    public float PlayerHP;
 
     //Level and Wave
     public int Level;
@@ -240,6 +241,7 @@ public class DataManager : MonoBehaviour {
         #region To view data in runtime only
 
         Coins = PlayerData.coins;
+        PlayerHP = PlayerData.playerHealth;
         Level = LevelScript.level;
         Wave = LevelScript.wave;
         HelmTier = PlayerData.armourTier[0];
@@ -596,6 +598,7 @@ public class DataManager : MonoBehaviour {
         PlayerDataJSON playerDataJSON = new PlayerDataJSON()
         {
             Coins = PlayerData.coins,
+            PlayerHP = PlayerData.playerHealth,
             Level = LevelScript.level,
             Wave = LevelScript.wave,
             HelmTier = PlayerData.armourTier[0],

@@ -225,6 +225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvasHP: {fileID: 1280177220369956}
   ownCollider: {fileID: 61783234307845568}
+  reachedEnd: 0
 --- !u!114 &114919685180762728
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -257,6 +258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b21ec86f64e4840b741df532158fd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mobMovementScript: {fileID: 114854091635458082}
   healthBar: {fileID: 114670348341434538}
 --- !u!212 &212584163884365198
 SpriteRenderer:

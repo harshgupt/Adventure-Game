@@ -8,6 +8,7 @@ public class LevelScript : MonoBehaviour {
 
     public static int level = 1;
     public static int wave = 1;
+    public static int playerHP = 100;
 
     private void Start()
     {
@@ -19,6 +20,7 @@ public class LevelScript : MonoBehaviour {
                 PlayerDataJSON loadedData = JsonUtility.FromJson<PlayerDataJSON>(File.ReadAllText(Path.Combine(Application.streamingAssetsPath, "data.json")));
                 level = loadedData.Level;
                 wave = loadedData.Wave;
+                PlayerData.playerHealth = loadedData.PlayerHP;
             }
         }
     }

@@ -3,5 +3,4 @@ Save scrolled position, or unlocked position in Mine, Forge, etc
 Change all backgrounds to fit for all resolutions
 Show animation for adding and removing items (fade out + and - in while mining, etc)
 Drag and drop action for battle items
-Damage to player when enemy reaches end
 Create inventory for Fight scene (max 5-10 items)

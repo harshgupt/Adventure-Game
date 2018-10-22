@@ -1,6 +1,7 @@
 ﻿public class PlayerDataJSON
 {
     public float Coins;
+    public float PlayerHP;
 
     //Level and Wave
     public int Level;

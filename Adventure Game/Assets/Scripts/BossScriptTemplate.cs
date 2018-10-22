@@ -5,13 +5,32 @@ using UnityEngine.UI;
 
 public class BossScriptTemplate : MonoBehaviour {
 
+    public BossMovementScript bossMovementScript;
+
+    public Image healthBar;
+
     float maxHealth = 2f;
     float health;
-    public Image healthBar;
+    float attackTime = 2f;
+    float timer = 0;
+    float damage = 5f;
 
     private void Start()
     {
         health = maxHealth;
+    }
+
+    private void Update()
+    {
+        if (bossMovementScript.reachedEnd)
+        {
+            timer += Time.deltaTime;
+            if (timer >= attackTime)
+            {
+                timer = 0;
+                AttackPlayer();
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -28,5 +47,11 @@ public class BossScriptTemplate : MonoBehaviour {
                 Destroy(gameObject);
             }
         }
+    }
+
+    public void AttackPlayer()
+    {
+        PlayerData.playerHealth -= damage;
+        Debug.Log(PlayerData.playerHealth);
     }
 }

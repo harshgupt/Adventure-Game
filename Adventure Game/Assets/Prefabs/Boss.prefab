@@ -123,7 +123,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1046972967398200}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -180,6 +180,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93e58a8feb8cbe645852a50c607ffa14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasHP: {fileID: 1635598336714476}
+  ownCollider: {fileID: 61810320430132266}
+  reachedEnd: 0
 --- !u!114 &114239396820817826
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -239,6 +242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc9580c49ce7de6409f2c223b1f6cae9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bossMovementScript: {fileID: 114182088578190156}
   healthBar: {fileID: 114056244168340572}
 --- !u!114 &114675378247718538
 MonoBehaviour:

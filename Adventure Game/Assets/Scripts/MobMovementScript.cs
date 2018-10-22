@@ -12,6 +12,8 @@ public class MobMovementScript : MonoBehaviour {
     float xPos;
     float speed = -0.5f;
 
+    public bool reachedEnd = false;
+
     private void Start()
     {
         yPos = transform.position.y;
@@ -32,6 +34,7 @@ public class MobMovementScript : MonoBehaviour {
             speed = 0;
             canvasHP.SetActive(true);
             ownCollider.enabled = true;
+            reachedEnd = true;
         }
         transform.Translate(speed, 0, 0);
     }

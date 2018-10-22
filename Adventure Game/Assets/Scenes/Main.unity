@@ -13983,6 +13983,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081c124f797836a4da9e87e6e6fe8456, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHealthBar: {fileID: 124456849}
   ores:
   - {fileID: 11400000, guid: fff4cefb2272e084ea0b9987ac2ee1ef, type: 2}
   - {fileID: 11400000, guid: 69d974ee998e264449c53c6cbec26f38, type: 2}
