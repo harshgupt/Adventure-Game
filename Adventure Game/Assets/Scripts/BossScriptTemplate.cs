@@ -22,7 +22,7 @@ public class BossScriptTemplate : MonoBehaviour {
             healthBar.fillAmount = health / maxHealth;
             if (health <= 0)
             {
-                MobSpawner.bossKilled = true;
+                MobSpawner.bossOnScreen = 0;
                 Destroy(gameObject);
             }
         }

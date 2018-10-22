@@ -262,3 +262,10 @@ Brain
 Claw
 Flesh
 Hair
+
+Monsters (22 Levels):
+
+Chicken - Cockatrice
+Snake - Basilisk
+Goblin - Troll
+Wolf - Werewolf

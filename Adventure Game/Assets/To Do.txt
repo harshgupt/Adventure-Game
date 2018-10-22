@@ -1,5 +1,3 @@
-Add 'Item' assets
-Convert PlayerData int to Item types
 Show ingredients for Smelting and Potions
 Save scrolled position, or unlocked position in Mine, Forge, etc
 Change all backgrounds to fit for all resolutions

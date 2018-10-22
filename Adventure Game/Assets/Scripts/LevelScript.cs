@@ -14,7 +14,7 @@ public class LevelScript : MonoBehaviour {
         if(nextLevel)
         {
             nextLevel = false;
-            wave = 1;
+            wave = 0;
             level++;
         }
     }

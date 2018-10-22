@@ -2,98 +2,134 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MobSpawner : MonoBehaviour {
+public class MobSpawner : MonoBehaviour
+{
+    public Transform mob1;
+    public Transform mob2;
+    public Transform mob3;
+    public Transform mob4;
+    public Transform boss1;
+    public Transform boss2;
+    public Transform boss3;
+    public Transform boss4;
 
-    public Transform mob;
-    public Transform boss;
-
-    float yPos1 = 2f;
-    float yPos2 = -1f;
-    float yPos3 = 0.5f;
-    float yPos4 = 3.5f;
-    float yPos5 = -2.5f;
-
-    public static int mobsKilled;
-
-    public static bool bossKilled;
+    public static int mobsOnScreen;
+    public static int bossOnScreen;
 
     private void Start()
     {
-        mobsKilled = 0;
-        bossKilled = false;
-        //Debug.Log("Level: " + LevelScript.level + ", Wave: " + LevelScript.wave);
-        SpawnMobs(2);
+        mobsOnScreen = 0;
+        bossOnScreen = 0;
+        SpawnMob(1);
+        SpawnMob(2);
+        Debug.Log("Level: " + LevelScript.level + ", Wave: " + LevelScript.wave);
     }
 
     private void Update()
     {
-        if (bossKilled)
+        if (mobsOnScreen == 0 && bossOnScreen == 0)
         {
-            bossKilled = false;
-            LevelScript.nextLevel = true;
-            //Debug.Log("Level: " + LevelScript.level + ", Wave: " + LevelScript.wave);
-            SpawnMobs(2);
-        }
-        if(mobsKilled == 2 && LevelScript.wave <= 3)
-        {
-            mobsKilled = 0;
             LevelScript.wave++;
-            //Debug.Log("Level: " + LevelScript.level + ", Wave: " + LevelScript.wave);
-            CheckWaveNo();
-        }
-        else if(mobsKilled == 3 && LevelScript.wave <= 6)
-        {
-            mobsKilled = 0;
-            LevelScript.wave++;
-            //Debug.Log("Level: " + LevelScript.level + ", Wave: " + LevelScript.wave);
-            CheckWaveNo();
-        }
-        else if (mobsKilled == 5 && LevelScript.wave <= 9)
-        {
-            mobsKilled = 0;
-            LevelScript.wave++;
-            //Debug.Log("Level: " + LevelScript.level + ", Wave: " + LevelScript.wave);
-            CheckWaveNo();
-        }
-    }
-
-    public void CheckWaveNo()
-    {
-        if (LevelScript.wave <= 3)
-        {
-            SpawnMobs(2);
-        }
-        else if (LevelScript.wave <= 6)
-        {
-            SpawnMobs(3);
-        }
-        else if (LevelScript.wave <= 9)
-        {
-            SpawnMobs(5);
-        }
-        else if (LevelScript.wave == 10)
-        {
-            SpawnBoss();
-        }
-    }
-
-    public void SpawnMobs(int numMobs)
-    {
-        Instantiate(mob, new Vector2(6, yPos1), Quaternion.identity);
-        Instantiate(mob, new Vector2(6, yPos2), Quaternion.identity);
-        if (numMobs >= 3)
-        {
-            Instantiate(mob, new Vector2(8, yPos3), Quaternion.identity);
-            if (numMobs == 5)
+            if (LevelScript.wave > 10)
             {
-                Instantiate(mob, new Vector2(8, yPos4), Quaternion.identity);
-                Instantiate(mob, new Vector2(8, yPos5), Quaternion.identity);
+                LevelScript.nextLevel = true;
+            }
+            if (LevelScript.wave > 0 && LevelScript.wave <= 3)
+            {
+                SpawnMob(1);
+                SpawnMob(2);
+                Debug.Log("Level: " + LevelScript.level + ", Wave: " + LevelScript.wave);
+            }
+            else if (LevelScript.wave > 3 && LevelScript.wave <= 6)
+            {
+                SpawnMob(1);
+                SpawnMob(2);
+                SpawnMob(3);
+                Debug.Log("Level: " + LevelScript.level + ", Wave: " + LevelScript.wave);
+            }
+            else if (LevelScript.wave > 6 && LevelScript.wave <= 9)
+            {
+                SpawnMob(1);
+                SpawnMob(2);
+                SpawnMob(3);
+                SpawnMob(4);
+                SpawnMob(5);
+                Debug.Log("Level: " + LevelScript.level + ", Wave: " + LevelScript.wave);
+            }
+            else if (LevelScript.wave == 10)
+            {
+                SpawnBoss();
+                Debug.Log("Level: " + LevelScript.level + ", Wave: " + LevelScript.wave);
             }
         }
     }
 
+    public void SpawnMob(int position)
+    {
+        Transform mobType;
+        switch (LevelScript.level)
+        {
+            case 1:
+                mobType = mob1;
+                break;
+            case 2:
+                mobType = mob2;
+                break;
+            case 3:
+                mobType = mob3;
+                break;
+            case 4:
+                mobType = mob4;
+                break;
+            default:
+                mobType = mob1;
+                break;
+        }
+        if (position == 1)
+        {
+            Instantiate(mobType, new Vector2(6, 2f), Quaternion.identity);
+        }
+        else if (position == 2)
+        {
+            Instantiate(mobType, new Vector2(6, -1f), Quaternion.identity);
+        }
+        else if (position == 3)
+        {
+            Instantiate(mobType, new Vector2(8, 0.5f), Quaternion.identity);
+        }
+        else if (position == 4)
+        {
+            Instantiate(mobType, new Vector2(8, 3.5f), Quaternion.identity);
+        }
+        else if (position == 5)
+        {
+            Instantiate(mobType, new Vector2(8, -2.5f), Quaternion.identity);
+        }
+        mobsOnScreen++;
+    }
+
     public void SpawnBoss()
     {
-        Instantiate(boss, new Vector2(6, 0), Quaternion.identity);
+        Transform bossType;
+        switch (LevelScript.level)
+        {
+            case 1:
+                bossType = boss1;
+                break;
+            case 2:
+                bossType = boss2;
+                break;
+            case 3:
+                bossType = boss3;
+                break;
+            case 4:
+                bossType = boss4;
+                break;
+            default:
+                bossType = boss1;
+                break;
+        }
+        Instantiate(bossType, new Vector2(6, 0f), Quaternion.identity);
+        bossOnScreen = 1;
     }
 }
