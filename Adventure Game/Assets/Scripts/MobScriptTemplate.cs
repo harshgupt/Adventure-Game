@@ -17,7 +17,6 @@ public class MobScriptTemplate : MonoBehaviour {
 
     private void Start()
     {
-        Debug.Log(gameObject.name);
         health = maxHealth;
     }
 

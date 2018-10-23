@@ -20,6 +20,8 @@ public class DataManager : MonoBehaviour {
     public const int numPotions = 31;
     public const int numHerbs = 30;
     public const int numFruits = 6;
+    public const int numMobs = 22;
+    public const int numBosses = 22;
 
     #region To view data in runtime only
     public float Coins;
