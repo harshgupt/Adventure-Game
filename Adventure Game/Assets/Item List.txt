@@ -263,9 +263,40 @@ Claw
 Flesh
 Hair
 
-Monsters (22 Levels):
+Themes (22 Levels):
 
-Chicken - Cockatrice
-Snake - Basilisk
-Goblin - Troll
-Wolf - Werewolf
+Goblin, Ogre
+Slime, Slime Creature
+Dwarf, Golem
+Satyr, Centaur
+Mummy, Sphinx
+Mermaid, Siren
+Gargoyle, Dracula
+
+Ghoul, Banshee
+Direwolf, Fenrir
+Pegasus, Cyclops
+Undead Pharaoh, Anubis
+Chupacabra, Ahuizotl
+Harpie, Medusa
+Valkyrie, Brynhildr
+Griffin, Manticore
+
+Hellhound, Cerberus
+Phoenix, Basilisk
+Giant Squid, Kraken
+Wyvern, Dragon
+Minotaur, Hydra
+Cockatrice, Chimaera
+Necromancer, Demon
+
+Greek - 
+Egyptian - 
+Transylvanian - Werewolf, Frankenstein's Monster,
+Pirate - 
+Fantasy - Elf, Gnome, Fairy, Giant Spider, Pixie, Unicorn, 
+Mexican - Skeleton, 
+Persian - 
+Spiritual - Witch, Imp, Ghost
+Norse - 
+Misc - Yeti, Sasquatch, Leprechaun, Troll, Giant, Zombie, Kappa

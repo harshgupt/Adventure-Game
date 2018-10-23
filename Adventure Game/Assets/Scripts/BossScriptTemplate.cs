@@ -52,6 +52,5 @@ public class BossScriptTemplate : MonoBehaviour {
     public void AttackPlayer()
     {
         PlayerData.playerHealth -= damage;
-        Debug.Log(PlayerData.playerHealth);
     }
 }

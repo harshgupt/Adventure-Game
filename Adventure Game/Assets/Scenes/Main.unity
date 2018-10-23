@@ -13743,6 +13743,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Coins: 0
+  PlayerHP: 0
   Level: 0
   Wave: 0
   HelmTier: 0
@@ -13953,14 +13954,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ce2ef3db9ce9534ea5316eec32ef091, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mob1: {fileID: 4285246463187854, guid: bab2ea62b02566e44bd8e2c2c6bafdaf, type: 2}
-  mob2: {fileID: 4285246463187854, guid: bab2ea62b02566e44bd8e2c2c6bafdaf, type: 2}
-  mob3: {fileID: 4285246463187854, guid: bab2ea62b02566e44bd8e2c2c6bafdaf, type: 2}
-  mob4: {fileID: 4285246463187854, guid: bab2ea62b02566e44bd8e2c2c6bafdaf, type: 2}
-  boss1: {fileID: 4143118274849130, guid: cef756f1fb1bb4642a765acb30a6ef55, type: 2}
-  boss2: {fileID: 4143118274849130, guid: cef756f1fb1bb4642a765acb30a6ef55, type: 2}
-  boss3: {fileID: 4143118274849130, guid: cef756f1fb1bb4642a765acb30a6ef55, type: 2}
-  boss4: {fileID: 4143118274849130, guid: cef756f1fb1bb4642a765acb30a6ef55, type: 2}
+  mob1: {fileID: 4285246463187854, guid: 0694d424883149d47ae1175b413d57a8, type: 2}
+  mob2: {fileID: 4285246463187854, guid: 20c202bb999e1284296369d9471db785, type: 2}
+  mob3: {fileID: 4285246463187854, guid: 993f40a3b4e5f2b4db0cdf3f7e531494, type: 2}
+  mob4: {fileID: 4285246463187854, guid: 4d35fca3eef5757429b6a91fbf243727, type: 2}
+  boss1: {fileID: 4143118274849130, guid: f910606f2f073fc4aadbb84d7104efa2, type: 2}
+  boss2: {fileID: 4143118274849130, guid: f910606f2f073fc4aadbb84d7104efa2, type: 2}
+  boss3: {fileID: 4143118274849130, guid: f910606f2f073fc4aadbb84d7104efa2, type: 2}
+  boss4: {fileID: 4143118274849130, guid: f910606f2f073fc4aadbb84d7104efa2, type: 2}
 --- !u!114 &668190246
 MonoBehaviour:
   m_ObjectHideFlags: 0

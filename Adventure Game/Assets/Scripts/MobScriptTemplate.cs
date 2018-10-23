@@ -17,6 +17,7 @@ public class MobScriptTemplate : MonoBehaviour {
 
     private void Start()
     {
+        Debug.Log(gameObject.name);
         health = maxHealth;
     }
 
@@ -54,6 +55,5 @@ public class MobScriptTemplate : MonoBehaviour {
     public void AttackPlayer()
     {
         PlayerData.playerHealth -= damage;
-        Debug.Log(PlayerData.playerHealth);
     }
 }
