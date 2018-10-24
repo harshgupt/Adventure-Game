@@ -19,7 +19,6 @@ public class BossScriptTemplate : MonoBehaviour {
     {
         int totalWaveNo = (LevelScript.level - 1) * 10 + LevelScript.wave;
         maxHealth = Mathf.Ceil(6 * Mathf.Pow(1.15f, totalWaveNo - 1));
-        Debug.Log(maxHealth);
         health = maxHealth;
     }
 

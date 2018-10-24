@@ -35,6 +35,7 @@ public class Upgrades : MonoBehaviour
         else
         {
             PlayerData.weaponTier++;
+            PlayerData.playerDamage = Mathf.Ceil(1 * Mathf.Pow(1.14f, PlayerData.weaponTier));
             PlayerData.coins -= numCoins;
             pData.metals[metalIndex].amount -= numMetals;
             pData.gems[gemIndex].amount -= numGems;

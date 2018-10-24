@@ -780,6 +780,12 @@ public class DataManager : MonoBehaviour {
     public void ResetData()
     {
         PlayerData.coins = 0;
+        PlayerData.playerHealth = 100;
+        for (int i = 0; i < numArmour; i++)
+        {
+            PlayerData.armourTier[i] = 0;
+        }
+        PlayerData.weaponTier = 0;
         for (int i = 0; i < numOres; i++)
         {
             pData.ores[i].amount = 0;

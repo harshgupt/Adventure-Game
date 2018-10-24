@@ -10,6 +10,7 @@ public class PlayerData : MonoBehaviour {
     float playerMaxHealth = 100;
     public static float coins;
     public static float playerHealth = 100;
+    public static float playerDamage = 1;
 
     public static int[] armourTier = new int[DataManager.numArmour];
     public static int weaponTier;
@@ -20,6 +21,11 @@ public class PlayerData : MonoBehaviour {
     public Item[] potions = new Item[DataManager.numPotions];
     public Item[] herbs = new Item[DataManager.numHerbs];
     public Item[] fruits = new Item[DataManager.numFruits];
+
+    private void Start()
+    {
+        playerDamage = Mathf.Ceil(1 * Mathf.Pow(1.14f, weaponTier));
+    }
 
     private void Update()
     {
