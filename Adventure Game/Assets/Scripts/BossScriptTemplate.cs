@@ -13,10 +13,13 @@ public class BossScriptTemplate : MonoBehaviour {
     float health;
     float attackTime = 2f;
     float timer = 0;
-    float damage = 5f;
+    float damage = 0f;
 
     private void Start()
     {
+        int totalWaveNo = (LevelScript.level - 1) * 10 + LevelScript.wave;
+        maxHealth = Mathf.Ceil(6 * Mathf.Pow(1.15f, totalWaveNo - 1));
+        Debug.Log(maxHealth);
         health = maxHealth;
     }
 

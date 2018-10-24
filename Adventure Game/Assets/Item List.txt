@@ -265,38 +265,25 @@ Hair
 
 Themes (22 Levels):
 
-Goblin, Ogre
-Slime, Slime Creature
-Dwarf, Golem
-Satyr, Centaur
-Mummy, Sphinx
-Mermaid, Siren
-Gargoyle, Dracula
-
-Ghoul, Banshee
-Direwolf, Fenrir
-Pegasus, Cyclops
-Undead Pharaoh, Anubis
-Chupacabra, Ahuizotl
-Harpie, Medusa
-Valkyrie, Brynhildr
-Griffin, Manticore
-
-Hellhound, Cerberus
-Phoenix, Basilisk
-Giant Squid, Kraken
-Wyvern, Dragon
-Minotaur, Hydra
-Cockatrice, Chimaera
-Necromancer, Demon
-
-Greek - 
-Egyptian - 
-Transylvanian - Werewolf, Frankenstein's Monster,
-Pirate - 
-Fantasy - Elf, Gnome, Fairy, Giant Spider, Pixie, Unicorn, 
-Mexican - Skeleton, 
-Persian - 
-Spiritual - Witch, Imp, Ghost
-Norse - 
-Misc - Yeti, Sasquatch, Leprechaun, Troll, Giant, Zombie, Kappa
+1 Goblin, Ogre
+2 Slime, Slime Creature
+3 Dwarf, Golem
+4 Satyr, Centaur
+5 Mummy, Sphinx
+6 Mermaid, Siren
+7 Gargoyle, Dracula
+8 Ghoul, Banshee
+9 Direwolf, Fenrir
+10 Pegasus, Cyclops
+11 Undead Pharaoh, Anubis
+12 Chupacabra, Ahuizotl
+13 Harpie, Medusa
+14 Valkyrie, Brynhildr
+15 Griffin, Manticore
+16 Hellhound, Cerberus
+17 Phoenix, Basilisk
+18 Giant Squid, Kraken
+19 Wyvern, Dragon
+20 Minotaur, Hydra
+21 Cockatrice, Chimaera
+22 Necromancer, Demon

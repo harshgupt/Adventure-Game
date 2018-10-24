@@ -1,3 +1,5 @@
+After 22 levels, end screen
+Add magic spell creation
 Show ingredients for Smelting and Potions
 Save scrolled position, or unlocked position in Mine, Forge, etc
 Change all backgrounds to fit for all resolutions

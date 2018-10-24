@@ -13,10 +13,12 @@ public class MobScriptTemplate : MonoBehaviour {
     float health;
     float attackTime = 1f;
     float timer = 0;
-    float damage = 1f;
+    float damage = 0f;
 
     private void Start()
     {
+        int totalWaveNo = (LevelScript.level - 1) * 10 + LevelScript.wave;
+        maxHealth = Mathf.Ceil(2 * Mathf.Pow(1.15f, totalWaveNo - 1));
         health = maxHealth;
     }
 

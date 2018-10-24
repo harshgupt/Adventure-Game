@@ -10,6 +10,21 @@ public class MobSpawner : MonoBehaviour
     public static int mobsOnScreen;
     public static int bossOnScreen;
 
+    private void Start()
+    {
+        for(int i = 0; i < 220; i++)
+        {
+            if((i + 1) % 10 != 0)
+            {
+                //Debug.Log("L: " + (i+1) + " HP: " + Mathf.Ceil(2 * Mathf.Pow(1.15f, i)));
+            }
+            else if ((i + 1) % 10 == 0)
+            {
+                //Debug.Log("L: " + (i + 1) + " HP: " + Mathf.Ceil(6 * Mathf.Pow(1.15f, i)));
+            }
+        }
+    }
+
     private void Update()
     {
         if (mobsOnScreen == 0 && bossOnScreen == 0)
