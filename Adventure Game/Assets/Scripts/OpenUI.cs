@@ -35,6 +35,7 @@ public class OpenUI : MonoBehaviour{
         else
         {
             CloseAll();
+            PlayerData.gamePaused = true;
             HideGameBlade();
             inventoryDisplayType = "All";
             shopUI.SetActive(true);
@@ -50,6 +51,7 @@ public class OpenUI : MonoBehaviour{
         else
         {
             CloseAll();
+            PlayerData.gamePaused = true;
             HideGameBlade();
             resourcesUI.SetActive(true);
         }
@@ -64,6 +66,7 @@ public class OpenUI : MonoBehaviour{
         else
         {
             CloseAll();
+            PlayerData.gamePaused = true;
             HideGameBlade();
             inventoryDisplayType = "Battle";
             inventoryUI.SetActive(true);
@@ -79,6 +82,7 @@ public class OpenUI : MonoBehaviour{
         else
         {
             CloseAll();
+            PlayerData.gamePaused = true;
             HideGameBlade();
             witchcraftUI.SetActive(true);
         }
@@ -93,6 +97,7 @@ public class OpenUI : MonoBehaviour{
         else
         {
             CloseAll();
+            PlayerData.gamePaused = true;
             HideGameBlade();
             rewardsUI.SetActive(true);
         }
@@ -107,6 +112,7 @@ public class OpenUI : MonoBehaviour{
         else
         {
             CloseAll();
+            PlayerData.gamePaused = true;
             HideGameBlade();
             settingsUI.SetActive(true);
         }
@@ -121,6 +127,7 @@ public class OpenUI : MonoBehaviour{
         else
         {
             CloseAll();
+            PlayerData.gamePaused = true;
             HideGameBlade();
             coinShopUI.SetActive(true);
         }
@@ -135,6 +142,7 @@ public class OpenUI : MonoBehaviour{
         else
         {
             CloseAll();
+            PlayerData.gamePaused = true;
             HideGameBlade();
             crystalShopUI.SetActive(true);
         }
@@ -173,6 +181,7 @@ public class OpenUI : MonoBehaviour{
 
     public void CloseAll()
     {
+        PlayerData.gamePaused = false;
         HideUIBlade();
         bladeGame.SetActive(true);
         shopUI.SetActive(false);

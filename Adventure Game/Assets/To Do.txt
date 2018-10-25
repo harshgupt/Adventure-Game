@@ -1,4 +1,5 @@
-Player health regen witin 24 hours
+Player health regen within 24 hours
+If player does not have fully upgraded armor and weapon when reach boss, boss unbeatable
 After 22 levels, end screen
 Add magic spell creation
 Show ingredients for Smelting and Potions
@@ -7,3 +8,6 @@ Change all backgrounds to fit for all resolutions
 Show animation for adding and removing items (fade out + and - in while mining, etc)
 Drag and drop action for battle items
 Create inventory for Fight scene (max 5-10 items)
+Tutorial
+- Show mining and smelting, then upgrade weapon after second wave
+- When lose first time, ask to upgrade

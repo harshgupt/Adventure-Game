@@ -424,12 +424,6 @@ public class DataManager : MonoBehaviour {
             string data = File.ReadAllText(dataFilePath);
             PlayerDataJSON loadedData = JsonUtility.FromJson<PlayerDataJSON>(data);
             PlayerData.coins = loadedData.Coins;
-            PlayerData.armourTier[0] = loadedData.HelmTier;
-            PlayerData.armourTier[1] = loadedData.ChestplateTier;
-            PlayerData.armourTier[2] = loadedData.GauntletsTier;
-            PlayerData.armourTier[3] = loadedData.LeggingsTier;
-            PlayerData.armourTier[4] = loadedData.BootsTier;
-            PlayerData.armourTier[5] = loadedData.ShieldTier;
             PlayerData.weaponTier = loadedData.WeaponTier;
             pData.ores[0].amount = loadedData.CopperOre;
             pData.ores[1].amount = loadedData.TinOre;
@@ -780,7 +774,7 @@ public class DataManager : MonoBehaviour {
     public void ResetData()
     {
         PlayerData.coins = 0;
-        PlayerData.playerHealth = 100;
+        PlayerData.playerHealth = 96;
         for (int i = 0; i < numArmour; i++)
         {
             PlayerData.armourTier[i] = 0;

@@ -19,6 +19,7 @@ public class MobScriptTemplate : MonoBehaviour {
     {
         int totalWaveNo = (LevelScript.level - 1) * 10 + LevelScript.wave;
         maxHealth = Mathf.Ceil(2 * Mathf.Pow(1.15f, totalWaveNo - 1));
+        damage = Mathf.Ceil(Mathf.Pow(1.15f, totalWaveNo - 1));
         health = maxHealth;
     }
 
@@ -39,7 +40,7 @@ public class MobScriptTemplate : MonoBehaviour {
     {
         if (col.tag == "Blade")
         {
-            health--;
+            health -= PlayerData.playerDamage;
             healthBar.fillAmount = health / maxHealth;
             if(health <= 0)
             {

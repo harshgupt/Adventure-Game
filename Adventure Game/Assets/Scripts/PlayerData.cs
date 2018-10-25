@@ -7,13 +7,16 @@ public class PlayerData : MonoBehaviour {
 
     public Image playerHealthBar;
 
-    float playerMaxHealth = 100;
+    public static float playerMaxHealth = 100;
     public static float coins;
     public static float playerHealth = 100;
     public static float playerDamage = 1;
+    public float currentPlayerHP;
 
     public static int[] armourTier = new int[DataManager.numArmour];
     public static int weaponTier;
+
+    public static bool gamePaused;
 
     public Item[] ores = new Item[DataManager.numOres];
     public Item[] metals = new Item[DataManager.numMetals];
@@ -24,11 +27,21 @@ public class PlayerData : MonoBehaviour {
 
     private void Start()
     {
+        gamePaused = false;
         playerDamage = Mathf.Ceil(1 * Mathf.Pow(1.14f, weaponTier));
+        currentPlayerHP = playerHealth;
     }
 
     private void Update()
     {
+        if (gamePaused)
+        {
+            playerHealth = currentPlayerHP;
+        }
+        else
+        {
+            currentPlayerHP = playerHealth;
+        }
         playerHealthBar.fillAmount = playerHealth / playerMaxHealth;
     }
 }

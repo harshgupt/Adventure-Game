@@ -18,7 +18,8 @@ public class BossScriptTemplate : MonoBehaviour {
     private void Start()
     {
         int totalWaveNo = (LevelScript.level - 1) * 10 + LevelScript.wave;
-        maxHealth = Mathf.Ceil(6 * Mathf.Pow(1.15f, totalWaveNo - 1));
+        maxHealth = Mathf.Ceil(10 * Mathf.Pow(1.15f, totalWaveNo - 1));
+        damage = Mathf.Ceil(10 * Mathf.Pow(1.14f, totalWaveNo - 1));
         health = maxHealth;
     }
 
@@ -39,7 +40,7 @@ public class BossScriptTemplate : MonoBehaviour {
     {
         if (col.tag == "Blade")
         {
-            health--;
+            health-= PlayerData.playerDamage;
             healthBar.fillAmount = health / maxHealth;
             if (health <= 0)
             {
