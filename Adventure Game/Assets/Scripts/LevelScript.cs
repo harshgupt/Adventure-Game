@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -9,6 +10,10 @@ public class LevelScript : MonoBehaviour {
     public static int level = 1;
     public static int wave = 1;
     public static int playerHP = 100;
+    public int currentHour;
+    public int currentDay;
+    public int savedHour;
+    public int savedDay;
 
     private void Start()
     {
@@ -28,7 +33,26 @@ public class LevelScript : MonoBehaviour {
                 PlayerData.armourTier[5] = loadedData.ShieldTier;
                 PlayerData.playerMaxHealth = Mathf.Ceil(100 / 6 * (Mathf.Pow(1.15f, PlayerData.armourTier[0]) + Mathf.Pow(1.15f, PlayerData.armourTier[1]) + Mathf.Pow(1.15f, PlayerData.armourTier[2]) + Mathf.Pow(1.15f, PlayerData.armourTier[3]) + Mathf.Pow(1.15f, PlayerData.armourTier[4]) + Mathf.Pow(1.15f, PlayerData.armourTier[5])));
                 PlayerData.playerHealth = loadedData.PlayerHP;
-
+                //Regenerating player health based on time passed
+                savedHour = loadedData.Hour;
+                savedDay = loadedData.DayOfYear;
+                currentHour = DateTime.Now.Hour;
+                currentDay = DateTime.Now.DayOfYear;
+                int numDays = currentDay - savedDay;
+                int numHours = numDays * 24;
+                if(currentHour >= savedHour)
+                {
+                    numHours += currentHour - savedHour;
+                }
+                else
+                {
+                    numHours += currentHour + 24 - savedHour;
+                }
+                PlayerData.playerHealth += PlayerData.playerMaxHealth / 24 * numHours;
+                if(PlayerData.playerHealth > PlayerData.playerMaxHealth)
+                {
+                    PlayerData.playerHealth = PlayerData.playerMaxHealth;
+                }
             }
         }
     }

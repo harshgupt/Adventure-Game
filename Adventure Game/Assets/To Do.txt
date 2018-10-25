@@ -1,4 +1,3 @@
-Player health regen within 24 hours
 If player does not have fully upgraded armor and weapon when reach boss, boss unbeatable
 After 22 levels, end screen
 Add magic spell creation

@@ -7,6 +7,10 @@
     public int Level;
     public int Wave;
 
+    //Date
+    public int DayOfYear;
+    public int Hour;
+
     //Armour and Weapon
     public int HelmTier;
     public int ChestplateTier;

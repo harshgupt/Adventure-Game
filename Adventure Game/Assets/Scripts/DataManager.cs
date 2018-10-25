@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -597,6 +598,8 @@ public class DataManager : MonoBehaviour {
             PlayerHP = PlayerData.playerHealth,
             Level = LevelScript.level,
             Wave = LevelScript.wave,
+            DayOfYear = DateTime.Now.DayOfYear,
+            Hour = DateTime.Now.Hour,
             HelmTier = PlayerData.armourTier[0],
             ChestplateTier = PlayerData.armourTier[1],
             GauntletsTier = PlayerData.armourTier[2],
