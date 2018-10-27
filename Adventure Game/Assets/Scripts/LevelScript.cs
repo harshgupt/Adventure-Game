@@ -32,6 +32,7 @@ public class LevelScript : MonoBehaviour {
                 PlayerData.armourTier[4] = loadedData.BootsTier;
                 PlayerData.armourTier[5] = loadedData.ShieldTier;
                 PlayerData.playerMaxHealth = Mathf.Ceil(100 / 6 * (Mathf.Pow(1.15f, PlayerData.armourTier[0]) + Mathf.Pow(1.15f, PlayerData.armourTier[1]) + Mathf.Pow(1.15f, PlayerData.armourTier[2]) + Mathf.Pow(1.15f, PlayerData.armourTier[3]) + Mathf.Pow(1.15f, PlayerData.armourTier[4]) + Mathf.Pow(1.15f, PlayerData.armourTier[5])));
+                Debug.Log(PlayerData.playerMaxHealth);
                 PlayerData.playerHealth = loadedData.PlayerHP;
                 //Regenerating player health based on time passed
                 savedHour = loadedData.Hour;

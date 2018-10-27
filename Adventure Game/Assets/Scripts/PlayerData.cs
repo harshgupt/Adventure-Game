@@ -42,6 +42,21 @@ public class PlayerData : MonoBehaviour {
         {
             currentPlayerHP = playerHealth;
         }
+        if(LevelScript.wave == 10)
+        {
+            if(weaponTier < (LevelScript.level - 1) * 10 + LevelScript.wave)
+            {
+                playerDamage = 0;
+            }
+            else
+            {
+                playerDamage = Mathf.Ceil(1 * Mathf.Pow(1.14f, weaponTier));
+            }
+        }
+        else
+        {
+            playerDamage = Mathf.Ceil(1 * Mathf.Pow(1.14f, weaponTier));
+        }
         playerHealthBar.fillAmount = playerHealth / playerMaxHealth;
     }
 }

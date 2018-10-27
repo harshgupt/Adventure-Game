@@ -1,4 +1,5 @@
 If player does not have fully upgraded armor and weapon when reach boss, boss unbeatable
+Death message and restart when player dies
 After 22 levels, end screen
 Add magic spell creation
 Show ingredients for Smelting and Potions
