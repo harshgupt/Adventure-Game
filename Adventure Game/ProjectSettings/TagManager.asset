@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Blade
   - UI Blade
+  - Enemy
   layers:
   - Default
   - TransparentFX

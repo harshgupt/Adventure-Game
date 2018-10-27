@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class LevelScript : MonoBehaviour {
 
+    public GameObject gameOverUI;
+
     public static int level = 1;
     public static int wave = 1;
     public static int playerHP = 100;
@@ -14,6 +16,10 @@ public class LevelScript : MonoBehaviour {
     public int currentDay;
     public int savedHour;
     public int savedDay;
+    public int numDays;
+    public int numHours;
+
+    public static bool restart = false;
 
     private void Start()
     {
@@ -39,8 +45,15 @@ public class LevelScript : MonoBehaviour {
                 savedDay = loadedData.DayOfYear;
                 currentHour = DateTime.Now.Hour;
                 currentDay = DateTime.Now.DayOfYear;
-                int numDays = currentDay - savedDay;
-                int numHours = numDays * 24;
+                if(currentDay < savedDay)
+                {
+                    numDays = 366 - savedDay + currentDay;
+                }
+                else
+                {
+                    numDays = currentDay - savedDay;
+                }
+                numHours = numDays * 24;
                 if(currentHour >= savedHour)
                 {
                     numHours += currentHour - savedHour;
@@ -56,6 +69,29 @@ public class LevelScript : MonoBehaviour {
                 }
             }
         }
+    }
+
+    public void Update()
+    {
+        if (restart)
+        {
+            restart = false;
+            gameOverUI.SetActive(true);
+        }
+    }
+
+    public void RestartLevel()
+    {
+        gameOverUI.SetActive(false);
+        wave = 1;
+        PlayerData.playerHealth = PlayerData.playerMaxHealth;
+        var enemiesOnScreen = GameObject.FindGameObjectsWithTag("Enemy");
+        for (var i = 0; i < enemiesOnScreen.Length; i++)
+        {
+            Destroy(enemiesOnScreen[i]);
+        }
+        MobSpawner.bossOnScreen = 0;
+        MobSpawner.mobsOnScreen = 0;
     }
 
     public void GoToMain()

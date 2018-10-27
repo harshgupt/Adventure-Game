@@ -34,6 +34,10 @@ public class PlayerData : MonoBehaviour {
 
     private void Update()
     {
+        if(playerHealth <= 0)
+        {
+            LevelScript.restart = true;
+        }
         if (gamePaused)
         {
             playerHealth = currentPlayerHP;
