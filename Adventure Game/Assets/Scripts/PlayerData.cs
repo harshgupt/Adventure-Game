@@ -7,9 +7,9 @@ public class PlayerData : MonoBehaviour {
 
     public Image playerHealthBar;
 
-    public static float playerMaxHealth = 100;
+    public static float playerMaxHealth = 96f;
     public static float coins;
-    public static float playerHealth = 100;
+    public static float playerHealth = 96f;
     public static float playerDamage = 1;
     public float currentPlayerHP;
 

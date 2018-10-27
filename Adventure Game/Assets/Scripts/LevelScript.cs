@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class LevelScript : MonoBehaviour {
 
     public GameObject gameOverUI;
+    public GameObject gameWinUI;
 
     public static int level = 1;
     public static int wave = 1;
@@ -38,7 +39,6 @@ public class LevelScript : MonoBehaviour {
                 PlayerData.armourTier[4] = loadedData.BootsTier;
                 PlayerData.armourTier[5] = loadedData.ShieldTier;
                 PlayerData.playerMaxHealth = Mathf.Ceil(100 / 6 * (Mathf.Pow(1.15f, PlayerData.armourTier[0]) + Mathf.Pow(1.15f, PlayerData.armourTier[1]) + Mathf.Pow(1.15f, PlayerData.armourTier[2]) + Mathf.Pow(1.15f, PlayerData.armourTier[3]) + Mathf.Pow(1.15f, PlayerData.armourTier[4]) + Mathf.Pow(1.15f, PlayerData.armourTier[5])));
-                Debug.Log(PlayerData.playerMaxHealth);
                 PlayerData.playerHealth = loadedData.PlayerHP;
                 //Regenerating player health based on time passed
                 savedHour = loadedData.Hour;
@@ -76,12 +76,21 @@ public class LevelScript : MonoBehaviour {
         if (restart)
         {
             restart = false;
+            PlayerData.gamePaused = true;
             gameOverUI.SetActive(true);
+        }
+        if(level > 22)
+        {
+            level = 1;
+            wave = 1;
+            PlayerData.gamePaused = true;
+            gameWinUI.SetActive(true);
         }
     }
 
     public void RestartLevel()
     {
+        PlayerData.gamePaused = false;
         gameOverUI.SetActive(false);
         wave = 1;
         PlayerData.playerHealth = PlayerData.playerMaxHealth;
@@ -92,6 +101,13 @@ public class LevelScript : MonoBehaviour {
         }
         MobSpawner.bossOnScreen = 0;
         MobSpawner.mobsOnScreen = 0;
+    }
+
+    public void RestartGame()
+    {
+        PlayerData.gamePaused = false;
+        gameWinUI.SetActive(false);
+        PlayerData.playerHealth = PlayerData.playerMaxHealth;
     }
 
     public void GoToMain()

@@ -12,13 +12,13 @@ public class MobSpawner : MonoBehaviour
 
     private void Update()
     {
-        if (mobsOnScreen == 0 && bossOnScreen == 0)
+        if (mobsOnScreen == 0 && bossOnScreen == 0 && LevelScript.level < 23)
         {
             if (LevelScript.wave > 0 && LevelScript.wave <= 3)
             {
                 SpawnMob(1);
                 SpawnMob(2);
-                Debug.Log("Level: " + LevelScript.level + ", Mob: " + mobs[LevelScript.level - 1].name);
+                //Debug.Log("Level: " + LevelScript.level + ", Mob: " + mobs[LevelScript.level - 1].name);
             }
             else if (LevelScript.wave > 3 && LevelScript.wave <= 6)
             {
