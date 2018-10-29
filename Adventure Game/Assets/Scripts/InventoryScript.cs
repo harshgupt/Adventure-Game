@@ -13,11 +13,8 @@ public class InventoryScript : MonoBehaviour{
     public Image[] itemImages = new Image[numInventorySlots];
     public Text[] itemAmounts = new Text[numInventorySlots];
     public string[] itemName = new string[numInventorySlots];
-    public Item[] metals = new Item[DataManager.numMetals];
-    public Item[] ores = new Item[DataManager.numOres];
-    public Item[] potions = new Item[DataManager.numPotions];
 
-    public void AddItem(string name, Sprite sprite, float amount)
+    /*public void AddItem(string name, Sprite sprite, float amount)
     {
         for(int i = 0; i < numInventorySlots; i++)
         {
@@ -68,57 +65,31 @@ public class InventoryScript : MonoBehaviour{
                 }
             }
         }
-    }
+    }*/
 
     void Update()
     {
         int inventoryNo = 0;
-        if(SceneManager.GetActiveScene().name == "Main")
+        if (SceneManager.GetActiveScene().name == "Main")
         {
-            if(OpenUI.inventoryDisplayType == "All")
+            for (int i = 0; i < DataManager.numPotions; i++)
             {
-                for (int i = 0; i < DataManager.numMetals; i++)
+                if (pData.potions[i].amount != 0)
                 {
-                    if (pData.metals[i].amount != 0)
-                    {
-                        itemImages[inventoryNo].sprite = metals[i].sprite;
-                        itemAmounts[inventoryNo].text = pData.metals[i].ToString();
-                        itemName[inventoryNo] = metals[i].name;
-                        inventoryNo++;
-                    }
-                }
-                for (int i = 0; i < DataManager.numOres; i++)
-                {
-                    if (pData.ores[i].amount != 0)
-                    {
-                        itemImages[inventoryNo].sprite = ores[i].sprite;
-                        itemAmounts[inventoryNo].text = pData.ores[i].ToString();
-                        itemName[inventoryNo] = ores[i].name;
-                        inventoryNo++;
-                    }
-                }
-                for (int i = 0; i < DataManager.numPotions; i++)
-                {
-                    if (pData.potions[i].amount != 0)
-                    {
-                        itemImages[inventoryNo].sprite = potions[i].sprite;
-                        itemAmounts[inventoryNo].text = pData.potions[i].ToString();
-                        itemName[inventoryNo] = potions[i].name;
-                        inventoryNo++;
-                    }
+                    itemImages[inventoryNo].sprite = pData.potions[i].sprite;
+                    itemAmounts[inventoryNo].text = pData.potions[i].amount.ToString();
+                    itemName[inventoryNo] = pData.potions[i].name;
+                    inventoryNo++;
                 }
             }
-            else if (OpenUI.inventoryDisplayType == "Battle")
+            for (int i = 0; i < DataManager.numFruits; i++)
             {
-                for (int i = 0; i < DataManager.numPotions; i++)
+                if (pData.fruits[i].amount != 0)
                 {
-                    if (pData.potions[i].amount != 0)
-                    {
-                        itemImages[inventoryNo].sprite = potions[i].sprite;
-                        itemAmounts[inventoryNo].text = pData.potions[i].ToString();
-                        itemName[inventoryNo] = potions[i].name;
-                        inventoryNo++;
-                    }
+                    itemImages[inventoryNo].sprite = pData.fruits[i].sprite;
+                    itemAmounts[inventoryNo].text = pData.fruits[i].amount.ToString();
+                    itemName[inventoryNo] = pData.fruits[i].name;
+                    inventoryNo++;
                 }
             }
         }

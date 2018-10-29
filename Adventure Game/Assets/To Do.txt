@@ -1,4 +1,3 @@
-After 22 levels, end screen
 Add magic spell creation
 Show ingredients for Smelting and Potions
 Save scrolled position, or unlocked position in Mine, Forge, etc
@@ -9,3 +8,4 @@ Create inventory for Fight scene (max 5-10 items)
 Tutorial
 - Show mining and smelting, then upgrade weapon after second wave
 - When lose first time, ask to upgrade
+- Drag and drop inventory to battle slots

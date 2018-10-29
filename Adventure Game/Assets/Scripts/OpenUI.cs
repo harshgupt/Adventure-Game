@@ -24,8 +24,6 @@ public class OpenUI : MonoBehaviour{
     public GameObject herbsUI;
     public GameObject fruitsUI;
 
-    public static string inventoryDisplayType = "All";
-
     public void OpenShop()
     {
         if (shopUI.activeSelf)
@@ -37,7 +35,6 @@ public class OpenUI : MonoBehaviour{
             CloseAll();
             PlayerData.gamePaused = true;
             HideGameBlade();
-            inventoryDisplayType = "All";
             shopUI.SetActive(true);
         }
     }
@@ -68,7 +65,6 @@ public class OpenUI : MonoBehaviour{
             CloseAll();
             PlayerData.gamePaused = true;
             HideGameBlade();
-            inventoryDisplayType = "Battle";
             inventoryUI.SetActive(true);
         }
     }
