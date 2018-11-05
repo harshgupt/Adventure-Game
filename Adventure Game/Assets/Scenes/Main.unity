@@ -30625,6 +30625,7 @@ GameObject:
   - component: {fileID: 1342059806}
   - component: {fileID: 1342059805}
   - component: {fileID: 1342059804}
+  - component: {fileID: 1342059809}
   - component: {fileID: 1342059807}
   - component: {fileID: 1342059808}
   m_Layer: 5
@@ -30690,7 +30691,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1342059805}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1342059809}
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1342059805
@@ -30772,6 +30784,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1342059809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1342059802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a5e3ba0ba38f549ac1748dd0578239, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionBarImage: {fileID: 0}
+  actionBarEmpty: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &1344101716
 GameObject:
   m_ObjectHideFlags: 0
@@ -36386,6 +36411,7 @@ GameObject:
   - component: {fileID: 1577810436}
   - component: {fileID: 1577810435}
   - component: {fileID: 1577810434}
+  - component: {fileID: 1577810439}
   - component: {fileID: 1577810437}
   - component: {fileID: 1577810438}
   m_Layer: 5
@@ -36451,7 +36477,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1577810435}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1577810439}
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1577810435
@@ -36533,6 +36570,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1577810439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1577810432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a5e3ba0ba38f549ac1748dd0578239, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionBarImage: {fileID: 0}
+  actionBarEmpty: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &1583079685
 GameObject:
   m_ObjectHideFlags: 0
@@ -39387,6 +39437,7 @@ GameObject:
   - component: {fileID: 1741601337}
   - component: {fileID: 1741601336}
   - component: {fileID: 1741601335}
+  - component: {fileID: 1741601340}
   - component: {fileID: 1741601338}
   - component: {fileID: 1741601339}
   m_Layer: 5
@@ -39452,7 +39503,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1741601336}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1741601340}
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1741601336
@@ -39534,6 +39596,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1741601340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1741601333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a5e3ba0ba38f549ac1748dd0578239, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionBarImage: {fileID: 0}
+  actionBarEmpty: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &1756820417
 GameObject:
   m_ObjectHideFlags: 0
@@ -42879,7 +42954,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1916568436
 RectTransform:
   m_ObjectHideFlags: 0
@@ -43481,6 +43556,7 @@ GameObject:
   - component: {fileID: 1918729637}
   - component: {fileID: 1918729636}
   - component: {fileID: 1918729635}
+  - component: {fileID: 1918729640}
   - component: {fileID: 1918729638}
   - component: {fileID: 1918729639}
   m_Layer: 5
@@ -43546,7 +43622,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1918729636}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1918729640}
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1918729636
@@ -43628,6 +43715,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1918729640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1918729633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a5e3ba0ba38f549ac1748dd0578239, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionBarImage: {fileID: 0}
+  actionBarEmpty: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &1921768624
 GameObject:
   m_ObjectHideFlags: 0
@@ -43639,6 +43739,7 @@ GameObject:
   - component: {fileID: 1921768628}
   - component: {fileID: 1921768627}
   - component: {fileID: 1921768626}
+  - component: {fileID: 1921768631}
   - component: {fileID: 1921768629}
   - component: {fileID: 1921768630}
   m_Layer: 5
@@ -43704,7 +43805,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1921768627}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1921768631}
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1921768627
@@ -43786,6 +43898,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1921768631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1921768624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a5e3ba0ba38f549ac1748dd0578239, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionBarImage: {fileID: 0}
+  actionBarEmpty: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &1922345853
 GameObject:
   m_ObjectHideFlags: 0

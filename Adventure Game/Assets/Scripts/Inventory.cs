@@ -15,8 +15,12 @@ public class Inventory : MonoBehaviour {
 
     public Text[] inventorySlotAmount = new Text[8];
 
+    public static string[] inventorySlotName = new string[8];
+
     public int itemIndex;
     public int inventoryPage = 1;
+    
+    public static bool inventoryActive;
 
     private void Awake()
     {
@@ -26,6 +30,7 @@ public class Inventory : MonoBehaviour {
     private void Start()
     {
         itemIndex = 0;
+        inventoryActive = true;
         for(int i = 0; i < DataManager.numPotions; i++)
         {
             if(pData.potions[i].amount != 0)
@@ -52,11 +57,13 @@ public class Inventory : MonoBehaviour {
             {
                 inventorySlotAmount[i].text = items[inventoryPage * 8 - 8 + i].amount.ToString();
                 inventorySlotImage[i].sprite = items[inventoryPage * 8 - 8 + i].sprite;
+                inventorySlotName[i] = items[inventoryPage * 8 - 8 + i].name;
             }
             else
             {
                 inventorySlotAmount[i].text = "";
                 inventorySlotImage[i].sprite = null;
+                inventorySlotName[i] = "";
             }
         }
     }

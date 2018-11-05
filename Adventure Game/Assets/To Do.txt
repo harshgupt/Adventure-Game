@@ -1,3 +1,4 @@
+Inventory image goes above amount after dragging
 Fix potions
 Add magic spell creation
 Show ingredients for Smelting and Potions

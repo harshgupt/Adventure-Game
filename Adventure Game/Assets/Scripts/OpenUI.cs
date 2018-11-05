@@ -66,6 +66,7 @@ public class OpenUI : MonoBehaviour{
             PlayerData.gamePaused = true;
             HideGameBlade();
             inventoryUI.SetActive(true);
+            Inventory.inventoryActive = true;
         }
     }
 
@@ -178,6 +179,7 @@ public class OpenUI : MonoBehaviour{
     public void CloseAll()
     {
         PlayerData.gamePaused = false;
+        Inventory.inventoryActive = false;
         HideUIBlade();
         bladeGame.SetActive(true);
         shopUI.SetActive(false);
