@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Name: Attack Potion 5
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 871a65aa31be96a45bd9209c82b2c2a3, type: 3}
-  amount: 0
+  amount: 2

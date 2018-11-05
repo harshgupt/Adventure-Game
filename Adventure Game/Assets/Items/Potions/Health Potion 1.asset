@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Name: Health Potion 1
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 28388d1392025f74fa11a275d674fdac, type: 3}
-  amount: 0
+  amount: 2

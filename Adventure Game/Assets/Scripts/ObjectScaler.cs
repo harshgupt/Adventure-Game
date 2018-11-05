@@ -13,8 +13,8 @@ public class ObjectScaler : MonoBehaviour {
         height = Screen.height;
         width = Screen.width;
         ratio = height / width;
-        //transform.localScale = transform.localScale * (ratio) / 2;
-        Camera.main.orthographicSize = 7.64f / (ratio * 1.5f);
-        Debug.Log(height + " " + width + " " + ratio);
+        //transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y * ratio / 2, transform.localScale.z);
+        transform.localScale = transform.localScale * ratio / 2;
+        //transform.localPosition = transform.localPosition * ratio / 2;
     }
 }

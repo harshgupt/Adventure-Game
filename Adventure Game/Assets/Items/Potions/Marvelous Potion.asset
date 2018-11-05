@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Name: Marvelous Potion
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 576ceffdfa5e0964eaec541d3dfce1cc, type: 3}
-  amount: 0
+  amount: 2

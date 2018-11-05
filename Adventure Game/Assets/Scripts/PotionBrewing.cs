@@ -63,7 +63,7 @@ public class PotionBrewing : MonoBehaviour {
     public Vector2 circleCenter = new Vector2(0, 0);
     public Vector2 touchPosition;
 
-    private const float circleRadius = 3f;
+    private const float circleRadius = 3.5f;
     public float angle;
 
     public int maxNumTurns = 10;
@@ -85,6 +85,7 @@ public class PotionBrewing : MonoBehaviour {
     private void Update()
     {
         DisplayInventoryAmount();
+        //Debug.Log(Mathf.Sqrt(Vector2.SqrMagnitude(new Vector2(cam.ScreenToWorldPoint(Input.mousePosition).x, cam.ScreenToWorldPoint(Input.mousePosition).y) - circleCenter)));
 #if !UNITY_EDITOR
         Touch touch = Input.touches[0];
         if(touch.phase == TouchPhase.Began && (addedIngredient1 || addedIngredient2))

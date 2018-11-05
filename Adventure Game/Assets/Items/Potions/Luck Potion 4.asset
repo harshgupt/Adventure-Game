@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Name: Luck Potion 4
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: c70d2fdea995d9843a14819518e1fb3f, type: 3}
-  amount: 0
+  amount: 2

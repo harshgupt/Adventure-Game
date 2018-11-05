@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Name: Magic Potion 5
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 8b2358dc74d7d0848bb8366cdcc3e776, type: 3}
-  amount: 0
+  amount: 2

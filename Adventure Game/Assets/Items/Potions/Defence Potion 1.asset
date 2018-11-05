@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Name: Defence Potion 1
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: d838d8b928c54ba40bc9ff8265d98ac2, type: 3}
-  amount: 0
+  amount: 2

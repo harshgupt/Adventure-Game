@@ -1,3 +1,4 @@
+Fix potions
 Add magic spell creation
 Show ingredients for Smelting and Potions
 Save scrolled position, or unlocked position in Mine, Forge, etc
