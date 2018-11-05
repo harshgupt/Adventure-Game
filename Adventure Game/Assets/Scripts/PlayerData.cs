@@ -27,7 +27,7 @@ public class PlayerData : MonoBehaviour {
 
     private void Start()
     {
-        gamePaused = false;
+        gamePaused = true;
         playerDamage = Mathf.Ceil(1 * Mathf.Pow(1.14f, weaponTier));
         currentPlayerHP = playerHealth;
     }

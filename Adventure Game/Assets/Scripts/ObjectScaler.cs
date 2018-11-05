@@ -8,7 +8,7 @@ public class ObjectScaler : MonoBehaviour {
     public float width;
     public float ratio;
 
-    void Start()
+    void Awake()
     {
         height = Screen.height;
         width = Screen.width;
