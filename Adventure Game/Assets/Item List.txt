@@ -175,12 +175,12 @@ MarvP = All Herbs + Fruits
 Magic:
 
 Lightning: damage
-Fire: Periodic burn damage
-Ice: Freeze all
 Water: Heal player
-Earth: Create fissure by drawing line, enemies fall and die
+Fire: Periodic burn damage
 Wind: Push enemies back by flicking
 Summoning: Summon substitute which takes damage
+Ice: Freeze all
+Earth: Create fissure by drawing line, enemies fall and die
 
 Herbs:
 
@@ -189,31 +189,26 @@ Daisy
 Holly
 Rose Thorns
 Ivy
-
 Windrush
 Willow Twigs
 Goosegrass
 Firegrass
 Moly
-
 Starthistle
 Knotweed
 Bitterroot
 Baneberry
 Mandrake Root
-
 Tawnymoth Weed
 Spleenwort
 Hellebore Syrup
 Valerian Root
 Dragon Ivy
-
 Asphodel
 Wormwood
 Silverweed
 Wolfsbane
 Moondew
-
 Fluxweed
 Tormentil
 Belladonna

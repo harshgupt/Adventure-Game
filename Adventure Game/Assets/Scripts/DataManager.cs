@@ -19,6 +19,7 @@ public class DataManager : MonoBehaviour {
     public const int numMetals = 45;
     public const int numGems = 30;
     public const int numPotions = 31;
+    public const int numMagicSpells = 7;
     public const int numHerbs = 30;
     public const int numFruits = 6;
     public const int numMobs = 22;
@@ -211,6 +212,15 @@ public class DataManager : MonoBehaviour {
     public float DewLemon;
     public float GoldenMango;
     public float WildNectarine;
+
+    //Spells
+    public float LightningSpell;
+    public float WaterSpell;
+    public float FireSpell;
+    public float WindSpell;
+    public float IceSpell;
+    public float EarthSpell;
+    public float SummoningSpell;
     #endregion
 
     private void Awake()
@@ -221,10 +231,6 @@ public class DataManager : MonoBehaviour {
         {
             LoadGameData();
         }
-    }
-
-    private void Start()
-    {
     }
 
     private void Update()
@@ -415,6 +421,13 @@ public class DataManager : MonoBehaviour {
         DewLemon = pData.fruits[3].amount;
         GoldenMango = pData.fruits[4].amount;
         WildNectarine = pData.fruits[5].amount;
+        LightningSpell = pData.magicSpells[0].amount;
+        WaterSpell = pData.magicSpells[1].amount;
+        FireSpell = pData.magicSpells[2].amount;
+        WindSpell = pData.magicSpells[3].amount;
+        IceSpell = pData.magicSpells[4].amount;
+        EarthSpell = pData.magicSpells[5].amount;
+        SummoningSpell = pData.magicSpells[6].amount;
         #endregion
     }
 
@@ -587,6 +600,13 @@ public class DataManager : MonoBehaviour {
             pData.fruits[3].amount = loadedData.DewLemon;
             pData.fruits[4].amount = loadedData.GoldenMango;
             pData.fruits[5].amount = loadedData.WildNectarine;
+            pData.magicSpells[0].amount = loadedData.LightningSpell;
+            pData.magicSpells[1].amount = loadedData.WaterSpell;
+            pData.magicSpells[2].amount = loadedData.FireSpell;
+            pData.magicSpells[3].amount = loadedData.WindSpell;
+            pData.magicSpells[4].amount = loadedData.IceSpell;
+            pData.magicSpells[5].amount = loadedData.EarthSpell;
+            pData.magicSpells[6].amount = loadedData.SummoningSpell;
         }
     }
 
@@ -767,7 +787,14 @@ public class DataManager : MonoBehaviour {
             CinderBanana = pData.fruits[2].amount,
             DewLemon = pData.fruits[3].amount,
             GoldenMango = pData.fruits[4].amount,
-            WildNectarine = pData.fruits[5].amount
+            WildNectarine = pData.fruits[5].amount,
+            LightningSpell = pData.magicSpells[0].amount,
+            WaterSpell = pData.magicSpells[1].amount,
+            FireSpell = pData.magicSpells[2].amount,
+            WindSpell = pData.magicSpells[3].amount,
+            IceSpell = pData.magicSpells[4].amount,
+            EarthSpell = pData.magicSpells[5].amount,
+            SummoningSpell = pData.magicSpells[6].amount,
         };
         string dataJSON = JsonUtility.ToJson(playerDataJSON);
         File.WriteAllText(dataFilePath, dataJSON);
@@ -807,6 +834,10 @@ public class DataManager : MonoBehaviour {
         {
             pData.fruits[i].amount = 0;
         }
+        for (int i = 0; i < numMagicSpells; i++)
+        {
+            pData.magicSpells[i].amount++;
+        }
         PlayerDataJSON playerDataJSON = new PlayerDataJSON()
         {
             Coins = PlayerData.coins,
@@ -970,7 +1001,14 @@ public class DataManager : MonoBehaviour {
             CinderBanana = pData.fruits[2].amount,
             DewLemon = pData.fruits[3].amount,
             GoldenMango = pData.fruits[4].amount,
-            WildNectarine = pData.fruits[5].amount
+            WildNectarine = pData.fruits[5].amount,
+            LightningSpell = pData.magicSpells[0].amount,
+            WaterSpell = pData.magicSpells[1].amount,
+            FireSpell = pData.magicSpells[2].amount,
+            WindSpell = pData.magicSpells[3].amount,
+            IceSpell = pData.magicSpells[4].amount,
+            EarthSpell = pData.magicSpells[5].amount,
+            SummoningSpell = pData.magicSpells[6].amount,
         };
         string dataJSON = JsonUtility.ToJson(playerDataJSON);
         File.WriteAllText(dataFilePath, dataJSON);
@@ -1004,6 +1042,10 @@ public class DataManager : MonoBehaviour {
         {
             pData.fruits[i].amount++;
         }
+        for (int i = 0; i < numMagicSpells; i++)
+        {
+            pData.magicSpells[i].amount++;
+        }
         PlayerDataJSON playerDataJSON = new PlayerDataJSON()
         {
             Coins = PlayerData.coins,
@@ -1167,7 +1209,14 @@ public class DataManager : MonoBehaviour {
             CinderBanana = pData.fruits[2].amount,
             DewLemon = pData.fruits[3].amount,
             GoldenMango = pData.fruits[4].amount,
-            WildNectarine = pData.fruits[5].amount
+            WildNectarine = pData.fruits[5].amount,
+            LightningSpell = pData.magicSpells[0].amount,
+            WaterSpell = pData.magicSpells[1].amount,
+            FireSpell = pData.magicSpells[2].amount,
+            WindSpell = pData.magicSpells[3].amount,
+            IceSpell = pData.magicSpells[4].amount,
+            EarthSpell = pData.magicSpells[5].amount,
+            SummoningSpell = pData.magicSpells[6].amount,
         };
         string dataJSON = JsonUtility.ToJson(playerDataJSON);
         File.WriteAllText(dataFilePath, dataJSON);

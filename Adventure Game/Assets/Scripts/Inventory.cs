@@ -31,7 +31,15 @@ public class Inventory : MonoBehaviour {
     {
         itemIndex = 0;
         inventoryActive = true;
-        for(int i = 0; i < DataManager.numPotions; i++)
+        for (int i = 0; i < DataManager.numMagicSpells; i++)
+        {
+            if (pData.magicSpells[i].amount != 0)
+            {
+                items[itemIndex] = pData.magicSpells[i];
+                itemIndex++;
+            }
+        }
+        for (int i = 0; i < DataManager.numPotions; i++)
         {
             if(pData.potions[i].amount != 0)
             {

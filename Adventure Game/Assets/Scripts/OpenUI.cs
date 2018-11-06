@@ -21,6 +21,7 @@ public class OpenUI : MonoBehaviour{
     public GameObject forgeUI;
     public GameObject gemstoneMineUI;
     public GameObject potionsUI;
+    public GameObject magicUI;
     public GameObject herbsUI;
     public GameObject fruitsUI;
 
@@ -165,6 +166,12 @@ public class OpenUI : MonoBehaviour{
         potionsUI.SetActive(true);
     }
 
+    public void OpenMagicSpells()
+    {
+        bladeUI.SetActive(true);
+        magicUI.SetActive(true);
+    }
+
     public void OpenHerbGarden()
     {
         bladeUI.SetActive(true);
@@ -194,6 +201,7 @@ public class OpenUI : MonoBehaviour{
         forgeUI.SetActive(false);
         gemstoneMineUI.SetActive(false);
         potionsUI.SetActive(false);
+        magicUI.SetActive(false);
         herbsUI.SetActive(false);
         fruitsUI.SetActive(false);
     }

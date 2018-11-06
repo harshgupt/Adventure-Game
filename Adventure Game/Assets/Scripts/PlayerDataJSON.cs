@@ -190,4 +190,13 @@
     public float DewLemon;
     public float GoldenMango;
     public float WildNectarine;
+
+    //Spells
+    public float LightningSpell;
+    public float WaterSpell;
+    public float FireSpell;
+    public float WindSpell;
+    public float IceSpell;
+    public float EarthSpell;
+    public float SummoningSpell;
 }

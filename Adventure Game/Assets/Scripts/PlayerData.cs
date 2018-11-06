@@ -22,6 +22,7 @@ public class PlayerData : MonoBehaviour {
     public Item[] metals = new Item[DataManager.numMetals];
     public Item[] gems = new Item[DataManager.numGems];
     public Item[] potions = new Item[DataManager.numPotions];
+    public Item[] magicSpells = new Item[DataManager.numMagicSpells];
     public Item[] herbs = new Item[DataManager.numHerbs];
     public Item[] fruits = new Item[DataManager.numFruits];
 
