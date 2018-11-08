@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Upgrades : MonoBehaviour
 {
     public PlayerData pData;
+
+    public Text[] upgradeText = new Text[7];
 
     public const int maxWeapon = 220;
     public const int maxArmour = 220;
@@ -13,6 +16,7 @@ public class Upgrades : MonoBehaviour
     {
         //Debug.Log(Mathf.Ceil(475f * Mathf.Pow(1.15f, 219)));
         //Debug.Log(Mathf.Ceil(400f * Mathf.Pow(1.15f, 219)));
+        DisplayValues();
     }
 
     public void UpgradeWeapon()
@@ -42,6 +46,7 @@ public class Upgrades : MonoBehaviour
             //pData.gems[gemIndex].amount -= numGems;
             Debug.Log("Tier: " + PlayerData.weaponTier);
         }
+        DisplayValues();
     }
 
     public void UpgradeChestplate()
@@ -70,6 +75,7 @@ public class Upgrades : MonoBehaviour
             //pData.gems[gemIndex].amount -= numGems;
             Debug.Log("Tier: " + PlayerData.armourTier[1]);
         }
+        DisplayValues();
     }
 
     public void UpgradeLeggings()
@@ -98,6 +104,7 @@ public class Upgrades : MonoBehaviour
             //pData.gems[gemIndex].amount -= numGems;
             Debug.Log("Tier: " + PlayerData.armourTier[3]);
         }
+        DisplayValues();
     }
 
     public void UpgradeShield()
@@ -126,6 +133,7 @@ public class Upgrades : MonoBehaviour
             //pData.gems[gemIndex].amount -= numGems;
             Debug.Log("Tier: " + PlayerData.armourTier[5]);
         }
+        DisplayValues();
     }
 
     public void UpgradeHelm()
@@ -154,6 +162,7 @@ public class Upgrades : MonoBehaviour
             //pData.gems[gemIndex].amount -= numGems;
             Debug.Log("Tier: " + PlayerData.armourTier[0]);
         }
+        DisplayValues();
     }
 
     public void UpgradeGauntlets()
@@ -182,6 +191,7 @@ public class Upgrades : MonoBehaviour
             //pData.gems[gemIndex].amount -= numGems;
             Debug.Log("Tier: " + PlayerData.armourTier[2]);
         }
+        DisplayValues();
     }
 
     public void UpgradeBoots()
@@ -209,6 +219,103 @@ public class Upgrades : MonoBehaviour
             //pData.metals[metalIndex].amount -= numMetals;
             //pData.gems[gemIndex].amount -= numGems;
             Debug.Log("Tier: " + PlayerData.armourTier[4]);
+        }
+        DisplayValues();
+    }
+
+    public void DisplayValues()
+    {
+        float shortenedValue;
+        int decimalThreeValue;
+        int tier = PlayerData.weaponTier;
+        float numCoins = Mathf.Ceil(100f * Mathf.Pow(1.15f, tier));
+        if (numCoins < 1000)
+        {
+            upgradeText[0].text = numCoins.ToString();
+        }
+        else if (numCoins < 1000000)
+        {
+            decimalThreeValue = (int)numCoins / 10;
+            shortenedValue = decimalThreeValue / 100;
+            upgradeText[0].text = shortenedValue.ToString() + "K";
+        }
+        else if (numCoins < 1000000000)
+        {
+            double temp = numCoins / 1000;
+            decimalThreeValue = (int)temp / 10;
+            shortenedValue = decimalThreeValue / 100;
+            upgradeText[0].text = shortenedValue.ToString() + "M";
+        }
+        else if (numCoins < 1000000000000)
+        {
+            double temp = numCoins / 1000000;
+            decimalThreeValue = (int)temp / 10;
+            shortenedValue = decimalThreeValue / 100;
+            upgradeText[0].text = shortenedValue.ToString() + "B";
+        }
+        else if (numCoins < 1000000000000000)
+        {
+            double temp = numCoins / 1000000000;
+            decimalThreeValue = (int)temp / 10;
+            shortenedValue = decimalThreeValue / 100;
+            upgradeText[0].text = shortenedValue.ToString() + "T";
+        }
+        else if (numCoins < 1000000000000000000)
+        {
+            double temp = numCoins / 1000000000000;
+            decimalThreeValue = (int)temp / 10;
+            shortenedValue = decimalThreeValue / 100;
+            upgradeText[0].text = shortenedValue.ToString() + "Q";
+        }
+        for (int i = 0; i <= 5; i++)
+        {
+            tier = PlayerData.armourTier[i];
+            if(i % 2 == 1)
+            {
+                numCoins = Mathf.Ceil(75f * Mathf.Pow(1.15f, tier));
+            }
+            else
+            {
+                numCoins = Mathf.Ceil(50f * Mathf.Pow(1.15f, tier));
+            }
+            if (numCoins < 1000)
+            {
+                upgradeText[i + 1].text = numCoins.ToString();
+            }
+            else if (numCoins < 1000000)
+            {
+                decimalThreeValue = (int)numCoins / 10;
+                shortenedValue = decimalThreeValue / 100;
+                upgradeText[i + 1].text = shortenedValue.ToString() + "K";
+            }
+            else if (numCoins < 1000000000)
+            {
+                double temp = numCoins / 1000;
+                decimalThreeValue = (int)temp / 10;
+                shortenedValue = decimalThreeValue / 100;
+                upgradeText[i + 1].text = shortenedValue.ToString() + "M";
+            }
+            else if (numCoins < 1000000000000)
+            {
+                double temp = numCoins / 1000000;
+                decimalThreeValue = (int)temp / 10;
+                shortenedValue = decimalThreeValue / 100;
+                upgradeText[i + 1].text = shortenedValue.ToString() + "B";
+            }
+            else if (numCoins < 1000000000000000)
+            {
+                double temp = numCoins / 1000000000;
+                decimalThreeValue = (int)temp / 10;
+                shortenedValue = decimalThreeValue / 100;
+                upgradeText[i + 1].text = shortenedValue.ToString() + "T";
+            }
+            else if (numCoins < 1000000000000000000)
+            {
+                double temp = numCoins / 1000000000000;
+                decimalThreeValue = (int)temp / 10;
+                shortenedValue = decimalThreeValue / 100;
+                upgradeText[i + 1].text = shortenedValue.ToString() + "Q";
+            }
         }
     }
 }

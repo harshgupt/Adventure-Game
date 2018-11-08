@@ -14,13 +14,16 @@ public class MobScriptTemplate : MonoBehaviour {
     float attackTime = 1f;
     float timer = 0;
     double damage = 0f;
+    double coinsDropped;
 
     private void Start()
     {
         int totalWaveNo = (LevelScript.level - 1) * 10 + LevelScript.wave;
+        Debug.Log(totalWaveNo);
         maxHealth = Mathf.Ceil(2 * Mathf.Pow(1.15f, totalWaveNo - 1));
         damage = Mathf.Ceil(Mathf.Pow(1.15f, totalWaveNo - 1));
         health = maxHealth;
+        coinsDropped = Mathf.Ceil(80f * Mathf.Pow(1.15f, totalWaveNo - 1));
     }
 
     private void Update()
@@ -45,6 +48,7 @@ public class MobScriptTemplate : MonoBehaviour {
             if(health <= 0)
             {
                 MobSpawner.mobsOnScreen--;
+                PlayerData.coins += coinsDropped;
                 if(MobSpawner.mobsOnScreen == 0)
                 {
                     LevelScript.wave++;

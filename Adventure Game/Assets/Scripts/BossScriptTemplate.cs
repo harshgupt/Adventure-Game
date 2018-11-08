@@ -14,6 +14,7 @@ public class BossScriptTemplate : MonoBehaviour {
     float attackTime = 2f;
     float timer = 0;
     double damage = 0f;
+    double coinsDropped;
 
     private void Start()
     {
@@ -21,6 +22,7 @@ public class BossScriptTemplate : MonoBehaviour {
         maxHealth = Mathf.Ceil(10 * Mathf.Pow(1.15f, totalWaveNo - 1));
         damage = Mathf.Ceil(10 * Mathf.Pow(1.14f, totalWaveNo - 1));
         health = maxHealth;
+        coinsDropped = Mathf.Ceil(400f * Mathf.Pow(1.15f, totalWaveNo - 1));
     }
 
     private void Update()
@@ -44,6 +46,7 @@ public class BossScriptTemplate : MonoBehaviour {
             healthBar.fillAmount = (float)(health / maxHealth);
             if (health <= 0)
             {
+                PlayerData.coins += coinsDropped;
                 LevelScript.wave = 1;
                 LevelScript.level++;
                 MobSpawner.bossOnScreen = 0;

@@ -35,7 +35,6 @@ public class DisplayCoins : MonoBehaviour {
         else if (PlayerData.coins < 1000000000000)
         {
             double temp = PlayerData.coins / 1000000;
-            //Debug.Log(temp);
             decimalThreeValue = (int)temp / 10;
             shortenedValue = decimalThreeValue / 100;
             coinText.text = shortenedValue.ToString() + "B";
