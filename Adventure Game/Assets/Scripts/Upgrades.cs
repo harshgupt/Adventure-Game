@@ -11,7 +11,8 @@ public class Upgrades : MonoBehaviour
 
     private void Start()
     {
-        //Debug.Log(ore.name);
+        //Debug.Log(Mathf.Ceil(475f * Mathf.Pow(1.15f, 219)));
+        //Debug.Log(Mathf.Ceil(400f * Mathf.Pow(1.15f, 219)));
     }
 
     public void UpgradeWeapon()
@@ -27,7 +28,7 @@ public class Upgrades : MonoBehaviour
         float numGems = Mathf.Ceil(2 * Mathf.Pow(1.15f, tier));
         int metalIndex = tier / 5;
         int gemIndex = tier * 2 / 15;
-        if(PlayerData.coins < numCoins || pData.metals[metalIndex].amount < numMetals || pData.gems[gemIndex].amount < numGems)
+        if(PlayerData.coins < numCoins/* || pData.metals[metalIndex].amount < numMetals || pData.gems[gemIndex].amount < numGems*/)
         {
             Debug.Log("Need: " + numCoins + " coins, " + numMetals + " metal, and " + numGems + " gems");
             return;
@@ -37,8 +38,8 @@ public class Upgrades : MonoBehaviour
             PlayerData.weaponTier++;
             PlayerData.playerDamage = Mathf.Ceil(1 * Mathf.Pow(1.14f, PlayerData.weaponTier));
             PlayerData.coins -= numCoins;
-            pData.metals[metalIndex].amount -= numMetals;
-            pData.gems[gemIndex].amount -= numGems;
+            //pData.metals[metalIndex].amount -= numMetals;
+            //pData.gems[gemIndex].amount -= numGems;
             Debug.Log("Tier: " + PlayerData.weaponTier);
         }
     }
@@ -56,7 +57,7 @@ public class Upgrades : MonoBehaviour
         float numGems = Mathf.Ceil(1 * Mathf.Pow(1.15f, tier));
         int metalIndex = tier / 5;
         int gemIndex = tier * 2 / 15;
-        if (PlayerData.coins < numCoins || pData.metals[metalIndex].amount < numMetals || pData.gems[gemIndex].amount < numGems)
+        if (PlayerData.coins < numCoins /*|| pData.metals[metalIndex].amount < numMetals || pData.gems[gemIndex].amount < numGems*/)
         {
             Debug.Log("Need: " + numCoins + " coins, " + numMetals + " metal, and " + numGems + " gems");
             return;
@@ -65,8 +66,8 @@ public class Upgrades : MonoBehaviour
         {
             PlayerData.armourTier[1]++;
             PlayerData.coins -= numCoins;
-            pData.metals[metalIndex].amount -= numMetals;
-            pData.gems[gemIndex].amount -= numGems;
+            //pData.metals[metalIndex].amount -= numMetals;
+            //pData.gems[gemIndex].amount -= numGems;
             Debug.Log("Tier: " + PlayerData.armourTier[1]);
         }
     }
@@ -84,7 +85,7 @@ public class Upgrades : MonoBehaviour
         float numGems = Mathf.Ceil(1 * Mathf.Pow(1.15f, tier));
         int metalIndex = tier / 5;
         int gemIndex = tier * 2 / 15;
-        if (PlayerData.coins < numCoins || pData.metals[metalIndex].amount < numMetals || pData.gems[gemIndex].amount < numGems)
+        if (PlayerData.coins < numCoins /*|| pData.metals[metalIndex].amount < numMetals || pData.gems[gemIndex].amount < numGems*/)
         {
             Debug.Log("Need: " + numCoins + " coins, " + numMetals + " metal, and " + numGems + " gems");
             return;
@@ -93,8 +94,8 @@ public class Upgrades : MonoBehaviour
         {
             PlayerData.armourTier[3]++;
             PlayerData.coins -= numCoins;
-            pData.metals[metalIndex].amount -= numMetals;
-            pData.gems[gemIndex].amount -= numGems;
+            //pData.metals[metalIndex].amount -= numMetals;
+            //pData.gems[gemIndex].amount -= numGems;
             Debug.Log("Tier: " + PlayerData.armourTier[3]);
         }
     }
@@ -112,7 +113,7 @@ public class Upgrades : MonoBehaviour
         float numGems = Mathf.Ceil(1 * Mathf.Pow(1.15f, tier));
         int metalIndex = tier / 5;
         int gemIndex = tier * 2 / 15;
-        if (PlayerData.coins < numCoins || pData.metals[metalIndex].amount < numMetals || pData.gems[gemIndex].amount < numGems)
+        if (PlayerData.coins < numCoins /*|| pData.metals[metalIndex].amount < numMetals || pData.gems[gemIndex].amount < numGems*/)
         {
             Debug.Log("Need: " + numCoins + " coins, " + numMetals + " metal, and " + numGems + " gems");
             return;
@@ -121,8 +122,8 @@ public class Upgrades : MonoBehaviour
         {
             PlayerData.armourTier[5]++;
             PlayerData.coins -= numCoins;
-            pData.metals[metalIndex].amount -= numMetals;
-            pData.gems[gemIndex].amount -= numGems;
+            //pData.metals[metalIndex].amount -= numMetals;
+            //pData.gems[gemIndex].amount -= numGems;
             Debug.Log("Tier: " + PlayerData.armourTier[5]);
         }
     }
@@ -140,7 +141,7 @@ public class Upgrades : MonoBehaviour
         float numGems = Mathf.Ceil(1 * Mathf.Pow(1.15f, tier));
         int metalIndex = tier / 5;
         int gemIndex = tier * 2 / 15;
-        if (PlayerData.coins < numCoins || pData.metals[metalIndex].amount < numMetals || pData.gems[gemIndex].amount < numGems)
+        if (PlayerData.coins < numCoins /*|| pData.metals[metalIndex].amount < numMetals || pData.gems[gemIndex].amount < numGems*/)
         {
             Debug.Log("Need: " + numCoins + " coins, " + numMetals + " metal, and " + numGems + " gems");
             return;
@@ -149,8 +150,8 @@ public class Upgrades : MonoBehaviour
         {
             PlayerData.armourTier[0]++;
             PlayerData.coins -= numCoins;
-            pData.metals[metalIndex].amount -= numMetals;
-            pData.gems[gemIndex].amount -= numGems;
+            //pData.metals[metalIndex].amount -= numMetals;
+            //pData.gems[gemIndex].amount -= numGems;
             Debug.Log("Tier: " + PlayerData.armourTier[0]);
         }
     }
@@ -168,7 +169,7 @@ public class Upgrades : MonoBehaviour
         float numGems = Mathf.Ceil(1 * Mathf.Pow(1.15f, tier));
         int metalIndex = tier / 5;
         int gemIndex = tier * 2 / 15;
-        if (PlayerData.coins < numCoins || pData.metals[metalIndex].amount < numMetals || pData.gems[gemIndex].amount < numGems)
+        if (PlayerData.coins < numCoins /*|| pData.metals[metalIndex].amount < numMetals || pData.gems[gemIndex].amount < numGems*/)
         {
             Debug.Log("Need: " + numCoins + " coins, " + numMetals + " metal, and " + numGems + " gems");
             return;
@@ -177,8 +178,8 @@ public class Upgrades : MonoBehaviour
         {
             PlayerData.armourTier[2]++;
             PlayerData.coins -= numCoins;
-            pData.metals[metalIndex].amount -= numMetals;
-            pData.gems[gemIndex].amount -= numGems;
+            //pData.metals[metalIndex].amount -= numMetals;
+            //pData.gems[gemIndex].amount -= numGems;
             Debug.Log("Tier: " + PlayerData.armourTier[2]);
         }
     }
@@ -196,7 +197,7 @@ public class Upgrades : MonoBehaviour
         float numGems = Mathf.Ceil(1 * Mathf.Pow(1.15f, tier));
         int metalIndex = tier / 5;
         int gemIndex = tier * 2 / 15;
-        if (PlayerData.coins < numCoins || pData.metals[metalIndex].amount < numMetals || pData.gems[gemIndex].amount < numGems)
+        if (PlayerData.coins < numCoins /*|| pData.metals[metalIndex].amount < numMetals || pData.gems[gemIndex].amount < numGems*/)
         {
             Debug.Log("Need: " + numCoins + " coins, " + numMetals + " metal, and " + numGems + " gems");
             return;
@@ -205,8 +206,8 @@ public class Upgrades : MonoBehaviour
         {
             PlayerData.armourTier[4]++;
             PlayerData.coins -= numCoins;
-            pData.metals[metalIndex].amount -= numMetals;
-            pData.gems[gemIndex].amount -= numGems;
+            //pData.metals[metalIndex].amount -= numMetals;
+            //pData.gems[gemIndex].amount -= numGems;
             Debug.Log("Tier: " + PlayerData.armourTier[4]);
         }
     }

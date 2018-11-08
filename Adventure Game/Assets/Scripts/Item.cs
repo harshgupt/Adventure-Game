@@ -6,5 +6,5 @@ using UnityEngine;
 public class Item : ScriptableObject {
 
     public Sprite sprite;
-    public float amount;
+    public double amount;
 }

@@ -9,11 +9,11 @@ public class MobScriptTemplate : MonoBehaviour {
 
     public Image healthBar;
 
-    float maxHealth = 1f;
-    float health;
+    double maxHealth = 1f;
+    double health;
     float attackTime = 1f;
     float timer = 0;
-    float damage = 0f;
+    double damage = 0f;
 
     private void Start()
     {
@@ -41,7 +41,7 @@ public class MobScriptTemplate : MonoBehaviour {
         if (col.tag == "Blade")
         {
             health -= PlayerData.playerDamage;
-            healthBar.fillAmount = health / maxHealth;
+            healthBar.fillAmount = (float)(health / maxHealth);
             if(health <= 0)
             {
                 MobSpawner.mobsOnScreen--;

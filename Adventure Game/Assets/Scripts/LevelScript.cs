@@ -90,10 +90,8 @@ public class LevelScript : MonoBehaviour {
 
     public void RestartLevel()
     {
-        PlayerData.gamePaused = false;
-        gameOverUI.SetActive(false);
-        wave = 1;
         PlayerData.playerHealth = PlayerData.playerMaxHealth;
+        wave = 1;
         var enemiesOnScreen = GameObject.FindGameObjectsWithTag("Enemy");
         for (var i = 0; i < enemiesOnScreen.Length; i++)
         {
@@ -101,6 +99,8 @@ public class LevelScript : MonoBehaviour {
         }
         MobSpawner.bossOnScreen = 0;
         MobSpawner.mobsOnScreen = 0;
+        gameOverUI.SetActive(false);
+        PlayerData.gamePaused = false;
     }
 
     public void RestartGame()

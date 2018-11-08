@@ -1,11 +1,12 @@
 Monsters drop coins
+Game restart not working
 After drawing lines for magic spells, flash picture of the symbol
 If not enough ingredients for anything, show pop-up
 Show ingredients for Smelting and Potions
 Save scrolled position, or unlocked position in Mine, Forge, etc
 Change all backgrounds to fit for all resolutions
 Show animation for adding and removing items (fade out + and - in while mining, etc)
-Drag and drop action for battle items
+Implement battle items use
 Tutorial
 - Show mining and smelting, then upgrade weapon after second wave
 - When lose first time, ask to upgrade

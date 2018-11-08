@@ -9,11 +9,11 @@ public class BossScriptTemplate : MonoBehaviour {
 
     public Image healthBar;
 
-    float maxHealth = 2f;
-    float health;
+    double maxHealth = 2f;
+    double health;
     float attackTime = 2f;
     float timer = 0;
-    float damage = 0f;
+    double damage = 0f;
 
     private void Start()
     {
@@ -41,7 +41,7 @@ public class BossScriptTemplate : MonoBehaviour {
         if (col.tag == "Blade")
         {
             health-= PlayerData.playerDamage;
-            healthBar.fillAmount = health / maxHealth;
+            healthBar.fillAmount = (float)(health / maxHealth);
             if (health <= 0)
             {
                 LevelScript.wave = 1;
