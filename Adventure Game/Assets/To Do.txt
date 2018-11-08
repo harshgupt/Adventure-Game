@@ -1,5 +1,5 @@
 Monsters drop coins
-Add magic spell creation
+After drawing lines for magic spells, flash picture of the symbol
 If not enough ingredients for anything, show pop-up
 Show ingredients for Smelting and Potions
 Save scrolled position, or unlocked position in Mine, Forge, etc

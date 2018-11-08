@@ -6,9 +6,11 @@ public class OpenUI : MonoBehaviour{
 
     public Blade bladeGameScript;
     public Blade bladeUIScript;
+    public Blade bladeLineScript;
 
     public GameObject bladeGame;
     public GameObject bladeUI;
+    public GameObject bladeLine;
     public GameObject shopUI;
     public GameObject resourcesUI;
     public GameObject inventoryUI;
@@ -168,7 +170,6 @@ public class OpenUI : MonoBehaviour{
 
     public void OpenMagicSpells()
     {
-        bladeUI.SetActive(true);
         magicUI.SetActive(true);
     }
 
@@ -188,6 +189,7 @@ public class OpenUI : MonoBehaviour{
         PlayerData.gamePaused = false;
         Inventory.inventoryActive = false;
         HideUIBlade();
+        HideLineBlade();
         bladeGame.SetActive(true);
         shopUI.SetActive(false);
         resourcesUI.SetActive(false);
@@ -221,6 +223,15 @@ public class OpenUI : MonoBehaviour{
         {
             bladeUIScript.StopCuttingForUI();
             bladeUI.SetActive(false);
+        }
+    }
+
+    public void HideLineBlade()
+    {
+        if (bladeLine.activeSelf)
+        {
+            bladeLineScript.StopCuttingForUI();
+            bladeLine.SetActive(false);
         }
     }
 }

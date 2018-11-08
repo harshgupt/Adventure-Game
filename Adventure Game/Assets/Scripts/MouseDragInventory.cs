@@ -34,10 +34,6 @@ public class MouseDragInventory : MonoBehaviour {
 
     public void OnMouseDrag()
     {
-        transform.parent = actionBar.transform;
-        Vector3 objPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        objPos.z = 0;
-        transform.position = objPos;
         string name = transform.gameObject.name;
         char num = name[14];
         switch (num)
@@ -69,6 +65,13 @@ public class MouseDragInventory : MonoBehaviour {
             default:
                 break;
         }
+        if (itemName != "")
+        {
+            transform.parent = actionBar.transform;
+            Vector3 objPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            objPos.z = 0;
+            transform.position = objPos;
+        }
     }
 
     public void OnMouseUp()
@@ -87,7 +90,7 @@ public class MouseDragInventory : MonoBehaviour {
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "ActionBarSlot")
+        if(collision.gameObject.tag == "Action Bar Slot")
         {
             numSlot++;
             onSlot = true;
@@ -98,7 +101,7 @@ public class MouseDragInventory : MonoBehaviour {
 
     public void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "ActionBarSlot")
+        if(collision.gameObject.tag == "Action Bar Slot")
         {
             numSlot--;
             if(numSlot == 0)

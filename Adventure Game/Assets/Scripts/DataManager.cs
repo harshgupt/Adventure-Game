@@ -836,7 +836,7 @@ public class DataManager : MonoBehaviour {
         }
         for (int i = 0; i < numMagicSpells; i++)
         {
-            pData.magicSpells[i].amount++;
+            pData.magicSpells[i].amount = 0;
         }
         PlayerDataJSON playerDataJSON = new PlayerDataJSON()
         {

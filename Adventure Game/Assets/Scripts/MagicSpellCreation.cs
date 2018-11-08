@@ -5,9 +5,12 @@ using UnityEngine.UI;
 
 public class MagicSpellCreation : MonoBehaviour {
 
-    public Blade bladeUIScript;
+    public Blade bladeLineScript;
 
-    public GameObject bladeUI;
+    public PlayerData pData;
+
+    public GameObject bladeLine;
+    public GameObject spellbookUI;
     public GameObject lightningSpell;
     public GameObject waterSpell;
     public GameObject fireSpell;
@@ -15,24 +18,137 @@ public class MagicSpellCreation : MonoBehaviour {
     public GameObject iceSpell;
     public GameObject earthSpell;
     public GameObject summoningSpell;
-
-    public PlayerData pData;
+    public GameObject lightningNodes;
+    public GameObject waterNodes;
+    public GameObject fireNodes;
+    public GameObject windNodes;
+    public GameObject iceNodes;
+    public GameObject earthNodes;
+    public GameObject summoningNodes;
 
     public Image inventoryImage;
+    public Image progressBar;
 
     public Text inventoryAmount;
 
     public int currentSpell = 0;
+    public int numIterations = 10;
+    public static int numNodes = 4;
+    public static int nodesDone = 0;
+    public static int iterationsDone = 0;
+
+    private void Start()
+    {
+        ResetAll();
+    }
 
     private void Update()
     {
         DisplayInventoryAmount();
+        if(nodesDone >= numNodes)
+        {
+            Debug.Log(nodesDone + " " + iterationsDone);
+            nodesDone = 0;
+            iterationsDone++;
+        }
+        progressBar.fillAmount = (float)iterationsDone / numIterations;
+        if(iterationsDone >= numIterations)
+        {
+            iterationsDone = 0;
+            ResetAll();
+            CloseSpellbook();
+            pData.magicSpells[currentSpell].amount++;
+        }
     }
 
     public void DisplayInventoryAmount()
     {
         inventoryImage.sprite = pData.magicSpells[currentSpell].sprite;
         inventoryAmount.text = pData.magicSpells[currentSpell].amount.ToString();
+    }
+
+    public void ResetAll()
+    {
+        progressBar.fillAmount = 0;
+        numIterations = 10;
+        numNodes = 4;
+        lightningNodes.SetActive(false);
+        waterNodes.SetActive(false);
+        fireNodes.SetActive(false);
+        windNodes.SetActive(false);
+        iceNodes.SetActive(false);
+        earthNodes.SetActive(false);
+        summoningNodes.SetActive(false);
+    }
+
+    public void LightningSpellCreation()
+    {
+        ResetAll();
+        bladeLine.SetActive(true);
+        spellbookUI.SetActive(true);
+        lightningNodes.SetActive(true);
+        numIterations = 2;
+        numNodes = 4;
+    }
+
+    public void WaterSpellCreation()
+    {
+        ResetAll();
+        bladeLine.SetActive(true);
+        spellbookUI.SetActive(true);
+        waterNodes.SetActive(true);
+        numIterations = 2;
+        numNodes = 7;
+    }
+
+    public void FireSpellCreation()
+    {
+        ResetAll();
+        bladeLine.SetActive(true);
+        spellbookUI.SetActive(true);
+        fireNodes.SetActive(true);
+        numIterations = 2;
+        numNodes = 7;
+    }
+
+    public void WindSpellCreation()
+    {
+        ResetAll();
+        bladeLine.SetActive(true);
+        spellbookUI.SetActive(true);
+        windNodes.SetActive(true);
+        numIterations = 2;
+        numNodes = 8;
+    }
+
+    public void IceSpellCreation()
+    {
+        ResetAll();
+        bladeLine.SetActive(true);
+        spellbookUI.SetActive(true);
+        iceNodes.SetActive(true);
+        numIterations = 2;
+        numNodes = 7;
+    }
+
+    public void EarthSpellCreation()
+    {
+        ResetAll();
+        bladeLine.SetActive(true);
+        spellbookUI.SetActive(true);
+        earthNodes.SetActive(true);
+        numIterations = 2;
+        numNodes = 6;
+    }
+
+    public void SummoningSpellCreation()
+    {
+        ResetAll();
+        bladeLine.SetActive(true);
+        spellbookUI.SetActive(true);
+        summoningNodes.SetActive(true);
+        numIterations = 2;
+        numNodes = 6;
     }
 
     public void LeftButton()
@@ -119,11 +235,16 @@ public class MagicSpellCreation : MonoBehaviour {
 
     public void Close()
     {
-        if (bladeUI.activeSelf)
-        {
-            bladeUIScript.StopCuttingForUI();
-            bladeUI.SetActive(false);
-        }
         transform.gameObject.SetActive(false);
+    }
+
+    public void CloseSpellbook()
+    {
+        if (bladeLine.activeSelf)
+        {
+            bladeLineScript.StopCuttingForUI();
+            bladeLine.SetActive(false);
+        }
+        spellbookUI.SetActive(false);
     }
 }

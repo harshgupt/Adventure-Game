@@ -9,8 +9,6 @@ public class Inventory : MonoBehaviour {
 
     public GameObject mainCamera;
 
-    public Item[] items = new Item[500];
-
     public Image[] inventorySlotImage = new Image[8];
 
     public Text[] inventorySlotAmount = new Text[8];
@@ -29,6 +27,7 @@ public class Inventory : MonoBehaviour {
 
     private void Start()
     {
+        Item[] items = new Item[500];
         itemIndex = 0;
         inventoryActive = true;
         for (int i = 0; i < DataManager.numMagicSpells; i++)
@@ -59,7 +58,34 @@ public class Inventory : MonoBehaviour {
 
     private void Update()
     {
-        for(int i = 0; i < 8; i++)
+        Item[] items = new Item[500];
+        itemIndex = 0;
+        inventoryActive = true;
+        for (int i = 0; i < DataManager.numMagicSpells; i++)
+        {
+            if (pData.magicSpells[i].amount != 0)
+            {
+                items[itemIndex] = pData.magicSpells[i];
+                itemIndex++;
+            }
+        }
+        for (int i = 0; i < DataManager.numPotions; i++)
+        {
+            if (pData.potions[i].amount != 0)
+            {
+                items[itemIndex] = pData.potions[i];
+                itemIndex++;
+            }
+        }
+        for (int i = 0; i < DataManager.numFruits; i++)
+        {
+            if (pData.fruits[i].amount != 0)
+            {
+                items[itemIndex] = pData.fruits[i];
+                itemIndex++;
+            }
+        }
+        for (int i = 0; i < 8; i++)
         {
             if(items[inventoryPage * 8 - 8 + i] != null)
             {

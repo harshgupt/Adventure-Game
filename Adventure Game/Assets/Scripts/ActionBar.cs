@@ -22,7 +22,6 @@ public class ActionBar : MonoBehaviour {
         if (Inventory.inventoryActive)
         {
             actionBarImage.sprite = actionBarEmpty;
-            Debug.Log(actionBarItem);
             actionBarItem = "";
         }
         else

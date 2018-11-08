@@ -85,7 +85,6 @@ public class PotionBrewing : MonoBehaviour {
     private void Update()
     {
         DisplayInventoryAmount();
-        //Debug.Log(Mathf.Sqrt(Vector2.SqrMagnitude(new Vector2(cam.ScreenToWorldPoint(Input.mousePosition).x, cam.ScreenToWorldPoint(Input.mousePosition).y) - circleCenter)));
 #if !UNITY_EDITOR
         Touch touch = Input.touches[0];
         if(touch.phase == TouchPhase.Began && (addedIngredient1 || addedIngredient2))
