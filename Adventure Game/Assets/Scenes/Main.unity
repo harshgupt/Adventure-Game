@@ -8011,6 +8011,53 @@ MonoBehaviour:
   iceNodes: {fileID: 9833442}
   earthNodes: {fileID: 1275551173}
   summoningNodes: {fileID: 2040898428}
+  initialNodes:
+  - {fileID: 1173627934}
+  - {fileID: 848386936}
+  - {fileID: 967073326}
+  - {fileID: 260641152}
+  - {fileID: 1911987410}
+  - {fileID: 1429265760}
+  - {fileID: 494619795}
+  midNodes:
+  - {fileID: 2044253402}
+  - {fileID: 1892213745}
+  - {fileID: 119373633}
+  - {fileID: 305549602}
+  - {fileID: 1875949024}
+  - {fileID: 842489348}
+  - {fileID: 65602048}
+  - {fileID: 1008855999}
+  - {fileID: 1418293921}
+  - {fileID: 540744113}
+  - {fileID: 1883639855}
+  - {fileID: 1215988083}
+  - {fileID: 2028744029}
+  - {fileID: 1336619311}
+  - {fileID: 1202928709}
+  - {fileID: 990846801}
+  - {fileID: 1590824236}
+  - {fileID: 324287449}
+  - {fileID: 1730835227}
+  - {fileID: 1706033430}
+  - {fileID: 1857322976}
+  - {fileID: 1010370153}
+  - {fileID: 176930979}
+  - {fileID: 1590014296}
+  - {fileID: 784837886}
+  - {fileID: 329061227}
+  - {fileID: 861731011}
+  - {fileID: 1176951428}
+  - {fileID: 1881469544}
+  - {fileID: 1042337631}
+  - {fileID: 377639536}
+  - {fileID: 774987788}
+  - {fileID: 428533763}
+  - {fileID: 164785159}
+  - {fileID: 1000466243}
+  - {fileID: 1639006987}
+  - {fileID: 1347980466}
+  - {fileID: 1667904877}
   inventoryImage: {fileID: 245942312}
   progressBar: {fileID: 1685147858}
   inventoryAmount: {fileID: 1020334219}

@@ -19,7 +19,6 @@ public class MobScriptTemplate : MonoBehaviour {
     private void Start()
     {
         int totalWaveNo = (LevelScript.level - 1) * 10 + LevelScript.wave;
-        Debug.Log(totalWaveNo);
         maxHealth = Mathf.Ceil(2 * Mathf.Pow(1.15f, totalWaveNo - 1));
         damage = Mathf.Ceil(Mathf.Pow(1.15f, totalWaveNo - 1));
         health = maxHealth;

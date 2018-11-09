@@ -26,6 +26,9 @@ public class MagicSpellCreation : MonoBehaviour {
     public GameObject earthNodes;
     public GameObject summoningNodes;
 
+    public GameObject[] initialNodes = new GameObject[7];
+    public GameObject[] midNodes = new GameObject[38];
+
     public Image inventoryImage;
     public Image progressBar;
 
@@ -47,7 +50,6 @@ public class MagicSpellCreation : MonoBehaviour {
         DisplayInventoryAmount();
         if(nodesDone >= numNodes)
         {
-            Debug.Log(nodesDone + " " + iterationsDone);
             nodesDone = 0;
             iterationsDone++;
         }
@@ -69,9 +71,19 @@ public class MagicSpellCreation : MonoBehaviour {
 
     public void ResetAll()
     {
+        for(int i = 0; i < initialNodes.Length; i++)
+        {
+            initialNodes[i].SetActive(true);
+        }
+        for(int i = 0; i < midNodes.Length; i++)
+        {
+            midNodes[i].SetActive(false);
+        }
         progressBar.fillAmount = 0;
         numIterations = 10;
         numNodes = 4;
+        nodesDone = 0;
+        iterationsDone = 0;
         lightningNodes.SetActive(false);
         waterNodes.SetActive(false);
         fireNodes.SetActive(false);
@@ -245,6 +257,7 @@ public class MagicSpellCreation : MonoBehaviour {
             bladeLineScript.StopCuttingForUI();
             bladeLine.SetActive(false);
         }
+        ResetAll();
         spellbookUI.SetActive(false);
     }
 }

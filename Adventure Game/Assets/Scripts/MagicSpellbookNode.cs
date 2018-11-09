@@ -16,12 +16,10 @@ public class MagicSpellbookNode : MonoBehaviour {
             if (MagicSpellCreation.nodesDone == 0 && gameObject.name == "Node1")
             {
                 MagicSpellCreation.nodesDone++;
-                Debug.Log("Node 1: " + MagicSpellCreation.nodesDone);
             }
             else if(gameObject.name == name)
             {
                 MagicSpellCreation.nodesDone++;
-                Debug.Log(name + ": " + MagicSpellCreation.nodesDone);
                 if (MagicSpellCreation.numNodes == MagicSpellCreation.nodesDone)
                 {
                     bladeTrail = collision.GetComponentInChildren<TrailRenderer>();
