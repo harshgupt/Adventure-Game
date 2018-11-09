@@ -29,6 +29,8 @@ public class MagicSpellCreation : MonoBehaviour {
     public GameObject[] initialNodes = new GameObject[7];
     public GameObject[] midNodes = new GameObject[38];
 
+    CircleCollider2D bladeCollider;
+
     public Image inventoryImage;
     public Image progressBar;
 
@@ -67,6 +69,19 @@ public class MagicSpellCreation : MonoBehaviour {
             ResetAll();
             CloseSpellbook();
             pData.magicSpells[currentSpell].amount++;
+        }
+        if (!bladeLineScript.GetComponent<CircleCollider2D>().isActiveAndEnabled)
+        {
+            progressBar.fillAmount = 0;
+            for (int i = 0; i < initialNodes.Length; i++)
+            {
+                initialNodes[i].SetActive(true);
+            }
+            for (int i = 0; i < midNodes.Length; i++)
+            {
+                midNodes[i].SetActive(false);
+            }
+            nodesDone = 0;
         }
     }
 
