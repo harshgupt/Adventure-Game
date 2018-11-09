@@ -1,5 +1,5 @@
 Game not saving on phone
-Resetting while creating magic spell does not work
+If mouse is lifted while drawing, reset it
 Too much cash dropped from monsters (can spam upgrade weapon)
 After drawing lines for magic spells, flash picture of the symbol
 If not enough ingredients for anything, show pop-up

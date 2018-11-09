@@ -2245,6 +2245,7 @@ MonoBehaviour:
   - {fileID: 65602048}
   - {fileID: 1008855999}
   - {fileID: 1418293921}
+  progressBar: {fileID: 1685147858}
 --- !u!58 &65602051
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3128,6 +3129,7 @@ MonoBehaviour:
   - {fileID: 2044253402}
   - {fileID: 1892213745}
   - {fileID: 119373633}
+  progressBar: {fileID: 1685147858}
 --- !u!1 &120159060
 GameObject:
   m_ObjectHideFlags: 0
@@ -4103,6 +4105,7 @@ MonoBehaviour:
   - {fileID: 1639006987}
   - {fileID: 1347980466}
   - {fileID: 1667904877}
+  progressBar: {fileID: 1685147858}
 --- !u!58 &164785161
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4308,6 +4311,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  progressBar: {fileID: 1685147858}
 --- !u!58 &176930981
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6875,6 +6879,7 @@ MonoBehaviour:
   - {fileID: 1010370153}
   - {fileID: 0}
   - {fileID: 0}
+  progressBar: {fileID: 1685147858}
 --- !u!58 &260641154
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7771,6 +7776,7 @@ MonoBehaviour:
   - {fileID: 65602048}
   - {fileID: 1008855999}
   - {fileID: 1418293921}
+  progressBar: {fileID: 1685147858}
 --- !u!58 &305549604
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -8062,7 +8068,6 @@ MonoBehaviour:
   progressBar: {fileID: 1685147858}
   inventoryAmount: {fileID: 1020334219}
   currentSpell: 0
-  numIterations: 0
 --- !u!114 &308199336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8338,6 +8343,7 @@ MonoBehaviour:
   - {fileID: 1010370153}
   - {fileID: 0}
   - {fileID: 0}
+  progressBar: {fileID: 1685147858}
 --- !u!58 &324287451
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -8468,6 +8474,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  progressBar: {fileID: 1685147858}
 --- !u!58 &329061229
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -10295,6 +10302,7 @@ MonoBehaviour:
   - {fileID: 377639536}
   - {fileID: 774987788}
   - {fileID: 428533763}
+  progressBar: {fileID: 1685147858}
 --- !u!58 &377639538
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -11178,6 +11186,7 @@ MonoBehaviour:
   - {fileID: 377639536}
   - {fileID: 774987788}
   - {fileID: 428533763}
+  progressBar: {fileID: 1685147858}
 --- !u!58 &428533765
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -13287,6 +13296,7 @@ MonoBehaviour:
   - {fileID: 1639006987}
   - {fileID: 1347980466}
   - {fileID: 1667904877}
+  progressBar: {fileID: 1685147858}
 --- !u!58 &494619797
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -14288,6 +14298,7 @@ MonoBehaviour:
   - {fileID: 2028744029}
   - {fileID: 1336619311}
   - {fileID: 1202928709}
+  progressBar: {fileID: 1685147858}
 --- !u!58 &540744115
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -20509,6 +20520,7 @@ MonoBehaviour:
   - {fileID: 377639536}
   - {fileID: 774987788}
   - {fileID: 428533763}
+  progressBar: {fileID: 1685147858}
 --- !u!58 &774987790
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -20800,6 +20812,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  progressBar: {fileID: 1685147858}
 --- !u!58 &784837888
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -21779,6 +21792,7 @@ MonoBehaviour:
   - {fileID: 65602048}
   - {fileID: 1008855999}
   - {fileID: 1418293921}
+  progressBar: {fileID: 1685147858}
 --- !u!58 &842489351
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -22397,6 +22411,7 @@ MonoBehaviour:
   - {fileID: 65602048}
   - {fileID: 1008855999}
   - {fileID: 1418293921}
+  progressBar: {fileID: 1685147858}
 --- !u!58 &848386938
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -22672,6 +22687,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  progressBar: {fileID: 1685147858}
 --- !u!58 &861731013
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -25797,6 +25813,7 @@ MonoBehaviour:
   - {fileID: 2028744029}
   - {fileID: 1336619311}
   - {fileID: 1202928709}
+  progressBar: {fileID: 1685147858}
 --- !u!58 &967073328
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -26597,6 +26614,7 @@ MonoBehaviour:
   - {fileID: 1010370153}
   - {fileID: 0}
   - {fileID: 0}
+  progressBar: {fileID: 1685147858}
 --- !u!58 &990846803
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -26723,6 +26741,7 @@ MonoBehaviour:
   - {fileID: 1639006987}
   - {fileID: 1347980466}
   - {fileID: 1667904877}
+  progressBar: {fileID: 1685147858}
 --- !u!58 &1000466245
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -27113,6 +27132,7 @@ MonoBehaviour:
   - {fileID: 65602048}
   - {fileID: 1008855999}
   - {fileID: 1418293921}
+  progressBar: {fileID: 1685147858}
 --- !u!58 &1008856001
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -27534,6 +27554,7 @@ MonoBehaviour:
   - {fileID: 1010370153}
   - {fileID: 0}
   - {fileID: 0}
+  progressBar: {fileID: 1685147858}
 --- !u!58 &1010370156
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -28510,6 +28531,7 @@ MonoBehaviour:
   - {fileID: 377639536}
   - {fileID: 774987788}
   - {fileID: 428533763}
+  progressBar: {fileID: 1685147858}
 --- !u!58 &1042337633
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -31051,6 +31073,7 @@ MonoBehaviour:
   - {fileID: 2044253402}
   - {fileID: 1892213745}
   - {fileID: 119373633}
+  progressBar: {fileID: 1685147858}
 --- !u!1 &1174443262
 GameObject:
   m_ObjectHideFlags: 0
@@ -31361,6 +31384,7 @@ MonoBehaviour:
   - {fileID: 329061227}
   - {fileID: 861731011}
   - {fileID: 1176951428}
+  progressBar: {fileID: 1685147858}
 --- !u!58 &1176951431
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -31851,6 +31875,7 @@ MonoBehaviour:
   - {fileID: 2028744029}
   - {fileID: 1336619311}
   - {fileID: 1202928709}
+  progressBar: {fileID: 1685147858}
 --- !u!58 &1202928712
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -32409,6 +32434,7 @@ MonoBehaviour:
   - {fileID: 2028744029}
   - {fileID: 1336619311}
   - {fileID: 1202928709}
+  progressBar: {fileID: 1685147858}
 --- !u!58 &1215988085
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -36134,6 +36160,7 @@ MonoBehaviour:
   - {fileID: 2028744029}
   - {fileID: 1336619311}
   - {fileID: 1202928709}
+  progressBar: {fileID: 1685147858}
 --- !u!58 &1336619314
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -36549,6 +36576,7 @@ MonoBehaviour:
   - {fileID: 1639006987}
   - {fileID: 1347980466}
   - {fileID: 1667904877}
+  progressBar: {fileID: 1685147858}
 --- !u!58 &1347980468
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -38051,6 +38079,7 @@ MonoBehaviour:
   - {fileID: 65602048}
   - {fileID: 1008855999}
   - {fileID: 1418293921}
+  progressBar: {fileID: 1685147858}
 --- !u!58 &1418293924
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -38394,6 +38423,7 @@ MonoBehaviour:
   - {fileID: 377639536}
   - {fileID: 774987788}
   - {fileID: 428533763}
+  progressBar: {fileID: 1685147858}
 --- !u!58 &1429265762
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -43203,6 +43233,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  progressBar: {fileID: 1685147858}
 --- !u!58 &1590014298
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -43333,6 +43364,7 @@ MonoBehaviour:
   - {fileID: 1010370153}
   - {fileID: 0}
   - {fileID: 0}
+  progressBar: {fileID: 1685147858}
 --- !u!58 &1590824238
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -44459,6 +44491,7 @@ MonoBehaviour:
   - {fileID: 1639006987}
   - {fileID: 1347980466}
   - {fileID: 1667904877}
+  progressBar: {fileID: 1685147858}
 --- !u!58 &1639006989
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -44881,6 +44914,7 @@ MonoBehaviour:
   - {fileID: 1639006987}
   - {fileID: 1347980466}
   - {fileID: 1667904877}
+  progressBar: {fileID: 1685147858}
 --- !u!58 &1667904880
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -45952,6 +45986,7 @@ MonoBehaviour:
   - {fileID: 1010370153}
   - {fileID: 0}
   - {fileID: 0}
+  progressBar: {fileID: 1685147858}
 --- !u!58 &1706033432
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -46772,6 +46807,7 @@ MonoBehaviour:
   - {fileID: 1010370153}
   - {fileID: 0}
   - {fileID: 0}
+  progressBar: {fileID: 1685147858}
 --- !u!58 &1730835229
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -49870,6 +49906,7 @@ MonoBehaviour:
   - {fileID: 1010370153}
   - {fileID: 0}
   - {fileID: 0}
+  progressBar: {fileID: 1685147858}
 --- !u!58 &1857322978
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -50269,6 +50306,7 @@ MonoBehaviour:
   - {fileID: 65602048}
   - {fileID: 1008855999}
   - {fileID: 1418293921}
+  progressBar: {fileID: 1685147858}
 --- !u!58 &1875949026
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -50593,6 +50631,7 @@ MonoBehaviour:
   - {fileID: 377639536}
   - {fileID: 774987788}
   - {fileID: 428533763}
+  progressBar: {fileID: 1685147858}
 --- !u!58 &1881469546
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -50720,6 +50759,7 @@ MonoBehaviour:
   - {fileID: 2028744029}
   - {fileID: 1336619311}
   - {fileID: 1202928709}
+  progressBar: {fileID: 1685147858}
 --- !u!58 &1883639857
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -51135,6 +51175,7 @@ MonoBehaviour:
   - {fileID: 2044253402}
   - {fileID: 1892213745}
   - {fileID: 119373633}
+  progressBar: {fileID: 1685147858}
 --- !u!1 &1896683549
 GameObject:
   m_ObjectHideFlags: 0
@@ -51491,6 +51532,7 @@ MonoBehaviour:
   - {fileID: 329061227}
   - {fileID: 861731011}
   - {fileID: 1176951428}
+  progressBar: {fileID: 1685147858}
 --- !u!58 &1911987412
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -54831,6 +54873,7 @@ MonoBehaviour:
   - {fileID: 2028744029}
   - {fileID: 1336619311}
   - {fileID: 1202928709}
+  progressBar: {fileID: 1685147858}
 --- !u!58 &2028744032
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -55213,6 +55256,7 @@ MonoBehaviour:
   - {fileID: 2044253402}
   - {fileID: 1892213745}
   - {fileID: 119373633}
+  progressBar: {fileID: 1685147858}
 --- !u!1 &2048611571
 GameObject:
   m_ObjectHideFlags: 0

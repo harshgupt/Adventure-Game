@@ -34,11 +34,11 @@ public class MagicSpellCreation : MonoBehaviour {
 
     public Text inventoryAmount;
 
+    public float timer;
+
     public int currentSpell = 0;
-    public int numIterations = 10;
     public static int numNodes = 4;
     public static int nodesDone = 0;
-    public static int iterationsDone = 0;
 
     private void Start()
     {
@@ -51,12 +51,19 @@ public class MagicSpellCreation : MonoBehaviour {
         if(nodesDone >= numNodes)
         {
             nodesDone = 0;
-            iterationsDone++;
         }
-        progressBar.fillAmount = (float)iterationsDone / numIterations;
-        if(iterationsDone >= numIterations)
+        timer += Time.deltaTime;
+        if(timer >= 1f)
         {
-            iterationsDone = 0;
+            timer = 0;
+            progressBar.fillAmount -= 0.01f;
+        }
+        if (progressBar.fillAmount < 0)
+        {
+            progressBar.fillAmount = 0;
+        }
+        if (progressBar.fillAmount >= 1)
+        {
             ResetAll();
             CloseSpellbook();
             pData.magicSpells[currentSpell].amount++;
@@ -80,10 +87,8 @@ public class MagicSpellCreation : MonoBehaviour {
             midNodes[i].SetActive(false);
         }
         progressBar.fillAmount = 0;
-        numIterations = 10;
         numNodes = 4;
         nodesDone = 0;
-        iterationsDone = 0;
         lightningNodes.SetActive(false);
         waterNodes.SetActive(false);
         fireNodes.SetActive(false);
@@ -99,7 +104,6 @@ public class MagicSpellCreation : MonoBehaviour {
         bladeLine.SetActive(true);
         spellbookUI.SetActive(true);
         lightningNodes.SetActive(true);
-        numIterations = 2;
         numNodes = 4;
     }
 
@@ -109,7 +113,6 @@ public class MagicSpellCreation : MonoBehaviour {
         bladeLine.SetActive(true);
         spellbookUI.SetActive(true);
         waterNodes.SetActive(true);
-        numIterations = 2;
         numNodes = 7;
     }
 
@@ -119,7 +122,6 @@ public class MagicSpellCreation : MonoBehaviour {
         bladeLine.SetActive(true);
         spellbookUI.SetActive(true);
         fireNodes.SetActive(true);
-        numIterations = 2;
         numNodes = 7;
     }
 
@@ -129,7 +131,6 @@ public class MagicSpellCreation : MonoBehaviour {
         bladeLine.SetActive(true);
         spellbookUI.SetActive(true);
         windNodes.SetActive(true);
-        numIterations = 2;
         numNodes = 8;
     }
 
@@ -139,7 +140,6 @@ public class MagicSpellCreation : MonoBehaviour {
         bladeLine.SetActive(true);
         spellbookUI.SetActive(true);
         iceNodes.SetActive(true);
-        numIterations = 2;
         numNodes = 7;
     }
 
@@ -149,7 +149,6 @@ public class MagicSpellCreation : MonoBehaviour {
         bladeLine.SetActive(true);
         spellbookUI.SetActive(true);
         earthNodes.SetActive(true);
-        numIterations = 2;
         numNodes = 6;
     }
 
@@ -159,7 +158,6 @@ public class MagicSpellCreation : MonoBehaviour {
         bladeLine.SetActive(true);
         spellbookUI.SetActive(true);
         summoningNodes.SetActive(true);
-        numIterations = 2;
         numNodes = 6;
     }
 

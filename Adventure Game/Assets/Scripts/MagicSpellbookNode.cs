@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MagicSpellbookNode : MonoBehaviour {
 
     public TrailRenderer bladeTrail;
 
     public GameObject[] nodes = new GameObject[11];
+
+    public Image progressBar;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,10 +18,12 @@ public class MagicSpellbookNode : MonoBehaviour {
             string name = "Node" + (MagicSpellCreation.nodesDone + 1).ToString();
             if (MagicSpellCreation.nodesDone == 0 && gameObject.name == "Node1")
             {
+                progressBar.fillAmount += 0.05f;
                 MagicSpellCreation.nodesDone++;
             }
             else if(gameObject.name == name)
             {
+                progressBar.fillAmount += 0.05f;
                 MagicSpellCreation.nodesDone++;
                 if (MagicSpellCreation.numNodes == MagicSpellCreation.nodesDone)
                 {
