@@ -9705,7 +9705,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1813908102}
+      - m_Target: {fileID: 668190242}
         m_MethodName: UpgradeChestplate
         m_Mode: 1
         m_Arguments:
@@ -17361,6 +17361,7 @@ GameObject:
   - component: {fileID: 668190246}
   - component: {fileID: 668190245}
   - component: {fileID: 668190247}
+  - component: {fileID: 668190242}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -17428,6 +17429,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &668190242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 668190238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca65ac0ea80ad834eb164677b42642ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pData: {fileID: 0}
+  upgradeText:
+  - {fileID: 1915829664}
+  - {fileID: 2017378348}
+  - {fileID: 283407161}
+  - {fileID: 1564485792}
+  - {fileID: 1399395324}
+  - {fileID: 481203076}
+  - {fileID: 1310746922}
 --- !u!114 &668190243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21367,7 +21388,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1813908102}
+      - m_Target: {fileID: 668190242}
         m_MethodName: UpgradeLeggings
         m_Mode: 1
         m_Arguments:
@@ -24817,7 +24838,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1813908102}
+      - m_Target: {fileID: 668190242}
         m_MethodName: UpgradeShield
         m_Mode: 1
         m_Arguments:
@@ -35415,7 +35436,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1813908102}
+      - m_Target: {fileID: 668190242}
         m_MethodName: UpgradeGauntlets
         m_Mode: 1
         m_Arguments:
@@ -37403,7 +37424,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1813908102}
+      - m_Target: {fileID: 668190242}
         m_MethodName: UpgradeBoots
         m_Mode: 1
         m_Arguments:
@@ -44630,7 +44651,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1813908102}
+      - m_Target: {fileID: 668190242}
         m_MethodName: UpgradeHelm
         m_Mode: 1
         m_Arguments:
@@ -45082,7 +45103,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1813908102}
+      - m_Target: {fileID: 668190242}
         m_MethodName: UpgradeWeapon
         m_Mode: 1
         m_Arguments:
@@ -48391,7 +48412,6 @@ GameObject:
   - component: {fileID: 1813908099}
   - component: {fileID: 1813908101}
   - component: {fileID: 1813908100}
-  - component: {fileID: 1813908102}
   m_Layer: 5
   m_Name: Upgrades
   m_TagString: Untagged
@@ -48452,26 +48472,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1813908098}
   m_CullTransparentMesh: 0
---- !u!114 &1813908102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1813908098}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca65ac0ea80ad834eb164677b42642ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pData: {fileID: 668190247}
-  upgradeText:
-  - {fileID: 1915829664}
-  - {fileID: 2017378348}
-  - {fileID: 283407161}
-  - {fileID: 1564485792}
-  - {fileID: 1399395324}
-  - {fileID: 481203076}
-  - {fileID: 1310746922}
 --- !u!1 &1818293993
 GameObject:
   m_ObjectHideFlags: 0

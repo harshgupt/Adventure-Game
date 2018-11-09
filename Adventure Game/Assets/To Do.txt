@@ -1,5 +1,6 @@
-Monsters drop coins
-Game restart not working
+Game not saving on phone
+Resetting while creating magic spell does not work
+Too much cash dropped from monsters (can spam upgrade weapon)
 After drawing lines for magic spells, flash picture of the symbol
 If not enough ingredients for anything, show pop-up
 Show ingredients for Smelting and Potions
