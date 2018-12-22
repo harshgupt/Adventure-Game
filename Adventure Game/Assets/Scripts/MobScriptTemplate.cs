@@ -22,7 +22,7 @@ public class MobScriptTemplate : MonoBehaviour {
         maxHealth = Mathf.Ceil(2 * Mathf.Pow(1.15f, totalWaveNo - 1));
         damage = Mathf.Ceil(Mathf.Pow(1.15f, totalWaveNo - 1));
         health = maxHealth;
-        coinsDropped = Mathf.Ceil(80f * Mathf.Pow(1.15f, totalWaveNo - 1));
+        coinsDropped = Mathf.Ceil(10f * Mathf.Pow(1.15f, totalWaveNo - 1));
     }
 
     private void Update()

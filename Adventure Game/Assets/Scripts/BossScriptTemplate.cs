@@ -22,7 +22,7 @@ public class BossScriptTemplate : MonoBehaviour {
         maxHealth = Mathf.Ceil(10 * Mathf.Pow(1.15f, totalWaveNo - 1));
         damage = Mathf.Ceil(10 * Mathf.Pow(1.14f, totalWaveNo - 1));
         health = maxHealth;
-        coinsDropped = Mathf.Ceil(400f * Mathf.Pow(1.15f, totalWaveNo - 1));
+        coinsDropped = Mathf.Ceil(200f * Mathf.Pow(1.15f, totalWaveNo - 1));
     }
 
     private void Update()

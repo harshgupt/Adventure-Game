@@ -1,5 +1,6 @@
 Game not saving on phone
-If mouse is lifted while drawing, reset it
+Change armor pieces to single piece?
+Instead of no damage to boss, do minimal damage if weapon tier does not match, also if armor tier not enough, kill faster
 Too much cash dropped from monsters (can spam upgrade weapon)
 After drawing lines for magic spells, flash picture of the symbol
 If not enough ingredients for anything, show pop-up
