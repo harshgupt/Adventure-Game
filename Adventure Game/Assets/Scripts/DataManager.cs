@@ -13,8 +13,7 @@ public class DataManager : MonoBehaviour {
 
     public static bool saveData;
     public static float saveTimer;
-
-    public const int numArmour = 6;
+    
     public const int numOres = 19;
     public const int numMetals = 45;
     public const int numGems = 30;
@@ -34,12 +33,7 @@ public class DataManager : MonoBehaviour {
     public int Wave;
 
     //Armour and Weapon
-    public int HelmTier;
-    public int ChestplateTier;
-    public int GauntletsTier;
-    public int LeggingsTier;
-    public int BootsTier;
-    public int ShieldTier;
+    public int ArmourTier;
     public int WeaponTier;
 
     //Metals and Alloys
@@ -261,12 +255,7 @@ public class DataManager : MonoBehaviour {
         PlayerHP = PlayerData.playerHealth;
         Level = LevelScript.level;
         Wave = LevelScript.wave;
-        HelmTier = PlayerData.armourTier[0];
-        ChestplateTier = PlayerData.armourTier[1];
-        GauntletsTier = PlayerData.armourTier[2];
-        LeggingsTier = PlayerData.armourTier[3];
-        BootsTier = PlayerData.armourTier[4];
-        ShieldTier = PlayerData.armourTier[5];
+        ArmourTier = PlayerData.armourTier;
         WeaponTier = PlayerData.weaponTier;
         CopperOre = pData.ores[0].amount;
         TinOre = pData.ores[1].amount;
@@ -632,12 +621,7 @@ public class DataManager : MonoBehaviour {
             Wave = LevelScript.wave,
             DayOfYear = DateTime.Now.DayOfYear,
             Hour = DateTime.Now.Hour,
-            HelmTier = PlayerData.armourTier[0],
-            ChestplateTier = PlayerData.armourTier[1],
-            GauntletsTier = PlayerData.armourTier[2],
-            LeggingsTier = PlayerData.armourTier[3],
-            BootsTier = PlayerData.armourTier[4],
-            ShieldTier = PlayerData.armourTier[5],
+            ArmourTier = PlayerData.armourTier,
             WeaponTier = PlayerData.weaponTier,
             CopperOre = pData.ores[0].amount,
             TinOre = pData.ores[1].amount,
@@ -817,10 +801,7 @@ public class DataManager : MonoBehaviour {
     {
         PlayerData.coins = 0;
         PlayerData.playerHealth = 96;
-        for (int i = 0; i < numArmour; i++)
-        {
-            PlayerData.armourTier[i] = 0;
-        }
+        PlayerData.armourTier = 0;
         PlayerData.weaponTier = 0;
         for (int i = 0; i < numOres; i++)
         {

@@ -13,7 +13,7 @@ public class PlayerData : MonoBehaviour {
     public static double playerDamage = 1;
     public double currentPlayerHP;
 
-    public static int[] armourTier = new int[DataManager.numArmour];
+    public static int armourTier;
     public static int weaponTier;
 
     public static bool gamePaused;

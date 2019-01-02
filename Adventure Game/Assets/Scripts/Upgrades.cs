@@ -49,17 +49,17 @@ public class Upgrades : MonoBehaviour
         DisplayValues();
     }
 
-    public void UpgradeChestplate()
+    public void UpgradeArmour()
     {
-        int tier = PlayerData.armourTier[1];
+        int tier = PlayerData.armourTier;
         if (tier > maxArmour)
         {
             Debug.Log("Max level achieved");
             return;
         }
-        float numCoins = Mathf.Ceil(75f * Mathf.Pow(1.15f, tier));
-        float numMetals = Mathf.Ceil(2 * Mathf.Pow(1.15f, tier));
-        float numGems = Mathf.Ceil(1 * Mathf.Pow(1.15f, tier));
+        float numCoins = Mathf.Ceil(150f * Mathf.Pow(1.15f, tier));
+        float numMetals = Mathf.Ceil(5 * Mathf.Pow(1.15f, tier));
+        float numGems = Mathf.Ceil(3 * Mathf.Pow(1.15f, tier));
         int metalIndex = tier / 5;
         int gemIndex = tier * 2 / 15;
         if (PlayerData.coins < numCoins /*|| pData.metals[metalIndex].amount < numMetals || pData.gems[gemIndex].amount < numGems*/)
@@ -69,156 +69,11 @@ public class Upgrades : MonoBehaviour
         }
         else
         {
-            PlayerData.armourTier[1]++;
+            PlayerData.armourTier++;
             PlayerData.coins -= numCoins;
             //pData.metals[metalIndex].amount -= numMetals;
             //pData.gems[gemIndex].amount -= numGems;
-            Debug.Log("Tier: " + PlayerData.armourTier[1]);
-        }
-        DisplayValues();
-    }
-
-    public void UpgradeLeggings()
-    {
-        int tier = PlayerData.armourTier[3];
-        if (tier > maxArmour)
-        {
-            Debug.Log("Max level achieved");
-            return;
-        }
-        float numCoins = Mathf.Ceil(75f * Mathf.Pow(1.15f, tier));
-        float numMetals = Mathf.Ceil(2 * Mathf.Pow(1.15f, tier));
-        float numGems = Mathf.Ceil(1 * Mathf.Pow(1.15f, tier));
-        int metalIndex = tier / 5;
-        int gemIndex = tier * 2 / 15;
-        if (PlayerData.coins < numCoins /*|| pData.metals[metalIndex].amount < numMetals || pData.gems[gemIndex].amount < numGems*/)
-        {
-            Debug.Log("Need: " + numCoins + " coins, " + numMetals + " metal, and " + numGems + " gems");
-            return;
-        }
-        else
-        {
-            PlayerData.armourTier[3]++;
-            PlayerData.coins -= numCoins;
-            //pData.metals[metalIndex].amount -= numMetals;
-            //pData.gems[gemIndex].amount -= numGems;
-            Debug.Log("Tier: " + PlayerData.armourTier[3]);
-        }
-        DisplayValues();
-    }
-
-    public void UpgradeShield()
-    {
-        int tier = PlayerData.armourTier[5];
-        if (tier > maxArmour)
-        {
-            Debug.Log("Max level achieved");
-            return;
-        }
-        float numCoins = Mathf.Ceil(75f * Mathf.Pow(1.15f, tier));
-        float numMetals = Mathf.Ceil(2 * Mathf.Pow(1.15f, tier));
-        float numGems = Mathf.Ceil(1 * Mathf.Pow(1.15f, tier));
-        int metalIndex = tier / 5;
-        int gemIndex = tier * 2 / 15;
-        if (PlayerData.coins < numCoins /*|| pData.metals[metalIndex].amount < numMetals || pData.gems[gemIndex].amount < numGems*/)
-        {
-            Debug.Log("Need: " + numCoins + " coins, " + numMetals + " metal, and " + numGems + " gems");
-            return;
-        }
-        else
-        {
-            PlayerData.armourTier[5]++;
-            PlayerData.coins -= numCoins;
-            //pData.metals[metalIndex].amount -= numMetals;
-            //pData.gems[gemIndex].amount -= numGems;
-            Debug.Log("Tier: " + PlayerData.armourTier[5]);
-        }
-        DisplayValues();
-    }
-
-    public void UpgradeHelm()
-    {
-        int tier = PlayerData.armourTier[0];
-        if (tier > maxArmour)
-        {
-            Debug.Log("Max level achieved");
-            return;
-        }
-        float numCoins = Mathf.Ceil(50f * Mathf.Pow(1.15f, tier));
-        float numMetals = Mathf.Ceil(1 * Mathf.Pow(1.15f, tier));
-        float numGems = Mathf.Ceil(1 * Mathf.Pow(1.15f, tier));
-        int metalIndex = tier / 5;
-        int gemIndex = tier * 2 / 15;
-        if (PlayerData.coins < numCoins /*|| pData.metals[metalIndex].amount < numMetals || pData.gems[gemIndex].amount < numGems*/)
-        {
-            Debug.Log("Need: " + numCoins + " coins, " + numMetals + " metal, and " + numGems + " gems");
-            return;
-        }
-        else
-        {
-            PlayerData.armourTier[0]++;
-            PlayerData.coins -= numCoins;
-            //pData.metals[metalIndex].amount -= numMetals;
-            //pData.gems[gemIndex].amount -= numGems;
-            Debug.Log("Tier: " + PlayerData.armourTier[0]);
-        }
-        DisplayValues();
-    }
-
-    public void UpgradeGauntlets()
-    {
-        int tier = PlayerData.armourTier[2];
-        if (tier > maxArmour)
-        {
-            Debug.Log("Max level achieved");
-            return;
-        }
-        float numCoins = Mathf.Ceil(50f * Mathf.Pow(1.15f, tier));
-        float numMetals = Mathf.Ceil(1 * Mathf.Pow(1.15f, tier));
-        float numGems = Mathf.Ceil(1 * Mathf.Pow(1.15f, tier));
-        int metalIndex = tier / 5;
-        int gemIndex = tier * 2 / 15;
-        if (PlayerData.coins < numCoins /*|| pData.metals[metalIndex].amount < numMetals || pData.gems[gemIndex].amount < numGems*/)
-        {
-            Debug.Log("Need: " + numCoins + " coins, " + numMetals + " metal, and " + numGems + " gems");
-            return;
-        }
-        else
-        {
-            PlayerData.armourTier[2]++;
-            PlayerData.coins -= numCoins;
-            //pData.metals[metalIndex].amount -= numMetals;
-            //pData.gems[gemIndex].amount -= numGems;
-            Debug.Log("Tier: " + PlayerData.armourTier[2]);
-        }
-        DisplayValues();
-    }
-
-    public void UpgradeBoots()
-    {
-        int tier = PlayerData.armourTier[4];
-        if (tier > maxArmour)
-        {
-            Debug.Log("Max level achieved");
-            return;
-        }
-        float numCoins = Mathf.Ceil(50f * Mathf.Pow(1.15f, tier));
-        float numMetals = Mathf.Ceil(1 * Mathf.Pow(1.15f, tier));
-        float numGems = Mathf.Ceil(1 * Mathf.Pow(1.15f, tier));
-        int metalIndex = tier / 5;
-        int gemIndex = tier * 2 / 15;
-        if (PlayerData.coins < numCoins /*|| pData.metals[metalIndex].amount < numMetals || pData.gems[gemIndex].amount < numGems*/)
-        {
-            Debug.Log("Need: " + numCoins + " coins, " + numMetals + " metal, and " + numGems + " gems");
-            return;
-        }
-        else
-        {
-            PlayerData.armourTier[4]++;
-            PlayerData.coins -= numCoins;
-            //pData.metals[metalIndex].amount -= numMetals;
-            //pData.gems[gemIndex].amount -= numGems;
-            Debug.Log("Tier: " + PlayerData.armourTier[4]);
+            Debug.Log("Tier: " + PlayerData.armourTier);
         }
         DisplayValues();
     }
@@ -269,15 +124,8 @@ public class Upgrades : MonoBehaviour
         }
         for (int i = 0; i <= 5; i++)
         {
-            tier = PlayerData.armourTier[i];
-            if(i % 2 == 1)
-            {
-                numCoins = Mathf.Ceil(75f * Mathf.Pow(1.15f, tier));
-            }
-            else
-            {
-                numCoins = Mathf.Ceil(50f * Mathf.Pow(1.15f, tier));
-            }
+            tier = PlayerData.armourTier;
+            numCoins = Mathf.Ceil(150f * Mathf.Pow(1.15f, tier));
             if (numCoins < 1000)
             {
                 upgradeText[i + 1].text = numCoins.ToString();

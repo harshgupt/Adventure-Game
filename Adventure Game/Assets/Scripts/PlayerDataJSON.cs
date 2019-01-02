@@ -12,12 +12,7 @@
     public int Hour;
 
     //Armour and Weapon
-    public int HelmTier;
-    public int ChestplateTier;
-    public int GauntletsTier;
-    public int LeggingsTier;
-    public int BootsTier;
-    public int ShieldTier;
+    public int ArmourTier;
     public int WeaponTier;
 
     //Metals and Alloys
