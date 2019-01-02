@@ -226,7 +226,15 @@ public class DataManager : MonoBehaviour {
     private void Awake()
     {
         pData = GetComponent<PlayerData>();
-        dataFilePath = Path.Combine(Application.streamingAssetsPath, "data.json");
+        dataFilePath = GetApplicationPath() + "data.json";
+        if (!File.Exists(dataFilePath))
+        {
+            TextAsset tempData = (TextAsset)Resources.Load("defaultData", typeof(TextAsset));
+            var writer = new StreamWriter(dataFilePath);
+            writer.Write(tempData.text);
+            writer.Flush();
+            writer.Close();
+        }
         if (SceneManager.GetActiveScene().name == "Main")
         {
             LoadGameData();
@@ -1224,5 +1232,18 @@ public class DataManager : MonoBehaviour {
         };
         string dataJSON = JsonUtility.ToJson(playerDataJSON);
         File.WriteAllText(dataFilePath, dataJSON);
+    }
+    
+    private string GetApplicationPath()
+    {
+#if UNITY_EDITOR
+        return Application.dataPath + "/Data/";
+#elif UNITY_ANDROID
+        return Application.persistentDataPath;
+#elif UNITY_IPHONE
+        return Application.persistentDataPath+"/";
+#else
+        return Application.dataPath +"/";
+#endif
     }
 }

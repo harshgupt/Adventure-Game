@@ -10,6 +10,8 @@ public class LevelScript : MonoBehaviour {
     public GameObject gameOverUI;
     public GameObject gameWinUI;
 
+    public string dataFilePath;
+
     public static int level = 1;
     public static int wave = 1;
     public static int playerHP = 100;
@@ -27,47 +29,16 @@ public class LevelScript : MonoBehaviour {
         if(SceneManager.GetActiveScene().name == "Start")
         {
             //Load Level
-            if (File.Exists(Path.Combine(Application.streamingAssetsPath, "data.json")))
+            dataFilePath = GetApplicationPath() + "data.json";
+            if (!File.Exists(dataFilePath))
             {
-                PlayerDataJSON loadedData = JsonUtility.FromJson<PlayerDataJSON>(File.ReadAllText(Path.Combine(Application.streamingAssetsPath, "data.json")));
-                level = loadedData.Level;
-                wave = loadedData.Wave;
-                PlayerData.armourTier[0] = loadedData.HelmTier;
-                PlayerData.armourTier[1] = loadedData.ChestplateTier;
-                PlayerData.armourTier[2] = loadedData.GauntletsTier;
-                PlayerData.armourTier[3] = loadedData.LeggingsTier;
-                PlayerData.armourTier[4] = loadedData.BootsTier;
-                PlayerData.armourTier[5] = loadedData.ShieldTier;
-                PlayerData.playerMaxHealth = Mathf.Ceil(100 / 6 * (Mathf.Pow(1.15f, PlayerData.armourTier[0]) + Mathf.Pow(1.15f, PlayerData.armourTier[1]) + Mathf.Pow(1.15f, PlayerData.armourTier[2]) + Mathf.Pow(1.15f, PlayerData.armourTier[3]) + Mathf.Pow(1.15f, PlayerData.armourTier[4]) + Mathf.Pow(1.15f, PlayerData.armourTier[5])));
-                PlayerData.playerHealth = loadedData.PlayerHP;
-                //Regenerating player health based on time passed
-                savedHour = loadedData.Hour;
-                savedDay = loadedData.DayOfYear;
-                currentHour = DateTime.Now.Hour;
-                currentDay = DateTime.Now.DayOfYear;
-                if(currentDay < savedDay)
-                {
-                    numDays = 366 - savedDay + currentDay;
-                }
-                else
-                {
-                    numDays = currentDay - savedDay;
-                }
-                numHours = numDays * 24;
-                if(currentHour >= savedHour)
-                {
-                    numHours += currentHour - savedHour;
-                }
-                else
-                {
-                    numHours += currentHour + 24 - savedHour;
-                }
-                PlayerData.playerHealth += PlayerData.playerMaxHealth / 24 * numHours;
-                if(PlayerData.playerHealth > PlayerData.playerMaxHealth)
-                {
-                    PlayerData.playerHealth = PlayerData.playerMaxHealth;
-                }
+                TextAsset tempData = (TextAsset)Resources.Load("defaultData", typeof(TextAsset));
+                var writer = new StreamWriter(dataFilePath);
+                writer.Write(tempData.text);
+                writer.Flush();
+                writer.Close();
             }
+            GetData();
         }
     }
 
@@ -85,6 +56,48 @@ public class LevelScript : MonoBehaviour {
             wave = 1;
             PlayerData.gamePaused = true;
             gameWinUI.SetActive(true);
+        }
+    }
+
+    public void GetData()
+    {
+        PlayerDataJSON loadedData = JsonUtility.FromJson<PlayerDataJSON>(File.ReadAllText(dataFilePath));
+        level = loadedData.Level;
+        wave = loadedData.Wave;
+        PlayerData.armourTier[0] = loadedData.HelmTier;
+        PlayerData.armourTier[1] = loadedData.ChestplateTier;
+        PlayerData.armourTier[2] = loadedData.GauntletsTier;
+        PlayerData.armourTier[3] = loadedData.LeggingsTier;
+        PlayerData.armourTier[4] = loadedData.BootsTier;
+        PlayerData.armourTier[5] = loadedData.ShieldTier;
+        PlayerData.playerMaxHealth = Mathf.Ceil(100 / 6 * (Mathf.Pow(1.15f, PlayerData.armourTier[0]) + Mathf.Pow(1.15f, PlayerData.armourTier[1]) + Mathf.Pow(1.15f, PlayerData.armourTier[2]) + Mathf.Pow(1.15f, PlayerData.armourTier[3]) + Mathf.Pow(1.15f, PlayerData.armourTier[4]) + Mathf.Pow(1.15f, PlayerData.armourTier[5])));
+        PlayerData.playerHealth = loadedData.PlayerHP;
+        //Regenerating player health based on time passed
+        savedHour = loadedData.Hour;
+        savedDay = loadedData.DayOfYear;
+        currentHour = DateTime.Now.Hour;
+        currentDay = DateTime.Now.DayOfYear;
+        if (currentDay < savedDay)
+        {
+            numDays = 366 - savedDay + currentDay;
+        }
+        else
+        {
+            numDays = currentDay - savedDay;
+        }
+        numHours = numDays * 24;
+        if (currentHour >= savedHour)
+        {
+            numHours += currentHour - savedHour;
+        }
+        else
+        {
+            numHours += currentHour + 24 - savedHour;
+        }
+        PlayerData.playerHealth += PlayerData.playerMaxHealth / 24 * numHours;
+        if (PlayerData.playerHealth > PlayerData.playerMaxHealth)
+        {
+            PlayerData.playerHealth = PlayerData.playerMaxHealth;
         }
     }
 
@@ -113,5 +126,18 @@ public class LevelScript : MonoBehaviour {
     public void GoToMain()
     {
         SceneManager.LoadScene("Main");
+    }
+
+    private string GetApplicationPath()
+    {
+#if UNITY_EDITOR
+        return Application.dataPath + "/Data/";
+#elif UNITY_ANDROID
+        return Application.persistentDataPath;
+#elif UNITY_IPHONE
+        return Application.persistentDataPath+"/";
+#else
+        return Application.dataPath +"/";
+#endif
     }
 }
